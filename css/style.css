@@ -1,0 +1,150 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 20px;
+}
+
+.panel {
+	position: relative;
+	background-color: grey;
+	width: 30em;
+	height: 30em;
+	margin-bottom: 1em;
+
+	padding: 1em 2em;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 3em;
+
+	justify-items: center;
+	align-items: center;
+}
+
+.item {
+	background-color: red;
+}
+
+.grid-i-señal-parada {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.grid-i-boton-parada {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	width: auto;
+	height: auto;
+}
+
+.grid-i-selector {
+	grid-column-start: 1;
+	grid-column-end: 4;
+}
+
+.selector {
+	width: 2em;
+	height: 2em;
+	background-color: #444444;
+	border-radius: 50%;
+	position: relative;
+}
+
+.selector .perrilla {
+	position: absolute;
+	width: 0.5em;
+	height: 120%;
+	background-color: #111111;
+	bottom: 0px;
+	left: 0.75em;
+}
+
+.señal {
+	width: 7rem;
+	height: auto;
+	padding: 0.1rem 0.5rem;
+	background-color: black;
+	color: white;
+	text-align: center;
+	border-radius: 0.2rem;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+
+.pulsador {
+	border: 0.2em #222222 solid;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	color: white;
+}
+
+.pulsador:hover {
+	filter: brightness(120%);
+}
+
+.pulsador:focus {
+	outline: none;
+}
+
+.pulsador:active {
+	filter: brightness(130%);
+	border: none;
+}
+
+.pulsador.rojo {
+	background-color: red;
+}
+
+.pulsador.verde {
+	background-color: green;
+}
+
+.luz {
+	width: 3em;
+	height: 3em;
+	background-color: white;
+	border-radius: 50%;
+	filter: brightness(40%);
+	border: 0.1em solid black;
+}
+
+.luz.verde {
+	background-color: green;
+}
+
+.luz.roja {
+	background-color: red;
+}
+
+.luz.amarillo {
+	background-color: yellow;
+}
+
+
+
+.logo-universidad {
+	position: absolute;
+	width: 8em;
+	top: 0px;
+	left: 0px;
+}
+
+.señal-riesgo {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 7em;
+}
+
+
+.panel-inferior {
+	position: relative;
+	background-color: grey;
+	width: 30em;
+	height: 10em;
+}
