@@ -1,29 +1,52 @@
 * {
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
 html {
-	font-size: 20px;
+	font-size: 15px;
+	font-family: Arial;
 }
+
+@media (max-width: 600px) {
+	html {
+		font-size: 8px;
+	}
+}
+
+button {
+	font-size: inherit;
+}
+
+/* Fondo de paneles  */
 
 .panel {
 	position: relative;
-	background-color: grey;
+	background-color: #c2c2c2;
 	width: 30em;
-	height: 30em;
-	margin-bottom: 1em;
+	border-radius: 0.3em;
+	/*border: 0.2em solid #dbdbdb;*/
+	box-shadow: 0px 0px 5px black;
+}
 
+.superior {
 	padding: 1em 2em;
+	padding-bottom: 3em;
+	margin-bottom: 0.5em;
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 3em;
-
+	grid-template-rows: 3em auto 3em auto 3em auto 5em auto;
 	justify-items: center;
 	align-items: center;
 }
+
+.inferior {
+	padding: 2em 3em;
+}
+
+/* Grid */
 
 .item {
 	background-color: red;
@@ -46,45 +69,74 @@ html {
 	grid-column-end: 4;
 }
 
+/* Selector giratorio */
+
 .selector {
 	width: 2em;
 	height: 2em;
-	background-color: #444444;
+	background-color: #757575;
 	border-radius: 50%;
 	position: relative;
+	box-shadow: 0.1em 0.1em 0.2em black;
 }
 
 .selector .perrilla {
 	position: absolute;
 	width: 0.5em;
 	height: 120%;
-	background-color: #111111;
-	bottom: 0px;
+	background-color: #474747;
+	bottom: 0;
 	left: 0.75em;
+	box-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 90%);
 }
+
+/* Pequeñas señales con letras marrones*/
 
 .señal {
 	width: 7rem;
 	height: auto;
-	padding: 0.1rem 0.5rem;
+	padding: 0.2rem 0.5rem;
 	background-color: black;
-	color: white;
+	color: rgb(198, 176, 99);
 	text-align: center;
 	border-radius: 0.2rem;
 	text-transform: uppercase;
 	font-size: 0.8em;
+	font-weight: bold;
 }
 
+.señal.lp {
+	font-size: 0.5em;
+}
+
+.señal.lm {
+	font-size: 0.7em;
+}
+
+.señal.boton {
+	cursor: pointer;
+}
+
+.señal.boton:hover {
+	filter: brightness(50%);
+}
+
+/* Botones pulsadores*/
+
 .pulsador {
-	border: 0.2em #222222 solid;
+	border: none;
 	width: 4em;
 	height: 4em;
 	border-radius: 50%;
 	color: white;
+	cursor: pointer;
+	font-size: 0.75em;
+	font-weight: bold;
+	box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 50%);
 }
 
 .pulsador:hover {
-	filter: brightness(120%);
+	filter: brightness(95%);
 }
 
 .pulsador:focus {
@@ -92,17 +144,49 @@ html {
 }
 
 .pulsador:active {
-	filter: brightness(130%);
-	border: none;
+	transform: translate(0.5em, 0.5em);
+	box-shadow: 0em 0em 0.1em rgba(0, 0, 0, 50%);
 }
 
 .pulsador.rojo {
 	background-color: red;
 }
 
-.pulsador.verde {
+
+
+.pulsador-l {
+	border: 0.2em #b8b8b8 solid;
+	width: 4em;
+	height: 4em;
+	border-radius: 50%;
+	color: white;
+	cursor: pointer;
+	font-size: 0.75em;
+	font-weight: bold;
+	box-shadow: 0.3em 0.3em 0.2em rgba(0, 0, 0, 50%);
+}
+
+.pulsador-l:hover {
+	filter: brightness(120%);
+}
+
+.pulsador-l:focus {
+	outline: none;
+}
+
+.pulsador-l:active {
+	filter: brightness(130%);
+}
+
+.pulsador-l.rojo {
+	background-color: red;
+}
+
+.pulsador-l.verde {
 	background-color: green;
 }
+
+/* Luces indicadora */
 
 .luz {
 	width: 3em;
@@ -111,6 +195,7 @@ html {
 	border-radius: 50%;
 	filter: brightness(40%);
 	border: 0.1em solid black;
+	box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 30%);
 }
 
 .luz.verde {
@@ -125,26 +210,45 @@ html {
 	background-color: yellow;
 }
 
-
+/* Logos del panel superior*/
 
 .logo-universidad {
 	position: absolute;
 	width: 8em;
-	top: 0px;
-	left: 0px;
+	top: 0.3em;
+	left: 0.3em;
 }
 
 .señal-riesgo {
 	position: absolute;
-	top: 0px;
-	right: 0px;
+	top: 0;
+	right: 0;
 	width: 7em;
 }
 
 
-.panel-inferior {
-	position: relative;
-	background-color: grey;
-	width: 30em;
-	height: 10em;
+/* Logo del panel inferior */
+.señal-proyecto {
+	position: absolute;
+	top: 0.5em;
+	right: 1em;
+	width: 10rem;
+	background-color: #999999;
+	font-size: 0.8em;
+	padding: 0.4em;
+	font-weight: bold;
+	border: 0.2em solid black;
+}
+
+.señal-c {
+	margin-bottom: 1em;
+}
+
+/* Controlador */
+
+.controlador {
+	width: 9em;
+	height: 7em;
+	background-color: #51addc;
+	border: 0.3em solid black;
 }
