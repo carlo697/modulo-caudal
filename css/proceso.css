@@ -1,0 +1,36 @@
+.proceso-contenedor {
+	height: 200px;
+	background-color: gray;
+	position: relative;
+}
+
+.panel-informacion {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: black;
+	color: white;
+	padding: 0.5em;
+}
+
+#Transmisor {
+	position: absolute;
+	top: 5em;
+	left: 1em;
+	width: 5em;
+}
+
+#ValvulaControl {
+	position: absolute;
+	top: 5em;
+	left: 10em;
+	width: 5em;
+
+}
+
+#Bomba {
+	position: absolute;
+	top: 5em;
+	left: 20em;
+	width: 5em;
+}

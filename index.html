@@ -7,10 +7,9 @@
 	    <meta name="description" content="Demo project">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/proceso.css">
 	</head>
 	<body>
-		<script src="js/index.js"></script>
-
 		<div class="panel superior">
 			<img src="img/logo_iutval.png" class="logo-universidad">
 			<img src="img/signs/caution.svg" class="señal-riesgo">
@@ -18,23 +17,23 @@
 			<div class="item señal grid-i-señal-parada">
 				Parada de<br>emergencia
 			</div>
-			<button class="grid-i-boton-parada pulsador rojo">STOP</button>
-			<div class="señal boton">Manual</div>
-			<div class="señal boton">OFF</div>
-			<div class="señal boton">Automatico</div>
-			<div class="grid-i-selector selector">
+			<button id="StopEmergencia1" class="grid-i-boton-parada pulsador rojo">STOP</button>
+			<div id="BotonManual" class="señal boton">Manual</div>
+			<div id="BotonOff" class="señal boton">OFF</div>
+			<div id="BotonAutomatico" class="señal boton">Automatico</div>
+			<div id="Selector" state="1" class="grid-i-selector selector">
 				<div class="perrilla"></div>
 			</div>
 			<div class="señal encendido">Encendido</div>
 			<div class="señal">Fallo de aire</div>
 			<div class="señal">Sobrecarga</div>
-			<button class="pulsador-l verde">START</button>
+			<button id="BotonStart" class="pulsador-l verde">START</button>
 			<div class="luz amarillo"></div>
 			<div class="luz roja"></div>
 			<div class="señal">Apagado</div>
 			<div class="señal">Control de proceso<br>bloqueado</div>
 			<div class="señal">Válvula solenoide</div>
-			<button class="pulsador-l rojo">STOP</button>
+			<button id="BotonStop" class="pulsador-l rojo">STOP</button>
 			<div class="luz"></div>
 			<div class="luz amarillo"></div>
 		</div>
@@ -45,5 +44,18 @@
 			<div class="controlador"></div>
 		</div>
 
+		<h1>Proceso - Modulo de control de caudal de lazo cerrado</h1>
+		<div class="proceso-contenedor">
+			<img id="Transmisor" src="img/sensors_pressure_transmitter.svg" alt="">
+			<img id="ValvulaControl" src="img/control_valve.svg" alt="">
+			<img id="Bomba" src="img/pumps_centrifugal_pump_2.svg" alt="">
+
+			<div class="panel-informacion">
+				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
+				<p id="Texto"></p>
+			</div>
+		</div>
+
+		<script src="js/index.js"></script>
 	</body>
 </html>
