@@ -8,41 +8,101 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/style.css">
 		<link rel="stylesheet" href="css/proceso.css">
+		<link rel="stylesheet" href="css/interior.css">
+		<script src="https://kit.fontawesome.com/e89d481fed.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
-		<div class="panel superior">
-			<img src="img/logo_iutval.png" class="logo-universidad">
-			<img src="img/signs/caution.svg" class="señal-riesgo">
 
-			<div class="item señal grid-i-señal-parada">
-				Parada de<br>emergencia
+		<div class="flex">
+			<div class="panel superior">
+				<img src="img/logo_iutval.png" class="logo-universidad">
+				<img src="img/signs/caution.svg" class="señal-riesgo">
+
+				<div class="item señal grid-i-señal-parada">
+					Parada de<br>emergencia
+				</div>
+				<button id="stopPulsador" class="grid-i-boton-parada pulsador rojo">STOP</button>
+				<div id="BotonManual" class="señal boton">Manual</div>
+				<div id="BotonOff" class="señal boton">OFF</div>
+				<div id="BotonAutomatico" class="señal boton">Automatico</div>
+				<div id="Selector" state="1" class="grid-i-selector selector">
+					<div class="perrilla"></div>
+				</div>
+				<div class="señal encendido">Encendido</div>
+				<div class="señal">Fallo de aire</div>
+				<div class="señal">Sobrecarga</div>
+				<button id="botonStart" class="pulsador-l verde">START</button>
+				<div id="luzFalloAire" class="luz amarillo"></div>
+				<div id="luzSobrecarga" class="luz roja"></div>
+				<div class="señal">Apagado</div>
+				<div class="señal">Control de proceso<br>bloqueado</div>
+				<div class="señal">Válvula solenoide</div>
+				<button id="botonStop" class="pulsador-l rojo">STOP</button>
+				<div id="luzProcesoBloqueado" class="luz"></div>
+				<div id="luzSolenoide" class="luz amarillo"></div>
 			</div>
-			<button id="StopEmergencia1" class="grid-i-boton-parada pulsador rojo">STOP</button>
-			<div id="BotonManual" class="señal boton">Manual</div>
-			<div id="BotonOff" class="señal boton">OFF</div>
-			<div id="BotonAutomatico" class="señal boton">Automatico</div>
-			<div id="Selector" state="1" class="grid-i-selector selector">
-				<div class="perrilla"></div>
+
+			<div class="panel superior-in">
+				<div id="interruptor1" class="interruptor i1 iconos superior">
+					Interruptor 1
+					<i class="icono-on fas fa-check-circle"></i>
+					<i class="icono-off far fa-circle"></i>
+				</div>
+				<div id="breaker" class="breaker iconos superior">
+					Breaker
+					<i class="icono-on fas fa-check-circle"></i>
+					<i class="icono-off far fa-circle"></i>
+				</div>
+				<div id="protector" class="protector iconos">
+					Protector
+					<i class="icono-off fas fa-exclamation-triangle"></i>
+					<i class="icono-on fas fa-check"></i>
+				</div>
+				<div id="rele1" class="rele r1 iconos">
+					rele1
+					<i class="icono-off"></i>
+					<i class="icono-on fas fa-bolt"></i>
+				</div>
+				<div id="rele2" class="rele r2 iconos">
+					rele2
+					<i class="icono-off"></i>
+					<i class="icono-on fas fa-bolt"></i>
+				</div>
+				<div id="contactor" class="contactor iconos">
+					Contactor
+					<i class="icono-off"></i>
+					<i class="icono-on fas fa-bolt"></i>
+				</div>
+				<div id="termico" class="termico iconos">
+					Termico
+					<i class="icono-off"></i>
+					<i class="icono-on fas fa-bolt"></i>
+				</div>
 			</div>
-			<div class="señal encendido">Encendido</div>
-			<div class="señal">Fallo de aire</div>
-			<div class="señal">Sobrecarga</div>
-			<button id="BotonStart" class="pulsador-l verde">START</button>
-			<div class="luz amarillo"></div>
-			<div class="luz roja"></div>
-			<div class="señal">Apagado</div>
-			<div class="señal">Control de proceso<br>bloqueado</div>
-			<div class="señal">Válvula solenoide</div>
-			<button id="BotonStop" class="pulsador-l rojo">STOP</button>
-			<div class="luz"></div>
-			<div class="luz amarillo"></div>
+
+			<div id="log">
+				Lorem ipsum
+			</div>
 		</div>
 
-		<div class="panel inferior">
-			<div class="señal-proyecto ">Modulo de caudal de lazo cerrado</div>
-			<div class="señal señal-c">Controlador</div>
-			<div class="controlador"></div>
+		<div class="flex">
+			<div class="panel inferior">
+				<div class="señal-proyecto">Modulo de caudal de lazo cerrado</div>
+				<div class="señal señal-c">Controlador</div>
+				<div id="controlador" class="controlador elemento"></div>
+			</div>
+
+			<div class="panel inferior-in">
+
+				<div id="interruptor2" class="interruptor i2 iconos superior">
+					Interruptor2
+					<i class="icono-on fas fa-check-circle"></i>
+					<i class="icono-off far fa-circle"></i>
+				</div>
+			</div>
 		</div>
+
+			
 
 		<h1>Proceso - Modulo de control de caudal de lazo cerrado</h1>
 		<div class="proceso-contenedor">
@@ -53,6 +113,31 @@
 			<div class="panel-informacion">
 				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
 				<p id="Texto"></p>
+			</div>
+		</div>
+
+		<div class="fallas-contenedor">
+			<div class="fallas-boton">
+				<i class="icono fas fa-angle-double-left"></i>
+			</div>
+
+			<div class="lista-fallas">
+				<h2>Simulación de Fallas</h2>
+
+				<div>
+					<input id="fallaAire" type="checkbox" name="">
+					<label for="fallaAire">Falla de suministro de aire</label>
+				</div>
+				
+				<div>
+					<input id="sobreVoltaje" type="checkbox" name="">
+					<label for="sobreVoltaje">Sobre voltaje</label>
+				</div>
+
+				<div>
+					<input id="sobreCarga" type="checkbox" name="">
+					<label for="sobreCarga">Sobrecarga en la bomba</label>
+				</div>
 			</div>
 		</div>
 

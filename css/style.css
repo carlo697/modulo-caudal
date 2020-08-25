@@ -34,22 +34,46 @@ button {
 	border-radius: 0.3em;
 	/*border: 0.2em solid #dbdbdb;*/
 	box-shadow: 0em 0em 0.5em black;
+	display: inline-block;
+
+	flex-shrink: 0;
+}
+
+.flex {
+	display: flex;
 }
 
 .superior {
 	padding: 1em 2em;
 	padding-bottom: 3em;
 	margin-bottom: 0.5em;
+	margin-right: 1em;
 
-	display: grid;
+	height: 30em;
+	width: 30em;
+
+	display: inline-grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 3em auto 3em 3em 3em auto 5em auto;
 	justify-items: center;
 	align-items: center;
 }
 
+.superior-in {
+	height: 30em;
+	width: 30em;
+}
+
 .inferior {
+	height: 13em;
+	width: 30em;
 	padding: 2em 3em;
+	margin-right: 1em;
+}
+
+.inferior-in {
+	height: 13em;
+	width: 30em;
 }
 
 /* Grid */
@@ -84,6 +108,8 @@ button {
 	border-radius: 50%;
 	position: relative;
 	box-shadow: 0.1em 0.1em 0.2em black;
+
+	transition: transform 0.05s;
 }
 
 .selector[state="0"] {
@@ -147,19 +173,26 @@ button {
 	font-size: 0.75em;
 	font-weight: bold;
 	box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 50%);
-}
 
-.pulsador:hover {
-	filter: brightness(95%);
+	transition: all 0.05s;
 }
 
 .pulsador:focus {
 	outline: none;
 }
 
-.pulsador:active {
+.pulsador.on {
+	transform: translate(0.4em, 0.4em);
+	box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 50%);
+}
+
+.pulsador.off:hover {
+	filter: brightness(95%);
+}
+
+.pulsador.off:active {
 	transform: translate(0.5em, 0.5em);
-	box-shadow: 0em 0em 0.1em rgba(0, 0, 0, 50%);
+	box-shadow: 0em 0em 0.5em rgba(0, 0, 0, 50%);
 }
 
 .pulsador.rojo {
@@ -180,16 +213,32 @@ button {
 	box-shadow: 0.3em 0.3em 0.2em rgba(0, 0, 0, 50%);
 }
 
-.pulsador-l:hover {
-	filter: brightness(120%);
-}
-
 .pulsador-l:focus {
 	outline: none;
 }
 
-.pulsador-l:active {
-	filter: brightness(130%);
+.pulsador-l.off {
+	filter: brightness(50%);
+}
+
+.pulsador-l.off:hover {
+	filter: brightness(60%);
+}
+
+.pulsador-l.off:active {
+	filter: brightness(70%);
+}
+
+.pulsador-l.on {
+	filter: brightness(100%);
+}
+
+.pulsador-l.on:hover {
+	filter: brightness(110%);
+}
+
+.pulsador-l.on:active {
+	filter: brightness(120%);
 }
 
 .pulsador-l.rojo {
@@ -210,6 +259,10 @@ button {
 	filter: brightness(40%);
 	border: 0.1em solid black;
 	box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 30%);
+}
+
+.luz.on {
+	filter: brightness(100%);
 }
 
 .luz.verde {
@@ -265,4 +318,71 @@ button {
 	height: 7em;
 	background-color: #51addc;
 	border: 0.3em solid black;
+	position: relative;
+}
+
+
+#log {
+	padding: 1rem 0 0 2rem;
+	font-size: 1rem;
+	white-space: pre;
+	font-family: monospace;
+	display: inline-block;
+}
+
+
+
+.fallas-contenedor {
+	position: fixed;
+	top: 0px;
+	right: -45%;
+	height: 100%;
+	width: 50%;
+	background-color: rgba(0, 0, 0, 75%);
+	z-index: 100;
+
+	color: white;
+
+	display: flex;
+
+	transition: 0.1s right;
+}
+
+.fallas-contenedor:hover {
+	right: 0%;
+}
+
+.fallas-boton {
+	display: inline-block;
+	background-color: black;
+	height: 100%;
+	width: 4rem;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3em;
+	color: gray;
+}
+
+.lista-fallas {
+	flex-grow: 1;
+	margin-bottom: 1rem;
+	padding: 1rem;
+}
+
+.lista-fallas h2 {
+	text-align: center;
+}
+
+.lista-fallas input[type="checkbox"] {
+	height: 2rem;
+	width: 2rem;
+	margin-right: 1rem;
+}
+
+.lista-fallas > div {
+	display: flex;
+	align-items: center;
+	margin-bottom: 1rem;
 }

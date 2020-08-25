@@ -1,0 +1,150 @@
+.interruptor {
+	width: 4em;
+	height: 7em;
+	background-color: white;
+	cursor: pointer;
+}
+
+.i1 {
+	position: absolute;
+	top: 15%;
+	left: 45%;
+}
+
+.i2 {
+	position: absolute;
+	top: 25%;
+	left: 70%;
+}
+
+.breaker {
+	width: 7em;
+	height: 10em;
+	background-color: gray;
+
+	position: absolute;
+	top: 10%;
+	left: 63%;
+
+	cursor: pointer;
+}
+
+.protector {
+	width: 4em;
+	height: 8em;
+	background-color: #FFF4F4;
+	border: 1px solid gray;
+
+	position: absolute;
+	top: 55%;
+	left: 15%;
+}
+
+.rele {
+	width: 4em;
+	height: 6em;
+	background-color: black;
+	color: white;
+}
+
+.r1 {
+	position: absolute;
+	top: 55%;
+	left: 30%;
+}
+
+.r2 {
+	position: absolute;
+	top: 55%;
+	left: 45%;
+}
+
+.contactor {
+	width: 5em;
+	height: 7em;
+	background-color: #EDEDED;
+
+	position: absolute;
+	top: 55%;
+	left: 65%;
+}
+
+.termico {
+	width: 5em;
+	height: 5em;
+	background-color: #EDEDED;
+
+	position: absolute;
+	top: 80%;
+	left: 65%;
+}
+
+
+
+.manual::after {
+	content: "";
+	width: 0.5em;
+	height: 0.5em;
+	position: absolute;
+	background-color: red;
+	top: 0px;
+	right: 0px;
+}
+
+.manual.on::after {
+	background-color: green;
+}
+
+
+.elemento::after {
+	content: "";
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	position: absolute;
+	background-color: red;
+
+	bottom: 0px;
+	left: 0px;
+}
+
+.elemento.on::after {
+	background-color: green;
+}
+
+.iconos.off .icono-off {
+	font-size: 1.5em;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: red;
+}
+
+.iconos.on .icono-off {
+	display: none;
+}
+
+
+.iconos.on .icono-on {
+	font-size: 1.5em;
+	border-radius: 50%;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	color: green;
+}
+
+.iconos.off .icono-on {
+	display: none;
+}
+
+
+
+.iconos.superior.off .icono-off {
+	top: 0px;
+}
+
+.iconos.superior.on .icono-on {
+	top: 0px;
+}
