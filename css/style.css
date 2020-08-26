@@ -354,16 +354,9 @@ button {
 	display: none;
 }
 
-
-.menu-contenido {
-	flex-grow: 1;
-	overflow: auto;
-}
-
 .menu-boton {
 	display: inline-block;
 	background-color: black;
-	height: 100%;
 	width: 50px;
 
 	display: flex;
@@ -373,6 +366,12 @@ button {
 	color: gray;
 
 	cursor: pointer;
+	z-index: 100;
+}
+
+.menu-contenido {
+	flex-grow: 1;
+	flex-basis: 0;
 }
 
 .menu .titulo {
@@ -381,17 +380,29 @@ button {
 }
 
 
-
-
 .pestañas {
+	flex-basis: 100%;
+
 	display: flex;
+	flex-direction: row-reverse;
 	height: 30px;
 	font-size: 20px;
 	font-weight: bold;
 }
 
+.pestaña-contenido {
+	height: calc(100% - 30px);
+	overflow: auto;
+}
+
 .pestaña {
 	flex-grow: 1;
+	border: 1px solid black;
+	border: 1px solid black;
+}
+
+.pestaña:focus {
+	outline: none;
 }
 
 .pestaña.on {
@@ -423,7 +434,7 @@ button {
 
 
 .planos {
-	flex-shrink: 1;
+
 }
 
 .plano-control {

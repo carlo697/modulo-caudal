@@ -131,43 +131,50 @@
 
 		<div class="menu-contenido">
 			<div class="pestañas">
-				<button class="pestaña" for="fallas">Fallas</button>
-				<button class="pestaña" for="guias">Guía</button>
-				<button class="pestaña" for="planos">Planos</button>
 				<button class="pestaña" for="practicas">Practicas</button>
-			</div>
-
-			<div id="fallas" class="submenu fallas">
-				<h2 class="titulo">Simulación de Fallas</h2>
-
-				<div>
-					<input id="fallaAire" type="checkbox" name="">
-					<label for="fallaAire">Falla de suministro de aire</label>
-				</div>
+				<button class="pestaña" for="planos">Planos</button>
+				<button class="pestaña" for="guias">Guía</button>
+				<button class="pestaña" for="fallas">Fallas</button>
 				
-				<div>
-					<input id="sobreVoltaje" type="checkbox" name="">
-					<label for="sobreVoltaje">Sobre voltaje</label>
+				
+				
+			</div>
+
+			<div class="pestaña-contenido">
+				<div id="fallas" class="submenu fallas">
+					<h2 class="titulo">Simulación de Fallas</h2>
+
+					<div>
+						<input id="fallaAire" type="checkbox" name="">
+						<label for="fallaAire">Falla de suministro de aire</label>
+					</div>
+					
+					<div>
+						<input id="sobreVoltaje" type="checkbox" name="">
+						<label for="sobreVoltaje">Sobre voltaje</label>
+					</div>
+
+					<div>
+						<input id="sobreCarga" type="checkbox" name="">
+						<label for="sobreCarga">Sobrecarga en la bomba</label>
+					</div>
 				</div>
 
-				<div>
-					<input id="sobreCarga" type="checkbox" name="">
-					<label for="sobreCarga">Sobrecarga en la bomba</label>
+				<div id="guias" class="submenu guias">
+					<h2 class="titulo">Guias</h2>
+				</div>
+
+				<div id="planos" class="submenu planos">
+					<h2 class="titulo">Planos</h2>
+					<img class="plano-control" src="img/planos/control.png" alt="">
+				</div>
+
+				<div id="practicas" class="submenu practicas">
+					<h2 class="titulo">Practicas</h2>
 				</div>
 			</div>
 
-			<div id="guias" class="submenu guias">
-				<h2 class="titulo">Guias</h2>
-			</div>
-
-			<div id="planos" class="submenu planos">
-				<h2 class="titulo">Planos</h2>
-				<img class="plano-control" src="img/planos/control.png" alt="">
-			</div>
-
-			<div id="practicas" class="submenu practicas">
-				<h2 class="titulo">Practicas</h2>
-			</div>
+				
 		</div>
 
 			
