@@ -1,6 +1,7 @@
 class Interruptor {
-	constructor(element, initialState = false) {
+	constructor(element, initialState = false, targetElement = null) {
 		this.element = element;
+		this.targetElement = targetElement;
 		this.setState(initialState);
 
 		this.element.addEventListener("click", e => this.onClickEvent(e));
@@ -9,12 +10,24 @@ class Interruptor {
 	setState(state) {
 		this.element.setAttribute("state", state == true ? "1" : "0");
 
+		console.log(this.targetElement);
+
 		if (state) {
 			this.element.classList.add("on");
 			this.element.classList.remove("off");
 		} else {
 			this.element.classList.add("off");
 			this.element.classList.remove("on");
+		}
+
+		if (this.targetElement != null) {
+			if (state) {
+				this.targetElement.classList.add("on");
+				this.targetElement.classList.remove("off");
+			} else {
+				this.targetElement.classList.add("off");
+				this.targetElement.classList.remove("on");
+			}
 		}
 	}
 
@@ -64,7 +77,10 @@ selector.state = parseInt(selector.getAttribute("state"), 10);
 
 document.body.addEventListener("click", clickGlobal);
 document.body.addEventListener("mousedown", mousedownGlobal);
+document.body.addEventListener("touchstart", mousedownGlobal);
+
 document.body.addEventListener("mouseup", mouseupGlobal);
+document.body.addEventListener("touchend", mouseupGlobal);
 document.body.addEventListener("change", changeGlobal);
 
 function seleccionarManual() {
@@ -117,6 +133,39 @@ function changeGlobal(e) {
 	}
 }
 
+
+const _pestañaBotones = document.querySelectorAll(".pestaña");
+
+const botonesPestañas = [];
+
+for (let boton of _pestañaBotones) {
+	const target = document.getElementById(boton.getAttribute("for"));
+
+	boton.contenedor = target;
+	botonesPestañas.push(boton);
+
+	boton.addEventListener("click", function(e) {
+		for (let boton of botonesPestañas) {
+			boton.classList.remove("on");
+			boton.contenedor.style.display = "none";
+		}
+
+		if (target.style.display == "none") {
+			target.style.display = "block";
+			boton.classList.add("on");
+		}
+	});
+}
+
+for (let boton of botonesPestañas) {
+	boton.contenedor.style.display = "none";
+}
+
+new Interruptor(
+	document.getElementById("menuBoton"),
+	false,
+	document.getElementById("menuLateral")
+);
 
 const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
 const breaker = new Interruptor(document.getElementById("breaker"));

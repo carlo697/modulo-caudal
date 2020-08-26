@@ -19,8 +19,8 @@
 
 .breaker {
 	width: 7em;
-	height: 10em;
-	background-color: gray;
+	height: 11.6em;
+	/*background-color: gray;*/
 
 	position: absolute;
 	top: 10%;
@@ -112,6 +112,10 @@
 	background-color: green;
 }
 
+
+
+
+
 .iconos.off .icono-off {
 	font-size: 1.5em;
 	border-radius: 50%;
@@ -141,10 +145,34 @@
 
 
 
+
+
+
 .iconos.superior.off .icono-off {
 	top: 0px;
 }
 
 .iconos.superior.on .icono-on {
 	top: 0px;
+}
+
+
+
+
+
+
+
+.imagen {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+
+.iconos.off .hide-off {
+	display: none;
+}
+
+.iconos.on .hide-on {
+	display: none;
 }

@@ -9,17 +9,6 @@ html {
 	font-family: Arial;
 }
 
-@media (min-width: 0px) and (max-width: 340px){
-	html {
-		font-size: 6px;
-	}
-}
-
-@media (min-width: 340px) and (max-width: 500px) {
-	html {
-		font-size: 8px;
-	}
-}
 
 button {
 	font-size: inherit;
@@ -328,61 +317,140 @@ button {
 	white-space: pre;
 	font-family: monospace;
 	display: inline-block;
+	display: none;
 }
 
 
 
-.fallas-contenedor {
+
+
+.menu {
 	position: fixed;
 	top: 0px;
-	right: -45%;
+	right: -93%;
 	height: 100%;
-	width: 50%;
-	background-color: rgba(0, 0, 0, 75%);
-	z-index: 100;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0%);
 
 	color: white;
 
 	display: flex;
-
-	transition: 0.1s right;
+	transition: 0.1s right, 0.3s background-color;
 }
 
-.fallas-contenedor:hover {
+
+.menu.on {
 	right: 0%;
+	background-color: rgba(0, 0, 0, 75%);
 }
 
-.fallas-boton {
+.menu.on .off {
+	display: none;
+}
+
+.menu.off .on {
+	display: none;
+}
+
+
+.menu-contenido {
+	flex-grow: 1;
+	overflow: auto;
+}
+
+.menu-boton {
 	display: inline-block;
 	background-color: black;
 	height: 100%;
-	width: 4rem;
+	width: 7%;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 3em;
 	color: gray;
+
+	cursor: pointer;
 }
 
-.lista-fallas {
-	flex-grow: 1;
-	margin-bottom: 1rem;
-	padding: 1rem;
-}
-
-.lista-fallas h2 {
+.menu .titulo {
 	text-align: center;
+	margin-bottom: 10px;
 }
 
-.lista-fallas input[type="checkbox"] {
+
+
+
+.pestañas {
+	display: flex;
+	height: 30px;
+}
+
+.pestaña {
+	flex-grow: 1;
+}
+
+.pestaña.on {
+	filter: brightness(120%);
+}
+
+.submenu {
+	padding: 10px;
+}
+
+
+
+
+.fallas {
+
+}
+
+.fallas input[type="checkbox"] {
 	height: 2rem;
 	width: 2rem;
 	margin-right: 1rem;
 }
 
-.lista-fallas > div {
+.fallas > div {
 	display: flex;
 	align-items: center;
 	margin-bottom: 1rem;
+}
+
+
+.planos {
+	flex-shrink: 1;
+}
+
+.plano-control {
+	width: 100%;
+}
+
+
+@media (min-width: 0px) and (max-width: 400px){
+	html {
+		font-size: 5px;
+	}
+
+	#log {
+		display: none;
+	}
+}
+
+@media (min-width: 401px) and (max-width: 500px) {
+	html {
+		font-size: 6px;
+	}
+}
+
+@media (min-width: 501px) and (max-width: 700px) {
+	html {
+		font-size: 7px;
+	}
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+	html {
+		font-size: 8px;
+	}
 }
