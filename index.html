@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Demo</title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	    <meta name="description" content="Demo project">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="stylesheet" href="css/proceso.css">
-		<link rel="stylesheet" href="css/interior.css">
-		<script src="https://kit.fontawesome.com/e89d481fed.js" crossorigin="anonymous"></script>
-	</head>
-	<body>
+<head>
+	<title>Demo</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Demo project">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/proceso.css">
+	<link rel="stylesheet" href="css/interior.css">
+	<script src="https://kit.fontawesome.com/e89d481fed.js" crossorigin="anonymous"></script>
+</head>
+<body>
 
+	<main>
 		<div class="flex">
 			<div class="panel superior">
 				<img src="img/logo_iutval.png" class="logo-universidad">
@@ -113,66 +114,65 @@
 				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
 				<p id="Texto"></p>
 			</div>
+		</div>
+	</main>
 
 
+
+	<div id="menuLateral" class="menu">
+		<div id="menuBoton" class="menu-boton">
+			<i class="icono fas fa-angle-double-left off"></i>
+			<i class="icono fas fa-angle-double-right on"></i>
 		</div>
 
-
-
-		<div id="menuLateral" class="menu">
-			<div id="menuBoton" class="menu-boton">
-				<i class="icono fas fa-angle-double-left off"></i>
-				<i class="icono fas fa-angle-double-right on"></i>
+		<div class="menu-contenido">
+			<div class="pestañas">
+				<button class="pestaña" for="fallas">Fallas</button>
+				<button class="pestaña" for="guias">Guía</button>
+				<button class="pestaña" for="planos">Planos</button>
+				<button class="pestaña" for="practicas">Practicas</button>
 			</div>
 
-			<div class="menu-contenido">
-				<div class="pestañas">
-					<button class="pestaña" for="fallas">Fallas</button>
-					<button class="pestaña" for="guias">Guía</button>
-					<button class="pestaña" for="planos">Planos</button>
-					<button class="pestaña" for="practicas">Practicas</button>
+			<div id="fallas" class="submenu fallas">
+				<h2 class="titulo">Simulación de Fallas</h2>
+
+				<div>
+					<input id="fallaAire" type="checkbox" name="">
+					<label for="fallaAire">Falla de suministro de aire</label>
 				</div>
-
-				<div id="fallas" class="submenu fallas">
-					<h2 class="titulo">Simulación de Fallas</h2>
-
-					<div>
-						<input id="fallaAire" type="checkbox" name="">
-						<label for="fallaAire">Falla de suministro de aire</label>
-					</div>
-					
-					<div>
-						<input id="sobreVoltaje" type="checkbox" name="">
-						<label for="sobreVoltaje">Sobre voltaje</label>
-					</div>
-
-					<div>
-						<input id="sobreCarga" type="checkbox" name="">
-						<label for="sobreCarga">Sobrecarga en la bomba</label>
-					</div>
-				</div>
-
-				<div id="guias" class="submenu guias">
-					<h2 class="titulo">Guias</h2>
-				</div>
-
-				<div id="planos" class="submenu planos">
-					<h2 class="titulo">Planos</h2>
-					<img class="plano-control" src="img/planos/control.png" alt="">
-				</div>
-
-				<div id="practicas" class="submenu practicas">
-					<h2 class="titulo">Practicas</h2>
-				</div>
-			</div>
-
 				
+				<div>
+					<input id="sobreVoltaje" type="checkbox" name="">
+					<label for="sobreVoltaje">Sobre voltaje</label>
+				</div>
+
+				<div>
+					<input id="sobreCarga" type="checkbox" name="">
+					<label for="sobreCarga">Sobrecarga en la bomba</label>
+				</div>
+			</div>
+
+			<div id="guias" class="submenu guias">
+				<h2 class="titulo">Guias</h2>
+			</div>
+
+			<div id="planos" class="submenu planos">
+				<h2 class="titulo">Planos</h2>
+				<img class="plano-control" src="img/planos/control.png" alt="">
+			</div>
+
+			<div id="practicas" class="submenu practicas">
+				<h2 class="titulo">Practicas</h2>
+			</div>
 		</div>
 
-		<div class="proceso-fondo">
 			
-		</div>
+	</div>
 
-		<script src="js/index.js"></script>
-	</body>
+	<div class="proceso-fondo">
+		
+	</div>
+
+	<script src="js/index.js"></script>
+</body>
 </html>
