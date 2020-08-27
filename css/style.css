@@ -1,3 +1,7 @@
+:root {
+	--menu-boton-ancho: 50px;
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -327,7 +331,7 @@ button {
 .menu {
 	position: fixed;
 	top: 0px;
-	right: calc(-100% + 50px);
+	right: calc(-100% + var(--menu-boton-ancho));
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 85%);
@@ -353,22 +357,24 @@ button {
 	display: none;
 }
 
-.menu.off:hover {
+
+/*.menu.off:hover {
 	right: calc(-100% + 60px);
 }
 
 .menu.off:hover .menu-boton {
 	width: 60px;
-}
+}*/
 
 .menu-boton {
 	background-color: black;
-	width: 50px;
+	width: var(--menu-boton-ancho);
+	flex-shrink: 0;
 
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 50px;
+	font-size: calc(var(--menu-boton-ancho) - 5px);
 	color: gray;
 
 	cursor: pointer;
@@ -383,7 +389,7 @@ button {
 
 .menu-contenido {
 	flex-grow: 1;
-	flex-basis: 0;
+	flex-shrink: 1;
 }
 
 .menu h2 {
@@ -536,6 +542,13 @@ button {
 
 .plano-control {
 	width: 100%;
+}
+
+
+@media (min-width: 0px) and (max-width: 600px) {
+	:root {
+		--menu-boton-ancho: 25px;
+	}
 }
 
 

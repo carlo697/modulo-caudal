@@ -141,6 +141,10 @@ const botonesPestañas = [];
 for (let boton of _pestañaBotones) {
 	const target = document.getElementById(boton.getAttribute("for"));
 
+	if (target == null) {
+		continue;
+	}
+
 	boton.contenedor = target;
 	botonesPestañas.push(boton);
 
