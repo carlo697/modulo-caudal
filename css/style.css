@@ -330,12 +330,12 @@ button {
 	right: calc(-100% + 50px);
 	height: 100%;
 	width: 100%;
-	background-color: rgba(0, 0, 0, 0%);
+	background-color: rgba(0, 0, 0, 85%);
 
 	color: white;
 
 	display: flex;
-	transition: 0.1s right, 0.3s background-color;
+	transition: 0.1s right;
 
 	font-size: 15px;
 }
@@ -343,7 +343,6 @@ button {
 
 .menu.on {
 	right: 0%;
-	background-color: rgba(0, 0, 0, 75%);
 }
 
 .menu.on .off {
@@ -354,8 +353,15 @@ button {
 	display: none;
 }
 
+.menu.off:hover {
+	right: calc(-100% + 60px);
+}
+
+.menu.off:hover .menu-boton {
+	width: 60px;
+}
+
 .menu-boton {
-	display: inline-block;
 	background-color: black;
 	width: 50px;
 
@@ -367,6 +373,12 @@ button {
 
 	cursor: pointer;
 	z-index: 100;
+
+	transition: 0.1s width;
+}
+
+.menu-boton:hover {
+	background-color: 
 }
 
 .menu-contenido {
@@ -374,9 +386,30 @@ button {
 	flex-basis: 0;
 }
 
-.menu .titulo {
+.menu h2 {
 	text-align: center;
 	margin-bottom: 10px;
+}
+
+.menu h3 {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.menu p {
+	margin-bottom: 10px;
+}
+
+.menu ol {
+	padding-left: 20px;
+}
+
+.menu li {
+	margin-bottom: 20px;
+}
+
+.menu .text-left {
+	text-align: left;
 }
 
 
@@ -393,6 +426,8 @@ button {
 .pestaña-contenido {
 	height: calc(100% - 30px);
 	overflow: auto;
+	padding: 30px;
+	text-align: justify;
 }
 
 .pestaña {
@@ -407,10 +442,6 @@ button {
 
 .pestaña.on {
 	filter: brightness(120%);
-}
-
-.submenu {
-	padding: 10px;
 }
 
 
@@ -431,6 +462,72 @@ button {
 	align-items: center;
 	margin-bottom: 10px;
 }
+
+
+
+.guias {
+
+}
+
+
+
+
+
+.elementos-grid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	color: black;
+
+	margin-bottom: 30px;
+}
+
+.g-titulo {
+	background-color: white;
+}
+
+.g-elemento, .g-info {
+	background-color: #dddddd;
+}
+
+.g-elemento, .g-info, .g-titulo {
+	padding: 8px;
+	border: 1px solid #A8A8A8;
+}
+
+.g-elemento {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.g-elemento h4 {
+	margin-bottom: 5px;
+	max-width: 200px;
+	text-align: center;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+	.g-elemento h4 {
+		max-width: 80px;
+	}
+}
+
+.g-elemento .apariencia {
+	margin-bottom: 5px;
+	height: 70px;
+}
+
+.g-elemento .placeholder {
+	background-color: white;
+	height: 70px;
+	width: 40px;
+	margin-bottom: 5px;
+}
+
+.g-boton {
+	padding: 5px;
+}
+
 
 
 .planos {
