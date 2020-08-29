@@ -23,22 +23,48 @@
 					Parada de<br>emergencia
 				</div>
 				<button id="stopPulsador" class="grid-i-boton-parada pulsador rojo">STOP</button>
-				<div id="BotonManual" class="señal boton">Manual</div>
-				<div id="BotonOff" class="señal boton">OFF</div>
-				<div id="BotonAutomatico" class="señal boton">Automatico</div>
+				<div id="BotonManual" class="señal boton">
+					Manual
+					<audio autoplay>
+						<source src="sound/rele.mp3">
+					</audio>
+				</div>
+				<div id="BotonOff" class="señal boton">
+					OFF
+					<audio autoplay>
+						<source src="sound/rele.mp3">
+					</audio>
+				</div>
+
+				<div id="BotonAutomatico" class="señal boton">
+					Automatico
+					<audio autoplay>
+						<source src="sound/rele.mp3">
+					</audio>
+				</div>
 				<div id="selector" state="1" class="grid-i-selector selector">
 					<div class="perrilla"></div>
 				</div>
 				<div class="señal encendido">Encendido</div>
 				<div class="señal">Fallo de aire</div>
 				<div class="señal">Sobrecarga</div>
-				<button id="botonStart" class="pulsador-l verde">START</button>
+				<button id="botonStart" class="pulsador-l verde">
+					<audio autoplay>
+						<source src="sound/pulsador.mp3">
+					</audio>
+					START
+				</button>
 				<div id="luzFalloAire" class="luz amarillo"></div>
 				<div id="luzSobrecarga" class="luz roja"></div>
 				<div class="señal">Apagado</div>
 				<div class="señal">Control de proceso<br>bloqueado</div>
 				<div class="señal">Válvula solenoide</div>
-				<button id="botonStop" class="pulsador-l rojo">STOP</button>
+				<button id="botonStop" class="pulsador-l rojo">
+					<audio autoplay>
+						<source src="sound/pulsador.mp3">
+					</audio>
+					STOP
+				</button>
 				<div id="luzProcesoBloqueado" class="luz"></div>
 				<div id="luzSolenoide" class="luz amarillo"></div>
 			</div>
@@ -116,11 +142,14 @@
 		</div>
 
 		<div class="proceso-fondo">
-		
+			<div id="bomba">
+				<audio autoplay loop playWhileOn>
+					<source src="sound/bomba.wav">
+				</audio>
+			</div>
+
 		</div>
 	</main>
-
-
 
 	<div id="menuLateral" class="menu">
 		<div id="menuBoton" class="menu-boton">
@@ -182,7 +211,7 @@
 						<div class="g-elemento">
 				    		<h4>Bomba Centrifuga</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="bomba"><i class="fas fa-eye" ></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Esta bomba centrifuga de X HP se encarga de hacer circular el agua del tanque a través del sistema de tuberías del proceso. El agua al final de su recorrido termina retornando al tanque.</p>

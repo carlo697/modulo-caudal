@@ -6,6 +6,7 @@
 }
 
 .proceso-fondo {
+	position: relative;
 	background-image: url("../img/proceso.png");
 	background-size: 100% 100%;
 	background-position: center;
@@ -37,9 +38,13 @@
 
 }
 
-#Bomba {
+#bomba {
 	position: absolute;
-	top: 5em;
-	left: 20em;
-	width: 5em;
+	top: 70%;
+	left: 80%;
+	width: 10em;
+	height: 10em;
+
+	background-image: url("../img/pumps_centrifugal_pump_2.svg");
+	background-size: 100% 100%;
 }

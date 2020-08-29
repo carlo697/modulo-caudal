@@ -38,12 +38,10 @@ class Interruptor {
 		this.setState(!this.getState());
 	}
 }
-*/
-
-
-/*				Clases 				*/
 
 class Dispositivo {
+
+
 	constructor(element, initialState = false) {
 		this.element = element;
 		this.setState(initialState);
@@ -64,6 +62,82 @@ class Dispositivo {
 	getState() {
 		return (this.element.getAttribute("state") == "1") ? true : false;
 	}
+
+	onSetState() {
+
+	}
+
+	onChangeState() {
+
+	}
+}
+*/
+
+
+/*				Clases 				*/
+
+class Dispositivo {
+	constructor(element, initialState = false) {
+		this.element = element;
+		this.state = initialState;
+
+		this.updateState();
+	}
+
+	updateState() {
+		if (this.state) {
+			this.element.classList.add("on");
+			this.element.classList.remove("off");
+		} else {
+			this.element.classList.add("off");
+			this.element.classList.remove("on");
+		}
+	}
+
+	setState(value) {
+		if (this.state == value) {
+			return;
+		}
+
+		this.state = value;
+		this.updateState();
+
+		const audio = this.element.querySelector("audio");
+		if (audio != null) {
+
+			if (audio.hasAttribute("playWhileOn")) {
+				if (value) {
+					audio.currentTime = 0;
+					audio.play();
+				} else {
+					audio.pause();
+				}
+			} else {
+				audio.play();
+			}
+		}
+
+		this.playSound();
+	}
+
+	getState(value) {
+		return this.state;
+	}
+
+	setSound(url, loop) {
+		this.audio = new Audio(url);
+	}
+
+	playSound() {
+		if (this.audio != null) {
+			this.audio.currentTime = 0;
+			this.audio.play();
+		}
+	}
+
+	stopSound() {
+		this.audio.pause();
+	}
 }
 
 class Interruptor extends Dispositivo {
@@ -73,11 +147,38 @@ class Interruptor extends Dispositivo {
 
 		this.targetElement = targetElement;
 		this.element.addEventListener("click", e => this.onClickEvent(e));
+		this.updateState();
 	}
 
-	setState(state) {
-		super.setState(state);
+	onClickEvent(e) {
+		this.setState(!this.getState());
+	}
 
+	updateState() {
+		super.updateState();
+
+		if (this.targetElement != null) {
+			if (this.state) {
+				this.targetElement.classList.add("on");
+				this.targetElement.classList.remove("off");
+			} else {
+				this.targetElement.classList.add("off");
+				this.targetElement.classList.remove("on");
+			}
+		}
+	}
+}
+
+class SwitchTarget extends Dispositivo {
+
+	constructor(element, initialState = false, targetElement = null) {
+		super(element, initialState);
+
+		this.targetElement = targetElement;
+		this.element.addEventListener("click", e => this.onClickEvent(e));
+	}
+
+	onChangeState(e) {
 		if (this.targetElement != null) {
 			if (state) {
 				this.targetElement.classList.add("on");
@@ -87,10 +188,10 @@ class Interruptor extends Dispositivo {
 				this.targetElement.classList.remove("on");
 			}
 		}
-	}
 
-	onClickEvent(e) {
-		this.setState(!this.getState());
+		// Play sound if true
+
+		// Stop sound if false
 	}
 }
 
@@ -114,20 +215,26 @@ document.body.addEventListener("mouseup", mouseupGlobal);
 document.body.addEventListener("touchend", mouseupGlobal);
 document.body.addEventListener("change", changeGlobal);
 
-function seleccionarManual() {
+function seleccionarManual(e) {
 	selector.setAttribute("state", "0");
 	selector.state = 0;
 	_contactor = false;
+
+	e.target.querySelector("audio").play();
 }
 
-function seleccionarOff() {
+function seleccionarOff(e) {
 	selector.setAttribute("state", "1");
 	selector.state = 1;
+
+	e.target.querySelector("audio").play();
 }
 
-function seleccionarAutomatico() {
+function seleccionarAutomatico(e) {
 	selector.setAttribute("state", "2");
 	selector.state = 2;
+
+	e.target.querySelector("audio").play();
 }
 
 let ultimoHightlight = null;
@@ -140,14 +247,6 @@ function clickGlobal(e) {
 
 		menuBoton.setState(false);
 
-		/*
-		const oldHightlight = target.querySelector(".hightlight-overlay");
-
-		if (oldHightlight != null) {
-			oldHightlight.remove();
-		}
-		*/
-
 		if (ultimoHightlight != null) {
 			ultimoHightlight.remove();
 		}
@@ -156,7 +255,7 @@ function clickGlobal(e) {
 		hightlight.className = "hightlight-overlay";
 
 		target.appendChild(hightlight);
-		hightlight.scrollIntoView();
+		hightlight.scrollIntoView(false);
 		ultimoHightlight = hightlight;
 
 		setTimeout( () => {
@@ -166,10 +265,18 @@ function clickGlobal(e) {
 }
 
 function mousedownGlobal(e) {
+	let boton = false;
+
 	if (e.target.id == "botonStart") {
 		presionadoStart = true;
+		boton = true;
 	} else if (e.target.id == "botonStop") {
 		presionadoStop = true;
+		boton = true;
+	}
+
+	if (boton) {
+		e.target.querySelector("audio").play();
 	}
 }
 
@@ -233,21 +340,43 @@ const menuBoton = new Interruptor(
 );
 
 const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
+emergencia1.setSound("sound/emergencia.mp3", false);
+
 const breaker = new Interruptor(document.getElementById("breaker"));
+breaker.setSound("sound/breaker.mp3", false);
+
 const interruptor1 = new Interruptor(document.getElementById("interruptor1"));
+interruptor1.setSound("sound/interruptor.mp3");
+
 const interruptor2 = new Interruptor(document.getElementById("interruptor2"));
+interruptor2.setSound("sound/interruptor.mp3");
+
 const controlador = new Dispositivo(document.getElementById("controlador"));
+
 const contactor = new Dispositivo(document.getElementById("contactor"));
+contactor.setSound("sound/rele.mp3", false);
+
 const termico = new Dispositivo(document.getElementById("termico"));
+termico.setSound("sound/rele.mp3", false);
+
 const protector = new Dispositivo(document.getElementById("protector"));
+protector.setSound("sound/rele.mp3", false);
+
 const rele1 = new Dispositivo(document.getElementById("rele1"));
+rele1.setSound("sound/rele.mp3", false);
+
 const rele2 = new Dispositivo(document.getElementById("rele2"));
+rele2.setSound("sound/rele.mp3", false);
+
 const luzStart = new Dispositivo(document.getElementById("botonStart"));
 const luzStop = new Dispositivo(document.getElementById("botonStop"));
 const luzFalloAire = new Dispositivo(document.getElementById("luzFalloAire"));
 const luzSobrecarga = new Dispositivo(document.getElementById("luzSobrecarga"));
 const luzProcesoBloqueado = new Dispositivo(document.getElementById("luzProcesoBloqueado"));
 const luzSolenoide = new Dispositivo(document.getElementById("luzSolenoide"));
+
+
+const bomba = new Dispositivo(document.getElementById("bomba"));
 
 
 var presionadoStart = false;
@@ -369,6 +498,8 @@ function update(deltaTime) {
 	luzSobrecarga.setState(_luzSobrecarga);
 	luzProcesoBloqueado.setState(_luzProcesoBloqueado);
 	luzSolenoide.setState(_luzSolenoide);
+
+	bomba.setState(_contactor);
 
 	log.textContent = `breaker: ${_breaker}
 interruptor1: ${_interruptor1}
