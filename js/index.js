@@ -1,3 +1,4 @@
+/*
 class Interruptor {
 	constructor(element, initialState = false, targetElement = null) {
 		this.element = element;
@@ -37,6 +38,10 @@ class Interruptor {
 		this.setState(!this.getState());
 	}
 }
+*/
+
+
+/*				Clases 				*/
 
 class Dispositivo {
 	constructor(element, initialState = false) {
@@ -58,6 +63,34 @@ class Dispositivo {
 
 	getState() {
 		return (this.element.getAttribute("state") == "1") ? true : false;
+	}
+}
+
+class Interruptor extends Dispositivo {
+
+	constructor(element, initialState = false, targetElement = null) {
+		super(element, initialState);
+
+		this.targetElement = targetElement;
+		this.element.addEventListener("click", e => this.onClickEvent(e));
+	}
+
+	setState(state) {
+		super.setState(state);
+
+		if (this.targetElement != null) {
+			if (state) {
+				this.targetElement.classList.add("on");
+				this.targetElement.classList.remove("off");
+			} else {
+				this.targetElement.classList.add("off");
+				this.targetElement.classList.remove("on");
+			}
+		}
+	}
+
+	onClickEvent(e) {
+		this.setState(!this.getState());
 	}
 }
 
