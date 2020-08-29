@@ -249,7 +249,7 @@ button {
 	height: 3em;
 	background-color: white;
 	border-radius: 50%;
-	filter: brightness(40%);
+	filter: brightness(20%);
 	border: 0.1em solid black;
 	box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 30%);
 }
@@ -432,7 +432,7 @@ button {
 .pestaña-contenido {
 	height: calc(100% - 30px);
 	overflow: auto;
-	padding: 30px;
+	padding: 1.5em;
 	text-align: justify;
 }
 
@@ -532,6 +532,7 @@ button {
 
 .g-boton {
 	padding: 5px;
+	width: 100%;
 }
 
 
@@ -556,13 +557,15 @@ button {
 }
 
 
-@media (min-width: 0px) and (max-width: 400px){
+@media (min-width: 0px) and (max-width: 350px){
 	html {
-		font-size: 5px;
+		font-size: 4px;
 	}
+}
 
-	#log {
-		display: none;
+@media (min-width: 351px) and (max-width: 400px){
+	html {
+		font-size: 6px;
 	}
 }
 
@@ -581,5 +584,48 @@ button {
 @media (min-width: 701px) and (max-width: 900px) {
 	html {
 		font-size: 8px;
+	}
+}
+
+html {
+	font-size: 1.5vw;
+}
+
+
+
+
+
+
+
+.hightlight-overlay {
+	position: absolute;
+	top: -10%;
+	left: -10%;
+	width: 120%;
+	height: 120%;
+	background-color: rgba(255, 255, 0,85%);
+	filter: blur(5px);
+	animation: desvanecer 4s infinite;
+}
+
+@keyframes desvanecer {
+	0% {
+		opacity: 0;
+	}
+
+	25% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
 	}
 }

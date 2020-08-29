@@ -10,8 +10,6 @@ class Interruptor {
 	setState(state) {
 		this.element.setAttribute("state", state == true ? "1" : "0");
 
-		console.log(this.targetElement);
-
 		if (state) {
 			this.element.classList.add("on");
 			this.element.classList.remove("off");
@@ -66,7 +64,7 @@ class Dispositivo {
 const botonManual = document.getElementById("BotonManual");
 const botonOff = document.getElementById("BotonOff");
 const botonAutomatico = document.getElementById("BotonAutomatico");
-const selector = document.getElementById("Selector");
+const selector = document.getElementById("selector");
 const log = document.getElementById("log");
 
 botonManual.onclick = seleccionarManual;
@@ -99,9 +97,39 @@ function seleccionarAutomatico() {
 	selector.state = 2;
 }
 
+let ultimoHightlight = null;
 
 function clickGlobal(e) {
+	const element = e.target;
 
+	if (element.hasAttribute("hightlightTarget")) {
+		const target = document.getElementById(element.getAttribute("hightlightTarget"));
+
+		menuBoton.setState(false);
+
+		/*
+		const oldHightlight = target.querySelector(".hightlight-overlay");
+
+		if (oldHightlight != null) {
+			oldHightlight.remove();
+		}
+		*/
+
+		if (ultimoHightlight != null) {
+			ultimoHightlight.remove();
+		}
+
+		const hightlight = document.createElement("div");
+		hightlight.className = "hightlight-overlay";
+
+		target.appendChild(hightlight);
+		hightlight.scrollIntoView();
+		ultimoHightlight = hightlight;
+
+		setTimeout( () => {
+			hightlight.remove();
+		}, 8000);
+	}
 }
 
 function mousedownGlobal(e) {
@@ -165,7 +193,7 @@ for (let boton of botonesPestañas) {
 	boton.contenedor.style.display = "none";
 }
 
-new Interruptor(
+const menuBoton = new Interruptor(
 	document.getElementById("menuBoton"),
 	false,
 	document.getElementById("menuLateral")

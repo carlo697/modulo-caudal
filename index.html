@@ -26,7 +26,7 @@
 				<div id="BotonManual" class="señal boton">Manual</div>
 				<div id="BotonOff" class="señal boton">OFF</div>
 				<div id="BotonAutomatico" class="señal boton">Automatico</div>
-				<div id="Selector" state="1" class="grid-i-selector selector">
+				<div id="selector" state="1" class="grid-i-selector selector">
 					<div class="perrilla"></div>
 				</div>
 				<div class="señal encendido">Encendido</div>
@@ -300,7 +300,7 @@
 						<div class="g-elemento">
 				    		<h4>Breaker</h4>
 				    		<img class="apariencia" src="img/breaker_off.svg" alt="">
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="breaker"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este dispositivo permite el paso de corriente a todo el modulo. Si no se activa, el modulo no se podrá encender.</p>
@@ -311,7 +311,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Interruptor 1</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="interruptor1"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este dispositivo permite el paso de corriente a todos los dispositivos de la sección superior del tablero. Si no se activa, no se podrá poner en marcha la bomba del proceso.</p>
@@ -323,7 +323,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Interruptor 2</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="interruptor2"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este dispositivo permite el paso de corriente hacia la sección inferior del tablero. Si no se activa, el Controlador Electrónico no podrá ser encendido.</p>
@@ -344,7 +344,7 @@
 						<div class="g-elemento">
 				    		<h4>Controlador Electrónico</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="controlador"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Con él, el operador es capaz de ingresar el caudal que se desea en el proceso. </p>
@@ -354,19 +354,16 @@
 
 				    	<div class="g-elemento">
 				    		<h4>Interruptores de Emergencia</h4>
-				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Un botón de emergencia y dos selectores de emergencia, son usados para apagar la bomba inmediatamente. Al accionarse, se encenderá la luz de Control de Proceso Bloqueado.</p>
 				    		<p>No se energizara sin activar el Breaker.</p>
-				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
 				    	<div class="g-elemento">
 				    		<h4>Selector de Modo de Operación</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="selector"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este selector tiene tres posiciones:</p>
@@ -379,7 +376,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Pulsador Luminoso de Encendido</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="botonStart"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este botón pulsador es usado para encender la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá siempre y cuando la bomba se halle encendida.</p>
@@ -390,7 +387,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Pulsador Luminoso de Apagado</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="botonStop"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este botón pulsador es usado para apagar la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá cuando la bomba se halle apagada.</p>
@@ -409,7 +406,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Luz de Fallo de Aire</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="luzFalloAire"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Esta luz se encenderá cuando el presostato se desactive, esto sucederá si deja de haber suministro de aire comprimido al modulo.</p>
@@ -420,7 +417,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Luz de Sobrecarga</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="luzSobrecarga"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Esta luz se encenderá cuando el Relé Térmico de la bomba se accione, esto sucederá cuando la bomba trabaje con una corriente mayor a X amperios, indicando que se halla sobrecargada.</p>
@@ -430,7 +427,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Luz de Control de Proceso Bloqueado</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="luzProcesoBloqueado"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Esta luz se encenderá cuando cualquiera de los Interruptores de Emergencia se accione, indicando que la bomba no podrá ser puesta en marcha.</p>
@@ -441,7 +438,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Luz de Válvula Solenoide</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="luzSolenoide"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Luz de Válvula Solenoide: Esta luz indica que la Válvula Solenoide del proceso ha sido accionada. Dicha situación se presentara estando la bomba este en marcha, y al mismo tiempo exista una falla con el suministro de aire comprimido (por ende, el presostato estará desactivado, y la Luz de Fallo de Aire también se encenderá).</p>
@@ -458,7 +455,7 @@
 						<div class="g-elemento">
 				    		<h4>Protector de voltaje</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="protector"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este dispositivo de protección se encenderá (junto con una luz roja) cuando el voltaje de 220 V (proveniente de dos líneas de 110 V) se halle en un rango seguro de operación.</p>
@@ -470,7 +467,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Relé térmico</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="termico"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este elemento supervisa la corriente usada por la bomba del proceso, y se disparara cuando esta supere los X amperios. Al dispararse, desconectara el contactor y a la bomba, además, se encenderá la Luz de Sobrecarga.</p>
@@ -488,7 +485,7 @@
 						<div class="g-elemento">
 				    		<h4>Contactor</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="contactor"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Cuando se energiza pondrá en marcha a la bomba del proceso.</p>
@@ -498,7 +495,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Relé 1</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="rele1"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Se activa cuando el Presostato se halla desactivado (lo cual sucede durante una falla de suministro neumático). Se usa para energizar la Válvula solenoide del proceso (y así evitar una sobrecarga en la bomba) y la Luz de Válvula Solenoide.</p>
@@ -508,7 +505,7 @@
 				    	<div class="g-elemento">
 				    		<h4>Relé 2</h4>
 				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<button class="g-boton" hightlightTarget="rele2"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Se activa cuando ninguno de los Interruptores de Emergencia se halle accionado. Cuando este desactivado, energizara a la Luz de Control de Proceso Bloqueado.</p>
