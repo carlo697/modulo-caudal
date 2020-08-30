@@ -338,6 +338,10 @@ button {
 	font-size: 15px;
 }
 
+.ayuda-boton .fa-info {
+	pointer-events: none;
+}
+
 .ayuda-texto {
 	background-color: white;
 	font-size: 15px;
