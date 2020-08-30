@@ -146,7 +146,15 @@ class Interruptor extends Dispositivo {
 		super(element, initialState);
 
 		this.targetElement = targetElement;
-		this.element.addEventListener("click", e => this.onClickEvent(e));
+		this.element.addEventListener("click", e => {
+			e.preventDefault();
+
+			if (e.target.classList.contains("ayuda-overlay")) {
+				return;
+			}
+
+			this.onClickEvent(e)
+		});
 		this.updateState();
 	}
 
@@ -201,6 +209,8 @@ const botonAutomatico = document.getElementById("BotonAutomatico");
 const selector = document.getElementById("selector");
 const log = document.getElementById("log");
 
+const botonFuncionamiento = document.getElementById("boton-funcionamiento");
+
 botonManual.onclick = seleccionarManual;
 botonOff.onclick = seleccionarOff;
 botonAutomatico.onclick = seleccionarAutomatico;
@@ -238,8 +248,53 @@ function seleccionarAutomatico(e) {
 }
 
 let ultimoHightlight = null;
+let usandoAyuda = false;
 
 function clickGlobal(e) {
+	if (usandoAyuda) {
+		if (e.target.id == "textoAyuda" || e.target.classList.contains("ayuda-overlay")) {
+			usandoAyuda = false;
+			document.getElementById("textoAyuda").style.display = "none";
+
+			if (e.target.classList.contains("ayuda-overlay") && e.target.helpTarget != null) {
+				menuBoton.setState("true");
+				abrirPestaña(botonFuncionamiento);
+				e.target.helpTarget.scrollIntoView(true);
+			}
+
+			let elementos = document.querySelectorAll(".ayuda-overlay");
+
+			for (let elemento of elementos) {
+				elemento.remove();
+			}
+		}
+	} else {
+		if (e.target.id == "botonAyuda") {
+			usandoAyuda = true;
+
+			document.getElementById("textoAyuda").style.display = "block";
+
+			const elementos = document.querySelectorAll("[helpTarget]");
+			let styles;
+
+			for (let elemento of elementos) {
+				styles = getComputedStyle(elemento);
+
+				if (styles.position == "static") {
+					elemento.ultimoPosition = styles.position;
+					elemento.style.position = "relative";
+				}
+
+				const overlay = document.createElement("div");
+				overlay.classList = "ayuda-overlay";
+				overlay.helpTarget = document.getElementById(elemento.getAttribute("helpTarget"));
+				elemento.appendChild(overlay);
+			}
+		}
+	}
+
+	
+
 	const element = e.target;
 
 	if (element.hasAttribute("hightlightTarget")) {
@@ -317,20 +372,24 @@ for (let boton of _pestañaBotones) {
 	botonesPestañas.push(boton);
 
 	boton.addEventListener("click", function(e) {
-		for (let boton of botonesPestañas) {
-			boton.classList.remove("on");
-			boton.contenedor.style.display = "none";
-		}
-
-		if (target.style.display == "none") {
-			target.style.display = "block";
-			boton.classList.add("on");
-		}
+		abrirPestaña(boton);
 	});
 }
 
 for (let boton of botonesPestañas) {
 	boton.contenedor.style.display = "none";
+}
+
+function abrirPestaña(pestaña) {
+	for (let boton of botonesPestañas) {
+		boton.classList.remove("on");
+		boton.contenedor.style.display = "none";
+	}
+
+	if (pestaña.contenedor.style.display == "none") {
+		pestaña.contenedor.style.display = "block";
+		pestaña.classList.add("on");
+	}
 }
 
 const menuBoton = new Interruptor(

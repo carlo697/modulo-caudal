@@ -22,85 +22,96 @@
 				<div class="item señal grid-i-señal-parada">
 					Parada de<br>emergencia
 				</div>
-				<button id="stopPulsador" class="grid-i-boton-parada pulsador rojo">STOP</button>
-				<div id="BotonManual" class="señal boton">
+
+				<button id="stopPulsador" class="grid-i-boton-parada pulsador rojo" helpTarget="emergenciaInfo">STOP</button>
+
+				<div id="BotonManual" class="señal boton" helpTarget="selectorInfo">
 					Manual
 					<audio autoplay>
 						<source src="sound/rele.mp3">
 					</audio>
 				</div>
-				<div id="BotonOff" class="señal boton">
+				<div id="BotonOff" class="señal boton" helpTarget="selectorInfo">
 					OFF
 					<audio autoplay>
 						<source src="sound/rele.mp3">
 					</audio>
 				</div>
-
-				<div id="BotonAutomatico" class="señal boton">
+				<div id="BotonAutomatico" class="señal boton" helpTarget="selectorInfo">
 					Automatico
 					<audio autoplay>
 						<source src="sound/rele.mp3">
 					</audio>
 				</div>
-				<div id="selector" state="1" class="grid-i-selector selector">
+
+				<div id="selector" state="1" class="grid-i-selector selector" helpTarget="selectorInfo">
 					<div class="perrilla"></div>
 				</div>
+
 				<div class="señal encendido">Encendido</div>
 				<div class="señal">Fallo de aire</div>
 				<div class="señal">Sobrecarga</div>
-				<button id="botonStart" class="pulsador-l verde">
+
+				<button id="botonStart" class="pulsador-l verde" helpTarget="botonStartInfo">
 					<audio autoplay>
 						<source src="sound/pulsador.mp3">
 					</audio>
 					START
 				</button>
-				<div id="luzFalloAire" class="luz amarillo"></div>
-				<div id="luzSobrecarga" class="luz roja"></div>
+				<div id="luzFalloAire" class="luz amarillo" helpTarget="luzFalloAireInfo"></div>
+				<div id="luzSobrecarga" class="luz roja" helpTarget="luzSobrecargaInfo"></div>
+
 				<div class="señal">Apagado</div>
 				<div class="señal">Control de proceso<br>bloqueado</div>
 				<div class="señal">Válvula solenoide</div>
-				<button id="botonStop" class="pulsador-l rojo">
+
+				<button id="botonStop" class="pulsador-l rojo" helpTarget="botonStopInfo">
 					<audio autoplay>
 						<source src="sound/pulsador.mp3">
 					</audio>
 					STOP
 				</button>
-				<div id="luzProcesoBloqueado" class="luz"></div>
-				<div id="luzSolenoide" class="luz amarillo"></div>
+				<div id="luzProcesoBloqueado" class="luz" helpTarget="luzProcesoBloqueadoInfo"></div>
+				<div id="luzSolenoide" class="luz amarillo" helpTarget="luzSolenoideInfo"></div>
 			</div>
 
 			<div class="panel superior-in">
-				<div id="interruptor1" class="interruptor i1 iconos superior">
+				<div id="interruptor1" class="interruptor i1 iconos superior" helpTarget="interruptor1Info">
 					Interruptor 1
 					<i class="icono-on fas fa-check-circle"></i>
 					<i class="icono-off far fa-circle"></i>
 				</div>
-				<div id="breaker" class="breaker iconos superior">
+
+				<div id="breaker" class="breaker iconos superior ayuda" helpTarget="breakerInfo">
 					Breaker
 					<img  class="imagen hide-off" src="img/breaker_off.svg" alt="">
 					<img  class="imagen hide-on" src="img/breaker_on.svg" alt="">
 				</div>
-				<div id="protector" class="protector iconos">
+
+				<div id="protector" class="protector iconos" helpTarget="protectorInfo">
 					Protector
 					<i class="icono-off fas fa-exclamation-triangle"></i>
 					<i class="icono-on fas fa-check"></i>
 				</div>
-				<div id="rele1" class="rele r1 iconos">
+
+				<div id="rele1" class="rele r1 iconos" helpTarget="rele1Info">
 					rele1
 					<i class="icono-off"></i>
 					<i class="icono-on fas fa-bolt"></i>
 				</div>
-				<div id="rele2" class="rele r2 iconos">
+
+				<div id="rele2" class="rele r2 iconos" helpTarget="rele2Info">
 					rele2
 					<i class="icono-off"></i>
 					<i class="icono-on fas fa-bolt"></i>
 				</div>
-				<div id="contactor" class="contactor iconos">
+				<div id="contactor" class="contactor iconos" helpTarget="contactorInfo">
 					Contactor
 					<i class="icono-off"></i>
 					<i class="icono-on fas fa-bolt"></i>
 				</div>
-				<div id="termico" class="termico iconos">
+
+				<div id="termico" class="termico iconos" helpTarget="termicoInfo">
 					Termico
 					<i class="icono-off"></i>
 					<i class="icono-on fas fa-bolt"></i>
@@ -116,12 +127,12 @@
 			<div class="panel inferior">
 				<div class="señal-proyecto">Modulo de caudal de lazo cerrado</div>
 				<div class="señal señal-c">Controlador</div>
-				<div id="controlador" class="controlador elemento"></div>
+				<div id="controlador" class="controlador elemento" helpTarget="controladorInfo"></div>
 			</div>
 
 			<div class="panel inferior-in">
 
-				<div id="interruptor2" class="interruptor i2 iconos superior">
+				<div id="interruptor2" class="interruptor i2 iconos superior" helpTarget="interruptor2Info">
 					Interruptor2
 					<i class="icono-on fas fa-check-circle"></i>
 					<i class="icono-off far fa-circle"></i>
@@ -142,13 +153,17 @@
 		</div>
 
 		<div class="proceso-fondo">
-			<div id="bomba">
+			<div id="bomba" helpTarget="bombaInfo">
 				<audio autoplay loop playWhileOn>
 					<source src="sound/bomba.wav">
 				</audio>
 			</div>
 
 		</div>
+
+		<button id="botonAyuda" class="ayuda-fixed ayuda-boton"><i class="fas fa-info"></i></button>
+
+		<div id="textoAyuda" class="ayuda-fixed ayuda-texto">Haga clic en un dispositivo del proceso para aprender más de él</div>
 	</main>
 
 	<div id="menuLateral" class="menu">
@@ -161,7 +176,7 @@
 			<div class="pestañas">
 				<button class="pestaña" for="practicas">Practicas</button>
 				<button class="pestaña" for="planos">Planos</button>
-				<button class="pestaña" for="guias">Funcionamiento</button>
+				<button id="boton-funcionamiento" class="pestaña" for="guias">Funcionamiento</button>
 				<button class="pestaña" for="fallas">Fallas</button>
 			</div>
 
@@ -208,7 +223,7 @@
 				    	</div>
 
 				    	<!-- Bomba Centrifuga -->
-						<div class="g-elemento">
+						<div class="g-elemento" id="bombaInfo">
 				    		<h4>Bomba Centrifuga</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="bomba"><i class="fas fa-eye" ></i>Ver</button>
@@ -326,7 +341,7 @@
 						<h4 class="g-titulo">Informacion</h4>
 
 						<!-- Breaker -->
-						<div class="g-elemento">
+						<div id="breakerInfo" class="g-elemento">
 				    		<h4>Breaker</h4>
 				    		<img class="apariencia" src="img/breaker_off.svg" alt="">
 				    		<button class="g-boton" hightlightTarget="breaker"><i class="fas fa-eye"></i>Ver</button>
@@ -337,7 +352,7 @@
 				    	</div>
 
 				    	<!-- Interruptor 1 -->
-				    	<div class="g-elemento">
+				    	<div id="interruptor1Info" class="g-elemento">
 				    		<h4>Interruptor 1</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="interruptor1"><i class="fas fa-eye"></i>Ver</button>
@@ -349,7 +364,7 @@
 				    	</div>
 
 				    	<!-- Interruptor 2 -->
-				    	<div class="g-elemento">
+				    	<div id="interruptor2Info" class="g-elemento">
 				    		<h4>Interruptor 2</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="interruptor2"><i class="fas fa-eye"></i>Ver</button>
@@ -370,7 +385,7 @@
 						<h4 class="g-titulo">Nombre</h4>
 						<h4 class="g-titulo">Informacion</h4>
 
-						<div class="g-elemento">
+						<div id="controladorInfo" class="g-elemento">
 				    		<h4>Controlador Electrónico</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="controlador"><i class="fas fa-eye"></i>Ver</button>
@@ -381,7 +396,7 @@
 				    	</div>
 
 
-				    	<div class="g-elemento">
+				    	<div id="emergenciaInfo" class="g-elemento">
 				    		<h4>Interruptores de Emergencia</h4>
 				    	</div>
 				    	<div class="g-info">
@@ -389,7 +404,7 @@
 				    		<p>No se energizara sin activar el Breaker.</p>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="selectorInfo" class="g-elemento">
 				    		<h4>Selector de Modo de Operación</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="selector"><i class="fas fa-eye"></i>Ver</button>
@@ -402,7 +417,7 @@
 				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="botonStartInfo" class="g-elemento">
 				    		<h4>Pulsador Luminoso de Encendido</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="botonStart"><i class="fas fa-eye"></i>Ver</button>
@@ -413,7 +428,7 @@
 				    	</div>
 
 
-				    	<div class="g-elemento">
+				    	<div id="botonStopInfo" class="g-elemento">
 				    		<h4>Pulsador Luminoso de Apagado</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="botonStop"><i class="fas fa-eye"></i>Ver</button>
@@ -432,7 +447,7 @@
 				    	</div>
 
 
-				    	<div class="g-elemento">
+				    	<div id="luzFalloAireInfo" class="g-elemento">
 				    		<h4>Luz de Fallo de Aire</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="luzFalloAire"><i class="fas fa-eye"></i>Ver</button>
@@ -443,7 +458,7 @@
 				    	</div>
 
 
-				    	<div class="g-elemento">
+				    	<div id="luzSobrecargaInfo" class="g-elemento">
 				    		<h4>Luz de Sobrecarga</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="luzSobrecarga"><i class="fas fa-eye"></i>Ver</button>
@@ -453,7 +468,7 @@
 				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="luzProcesoBloqueadoInfo" class="g-elemento">
 				    		<h4>Luz de Control de Proceso Bloqueado</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="luzProcesoBloqueado"><i class="fas fa-eye"></i>Ver</button>
@@ -464,7 +479,7 @@
 				    	</div>
 
 
-				    	<div class="g-elemento">
+				    	<div id="luzSolenoideInfo" class="g-elemento">
 				    		<h4>Luz de Válvula Solenoide</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="luzSolenoide"><i class="fas fa-eye"></i>Ver</button>
@@ -481,7 +496,7 @@
 						<h4 class="g-titulo">Nombre</h4>
 						<h4 class="g-titulo">Informacion</h4>
 
-						<div class="g-elemento">
+						<div id="protectorInfo" class="g-elemento">
 				    		<h4>Protector de voltaje</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="protector"><i class="fas fa-eye"></i>Ver</button>
@@ -493,7 +508,7 @@
 				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="termicoInfo" class="g-elemento">
 				    		<h4>Relé térmico</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="termico"><i class="fas fa-eye"></i>Ver</button>
@@ -511,7 +526,7 @@
 						<h4 class="g-titulo">Nombre</h4>
 						<h4 class="g-titulo">Informacion</h4>
 
-						<div class="g-elemento">
+						<div id="contactorInfo" class="g-elemento">
 				    		<h4>Contactor</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="contactor"><i class="fas fa-eye"></i>Ver</button>
@@ -521,7 +536,7 @@
 				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="rele1Info" class="g-elemento">
 				    		<h4>Relé 1</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="rele1"><i class="fas fa-eye"></i>Ver</button>
@@ -531,7 +546,7 @@
 				    		<button class="g-boton">Leer más</button>
 				    	</div>
 
-				    	<div class="g-elemento">
+				    	<div id="rele2Info" class="g-elemento">
 				    		<h4>Relé 2</h4>
 				    		<div class="placeholder"></div>
 				    		<button class="g-boton" hightlightTarget="rele2"><i class="fas fa-eye"></i>Ver</button>
