@@ -1,79 +1,3 @@
-/*
-class Interruptor {
-	constructor(element, initialState = false, targetElement = null) {
-		this.element = element;
-		this.targetElement = targetElement;
-		this.setState(initialState);
-
-		this.element.addEventListener("click", e => this.onClickEvent(e));
-	}
-
-	setState(state) {
-		this.element.setAttribute("state", state == true ? "1" : "0");
-
-		if (state) {
-			this.element.classList.add("on");
-			this.element.classList.remove("off");
-		} else {
-			this.element.classList.add("off");
-			this.element.classList.remove("on");
-		}
-
-		if (this.targetElement != null) {
-			if (state) {
-				this.targetElement.classList.add("on");
-				this.targetElement.classList.remove("off");
-			} else {
-				this.targetElement.classList.add("off");
-				this.targetElement.classList.remove("on");
-			}
-		}
-	}
-
-	getState() {
-		return (this.element.getAttribute("state") == "1") ? true : false;
-	}
-
-	onClickEvent(e) {
-		this.setState(!this.getState());
-	}
-}
-
-class Dispositivo {
-
-
-	constructor(element, initialState = false) {
-		this.element = element;
-		this.setState(initialState);
-	}
-
-	setState(state) {
-		this.element.setAttribute("state", state == true ? "1" : "0");
-
-		if (state) {
-			this.element.classList.add("on");
-			this.element.classList.remove("off");
-		} else {
-			this.element.classList.add("off");
-			this.element.classList.remove("on");
-		}
-	}
-
-	getState() {
-		return (this.element.getAttribute("state") == "1") ? true : false;
-	}
-
-	onSetState() {
-
-	}
-
-	onChangeState() {
-
-	}
-}
-*/
-
-
 /*				Clases 				*/
 
 class Dispositivo {
@@ -145,11 +69,14 @@ class Interruptor extends Dispositivo {
 	constructor(element, initialState = false, targetElement = null) {
 		super(element, initialState);
 
+		this.enable = true;
+		this.updateStateCallback = null;
+
 		this.targetElement = targetElement;
 		this.element.addEventListener("click", e => {
 			e.preventDefault();
 
-			if (e.target.classList.contains("ayuda-overlay")) {
+			if (!this.enable || e.target.classList.contains("ayuda-overlay")) {
 				return;
 			}
 
@@ -174,32 +101,20 @@ class Interruptor extends Dispositivo {
 				this.targetElement.classList.remove("on");
 			}
 		}
+
+		if (this.updateStateCallback != null) {
+			this.updateStateCallback(this);
+		}
 	}
 }
 
-class SwitchTarget extends Dispositivo {
+class Termico extends Interruptor {
+	onClickEvent(e) {
+		super.onClickEvent(e);
 
-	constructor(element, initialState = false, targetElement = null) {
-		super(element, initialState);
-
-		this.targetElement = targetElement;
-		this.element.addEventListener("click", e => this.onClickEvent(e));
-	}
-
-	onChangeState(e) {
-		if (this.targetElement != null) {
-			if (state) {
-				this.targetElement.classList.add("on");
-				this.targetElement.classList.remove("off");
-			} else {
-				this.targetElement.classList.add("off");
-				this.targetElement.classList.remove("on");
-			}
+		if (this.state == false) {
+			this.enable = false;
 		}
-
-		// Play sound if true
-
-		// Stop sound if false
 	}
 }
 
@@ -210,6 +125,45 @@ const selector = document.getElementById("selector");
 const log = document.getElementById("log");
 
 const botonFuncionamiento = document.getElementById("boton-funcionamiento");
+
+const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
+emergencia1.setSound("sound/emergencia.mp3", false);
+
+const breaker = new Interruptor(document.getElementById("breaker"));
+breaker.setSound("sound/breaker.mp3", false);
+
+const interruptor1 = new Interruptor(document.getElementById("interruptor1"));
+interruptor1.setSound("sound/interruptor.mp3");
+
+const interruptor2 = new Interruptor(document.getElementById("interruptor2"));
+interruptor2.setSound("sound/interruptor.mp3");
+
+const controlador = new Dispositivo(document.getElementById("controlador"));
+
+const contactor = new Dispositivo(document.getElementById("contactor"));
+contactor.setSound("sound/rele.mp3", false);
+
+const termico = new Termico(document.getElementById("termico"));
+termico.enable = false;
+termico.setSound("sound/rele.mp3", false);
+
+const protector = new Dispositivo(document.getElementById("protector"));
+protector.setSound("sound/rele.mp3", false);
+
+const rele1 = new Dispositivo(document.getElementById("rele1"));
+rele1.setSound("sound/rele.mp3", false);
+
+const rele2 = new Dispositivo(document.getElementById("rele2"));
+rele2.setSound("sound/rele.mp3", false);
+
+const luzStart = new Dispositivo(document.getElementById("botonStart"));
+const luzStop = new Dispositivo(document.getElementById("botonStop"));
+const luzFalloAire = new Dispositivo(document.getElementById("luzFalloAire"));
+const luzSobrecarga = new Dispositivo(document.getElementById("luzSobrecarga"));
+const luzProcesoBloqueado = new Dispositivo(document.getElementById("luzProcesoBloqueado"));
+const luzSolenoide = new Dispositivo(document.getElementById("luzSolenoide"));
+
+const bomba = new Dispositivo(document.getElementById("bomba"));
 
 selector.state = parseInt(selector.getAttribute("state"), 10);
 
@@ -335,6 +289,12 @@ function mouseupGlobal(e) {
 	}
 }
 
+termico.updateStateCallback = (element) => {
+	if (!element.state) {
+		document.getElementById("sobreCarga").checked = false;
+	}
+};
+
 function changeGlobal(e) {
 	const id = e.target.id;
 	const target = e.target;
@@ -345,6 +305,9 @@ function changeGlobal(e) {
 		sobreVoltaje = target.checked;
 	} else if (id == "sobreCarga") {
 		sobreCarga = target.checked;
+
+		termico.setState(true);
+		termico.enable = true;
 	}
 }
 
@@ -390,45 +353,6 @@ const menuBoton = new Interruptor(
 	document.getElementById("menuLateral")
 );
 
-const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
-emergencia1.setSound("sound/emergencia.mp3", false);
-
-const breaker = new Interruptor(document.getElementById("breaker"));
-breaker.setSound("sound/breaker.mp3", false);
-
-const interruptor1 = new Interruptor(document.getElementById("interruptor1"));
-interruptor1.setSound("sound/interruptor.mp3");
-
-const interruptor2 = new Interruptor(document.getElementById("interruptor2"));
-interruptor2.setSound("sound/interruptor.mp3");
-
-const controlador = new Dispositivo(document.getElementById("controlador"));
-
-const contactor = new Dispositivo(document.getElementById("contactor"));
-contactor.setSound("sound/rele.mp3", false);
-
-const termico = new Dispositivo(document.getElementById("termico"));
-termico.setSound("sound/rele.mp3", false);
-
-const protector = new Dispositivo(document.getElementById("protector"));
-protector.setSound("sound/rele.mp3", false);
-
-const rele1 = new Dispositivo(document.getElementById("rele1"));
-rele1.setSound("sound/rele.mp3", false);
-
-const rele2 = new Dispositivo(document.getElementById("rele2"));
-rele2.setSound("sound/rele.mp3", false);
-
-const luzStart = new Dispositivo(document.getElementById("botonStart"));
-const luzStop = new Dispositivo(document.getElementById("botonStop"));
-const luzFalloAire = new Dispositivo(document.getElementById("luzFalloAire"));
-const luzSobrecarga = new Dispositivo(document.getElementById("luzSobrecarga"));
-const luzProcesoBloqueado = new Dispositivo(document.getElementById("luzProcesoBloqueado"));
-const luzSolenoide = new Dispositivo(document.getElementById("luzSolenoide"));
-
-
-const bomba = new Dispositivo(document.getElementById("bomba"));
-
 
 var presionadoStart = false;
 var presionadoStop = false;
@@ -453,9 +377,8 @@ function update(deltaTime) {
 	let _emergencia3 = false;
 
 	let _selectorPosicion = parseInt(selector.getAttribute("state"));
-
 	
-	let _termico = sobreCarga;
+	let _termico = termico.getState();
 
 	let _protector = false;
 	let _rele1 = false;
@@ -539,7 +462,7 @@ function update(deltaTime) {
 
 	controlador.setState(_controlador);
 	contactor.setState(_contactor);
-	termico.setState(_termico);
+	//termico.setState(_termico);
 	protector.setState(_protector);
 	rele1.setState(_rele1);
 	rele2.setState(_rele2);
