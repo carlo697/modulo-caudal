@@ -211,10 +211,6 @@ const log = document.getElementById("log");
 
 const botonFuncionamiento = document.getElementById("boton-funcionamiento");
 
-botonManual.onclick = seleccionarManual;
-botonOff.onclick = seleccionarOff;
-botonAutomatico.onclick = seleccionarAutomatico;
-
 selector.state = parseInt(selector.getAttribute("state"), 10);
 
 document.body.addEventListener("click", clickGlobal);
@@ -225,34 +221,14 @@ document.body.addEventListener("mouseup", mouseupGlobal);
 document.body.addEventListener("touchend", mouseupGlobal);
 document.body.addEventListener("change", changeGlobal);
 
-function seleccionarManual(e) {
-	selector.setAttribute("state", "0");
-	selector.state = 0;
-	_contactor = false;
-
-	e.target.querySelector("audio").play();
-}
-
-function seleccionarOff(e) {
-	selector.setAttribute("state", "1");
-	selector.state = 1;
-
-	e.target.querySelector("audio").play();
-}
-
-function seleccionarAutomatico(e) {
-	selector.setAttribute("state", "2");
-	selector.state = 2;
-
-	e.target.querySelector("audio").play();
-}
-
 let ultimoHightlight = null;
 let usandoAyuda = false;
 
 function clickGlobal(e) {
 	if (usandoAyuda) {
 		if (e.target.id == "textoAyuda" || e.target.classList.contains("ayuda-overlay")) {
+			e.stopPropagation();
+
 			usandoAyuda = false;
 			document.getElementById("textoAyuda").style.display = "none";
 
@@ -291,9 +267,25 @@ function clickGlobal(e) {
 				elemento.appendChild(overlay);
 			}
 		}
-	}
 
-	
+		if (e.target.id == "botonManual") {
+			selector.setAttribute("state", "0");
+			selector.state = 0;
+			_contactor = false;
+
+			e.target.querySelector("audio").play();
+		} else if (e.target.id == "botonOff") {
+			selector.setAttribute("state", "1");
+			selector.state = 1;
+
+			e.target.querySelector("audio").play();
+		} else if (e.target.id == "botonAutomatico") {
+			selector.setAttribute("state", "2");
+			selector.state = 2;
+
+			e.target.querySelector("audio").play();
+		}
+	}
 
 	const element = e.target;
 
