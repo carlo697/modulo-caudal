@@ -1,0 +1,37 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 12pt;
+	font-family: Arial;
+	text-align: justify;
+}
+
+body {
+	padding: 1.5cm 1.5cm;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 10pt;
+}
+
+h2 {
+	margin-bottom: 10pt;
+}
+
+p {
+	margin-bottom: 10pt;
+}
+
+li {
+	margin-left: 1cm;
+	margin-bottom: 3pt;
+}
+
+.respuesta {
+	text-decoration: underline;
+}

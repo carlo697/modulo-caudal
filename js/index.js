@@ -309,6 +309,23 @@ function changeGlobal(e) {
 		termico.setState(true);
 		termico.enable = true;
 	}
+
+	if (target.hasAttribute("preguntaId")) {
+		const id = target.getAttribute("preguntaId");
+		localStorage.setItem(id, target.value);
+	}
+	
+}
+
+
+const preguntas = document.querySelectorAll("[preguntaId]");
+
+for (input of preguntas) {
+	const valor = localStorage.getItem(input.getAttribute("preguntaId"));
+
+	if (valor != null) {
+		input.value = valor;
+	}
 }
 
 
@@ -323,7 +340,10 @@ for (let boton of _pestañaBotones) {
 		continue;
 	}
 
+	const type = boton.getAttribute("type");
+
 	boton.contenedor = target;
+	boton.tipo = type;
 	botonesPestañas.push(boton);
 
 	boton.addEventListener("click", function(e) {
@@ -337,8 +357,10 @@ for (let boton of botonesPestañas) {
 
 function abrirPestaña(pestaña) {
 	for (let boton of botonesPestañas) {
-		boton.classList.remove("on");
-		boton.contenedor.style.display = "none";
+		if (boton.tipo == pestaña.tipo) {
+			boton.classList.remove("on");
+			boton.contenedor.style.display = "none";
+		}
 	}
 
 	if (pestaña.contenedor.style.display == "none") {
