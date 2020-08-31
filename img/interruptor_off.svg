@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px"
-	 height="100px" viewBox="0 0 50 100" style="enable-background:new 0 0 50 100;" xml:space="preserve">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="50px" height="100px" viewBox="0 0 50 100" style="enable-background:new 0 0 50 100;" xml:space="preserve">
 <style type="text/css">
 <![CDATA[
 @font-face{font-family:'MyriadPro-Bold';src:url("data:;base64,\
@@ -5403,37 +5403,38 @@ AzQCIgM3AzkCLgNDA0MCMQAA")}
 	<rect x="1.5" y="1.5" style="fill:#ECEAED;" width="47" height="97"/>
 	<circle style="fill:#B7B7B7;stroke:#4D4D4D;stroke-width:0.4;stroke-miterlimit:10;" cx="12.79" cy="9.565" r="4.292"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.589" y1="10.701" x2="13.892" y2="8.261"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.589" y1="10.701" x2="13.892" y2="8.261"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.563" y1="8.287" x2="13.918" y2="10.675"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.563" y1="8.287" x2="13.918" y2="10.675"/>
 	<circle style="fill:#B7B7B7;stroke:#4D4D4D;stroke-width:0.4;stroke-miterlimit:10;" cx="37.21" cy="9.565" r="4.292"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.009" y1="10.701" x2="38.312" y2="8.261"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.009" y1="10.701" x2="38.313" y2="8.261"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="35.982" y1="8.287" x2="38.338" y2="10.675"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="35.982" y1="8.287" x2="38.338" y2="10.675"/>
 	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M10.156,1.5v1.986C7.793,4.492,6.137,6.834,6.137,9.565
-		c0,3.648,2.956,6.604,6.604,6.604s6.604-2.956,6.604-6.604c0-2.841-1.797-5.256-4.314-6.188V1.5"/>
-	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M34.625,1.5v1.986c-2.363,1.006-4.019,3.348-4.019,6.079
-		c0,3.648,2.956,6.604,6.604,6.604s6.604-2.956,6.604-6.604c0-2.841-1.797-5.256-4.314-6.188V1.5"/>
+		c0,3.648,2.956,6.604,6.604,6.604c3.648,0,6.604-2.956,6.604-6.604c0-2.841-1.797-5.256-4.314-6.188V1.5"/>
+	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M34.625,1.5v1.986c-2.363,1.006-4.02,3.348-4.02,6.079
+		c0,3.648,2.957,6.604,6.604,6.604s6.604-2.956,6.604-6.604c0-2.841-1.797-5.256-4.314-6.188V1.5"/>
 	<circle style="fill:#B7B7B7;stroke:#4D4D4D;stroke-width:0.4;stroke-miterlimit:10;" cx="12.815" cy="90.435" r="4.292"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.614" y1="89.299" x2="13.917" y2="91.738"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.614" y1="89.299" x2="13.917" y2="91.738"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.587" y1="91.713" x2="13.943" y2="89.324"/>
-	<circle style="fill:#B7B7B7;stroke:#4D4D4D;stroke-width:0.4;stroke-miterlimit:10;" cx="37.235" cy="90.435" r="4.292"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="11.587" y1="91.713" x2="13.943" y2="89.324"/>
+	<circle style="fill:#B7B7B7;stroke:#4D4D4D;stroke-width:0.4;stroke-miterlimit:10;" cx="37.234" cy="90.435" r="4.292"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.034" y1="89.299" x2="38.337" y2="91.738"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.034" y1="89.299" x2="38.337" y2="91.738"/>
 	
-		<line style="fill:#626463;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.007" y1="91.713" x2="38.363" y2="89.324"/>
-	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M10.181,98.5v-1.986c-2.363-1.006-4.019-3.349-4.019-6.079
-		c0-3.647,2.956-6.604,6.604-6.604s6.604,2.956,6.604,6.604c0,2.841-1.797,5.256-4.314,6.188V98.5"/>
-	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M34.65,98.5v-1.986c-2.363-1.006-4.019-3.349-4.019-6.079
-		c0-3.647,2.956-6.604,6.604-6.604s6.604,2.956,6.604,6.604c0,2.841-1.797,5.256-4.314,6.188V98.5"/>
+		<line style="fill:none;stroke:#707070;stroke-linecap:round;stroke-miterlimit:10;" x1="36.007" y1="91.713" x2="38.363" y2="89.324"/>
+	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M10.181,98.5v-1.986c-2.363-1.006-4.019-3.349-4.019-6.078
+		c0-3.647,2.956-6.604,6.604-6.604s6.604,2.956,6.604,6.604c0,2.84-1.797,5.256-4.314,6.188V98.5"/>
+	<path style="fill:none;stroke:#A8A8A8;stroke-miterlimit:10;" d="M34.65,98.5v-1.986c-2.363-1.006-4.02-3.349-4.02-6.078
+		c0-3.647,2.956-6.604,6.604-6.604c3.648,0,6.604,2.956,6.604,6.604c0,2.84-1.797,5.256-4.313,6.188V98.5"/>
 	<rect x="1.5" y="22" style="fill:#ECEAED;" width="47" height="56"/>
 	<rect x="1.5" y="78" style="fill:#A8A8A8;" width="47" height="2.5"/>
 	<rect x="1.5" y="19.5" style="fill:#CECECE;" width="47" height="2.5"/>
 	<path style="fill:#CECECE;" d="M24.906,3.813c0.984,0,1.781-1.035,1.781-2.313h-3.563C23.125,2.777,23.922,3.813,24.906,3.813z"/>
-	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="25" y1="72.5" x2="25" y2="41.0005">
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="281" y1="-317.4995" x2="281" y2="-286" gradientTransform="matrix(1 0 0 -1 -256 -245)">
 		<stop  offset="0" style="stop-color:#D6D6D6"/>
 		<stop  offset="0.3226" style="stop-color:#F1FFFD"/>
 		<stop  offset="1" style="stop-color:#ECEAED"/>
@@ -5443,16 +5444,17 @@ AzQCIgM3AzkCLgNDA0MCMQAA")}
 	<rect x="24.375" y="1.5" style="fill:#A8A8A8;" width="0.375" height="97"/>
 	<rect x="25.25" y="1.5" style="fill:#CECECE;" width="0.375" height="97"/>
 	<rect x="24.75" y="1.5" style="fill:#ECEAED;" width="0.5" height="97"/>
-	<rect x="18.5" y="24.427" style="fill:#5AAF74;" width="27.333" height="3.646"/>
-	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="37.1606" y1="72.5" x2="37.1606" y2="41.0015">
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="293.1611" y1="-317.4995" x2="293.1611" y2="-286.001" gradientTransform="matrix(1 0 0 -1 -256 -245)">
 		<stop  offset="0" style="stop-color:#262626"/>
 		<stop  offset="0.3226" style="stop-color:#404040"/>
 		<stop  offset="1" style="stop-color:#404040"/>
 	</linearGradient>
 	<rect x="29.154" y="41.001" style="fill:url(#SVGID_2_);" width="16.012" height="31.499"/>
-	<text transform="matrix(1 0 0 1 30.0757 50.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">OFF</text>
-	<text transform="matrix(1 0 0 1 31.1362 69.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">ON</text>
-	<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="13.0815" y1="72.5" x2="13.0815" y2="41.0015">
+	<text transform="matrix(1 0 0 1 30.0762 50.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">OFF</text>
+	<text transform="matrix(1 0 0 1 31.1357 69.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">ON</text>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="269.082" y1="-317.4995" x2="269.082" y2="-286.001" gradientTransform="matrix(1 0 0 -1 -256 -245)">
 		<stop  offset="0" style="stop-color:#262626"/>
 		<stop  offset="0.3226" style="stop-color:#404040"/>
 		<stop  offset="1" style="stop-color:#404040"/>
@@ -5461,18 +5463,18 @@ AzQCIgM3AzkCLgNDA0MCMQAA")}
 	<text transform="matrix(1 0 0 1 5.9971 50.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">OFF</text>
 	<text transform="matrix(1 0 0 1 7.0576 69.7412)" style="fill:#FFFFFF; font-family:'MyriadPro-Bold'; font-size:8.2802;">ON</text>
 	<path style="fill:#CECECE;" d="M3.281,1.5H1.5v2.313C2.484,3.813,3.281,2.777,3.281,1.5z"/>
-	<path style="fill:#A8A8A8;" d="M48.5,1.5h-1.875c0,1.277,0.797,2.313,1.781,2.313c0.032,0,0.062-0.01,0.094-0.012V1.5z"/>
+	<path style="fill:#A8A8A8;" d="M48.5,1.5h-1.875c0,1.277,0.797,2.313,1.781,2.313c0.031,0,0.062-0.01,0.094-0.012V1.5z"/>
 	<path style="fill:#848484;" d="M3.281,98.5H1.5v-2.313C2.484,96.188,3.281,97.223,3.281,98.5z"/>
-	<path style="fill:#5B5B5B;" d="M48.5,98.5h-1.875c0-1.277,0.797-2.313,1.781-2.313c0.032,0,0.062,0.011,0.094,0.013V98.5z"/>
+	<path style="fill:#5B5B5B;" d="M48.5,98.5h-1.875c0-1.277,0.797-2.313,1.781-2.313c0.031,0,0.062,0.011,0.094,0.013V98.5z"/>
 </g>
 <g id="off">
 	
-		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="25.0005" y1="39.438" x2="25.0005" y2="22.938" gradientTransform="matrix(1 0 0 -1 0 95.376)">
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="281" y1="406.5615" x2="281" y2="423.0615" gradientTransform="matrix(1 0 0 1 -256 -350.624)">
 		<stop  offset="0" style="stop-color:#404040"/>
 		<stop  offset="0.7216" style="stop-color:#404040"/>
 		<stop  offset="1" style="stop-color:#171717"/>
 	</linearGradient>
 	<rect x="0.625" y="55.938" style="fill:url(#SVGID_4_);" width="48.75" height="16.5"/>
-	<path style="fill:#4F4F4F;" d="M41,63.438H9v9.262c0,0,4.809,2.863,16,2.863s16-2.863,16-2.863V63.438z"/>
+	<path style="fill:#4F4F4F;" d="M41,63.438H9V72.7c0,0,4.809,2.862,16,2.862c11.191,0,16-2.862,16-2.862V63.438z"/>
 </g>
 </svg>
