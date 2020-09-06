@@ -617,12 +617,30 @@ button {
 	margin-left: 2em;
 }
 
-.practica-contenido textarea {
+.practica-contenido textarea, .practicas input {
+	display: inline-block;
 	width: 100%;
 	resize: vertical;
 	font-family: Arial;
 	font-size: 1em;
 	padding: 0.5em;
+}
+
+.practicas label {
+	display: inline-block;
+	width: 80px;
+}
+
+.practicas input {
+	display: inline-block;
+	width: 200px;
+	margin-bottom: 10px;
+}
+
+.input-fila {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
 .boton-imprimir-padre {
