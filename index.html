@@ -143,18 +143,20 @@
 		</div>
 
 		<h1>Proceso - Modulo de control de caudal de lazo cerrado</h1>
-		<div class="proceso-contenedor">
-			<img id="Transmisor" src="img/sensors_pressure_transmitter.svg" alt="">
-			<img id="ValvulaControl" src="img/control_valve.svg" alt="">
-			<img id="Bomba" src="img/pumps_centrifugal_pump_2.svg" alt="">
-
+		<div class="proceso-fondo">
 			<div class="panel-informacion">
 				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
 				<p id="Texto"></p>
 			</div>
-		</div>
 
-		<div class="proceso-fondo">
+			<div id="transmisor" helpTarget="transmisorInfo">
+				<img class="imagen" src="img/transmisor.svg" alt="">
+			</div>
+			
+			<div id="valvulaControl" helpTarget="valvulaControlInfo">
+				<img class="imagen" src="img/valvula_control.svg" alt="">
+			</div>
+
 			<div id="bomba" helpTarget="bombaInfo">
 				<audio loop playWhileOn>
 					<source src="sound/bomba.wav">
@@ -238,10 +240,10 @@
 				    	</div>
 
 				    	<!-- Transmisor -->
-						<div class="g-elemento">
+						<div id="transmisorInfo" class="g-elemento">
 				    		<h4>Transmisor</h4>
-				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<img class="apariencia" src="img/transmisor.svg" alt="">
+				    		<button class="g-boton" hightlightTarget="transmisor"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Este dispositivo (en conjunto con el Elemento Primario) mide el caudal a través de la tubería donde se halle instalado el mismo Elemento Primario, produciendo una señal eléctrica que representara el resultado de la medición.</p>
@@ -303,10 +305,10 @@
 				    	</div>
 
 				    	<!-- Válvula de Control -->
-						<div class="g-elemento">
+						<div id="valvulaControlInfo" class="g-elemento">
 				    		<h4>Válvula de Control</h4>
-				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<img class="apariencia" src="img/valvula_control.svg" alt="">
+				    		<button class="g-boton" hightlightTarget="valvulaControl"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Esta válvula se abre y cierra dependiendo de la señal producida por el Convertidor I/P, regulando así el caudal en la tubería donde se halle instalada. Necesita de un suministro neumático para poder accionarse, y es normalmente cerrada, es decir, sin aire comprimido la válvula se cerrara y podría ocasionar problemas a la bomba (la cual trabajara forzada si esto sucede).</p>

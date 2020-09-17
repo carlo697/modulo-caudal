@@ -23,27 +23,28 @@
 	padding: 0.5em;
 }
 
-#Transmisor {
+#transmisor {
 	position: absolute;
-	top: 5em;
-	left: 1em;
-	width: 5em;
-}
-
-#ValvulaControl {
-	position: absolute;
-	top: 5em;
+	top: 8em;
 	left: 10em;
 	width: 5em;
+	height: 5em;
+}
 
+#valvulaControl {
+	position: absolute;
+	top: 10.3em;
+	left: 18.7em;
+	width: 10em;
+	height: 10em;
 }
 
 #bomba {
 	position: absolute;
-	top: 70%;
-	left: 80%;
-	width: 10em;
-	height: 10em;
+	top: 71%;
+	left: 80.5%;
+	width: 8em;
+	height: 8em;
 
 	background-image: url("../img/pumps_centrifugal_pump_2.svg");
 	background-size: 100% 100%;
