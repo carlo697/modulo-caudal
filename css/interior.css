@@ -113,6 +113,10 @@
 
 
 
+.iconos .icono-off, .iconos .icono-on {
+	filter: drop-shadow( 0.05em 0.05em 0.1em rgba(0, 0, 0, .9));
+}
+
 .iconos.off .icono-off {
 	font-size: 1.5em;
 	border-radius: 50%;
