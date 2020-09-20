@@ -66,11 +66,14 @@
 .termico {
 	width: 5em;
 	height: 5em;
-	background-color: #EDEDED;
 
 	position: absolute;
-	top: 80%;
+	top: 80.5%;
 	left: 65%;
+}
+
+.termico.on {
+	cursor: pointer;
 }
 
 
