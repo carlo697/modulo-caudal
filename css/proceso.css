@@ -49,3 +49,11 @@
 	background-image: url("../img/pumps_centrifugal_pump_2.svg");
 	background-size: 100% 100%;
 }
+
+#tanque {
+	position: absolute;
+	top: 35%;
+	left: 66.5%;
+	width: 8em;
+	height: 17em;
+}
