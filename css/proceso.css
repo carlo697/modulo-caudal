@@ -57,3 +57,45 @@
 	width: 8em;
 	height: 17em;
 }
+
+#chorro1 {
+	position: absolute;
+	top: 40.5%;
+	left: 68%;
+}
+
+
+.chorro-agua {
+	position: relative;
+	width: 0.5em;
+	height: 0.5em;
+	background-color: red;
+}
+
+.particula-agua {
+	position: absolute;
+	width: 0.7em;
+	height: 0.7em;
+	background-color: blue;
+	animation: agua 0.5s;
+	border-radius: 50%;
+	filter: blur(0.1em);
+}
+
+@keyframes agua {
+	0% {
+
+	}
+
+	10% {
+		transform: translate(1.5em, 1em);
+	}
+
+	35% {
+		transform: translate(2em, 3em);
+	}
+
+	100% {
+		transform: translate(3em, 10em);
+	}
+}

@@ -318,6 +318,24 @@ function changeGlobal(e) {
 }
 
 
+let activarChorro1 = false;
+const chorro1 = document.querySelector("#chorro1");
+
+setInterval( () => {
+	if (activarChorro1) {
+		const particula = document.createElement("div");
+		particula.classList.add("particula-agua");
+
+		chorro1.appendChild(particula);
+
+		setTimeout( () => {
+			particula.remove();
+		}, 500);
+	}
+}, 200);
+
+
+
 const preguntas = document.querySelectorAll("[preguntaId]");
 
 for (input of preguntas) {
@@ -478,6 +496,12 @@ function update(deltaTime) {
 
 	} else {
 		_contactor = false;
+	}
+
+	if (_contactor && !_luzFalloAire) {
+		activarChorro1 = true;
+	} else {
+		activarChorro1 = false;
 	}
 
 	_luzStart = _contactor;
