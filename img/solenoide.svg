@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="130px" height="100px" viewBox="0 0 130 100" style="enable-background:new 0 0 130 100;" xml:space="preserve">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="89.834" y1="12.8335" x2="89.834" y2="32.667">
+	<stop  offset="0" style="stop-color:#C1272D"/>
+	<stop  offset="1" style="stop-color:#7F2300"/>
+</linearGradient>
+<polyline style="fill:url(#SVGID_1_);" points="80.667,12.833 83.572,15 99,15 99,30 83.572,30 80.667,32.667 "/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="44.3335" y1="21.1211" x2="81.167" y2="21.1211">
+	<stop  offset="0" style="stop-color:#C1272D"/>
+	<stop  offset="1" style="stop-color:#7F2300"/>
+</linearGradient>
+<path style="fill:url(#SVGID_2_);" d="M81.167,38.5H44.333c0,0,0-27,0-30.625S62.75,3.75,62.75,3.75s18.417-0.375,18.417,4.125
+	S81.167,38.5,81.167,38.5z"/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="62.5801" y1="37.75" x2="62.5801" y2="40.667">
+	<stop  offset="0.7044" style="stop-color:#C1272D"/>
+	<stop  offset="1" style="stop-color:#7F2300"/>
+</linearGradient>
+<rect x="41.167" y="37.75" style="fill:url(#SVGID_3_);" width="42.826" height="2.917"/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="62.542" y1="40.667" x2="62.542" y2="53.0005">
+	<stop  offset="0.2365" style="stop-color:#1F6B00"/>
+	<stop  offset="1" style="stop-color:#035400"/>
+</linearGradient>
+<polygon style="fill:url(#SVGID_4_);" points="89.25,53 35.833,53 41.333,40.667 83.993,40.667 "/>
+<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="62.4932" y1="93.833" x2="62.4932" y2="60.083">
+	<stop  offset="0.2365" style="stop-color:#1F6B00"/>
+	<stop  offset="1" style="stop-color:#043F00"/>
+</linearGradient>
+<path style="fill:url(#SVGID_5_);stroke:#006837;stroke-miterlimit:10;" d="M94.75,60.083H77.375h-4.5h-24.5v2.125h-18.25v26h13.5
+	c0,0,2.169,0.12,4.75-0.242v5.867h29v-9.842c5.65-0.012,14.905-0.804,17.375-5.658C95,71.583,94.75,60.083,94.75,60.083z"/>
+<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="8.375" y1="76.541" x2="35.7085" y2="76.541">
+	<stop  offset="0" style="stop-color:#0D5400"/>
+	<stop  offset="1" style="stop-color:#085400"/>
+</linearGradient>
+<rect x="8.375" y="58.125" style="fill:url(#SVGID_6_);" width="27.333" height="36.833"/>
+<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="89.125" y1="76.541" x2="117.625" y2="76.541">
+	<stop  offset="0" style="stop-color:#0D5400"/>
+	<stop  offset="1" style="stop-color:#085400"/>
+</linearGradient>
+<path style="fill:url(#SVGID_7_);" d="M89.125,88.228c0,5.064,8.916,6.73,15.25,6.73s13.25,0,13.25,0V58.125h-28.5
+	C89.125,58.125,89.125,83.163,89.125,88.228z"/>
+<linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="61.334" y1="50" x2="61.334" y2="65.5005">
+	<stop  offset="0.2365" style="stop-color:#1F6B00"/>
+	<stop  offset="1" style="stop-color:#035400"/>
+</linearGradient>
+<rect x="23.667" y="50" style="fill:url(#SVGID_8_);" width="75.333" height="15.5"/>
+<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="103" y1="9.501" x2="103" y2="32.667">
+	<stop  offset="0.0049" style="stop-color:#534741"/>
+	<stop  offset="1" style="stop-color:#542D00"/>
+</linearGradient>
+<rect x="99" y="9.501" style="fill:url(#SVGID_9_);" width="8" height="23.166"/>
+<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="115.916" y1="5.6675" x2="115.916" y2="33.8345">
+	<stop  offset="0.0049" style="stop-color:#534741"/>
+	<stop  offset="1" style="stop-color:#542D00"/>
+</linearGradient>
+<rect x="107" y="5.667" style="fill:url(#SVGID_10_);" width="17.833" height="28.167"/>
+<rect x="23.667" y="53" style="fill:#333333;" width="75.333" height="2.334"/>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
