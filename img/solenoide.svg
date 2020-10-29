@@ -46,16 +46,6 @@
 	<stop  offset="1" style="stop-color:#035400"/>
 </linearGradient>
 <rect x="23.667" y="50" style="fill:url(#SVGID_8_);" width="75.333" height="15.5"/>
-<linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="103" y1="9.501" x2="103" y2="32.667">
-	<stop  offset="0.0049" style="stop-color:#534741"/>
-	<stop  offset="1" style="stop-color:#542D00"/>
-</linearGradient>
-<rect x="99" y="9.501" style="fill:url(#SVGID_9_);" width="8" height="23.166"/>
-<linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="115.916" y1="5.6675" x2="115.916" y2="33.8345">
-	<stop  offset="0.0049" style="stop-color:#534741"/>
-	<stop  offset="1" style="stop-color:#542D00"/>
-</linearGradient>
-<rect x="107" y="5.667" style="fill:url(#SVGID_10_);" width="17.833" height="28.167"/>
 <rect x="23.667" y="53" style="fill:#333333;" width="75.333" height="2.334"/>
 <g>
 </g>

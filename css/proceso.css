@@ -58,10 +58,25 @@
 	height: 17em;
 }
 
+
+#solenoide {
+	position: absolute;
+	top: 32%;
+	left: 81%;
+	width: 4em;
+	height: 4em;
+}
+
 #chorro1 {
 	position: absolute;
 	top: 40.5%;
 	left: 68%;
+}
+
+#chorro2 {
+	position: absolute;
+	top: 40.5%;
+	left: 77.5%;
 }
 
 
@@ -72,17 +87,17 @@
 	background-color: red;
 }
 
-.particula-agua {
+.particula-agua1 {
 	position: absolute;
 	width: 0.7em;
 	height: 0.7em;
 	background-color: blue;
-	animation: agua 0.5s;
+	animation: agua1 0.5s;
 	border-radius: 50%;
 	filter: blur(0.1em);
 }
 
-@keyframes agua {
+@keyframes agua1 {
 	0% {
 
 	}
@@ -97,5 +112,33 @@
 
 	100% {
 		transform: translate(3em, 10em);
+	}
+}
+
+.particula-agua2 {
+	position: absolute;
+	width: 0.7em;
+	height: 0.7em;
+	background-color: blue;
+	animation: agua2 0.5s;
+	border-radius: 50%;
+	filter: blur(0.1em);
+}
+
+@keyframes agua2 {
+	0% {
+
+	}
+
+	10% {
+		transform: translate(-1.5em, 1em);
+	}
+
+	35% {
+		transform: translate(-2em, 3em);
+	}
+
+	100% {
+		transform: translate(-3em, 10em);
 	}
 }

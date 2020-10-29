@@ -153,9 +153,9 @@
 				<img class="imagen" src="img/valvula_control.svg" alt="">
 			</div>
 
-			<div id="chorro1" class="chorro-agua">
-				
-			</div>
+			<div id="chorro1" class="chorro-agua"></div>
+
+			<div id="chorro2" class="chorro-agua"></div>
 
 			<div id="tanque" helpTarget="tanqueInfo">
 				<img class="imagen" src="img/tanque_abierto.svg" alt="">
@@ -166,6 +166,11 @@
 					<source src="sound/bomba.wav">
 				</audio>
 			</div>
+
+			<div id="solenoide" helpTarget="solenoideInfo">
+				<img class="imagen" src="img/solenoide.svg" alt="">
+			</div>
+
 		</div>
 
 		<button id="botonAyuda" class="ayuda-fixed ayuda-boton">
@@ -319,10 +324,10 @@
 				    	</div>
 
 				    	<!-- Válvula Solenoide -->
-						<div class="g-elemento">
+						<div id="solenoideInfo" class="g-elemento">
 				    		<h4>Válvula Solenoide</h4>
-				    		<div class="placeholder"></div>
-				    		<button class="g-boton"><i class="fas fa-eye"></i>Ver</button>
+				    		<img class="apariencia" src="img/solenoide.svg" alt="">
+				    		<button class="g-boton" hightlightTarget="solenoide"><i class="fas fa-eye"></i>Ver</button>
 				    	</div>
 				    	<div class="g-info">
 				    		<p>Al accionarse, abre una tubería (justo después de la salida de la bomba) de retorno para el agua. Esto es para evitar que la bomba se sobrecargue cuando no exista suministro neumático, que ocasionaría que la válvula se cerrara, provocando que no existiese retorno del agua al tanque, haciendo que la bomba trabajase forzada.</p>

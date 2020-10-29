@@ -324,9 +324,26 @@ const chorro1 = document.querySelector("#chorro1");
 setInterval( () => {
 	if (activarChorro1) {
 		const particula = document.createElement("div");
-		particula.classList.add("particula-agua");
+		particula.classList.add("particula-agua1");
 
 		chorro1.appendChild(particula);
+
+		setTimeout( () => {
+			particula.remove();
+		}, 500);
+	}
+}, 200);
+
+
+let activarChorro2 = false;
+const chorro2 = document.querySelector("#chorro2");
+
+setInterval( () => {
+	if (activarChorro2) {
+		const particula = document.createElement("div");
+		particula.classList.add("particula-agua2");
+
+		chorro2.appendChild(particula);
 
 		setTimeout( () => {
 			particula.remove();
@@ -502,6 +519,12 @@ function update(deltaTime) {
 		activarChorro1 = true;
 	} else {
 		activarChorro1 = false;
+	}
+
+	if (_luzSolenoide) {
+		activarChorro2 = true;
+	} else {
+		activarChorro2 = false;
 	}
 
 	_luzStart = _contactor;
