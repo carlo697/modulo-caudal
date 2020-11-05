@@ -162,6 +162,7 @@ const luzFalloAire = new Dispositivo(document.getElementById("luzFalloAire"));
 const luzSobrecarga = new Dispositivo(document.getElementById("luzSobrecarga"));
 const luzProcesoBloqueado = new Dispositivo(document.getElementById("luzProcesoBloqueado"));
 const luzSolenoide = new Dispositivo(document.getElementById("luzSolenoide"));
+const vastago = document.getElementById("vastago");
 
 const bomba = new Dispositivo(document.getElementById("bomba"));
 
@@ -421,6 +422,8 @@ let fallaAire = false;
 let sobreVoltaje = false;
 let sobreCarga = false;
 
+let vastagoPosicionActual = 0;
+
 function update(deltaTime) {
 	const elapsedTime = document.getElementById("ElapsedTime");
 	elapsedTime.innerHTML = (performance.now() / 1000).toFixed(2);
@@ -543,6 +546,16 @@ function update(deltaTime) {
 	luzSolenoide.setState(_luzSolenoide);
 
 	bomba.setState(_contactor);
+
+	let _vastagoAbierto = _controlador && !fallaAire;
+
+	vastagoPosicionActual += _vastagoAbierto ? (0.0005 * deltaTime) : (-0.0005 * deltaTime);
+	vastagoPosicionActual = Math.min(1, vastagoPosicionActual);
+	vastagoPosicionActual = Math.max(0, vastagoPosicionActual);
+
+	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.01 * vastagoPosicionActual;
+
+	vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
 
 	log.textContent = `breaker: ${_breaker}
 interruptor1: ${_interruptor1}
