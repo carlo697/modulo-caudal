@@ -63,9 +63,10 @@ function clickEnMenu(e) {
 			ultimaPestaña = pestana;
 			header.classList.add("on");
 		} else {
+			target.classList.toggle("on");
 			header.classList.toggle("on");
 		}
-	} else {
+	} else if (target.classList.contains("header") || target.classList.contains("nav-logo")) {
 		header.classList.toggle("on");
 	}
 }
