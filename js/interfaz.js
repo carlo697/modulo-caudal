@@ -1,56 +1,62 @@
+// Elementos
+const header = document.querySelector(".header");
 
-const _pestañaBotones = document.querySelectorAll(".pestaña");
+// Variables de pestanas
+const botonesPestanas = [];
+let ultimaPestaña = "";
 
-const botonesPestañas = [];
+// Event listeners
+eventListeners();
 
-for (let boton of _pestañaBotones) {
-	const target = document.getElementById(boton.getAttribute("for"));
+function eventListeners () {
+	inicializarPestanas();
+	header.addEventListener("click", clickEnMenu);
+}
 
-	if (target == null) {
-		continue;
+// Funciones
+
+function inicializarPestanas() {
+	const botones = document.querySelectorAll(".pestaña");
+
+	for (let boton of botones) {
+		const target = document.getElementById(boton.getAttribute("for"));
+
+		if (target == null) {
+			continue;
+		}
+
+		const type = boton.getAttribute("type");
+
+		boton.contenedor = target;
+		boton.tipo = type;
+		botonesPestanas.push(boton);
+
+		boton.addEventListener("click", function(e) {
+			abrirPestana(boton);
+		});
 	}
 
-	const type = boton.getAttribute("type");
-
-	boton.contenedor = target;
-	boton.tipo = type;
-	botonesPestañas.push(boton);
-
-	boton.addEventListener("click", function(e) {
-		abrirPestaña(boton);
-	});
+	for (let boton of botonesPestanas) {
+		boton.contenedor.style.display = "none";
+	}
 }
 
-for (let boton of botonesPestañas) {
-	boton.contenedor.style.display = "none";
+function abrirPestana(pestana) {
+	cerrarPestana(pestana.tipo);
+
+	if (pestana.contenedor.style.display == "none") {
+		pestana.contenedor.style.display = "block";
+		pestana.classList.add("on");
+	}
 }
 
-function abrirPestaña(pestaña) {
-	for (let boton of botonesPestañas) {
-		if (boton.tipo == pestaña.tipo) {
+function cerrarPestana(tipo) {
+	for (let boton of botonesPestanas) {
+		if (boton.tipo == tipo) {
 			boton.classList.remove("on");
 			boton.contenedor.style.display = "none";
 		}
 	}
-
-	if (pestaña.contenedor.style.display == "none") {
-		pestaña.contenedor.style.display = "block";
-		pestaña.classList.add("on");
-	}
-}
-
-
-
-
-
-const header = document.querySelector(".header");
-
-let ultimaPestaña = "";
-
-eventListeners();
-
-function eventListeners () {
-	header.addEventListener("click", clickEnMenu);
 }
 
 function clickEnMenu(e) {
@@ -59,14 +65,44 @@ function clickEnMenu(e) {
 	if (target.classList.contains("nav-enlace")) {
 		let pestana = target.getAttribute("for");
 
-		if (pestana != ultimaPestaña) {
-			ultimaPestaña = pestana;
-			header.classList.add("on");
+		if (estaMenuAbierto()) {
+			if (pestana == ultimaPestaña) {
+				cerrarMenu();
+			} else {
+				ultimaPestaña = pestana;
+			}
 		} else {
-			target.classList.toggle("on");
-			header.classList.toggle("on");
+			ultimaPestaña = pestana;
+			abrirMenu();
 		}
 	} else if (target.classList.contains("header") || target.classList.contains("nav-logo")) {
-		header.classList.toggle("on");
+		toggleMenu();
 	}
+}
+
+function abrirMenu(pestana) {
+	if (pestana != null) {
+		const boton = document.querySelector(pestana);
+
+		abrirPestana(boton);
+		ultimaPestaña = boton.getAttribute("for");
+	}
+
+	header.classList.add("on");
+}
+
+function cerrarMenu() {
+	header.classList.remove("on");
+}
+
+function toggleMenu() {
+	if (header.classList.contains("on")) {
+		cerrarMenu();
+	} else {
+		abrirMenu();
+	}
+}
+
+function estaMenuAbierto() {
+	return header.classList.contains("on");
 }

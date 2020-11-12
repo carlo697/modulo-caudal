@@ -124,8 +124,6 @@ const botonAutomatico = document.getElementById("BotonAutomatico");
 const selector = document.getElementById("selector");
 const log = document.getElementById("log");
 
-const botonFuncionamiento = document.getElementById("boton-funcionamiento");
-
 const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
 emergencia1.setSound("sound/emergencia.mp3", false);
 
@@ -188,8 +186,7 @@ function clickGlobal(e) {
 			document.getElementById("textoAyuda").style.display = "none";
 
 			if (e.target.classList.contains("ayuda-overlay") && e.target.helpTarget != null) {
-				menuBoton.setState("true");
-				abrirPestaña(botonFuncionamiento);
+				abrirMenu("#botonFuncionamiento");
 				e.target.helpTarget.scrollIntoView(true);
 			}
 
@@ -247,7 +244,7 @@ function clickGlobal(e) {
 	if (element.hasAttribute("hightlightTarget")) {
 		const target = document.getElementById(element.getAttribute("hightlightTarget"));
 
-		menuBoton.setState(false);
+		cerrarMenu();
 
 		if (ultimoHightlight != null) {
 			ultimoHightlight.remove();

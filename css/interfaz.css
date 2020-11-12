@@ -80,13 +80,23 @@ button {
 	left: 0;
 	width: 0;
 	height: 1px;
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: var(--naranja);
+	opacity: 0.5;
 	transition: width 0.3s;
 }
 
 .nav-enlace.on::after,
 .nav-enlace:hover::after {
 	width: 100%;
+}
+
+.nav-enlace.on::after,
+.nav-enlace.on:hover::after {
+	opacity: 1;
+}
+
+.nav-enlace:hover::after {
+	opacity: 0.5;
 }
 
 
