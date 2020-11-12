@@ -365,53 +365,6 @@ for (input of preguntas) {
 }
 
 
-const _pestañaBotones = document.querySelectorAll(".pestaña");
-
-const botonesPestañas = [];
-
-for (let boton of _pestañaBotones) {
-	const target = document.getElementById(boton.getAttribute("for"));
-
-	if (target == null) {
-		continue;
-	}
-
-	const type = boton.getAttribute("type");
-
-	boton.contenedor = target;
-	boton.tipo = type;
-	botonesPestañas.push(boton);
-
-	boton.addEventListener("click", function(e) {
-		abrirPestaña(boton);
-	});
-}
-
-for (let boton of botonesPestañas) {
-	boton.contenedor.style.display = "none";
-}
-
-function abrirPestaña(pestaña) {
-	for (let boton of botonesPestañas) {
-		if (boton.tipo == pestaña.tipo) {
-			boton.classList.remove("on");
-			boton.contenedor.style.display = "none";
-		}
-	}
-
-	if (pestaña.contenedor.style.display == "none") {
-		pestaña.contenedor.style.display = "block";
-		pestaña.classList.add("on");
-	}
-}
-
-const menuBoton = new Interruptor(
-	document.getElementById("menuBoton"),
-	false,
-	document.getElementById("menuLateral")
-);
-
-
 var presionadoStart = false;
 var presionadoStop = false;
 
