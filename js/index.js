@@ -307,12 +307,6 @@ function changeGlobal(e) {
 		termico.setState(true);
 		termico.enable = true;
 	}
-
-	if (target.hasAttribute("preguntaId")) {
-		const id = target.getAttribute("preguntaId");
-		localStorage.setItem(id, target.value);
-	}
-	
 }
 
 
@@ -348,18 +342,6 @@ setInterval( () => {
 		}, 500);
 	}
 }, 200);
-
-
-
-const preguntas = document.querySelectorAll("[preguntaId]");
-
-for (input of preguntas) {
-	const valor = localStorage.getItem(input.getAttribute("preguntaId"));
-
-	if (valor != null) {
-		input.value = valor;
-	}
-}
 
 
 var presionadoStart = false;

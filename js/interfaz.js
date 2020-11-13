@@ -1,5 +1,8 @@
 // Elementos
 const header = document.querySelector(".header");
+const insputsPractica = document.querySelectorAll("[preguntaId]");
+const contenidoPracticas = document.querySelector("#practicasArea");
+const practicasError = document.querySelector("#practicasError");
 
 // Variables de pestanas
 const botonesPestanas = [];
@@ -11,6 +14,12 @@ eventListeners();
 function eventListeners () {
 	inicializarPestanas();
 	header.addEventListener("click", clickEnMenu);
+
+	for (let input of insputsPractica) {
+		input.addEventListener("input", alModificarInputPractica);
+	}
+
+	cargarInputs();
 }
 
 // Funciones
@@ -106,3 +115,48 @@ function toggleMenu() {
 function estaMenuAbierto() {
 	return header.classList.contains("on");
 }
+
+function alModificarInputPractica(e) {
+	const target = e.target;
+
+	insputsPractica[target.id] = target.value;
+
+	// Guardar en localStorage el valor.
+	localStorage.setItem(target.getAttribute("preguntaId"), target.value);
+
+	actualizarContenidoPracticas();
+}
+
+function actualizarContenidoPracticas() {
+
+	let faltan = false;
+
+	for (input of insputsPractica) {
+		if (input.value == "") {
+			faltan = true;
+			break;
+		}
+	}
+
+	if (faltan) {
+		contenidoPracticas.classList.add("hide");
+		practicasError.classList.remove("hide");
+	} else {
+		contenidoPracticas.classList.remove("hide");
+		practicasError.classList.add("hide");
+	}
+}
+
+function cargarInputs() {
+
+	for (input of insputsPractica) {
+		const valor = localStorage.getItem(input.getAttribute("preguntaId"));
+
+		if (valor != null) {
+			input.value = valor;
+		}
+	}
+
+	actualizarContenidoPracticas();
+}
+

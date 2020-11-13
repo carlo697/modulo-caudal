@@ -635,120 +635,143 @@
 
 						<div class="input-fila">
 							<div>
-								<label for="estudiante">Estudiante</label>
-								<input id="estudiante" type="text" placeholder="Escriba su nombre" preguntaId="estudiante">
+								<label for="nombre">Nombre y Apellido</label>
+								<input id="nombre" class="practica-input" type="text" placeholder="Escriba su nombre y apellido" preguntaId="nombre">
 							</div>
 								
 							<div>
-								<label for="cedula">Cedula</label>
-								<input id="cedula" type="text" placeholder="Escriba su cedula" preguntaId="cedula">
+								<label for="cedula">Cedúla</label>
+								<input id="cedula" class="practica-input" type="number" placeholder="Escriba el numero de su cedúla" preguntaId="cedula">
+							</div>
+						</div>
+
+						<div class="input-fila">
+							<div>
+								<label for="carrera">Carrera</label>
+								<input id="carrera" class="practica-input" type="text" placeholder="Escriba el nombre de su carrera" preguntaId="carrera">
+							</div>
+								
+							<div>
+								<label for="trayecto">Trayecto</label>
+								<input id="trayecto" class="practica-input" type="number" placeholder="Escriba el numero de su cedula" preguntaId="trayecto">
 							</div>
 						</div>
 						
 						<div class="input-fila">
 							<div>
-								<label for="materia">Materia</label>
-								<input id="materia" type="text" placeholder="Escriba la materia" preguntaId="materia">
+								<label for="asignatura">Asignatura</label>
+								<input id="asignatura" class="practica-input" type="text" placeholder="Escriba el nombre de la asignatura" preguntaId="asignatura">
 							</div>
 							
 							<div>
-								<label for="profesor">Profesor</label>
-								<input id="profesor" type="text" placeholder="Escriba el nombre de su profesor" preguntaId="profesor">
+								<label for="profesor">Profesor/a</label>
+								<input id="profesor" class="practica-input" type="text" placeholder="Escriba el nombre de su profesor/a" preguntaId="profesor">
 							</div>
 						</div>
 
-						<div class="pestanas">
-							<button class="pestana boton" for="practica1" type="practicas">Practica 1</button>
-							<button class="pestana boton" for="practica2" type="practicas">Practica 2</button>
-							<button class="pestana boton" for="practica3" type="practicas">Practica 3</button>
-							<button class="pestana boton" for="practica4" type="practicas">Practica 4</button>
+						<div id="practicasError" class="error hide">
+							<p>Debe ingresar todos sus datos personales arriba para poder iniciar una práctica de laboratorio.</p>
+							<span class="icono">
+								<i class="fas fa-exclamation-triangle"></i>
+							</span>
 						</div>
 
-						<div class="practica-contenido">
-							<div id="practica1">
-								<h2>Practica N°1</h2>
+						<div id="practicasArea" class="hide">
+							<div class="pestanas">
+								<button class="pestana boton" for="practica1" type="practicas">Practica 1</button>
+								<button class="pestana boton" for="practica2" type="practicas">Practica 2</button>
+								<button class="pestana boton" for="practica3" type="practicas">Practica 3</button>
+								<button class="pestana boton" for="practica4" type="practicas">Practica 4</button>
+							</div>
 
-								<h3>Objetivo de la Práctica</h3>
+							<div class="practica-contenido">
+								<div id="practica1">
+									<h2>Practica N°1</h2>
 
-								<p>Aquí se explicara los conocimientos que se adquirirán a través de la ejecución de esta práctica.</p>
-								<br>
+									<h3>Objetivo de la Práctica</h3>
 
-								<h3>Conceptos Teóricos</h3>
+									<p>Aquí se explicara los conocimientos que se adquirirán a través de la ejecución de esta práctica.</p>
+									<br>
 
-								<p>Aquí se darán todos los fundamentos y principios sobre los dispositivos utilizados durante la práctica. A su vez, de los planos del proceso, se explicara la sección que está involucrada.</p>
-								<br>
+									<h3>Conceptos Teóricos</h3>
 
-								<h3>Equipo a Utilizar</h3>
-								<ul>
-								    <li>En esta sección se enlistan los dispositivos del proceso que estarán involucrados en la práctica.</li>
-								    <li>Motor.</li>
-								    <li>Tablero.</li>
-								    <li>Relé</li>
-								    <li>Etc</li>
-								</ul>
-								<br>
+									<p>Aquí se darán todos los fundamentos y principios sobre los dispositivos utilizados durante la práctica. A su vez, de los planos del proceso, se explicara la sección que está involucrada.</p>
+									<br>
 
-								<h3>Procedimiento</h3>
+									<h3>Equipo a Utilizar</h3>
+									<ul>
+									    <li>En esta sección se enlistan los dispositivos del proceso que estarán involucrados en la práctica.</li>
+									    <li>Motor.</li>
+									    <li>Tablero.</li>
+									    <li>Relé</li>
+									    <li>Etc</li>
+									</ul>
+									<br>
 
-								<ol>
-								    <li>En esta sección se explican cada uno de los pasos de la práctica.</li>
+									<h3>Procedimiento</h3>
 
-								    <li>
-								    	<p>Además, algunos pasos irán acompañados de preguntas sobre el compartimiento que haya presentado el proceso y el tablero durante el procedimiento.</p>
+									<ol>
+									    <li>En esta sección se explican cada uno de los pasos de la práctica.</li>
 
-								    	<p>¿Pregunta del paso numero 1?</p>
-								    	<textarea preguntaId="1_procedimiento_2"placeholder="Escriba su respuesta aquí…"></textarea>
-								    </li>
+									    <li>
+									    	<p>Además, algunos pasos irán acompañados de preguntas sobre el compartimiento que haya presentado el proceso y el tablero durante el procedimiento.</p>
 
-								    <li>Paso numero tres.</li>
+									    	<p>¿Pregunta del paso numero 1?</p>
+									    	<textarea preguntaId="1_procedimiento_2"placeholder="Escriba su respuesta aquí…"></textarea>
+									    </li>
 
-								    <li>
-								    	<p>Paso número cuatro.</p>
-								    	<p>¿Pregunta del paso numero 4?</p>
-								    	<textarea preguntaId="1_procedimiento_4" placeholder="Escriba su respuesta aquí…"></textarea>
-								    </li>
-								</ol>
-								<br>
+									    <li>Paso numero tres.</li>
 
-								<h3>Preguntas</h3>
+									    <li>
+									    	<p>Paso número cuatro.</p>
+									    	<p>¿Pregunta del paso numero 4?</p>
+									    	<textarea preguntaId="1_procedimiento_4" placeholder="Escriba su respuesta aquí…"></textarea>
+									    </li>
+									</ol>
+									<br>
 
-								<ol>
-								    <li>
-								    	<p>Aquí al final de la práctica se harán preguntas (o se le ordenara al estudiante que escriba sobre algo relacionado) para que el estudiante saque conclusiones sobre lo aprendido.</p>
-								    	<textarea preguntaId="1_pregunta_1" placeholder="Escriba su respuesta aquí…"></textarea>
-								    </li>
+									<h3>Preguntas</h3>
 
-								    <li>
-								    	<p>¿Pregunta numero dos?</p>
-								    	<textarea preguntaId="1_pregunta_2" placeholder="Escriba su respuesta aquí…"></textarea>
-								    </li>
-								</ol>
-								<br>
+									<ol>
+									    <li>
+									    	<p>Aquí al final de la práctica se harán preguntas (o se le ordenara al estudiante que escriba sobre algo relacionado) para que el estudiante saque conclusiones sobre lo aprendido.</p>
+									    	<textarea preguntaId="1_pregunta_1" placeholder="Escriba su respuesta aquí…"></textarea>
+									    </li>
 
-								<h3>Finalizar</h3>
-								<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
+									    <li>
+									    	<p>¿Pregunta numero dos?</p>
+									    	<textarea preguntaId="1_pregunta_2" placeholder="Escriba su respuesta aquí…"></textarea>
+									    </li>
+									</ol>
+									<br>
 
-								<div class="boton-imprimir-padre">
-									<a class="boton-imprimir boton" href="practica1.html" target="_blank">Imprimir</a>
+									<h3>Finalizar</h3>
+									<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
+
+									<div class="boton-imprimir-padre">
+										<a class="boton-imprimir boton" href="practica1.html" target="_blank">Imprimir</a>
+									</div>
+									
 								</div>
-								
-							</div>
 
-							<div id="practica2">
-								<h2>Practica 2</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
-							</div>
+								<div id="practica2">
+									<h2>Practica 2</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+								</div>
 
-							<div id="practica3">
-								<h2>Practica 3</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
-							</div>
+								<div id="practica3">
+									<h2>Practica 3</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+								</div>
 
-							<div id="practica4">
-								<h2>Practica 4</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+								<div id="practica4">
+									<h2>Practica 4</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+								</div>
 							</div>
 						</div>
+
+						
 					</div>
 		</div>
 	</header>
