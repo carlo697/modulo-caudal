@@ -1,6 +1,7 @@
 // Elementos
 const header = document.querySelector(".header");
-const insputsPractica = document.querySelectorAll("[preguntaId]");
+const datosInputs = document.querySelectorAll(".practica-input");
+const preguntasInputs = document.querySelectorAll("[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
 const practicasError = document.querySelector("#practicasError");
 
@@ -15,8 +16,12 @@ function eventListeners () {
 	inicializarPestanas();
 	header.addEventListener("click", clickEnMenu);
 
-	for (let input of insputsPractica) {
+	for (let input of preguntasInputs) {
 		input.addEventListener("input", alModificarInputPractica);
+	}
+
+	for (let input of datosInputs) {
+		input.addEventListener("input", alModificarInputDato);
 	}
 
 	cargarInputs();
@@ -117,21 +122,20 @@ function estaMenuAbierto() {
 }
 
 function alModificarInputPractica(e) {
-	const target = e.target;
+	localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
+}
 
-	insputsPractica[target.id] = target.value;
-
+function alModificarInputDato(e) {
 	// Guardar en localStorage el valor.
-	localStorage.setItem(target.getAttribute("preguntaId"), target.value);
+	localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
 
 	actualizarContenidoPracticas();
 }
 
 function actualizarContenidoPracticas() {
-
 	let faltan = false;
 
-	for (input of insputsPractica) {
+	for (input of datosInputs) {
 		if (input.value == "") {
 			faltan = true;
 			break;
@@ -148,8 +152,7 @@ function actualizarContenidoPracticas() {
 }
 
 function cargarInputs() {
-
-	for (input of insputsPractica) {
+	for (input of preguntasInputs) {
 		const valor = localStorage.getItem(input.getAttribute("preguntaId"));
 
 		if (valor != null) {
