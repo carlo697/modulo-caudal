@@ -3,7 +3,7 @@ const header = document.querySelector(".header");
 
 // Variables de pestanas
 const botonesPestanas = [];
-let ultimaPestaña = "";
+let ultimaPestana = "";
 
 // Event listeners
 eventListeners();
@@ -16,7 +16,7 @@ function eventListeners () {
 // Funciones
 
 function inicializarPestanas() {
-	const botones = document.querySelectorAll(".pestaña");
+	const botones = document.querySelectorAll(".pestana");
 
 	for (let boton of botones) {
 		const target = document.getElementById(boton.getAttribute("for"));
@@ -66,13 +66,13 @@ function clickEnMenu(e) {
 		let pestana = target.getAttribute("for");
 
 		if (estaMenuAbierto()) {
-			if (pestana == ultimaPestaña) {
+			if (pestana == ultimaPestana) {
 				cerrarMenu();
 			} else {
-				ultimaPestaña = pestana;
+				ultimaPestana = pestana;
 			}
 		} else {
-			ultimaPestaña = pestana;
+			ultimaPestana = pestana;
 			abrirMenu();
 		}
 	} else if (target.classList.contains("header") || target.classList.contains("nav-logo")) {
@@ -85,7 +85,7 @@ function abrirMenu(pestana) {
 		const boton = document.querySelector(pestana);
 
 		abrirPestana(boton);
-		ultimaPestaña = boton.getAttribute("for");
+		ultimaPestana = boton.getAttribute("for");
 	}
 
 	header.classList.add("on");

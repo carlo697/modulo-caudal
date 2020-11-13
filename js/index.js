@@ -506,33 +506,6 @@ function update(deltaTime) {
 	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.01 * vastagoPosicionActual;
 
 	vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
-
-	log.textContent = `breaker: ${_breaker}
-interruptor1: ${_interruptor1}
-interruptor2: ${_interruptor2}
-emergencia1: ${_emergencia1}
-emergencia2: ${_emergencia2}
-emergencia3: ${_emergencia3}
-selectorPosicion: ${_selectorPosicion}
-start: ${presionadoStart}
-stop: ${presionadoStop}
-contactor: ${_contactor}
-termico: ${_termico}
-protector: ${_protector}
-rele1: ${_rele1}
-rele2: ${_rele2}
-presostato: ${_presostato}
-luzStart: ${_luzStart}
-luzStop: ${_luzStop}
-luzFalloAire: ${_luzFalloAire}
-luzSobrecarga: ${_luzSobrecarga}
-luzProcesoBloqueado: ${_luzProcesoBloqueado}
-luzSolenoide: ${_luzSolenoide}
-bomba: ${_bomba}
-solenoide: ${_solenoide}
-controlador: ${_controlador}
-	`;
-
 }
 
 function loop(time) {
