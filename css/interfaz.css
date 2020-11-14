@@ -7,6 +7,17 @@
 	--azul: #005082;
 }
 
+@font-face {
+	font-family: "Babillon";
+	src: url("../font/Babillon.ttf")  format('truetype');
+}
+
+@font-face {
+	font-family: "Good Brush";
+	src: url("../font/Good Brush.woff") format('woff'),
+		 url("../font/Good Brush.ttf")  format('truetype')
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -18,12 +29,27 @@ html {
 	font-weight: normal;
 
 	font-family: 'Roboto', sans-serif;
+
+	background: url("../img/fondo.jpg");
+	background-size: contain;
+	background-position: 0 80px;
+}
+
+body {
+	background: linear-gradient(rgba(140, 144, 169, 0.6), rgb(105, 108, 118), rgb(42, 45, 52));
 }
 
 button {
 	border: none;
 	outline: none;
 	cursor: pointer;
+}
+
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .header {
@@ -175,6 +201,39 @@ button {
 
 .titulo {
 	text-align: center;
+	font-size: 1.4em;
+	margin: 0;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-family: "Good Brush", "Roboto", sans-serif;
+	font-weight: normal;
+}
+
+.sin-margen-inferior {
+	margin-bottom: 0;
+}
+
+.titulo2 {
+	margin: 0;
+	margin-bottom: 20px;
+	color: white;
+	text-shadow: 1px 1px 2px black;
+	font-weight: normal;
+	font-family: "Babillon", "Roboto", sans-serif;
+	font-size: 1.8em;
+}
+
+
+@media (min-width: 600px) {
+	.titulo {
+		font-size: 2.1em;
+	}
+
+	.titulo2 {
+		font-size: 2.8em;
+	}
 }
 
 .boton {
