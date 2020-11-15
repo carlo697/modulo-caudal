@@ -542,37 +542,69 @@ a.boton {
 
 
 
+
+
 .bienvenida {
 	position: fixed;
-	height: 60%;
+	height: 65%;
 	width: 100%;
 	left: 0;
-	top: 0;
-	z-index: 200;
-	background-color: rgb(50, 50, 50);
+	top: -65%;
+	background-color: #00a8cc;
 	color: white;
 
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
-	padding: 20px;
-	text-align: justify;
+	padding: 20px 20px 30px 20px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+	font-size: 1.15em;
+
 	transition: 0.5s;
 }
 
 .bienvenida p {
-	color: rgb(190, 190, 190);
+	color: white;
 	max-width: 800px;
-	font-size: 1.1em;
-}
-
-
-.header.bienvenida-on {
-	top: 60%;
+	font-weight: lighter;
+	text-align: center;
 }
 
 .header.bienvenida-on .bienvenida {
+	top: 80px;
+}
+
+.esconder-boton {
+	font-size: 3em;
+	color: #ffa41b;
+	background-color: transparent;
+	transition: 0.3s;
+	width: 50px;
+	height: 50px;
+	border-radius: 5px;
+
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform: scaleX(1.9);
+}
+
+.esconder-boton:hover {
+	color: var(--naranja);
+	transform: scaleX(2) scaleY(1.1);
+}
+
+.esconder-boton .icono {
+	transition: 0.4s;
+	filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.2));
+}
+
+.esconder-boton:hover .icono {
+	transform: translateY(-5px);
+}
+
+.bienvenida h2 {
+	font-weight: 400;
 }
