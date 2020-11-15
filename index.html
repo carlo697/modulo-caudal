@@ -193,6 +193,7 @@
 	</main>
 
 	<header class="header">
+
 		<img src="img/logo_iutval.png" class="nav-logo">
 
 		<nav class="nav-enlaces">
@@ -203,588 +204,598 @@
 			<button class="nav-enlace pestana" for="fallas" type="menu">Fallas</button>
 		</nav>
 
+
+		<div class="bienvenida">
+			<p>Hola, bienvenido/a al aula virtual de prácticas del laboratorio de Instrumentación y Control de la UPTValencia, este espacio fue creado como alternativa para llevar a cabo prácticas de laboratorio virtuales enfocadas en conocer el Modulo Didáctico de Caudal de Lazo Cerrado, para así fortalecer la educación a distancia y continuar con el proceso de aprendizaje.</p>
+			<br>
+			<button id="esconder" class="boton">Esconder Mensaje</button>
+		</div>
+
+
+
 		<div class="menu">
-					<div id="acerca" class="submenu acerca">
-						<h2>Nosotros</h2>
-						<p>Esta página web es producto del proyecto "<strong>Propuesta para Simulación Virtual del Tablero de Control del Modulo Didáctico de Control de Caudal de Lazo Cerrado como Prácticas para El Laboratorio de Instrumentación y Control en la Universidad Politécnica Territorial de Valencia</strong>"; elaborado en el año 2020 por los estudiantes:</p>
+			<div id="acerca" class="submenu acerca">
+				<p>Hola, bienvenido/a al aula virtual de prácticas del laboratorio de Instrumentación y Control de la UPTValencia, este espacio fue creado como alternativa para llevar a cabo prácticas de laboratorio virtuales enfocadas en conocer el Modulo Didáctico de Caudal de Lazo Cerrado, para así fortalecer la educación a distancia y continuar con el proceso de aprendizaje.</p>
+				<br>
 
-						<ul class="nombres">
-						    <li>Gil Danis</li>
-						    <li>Morales María</li>
-						    <li>Sánchez Richard</li>
-						    <li>Peña Carlos</li>
-						</ul>
+				<h2>Nosotros</h2>
+				<p>Esta página web es producto del proyecto "<strong>Propuesta para Simulación Virtual del Tablero de Control del Modulo Didáctico de Control de Caudal de Lazo Cerrado como Prácticas para El Laboratorio de Instrumentación y Control en la Universidad Politécnica Territorial de Valencia</strong>"; elaborado en el año 2020 por los estudiantes:</p>
 
-						<p>Para obtener el título de Técnico Superior Universitario en Instrumentación y Control, en la <strong>Universidad Politécnica Territorial de Valencia</strong>.</p>
+				<ul class="nombres">
+				    <li>Gil Danis</li>
+				    <li>Morales María</li>
+				    <li>Sánchez Richard</li>
+				    <li>Peña Carlos</li>
+				</ul>
+
+				<p>Para obtener el título de Técnico Superior Universitario en Instrumentación y Control, en la <strong>Universidad Politécnica Territorial de Valencia</strong>.</p>
+			</div>
+
+			<div id="fallas" class="submenu fallas">
+				<h2>Fallas</h2>
+
+				<p>Este menú permite simular fallas en el procedo del modulo para poder estudiar su comportamiento. De las siguientes casillas, seleccione las fallas que desee simular:</p>
+
+				<div class="fallas-contenedor">
+					<div class="fallas-subcontenedor">
+						<div class="falla-fila">
+							<input id="fallaAire" type="checkbox" name="">
+							<label for="fallaAire">Falla de suministro de aire</label>
+						</div>
+						
+						<div class="falla-fila">
+							<input id="sobreVoltaje" type="checkbox" name="">
+							<label for="sobreVoltaje">Sobretensión</label>
+						</div>
+
+						<div class="falla-fila">
+							<input id="sobreCarga" type="checkbox" name="">
+							<label for="sobreCarga">Sobrecarga en la bomba</label>
+						</div>
+					</div>
+						
+				</div>
+					
+			</div>
+
+			<div id="guias" class="submenu guias">
+				<h2>Funcionamiento</h2>
+
+				<h3>Dispositivos del proceso</h3>
+
+				<div class="elementos-grid">
+					<h4 class="g-titulo">Nombre</h4>
+					<h4 class="g-titulo">Informacion</h4>
+
+					<!-- Tanque -->
+					<div class="g-elemento" id="tanqueInfo">
+			    		<h4>Tanque</h4>
+			    		<img class="apariencia" src="img/tanque_cerrado.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="tanque"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Almacena el agua que se usara en el proceso. En un proceso industrial real, este tanque podría almacenar una materia prima necesaria para la elaboración de un producto.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Bomba Centrifuga -->
+					<div class="g-elemento" id="bombaInfo">
+			    		<h4>Bomba Centrifuga</h4>
+			    		<img class="apariencia" src="img/pumps_centrifugal_pump_2.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="bomba"><i class="fas fa-eye" ></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Esta bomba centrifuga de X HP se encarga de hacer circular el agua del tanque a través del sistema de tuberías del proceso. El agua al final de su recorrido termina retornando al tanque.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Transmisor -->
+					<div id="transmisorInfo" class="g-elemento">
+			    		<h4>Transmisor</h4>
+			    		<img class="apariencia" src="img/transmisor.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="transmisor"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo (en conjunto con el Elemento Primario) mide el caudal a través de la tubería donde se halle instalado el mismo Elemento Primario, produciendo una señal eléctrica que representara el resultado de la medición.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Elemento Primario -->
+					<div class="g-elemento">
+			    		<h4>Elemento Primario</h4>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo se instala en la tubería en la cual se realizara la medición de caudal (y por lo tanto, el dispositivo tiene contacto directo con la variable en cuestión) y trabaja en conjunto con el Transmisor para producir el resultado de la medición.</p>
+
+			    		<p>El modulo de caudal cuenta con dos elementos primarios localizados en dos tuberías distintas: La Placa Orificio y el Tubo Venturi.</p>
+			    	</div>
+
+			    	<!-- Placa Orificio -->
+					<div class="g-elemento">
+			    		<h4>Placa Orificio</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Tubo Venturi -->
+					<div class="g-elemento">
+			    		<h4>Tubo Venturi</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Controlador -->
+					<div class="g-elemento">
+			    		<h4>Controlador</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo recibe la medición de caudal producida por el Transmisor y la compara con un caudal ingresado por el operador, para así generar una señal eléctrica que será recibida por el Convertidor I/P y así ser usada para mover la Válvula de Control.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Convertidor I/P -->
+					<div class="g-elemento">
+			    		<h4>Convertidor I/P</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Recibe la señal eléctrica proveniente del controlador y la convierte en una señal neumática equivalente para enviarla a la Válvula de Control, logrando moverla.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Válvula de Control -->
+					<div id="valvulaControlInfo" class="g-elemento">
+			    		<h4>Válvula de Control</h4>
+			    		<img class="apariencia" src="img/valvula_control.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="valvulaControl"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Esta válvula se abre y cierra dependiendo de la señal producida por el Convertidor I/P, regulando así el caudal en la tubería donde se halle instalada. Necesita de un suministro neumático para poder accionarse, y es normalmente cerrada, es decir, sin aire comprimido la válvula se cerrara y podría ocasionar problemas a la bomba (la cual trabajara forzada si esto sucede).</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Válvula Solenoide -->
+					<div id="solenoideInfo" class="g-elemento">
+			    		<h4>Válvula Solenoide</h4>
+			    		<img class="apariencia" src="img/solenoide.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="solenoide"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Al accionarse, abre una tubería (justo después de la salida de la bomba) de retorno para el agua. Esto es para evitar que la bomba se sobrecargue cuando no exista suministro neumático, que ocasionaría que la válvula se cerrara, provocando que no existiese retorno del agua al tanque, haciendo que la bomba trabajase forzada.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Presostato -->
+					<div class="g-elemento">
+			    		<h4>Presostato</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo de dos posiciones (encendido y apagado) se encenderá cuando haya correcto suministro neumático al modulo, y se apagara si no lo hubiese. Es usado para abrir la Válvula Solenoide cuando no haya suministro de aire, evitando que la bomba trabaje forzada.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+		    	</div>
+
+				<h3>Dispositivos en el tablero</h3>
+
+				<h3 class="text-left">Elementos de operación en el interior del tablero</h3>
+
+				<div class="elementos-grid">
+					<h4 class="g-titulo">Nombre</h4>
+					<h4 class="g-titulo">Informacion</h4>
+
+					<!-- Breaker -->
+					<div id="breakerInfo" class="g-elemento">
+			    		<h4>Breaker</h4>
+			    		<img class="apariencia" src="img/breaker_off.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="breaker"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo permite el paso de corriente a todo el modulo. Si no se activa, el modulo no se podrá encender.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Interruptor 1 -->
+			    	<div id="interruptor1Info" class="g-elemento">
+			    		<h4>Interruptor 1</h4>
+			    		<div class="apariencia">
+			    			<img class="imagen" src="img/interruptor_on.svg">
+			    			<img class="imagen" src="img/interruptor_franja_verde.svg">
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="interruptor1"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo permite el paso de corriente a todos los dispositivos de la sección superior del tablero. Si no se activa, no se podrá poner en marcha la bomba del proceso.</p>
+			    		<p>No se energizara sin activar el Breaker.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<!-- Interruptor 2 -->
+			    	<div id="interruptor2Info" class="g-elemento">
+			    		<h4>Interruptor 2</h4>
+			    		<div class="apariencia">
+			    			<img class="imagen" src="img/interruptor_on.svg">
+			    			<img class="imagen" src="img/interruptor_franja_roja.svg">
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="interruptor2"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo permite el paso de corriente hacia la sección inferior del tablero. Si no se activa, el Controlador Electrónico no podrá ser encendido.</p>
+			    		<p>No se energizara sin activar el Breaker.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+				</div>
+
+
+				<h3 class="text-left">Elementos de operación en el exterior del tablero</h3>
+
+				<div class="elementos-grid">
+					<h4 class="g-titulo">Nombre</h4>
+					<h4 class="g-titulo">Informacion</h4>
+
+					<div id="controladorInfo" class="g-elemento">
+			    		<h4>Controlador Electrónico</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton" hightlightTarget="controlador"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Con él, el operador es capaz de ingresar el caudal que se desea en el proceso. </p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+			    	<div id="emergenciaInfo" class="g-elemento">
+			    		<h4>Interruptores de Emergencia</h4>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Un botón de emergencia y dos selectores de emergencia, son usados para apagar la bomba inmediatamente. Al accionarse, se encenderá la luz de Control de Proceso Bloqueado.</p>
+			    		<p>No se energizara sin activar el Breaker.</p>
+			    	</div>
+
+			    	<div id="selectorInfo" class="g-elemento">
+			    		<h4>Selector de Modo de Operación</h4>
+			    		<div class="apariencia">
+			    			<div class="selector">
+			    				<div class="perrilla"></div>
+			    			</div>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="selector"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este selector tiene tres posiciones:</p>
+			    		<p><strong>Modo manual:</strong> La bomba solo se podrá poner en marcha al presionar el Pulsador Luminoso de Encendido.</p>
+			    		<p><strong>Modo off:</strong> La bomba se mantendrá apagada en todo momento.</p>
+			    		<p><strong>Modo automático:</strong> La bomba se pondrá en marcha automáticamente al colocarse el selector en esta posición.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<div id="botonStartInfo" class="g-elemento">
+			    		<h4>Pulsador Luminoso de Encendido</h4>
+			    		<div class="apariencia">
+			    			<button class="pulsador-l verde">START</button>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="botonStart"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este botón pulsador es usado para encender la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá siempre y cuando la bomba se halle encendida.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+			    	<div id="botonStopInfo" class="g-elemento">
+			    		<h4>Pulsador Luminoso de Apagado</h4>
+			    		<div class="apariencia">
+			    			<button class="pulsador-l rojo">STOP</button>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="botonStop"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este botón pulsador es usado para apagar la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá cuando la bomba se halle apagada.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+			    	<div class="g-elemento">
+			    		<h4>Luces indicadoras</h4>
+			    		<div class="apariencia">
+			    			<div class="luz"></div>
+			    		</div>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Estas luces se encenderán para indicar fallas o advertencias que pueden surgir en el proceso.</p>
+			    	</div>
+
+
+			    	<div id="luzFalloAireInfo" class="g-elemento">
+			    		<h4>Luz de Fallo de Aire</h4>
+			    		<div class="apariencia">
+			    			<div class="luz amarillo on"></div>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="luzFalloAire"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Esta luz se encenderá cuando el presostato se desactive, esto sucederá si deja de haber suministro de aire comprimido al modulo.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+			    	<div id="luzSobrecargaInfo" class="g-elemento">
+			    		<h4>Luz de Sobrecarga</h4>
+			    		<div class="apariencia">
+			    			<div class="luz roja on"></div>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="luzSobrecarga"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Esta luz se encenderá cuando el Relé Térmico de la bomba se accione, esto sucederá cuando la bomba trabaje con una corriente mayor a X amperios, indicando que se halla sobrecargada.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<div id="luzProcesoBloqueadoInfo" class="g-elemento">
+			    		<h4>Luz de Control de Proceso Bloqueado</h4>
+			    		<div class="apariencia">
+			    			<div class="luz on"></div>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="luzProcesoBloqueado"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Esta luz se encenderá cuando cualquiera de los Interruptores de Emergencia se accione, indicando que la bomba no podrá ser puesta en marcha.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+
+			    	<div id="luzSolenoideInfo" class="g-elemento">
+			    		<h4>Luz de Válvula Solenoide</h4>
+			    		<div class="apariencia">
+			    			<div class="luz amarillo on"></div>
+			    		</div>
+			    		<button class="g-boton boton" hightlightTarget="luzSolenoide"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Luz de Válvula Solenoide: Esta luz indica que la Válvula Solenoide del proceso ha sido accionada. Dicha situación se presentara estando la bomba este en marcha, y al mismo tiempo exista una falla con el suministro de aire comprimido (por ende, el presostato estará desactivado, y la Luz de Fallo de Aire también se encenderá).</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+				</div>
+
+				<h3 class="text-left">Elementos de protección</h3>
+
+				<div class="elementos-grid">
+					<h4 class="g-titulo">Nombre</h4>
+					<h4 class="g-titulo">Informacion</h4>
+
+					<div id="protectorInfo" class="g-elemento">
+			    		<h4>Protector de voltaje</h4>
+			    		<img class="apariencia" src="img/protector_on.svg">
+			    		<button class="g-boton boton" hightlightTarget="protector"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este dispositivo de protección se encenderá (junto con una luz roja) cuando el voltaje de 220 V (proveniente de dos líneas de 110 V) se halle en un rango seguro de operación.</p>
+
+			    		<p>Cuando el voltaje se salga del rango seguro de operación, se apagara (y la luz también)  y cortara el paso de corriente a los elementos del tablero.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<div id="termicoInfo" class="g-elemento">
+			    		<h4>Relé térmico</h4>
+			    		<div class="placeholder"></div>
+			    		<button class="g-boton boton" hightlightTarget="termico"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Este elemento supervisa la corriente usada por la bomba del proceso, y se disparara cuando esta supere los X amperios. Al dispararse, desconectara el contactor y a la bomba, además, se encenderá la Luz de Sobrecarga.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+				
+				</div>
+
+				<h3 class="text-left">Elementos de Control</h3>
+
+				<div class="elementos-grid">
+					<h4 class="g-titulo">Nombre</h4>
+					<h4 class="g-titulo">Informacion</h4>
+
+					<div id="contactorInfo" class="g-elemento">
+			    		<h4>Contactor</h4>
+			    		<img class="apariencia" src="img/contactor_on.svg">
+			    		<button class="g-boton boton" hightlightTarget="contactor"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Cuando se energiza pondrá en marcha a la bomba del proceso.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<div id="rele1Info" class="g-elemento">
+			    		<h4>Relé 1</h4>
+			    		<img class="apariencia" src="img/rele.svg">
+			    		<button class="g-boton boton" hightlightTarget="rele1"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Se activa cuando el Presostato se halla desactivado (lo cual sucede durante una falla de suministro neumático). Se usa para energizar la Válvula solenoide del proceso (y así evitar una sobrecarga en la bomba) y la Luz de Válvula Solenoide.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+
+			    	<div id="rele2Info" class="g-elemento">
+			    		<h4>Relé 2</h4>
+			    		<img class="apariencia" src="img/rele.svg">
+			    		<button class="g-boton boton" hightlightTarget="rele2"><i class="fas fa-eye"></i>Ver</button>
+			    	</div>
+			    	<div class="g-info">
+			    		<p>Se activa cuando ninguno de los Interruptores de Emergencia se halle accionado. Cuando este desactivado, energizara a la Luz de Control de Proceso Bloqueado.</p>
+			    		<button class="g-boton boton">Leer más</button>
+			    	</div>
+			    </div>
+			</div>
+
+			<div id="planos" class="planos">
+				<h2>Diagrama Escalera del Tablero de Control</h2>
+				<a href="img/planos/control.png" target="_blank">
+					<img class="plano" src="img/planos/control.svg" alt="">
+				</a>
+				
+				<br>
+				<br>
+
+				<h2>Diagrama de Tuberías e Instrumentación del Modulo Didactico</h2>
+				<a href="img/planos/proceso.svg" target="_blank">
+					<img class="plano" src="img/planos/proceso.svg" alt="">
+				</a>
+				
+			</div>
+
+			<div id="practicas" class="practicas">
+				<h2>Practicas</h2>
+
+				<div class="input-fila">
+					<div>
+						<label for="nombre">Nombre y Apellido</label>
+						<input id="nombre" class="practica-input" type="text" placeholder="Escriba su nombre y apellido" preguntaId="nombre">
+					</div>
+						
+					<div>
+						<label for="cedula">Cedúla</label>
+						<input id="cedula" class="practica-input" type="number" placeholder="Escriba el numero de su cedúla" preguntaId="cedula">
+					</div>
+				</div>
+
+				<div class="input-fila">
+					<div>
+						<label for="carrera">Carrera</label>
+						<input id="carrera" class="practica-input" type="text" placeholder="Escriba el nombre de su carrera" preguntaId="carrera">
+					</div>
+						
+					<div>
+						<label for="trayecto">Trayecto</label>
+						<input id="trayecto" class="practica-input" type="number" placeholder="Escriba el numero de su cedula" preguntaId="trayecto">
+					</div>
+				</div>
+				
+				<div class="input-fila">
+					<div>
+						<label for="asignatura">Asignatura</label>
+						<input id="asignatura" class="practica-input" type="text" placeholder="Escriba el nombre de la asignatura" preguntaId="asignatura">
+					</div>
+					
+					<div>
+						<label for="profesor">Profesor/a</label>
+						<input id="profesor" class="practica-input" type="text" placeholder="Escriba el nombre de su profesor/a" preguntaId="profesor">
+					</div>
+				</div>
+
+				<div id="practicasError" class="error hide">
+					<p>Debe ingresar todos sus datos personales arriba para poder iniciar una práctica de laboratorio.</p>
+					<span class="icono">
+						<i class="fas fa-exclamation-triangle"></i>
+					</span>
+				</div>
+
+				<div id="practicasArea" class="hide">
+					<div class="pestanas">
+						<button class="pestana boton" for="practica1" type="practicas">Practica 1</button>
+						<button class="pestana boton" for="practica2" type="practicas">Practica 2</button>
+						<button class="pestana boton" for="practica3" type="practicas">Practica 3</button>
+						<button class="pestana boton" for="practica4" type="practicas">Practica 4</button>
 					</div>
 
-					<div id="fallas" class="submenu fallas">
-						<h2>Fallas</h2>
+					<div class="practica-contenido">
+						<div id="practica1">
+							<h2>Practica N°1</h2>
 
-						<p>Este menú permite simular fallas en el procedo del modulo para poder estudiar su comportamiento. De las siguientes casillas, seleccione las fallas que desee simular:</p>
+							<h3>Objetivo de la Práctica</h3>
 
-						<div class="fallas-contenedor">
-							<div class="fallas-subcontenedor">
-								<div class="falla-fila">
-									<input id="fallaAire" type="checkbox" name="">
-									<label for="fallaAire">Falla de suministro de aire</label>
-								</div>
-								
-								<div class="falla-fila">
-									<input id="sobreVoltaje" type="checkbox" name="">
-									<label for="sobreVoltaje">Sobretensión</label>
-								</div>
+							<p>Aquí se explicara los conocimientos que se adquirirán a través de la ejecución de esta práctica.</p>
+							<br>
 
-								<div class="falla-fila">
-									<input id="sobreCarga" type="checkbox" name="">
-									<label for="sobreCarga">Sobrecarga en la bomba</label>
-								</div>
+							<h3>Conceptos Teóricos</h3>
+
+							<p>Aquí se darán todos los fundamentos y principios sobre los dispositivos utilizados durante la práctica. A su vez, de los planos del proceso, se explicara la sección que está involucrada.</p>
+							<br>
+
+							<h3>Equipo a Utilizar</h3>
+							<ul>
+							    <li>En esta sección se enlistan los dispositivos del proceso que estarán involucrados en la práctica.</li>
+							    <li>Motor.</li>
+							    <li>Tablero.</li>
+							    <li>Relé</li>
+							    <li>Etc</li>
+							</ul>
+							<br>
+
+							<h3>Procedimiento</h3>
+
+							<ol>
+							    <li>En esta sección se explican cada uno de los pasos de la práctica.</li>
+
+							    <li>
+							    	<p>Además, algunos pasos irán acompañados de preguntas sobre el compartimiento que haya presentado el proceso y el tablero durante el procedimiento.</p>
+
+							    	<p>¿Pregunta del paso numero 1?</p>
+							    	<textarea preguntaId="1_procedimiento_2"placeholder="Escriba su respuesta aquí…"></textarea>
+							    </li>
+
+							    <li>Paso numero tres.</li>
+
+							    <li>
+							    	<p>Paso número cuatro.</p>
+							    	<p>¿Pregunta del paso numero 4?</p>
+							    	<textarea preguntaId="1_procedimiento_4" placeholder="Escriba su respuesta aquí…"></textarea>
+							    </li>
+							</ol>
+							<br>
+
+							<h3>Preguntas</h3>
+
+							<ol>
+							    <li>
+							    	<p>Aquí al final de la práctica se harán preguntas (o se le ordenara al estudiante que escriba sobre algo relacionado) para que el estudiante saque conclusiones sobre lo aprendido.</p>
+							    	<textarea preguntaId="1_pregunta_1" placeholder="Escriba su respuesta aquí…"></textarea>
+							    </li>
+
+							    <li>
+							    	<p>¿Pregunta numero dos?</p>
+							    	<textarea preguntaId="1_pregunta_2" placeholder="Escriba su respuesta aquí…"></textarea>
+							    </li>
+							</ol>
+							<br>
+
+							<h3>Finalizar</h3>
+							<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
+
+							<div class="boton-imprimir-padre">
+								<a class="boton-imprimir boton" href="practica1.html" target="_blank">Imprimir</a>
 							</div>
-								
-						</div>
 							
+						</div>
+
+						<div id="practica2">
+							<h2>Practica 2</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+						</div>
+
+						<div id="practica3">
+							<h2>Practica 3</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+						</div>
+
+						<div id="practica4">
+							<h2>Practica 4</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
+						</div>
 					</div>
-
-					<div id="guias" class="submenu guias">
-						<h2>Funcionamiento</h2>
-
-						<h3>Dispositivos del proceso</h3>
-
-						<div class="elementos-grid">
-							<h4 class="g-titulo">Nombre</h4>
-							<h4 class="g-titulo">Informacion</h4>
-
-							<!-- Tanque -->
-							<div class="g-elemento" id="tanqueInfo">
-					    		<h4>Tanque</h4>
-					    		<img class="apariencia" src="img/tanque_cerrado.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="tanque"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Almacena el agua que se usara en el proceso. En un proceso industrial real, este tanque podría almacenar una materia prima necesaria para la elaboración de un producto.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Bomba Centrifuga -->
-							<div class="g-elemento" id="bombaInfo">
-					    		<h4>Bomba Centrifuga</h4>
-					    		<img class="apariencia" src="img/pumps_centrifugal_pump_2.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="bomba"><i class="fas fa-eye" ></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Esta bomba centrifuga de X HP se encarga de hacer circular el agua del tanque a través del sistema de tuberías del proceso. El agua al final de su recorrido termina retornando al tanque.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Transmisor -->
-							<div id="transmisorInfo" class="g-elemento">
-					    		<h4>Transmisor</h4>
-					    		<img class="apariencia" src="img/transmisor.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="transmisor"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo (en conjunto con el Elemento Primario) mide el caudal a través de la tubería donde se halle instalado el mismo Elemento Primario, produciendo una señal eléctrica que representara el resultado de la medición.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Elemento Primario -->
-							<div class="g-elemento">
-					    		<h4>Elemento Primario</h4>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo se instala en la tubería en la cual se realizara la medición de caudal (y por lo tanto, el dispositivo tiene contacto directo con la variable en cuestión) y trabaja en conjunto con el Transmisor para producir el resultado de la medición.</p>
-
-					    		<p>El modulo de caudal cuenta con dos elementos primarios localizados en dos tuberías distintas: La Placa Orificio y el Tubo Venturi.</p>
-					    	</div>
-
-					    	<!-- Placa Orificio -->
-							<div class="g-elemento">
-					    		<h4>Placa Orificio</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Tubo Venturi -->
-							<div class="g-elemento">
-					    		<h4>Tubo Venturi</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Controlador -->
-							<div class="g-elemento">
-					    		<h4>Controlador</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo recibe la medición de caudal producida por el Transmisor y la compara con un caudal ingresado por el operador, para así generar una señal eléctrica que será recibida por el Convertidor I/P y así ser usada para mover la Válvula de Control.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Convertidor I/P -->
-							<div class="g-elemento">
-					    		<h4>Convertidor I/P</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Recibe la señal eléctrica proveniente del controlador y la convierte en una señal neumática equivalente para enviarla a la Válvula de Control, logrando moverla.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Válvula de Control -->
-							<div id="valvulaControlInfo" class="g-elemento">
-					    		<h4>Válvula de Control</h4>
-					    		<img class="apariencia" src="img/valvula_control.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="valvulaControl"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Esta válvula se abre y cierra dependiendo de la señal producida por el Convertidor I/P, regulando así el caudal en la tubería donde se halle instalada. Necesita de un suministro neumático para poder accionarse, y es normalmente cerrada, es decir, sin aire comprimido la válvula se cerrara y podría ocasionar problemas a la bomba (la cual trabajara forzada si esto sucede).</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Válvula Solenoide -->
-							<div id="solenoideInfo" class="g-elemento">
-					    		<h4>Válvula Solenoide</h4>
-					    		<img class="apariencia" src="img/solenoide.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="solenoide"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Al accionarse, abre una tubería (justo después de la salida de la bomba) de retorno para el agua. Esto es para evitar que la bomba se sobrecargue cuando no exista suministro neumático, que ocasionaría que la válvula se cerrara, provocando que no existiese retorno del agua al tanque, haciendo que la bomba trabajase forzada.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Presostato -->
-							<div class="g-elemento">
-					    		<h4>Presostato</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo de dos posiciones (encendido y apagado) se encenderá cuando haya correcto suministro neumático al modulo, y se apagara si no lo hubiese. Es usado para abrir la Válvula Solenoide cuando no haya suministro de aire, evitando que la bomba trabaje forzada.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-				    	</div>
-
-						<h3>Dispositivos en el tablero</h3>
-
-						<h3 class="text-left">Elementos de operación en el interior del tablero</h3>
-
-						<div class="elementos-grid">
-							<h4 class="g-titulo">Nombre</h4>
-							<h4 class="g-titulo">Informacion</h4>
-
-							<!-- Breaker -->
-							<div id="breakerInfo" class="g-elemento">
-					    		<h4>Breaker</h4>
-					    		<img class="apariencia" src="img/breaker_off.svg" alt="">
-					    		<button class="g-boton boton" hightlightTarget="breaker"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo permite el paso de corriente a todo el modulo. Si no se activa, el modulo no se podrá encender.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Interruptor 1 -->
-					    	<div id="interruptor1Info" class="g-elemento">
-					    		<h4>Interruptor 1</h4>
-					    		<div class="apariencia">
-					    			<img class="imagen" src="img/interruptor_on.svg">
-					    			<img class="imagen" src="img/interruptor_franja_verde.svg">
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="interruptor1"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo permite el paso de corriente a todos los dispositivos de la sección superior del tablero. Si no se activa, no se podrá poner en marcha la bomba del proceso.</p>
-					    		<p>No se energizara sin activar el Breaker.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<!-- Interruptor 2 -->
-					    	<div id="interruptor2Info" class="g-elemento">
-					    		<h4>Interruptor 2</h4>
-					    		<div class="apariencia">
-					    			<img class="imagen" src="img/interruptor_on.svg">
-					    			<img class="imagen" src="img/interruptor_franja_roja.svg">
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="interruptor2"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo permite el paso de corriente hacia la sección inferior del tablero. Si no se activa, el Controlador Electrónico no podrá ser encendido.</p>
-					    		<p>No se energizara sin activar el Breaker.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-						</div>
-
-
-						<h3 class="text-left">Elementos de operación en el exterior del tablero</h3>
-
-						<div class="elementos-grid">
-							<h4 class="g-titulo">Nombre</h4>
-							<h4 class="g-titulo">Informacion</h4>
-
-							<div id="controladorInfo" class="g-elemento">
-					    		<h4>Controlador Electrónico</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton" hightlightTarget="controlador"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Con él, el operador es capaz de ingresar el caudal que se desea en el proceso. </p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-					    	<div id="emergenciaInfo" class="g-elemento">
-					    		<h4>Interruptores de Emergencia</h4>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Un botón de emergencia y dos selectores de emergencia, son usados para apagar la bomba inmediatamente. Al accionarse, se encenderá la luz de Control de Proceso Bloqueado.</p>
-					    		<p>No se energizara sin activar el Breaker.</p>
-					    	</div>
-
-					    	<div id="selectorInfo" class="g-elemento">
-					    		<h4>Selector de Modo de Operación</h4>
-					    		<div class="apariencia">
-					    			<div class="selector">
-					    				<div class="perrilla"></div>
-					    			</div>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="selector"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este selector tiene tres posiciones:</p>
-					    		<p><strong>Modo manual:</strong> La bomba solo se podrá poner en marcha al presionar el Pulsador Luminoso de Encendido.</p>
-					    		<p><strong>Modo off:</strong> La bomba se mantendrá apagada en todo momento.</p>
-					    		<p><strong>Modo automático:</strong> La bomba se pondrá en marcha automáticamente al colocarse el selector en esta posición.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<div id="botonStartInfo" class="g-elemento">
-					    		<h4>Pulsador Luminoso de Encendido</h4>
-					    		<div class="apariencia">
-					    			<button class="pulsador-l verde">START</button>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="botonStart"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este botón pulsador es usado para encender la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá siempre y cuando la bomba se halle encendida.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-					    	<div id="botonStopInfo" class="g-elemento">
-					    		<h4>Pulsador Luminoso de Apagado</h4>
-					    		<div class="apariencia">
-					    			<button class="pulsador-l rojo">STOP</button>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="botonStop"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este botón pulsador es usado para apagar la bomba cuando el Selector de Modo de Operación se halle en el modo manual. También cuenta una luz integrada que se encenderá cuando la bomba se halle apagada.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-					    	<div class="g-elemento">
-					    		<h4>Luces indicadoras</h4>
-					    		<div class="apariencia">
-					    			<div class="luz"></div>
-					    		</div>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Estas luces se encenderán para indicar fallas o advertencias que pueden surgir en el proceso.</p>
-					    	</div>
-
-
-					    	<div id="luzFalloAireInfo" class="g-elemento">
-					    		<h4>Luz de Fallo de Aire</h4>
-					    		<div class="apariencia">
-					    			<div class="luz amarillo on"></div>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="luzFalloAire"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Esta luz se encenderá cuando el presostato se desactive, esto sucederá si deja de haber suministro de aire comprimido al modulo.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-					    	<div id="luzSobrecargaInfo" class="g-elemento">
-					    		<h4>Luz de Sobrecarga</h4>
-					    		<div class="apariencia">
-					    			<div class="luz roja on"></div>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="luzSobrecarga"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Esta luz se encenderá cuando el Relé Térmico de la bomba se accione, esto sucederá cuando la bomba trabaje con una corriente mayor a X amperios, indicando que se halla sobrecargada.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<div id="luzProcesoBloqueadoInfo" class="g-elemento">
-					    		<h4>Luz de Control de Proceso Bloqueado</h4>
-					    		<div class="apariencia">
-					    			<div class="luz on"></div>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="luzProcesoBloqueado"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Esta luz se encenderá cuando cualquiera de los Interruptores de Emergencia se accione, indicando que la bomba no podrá ser puesta en marcha.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-
-					    	<div id="luzSolenoideInfo" class="g-elemento">
-					    		<h4>Luz de Válvula Solenoide</h4>
-					    		<div class="apariencia">
-					    			<div class="luz amarillo on"></div>
-					    		</div>
-					    		<button class="g-boton boton" hightlightTarget="luzSolenoide"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Luz de Válvula Solenoide: Esta luz indica que la Válvula Solenoide del proceso ha sido accionada. Dicha situación se presentara estando la bomba este en marcha, y al mismo tiempo exista una falla con el suministro de aire comprimido (por ende, el presostato estará desactivado, y la Luz de Fallo de Aire también se encenderá).</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-						</div>
-
-						<h3 class="text-left">Elementos de protección</h3>
-
-						<div class="elementos-grid">
-							<h4 class="g-titulo">Nombre</h4>
-							<h4 class="g-titulo">Informacion</h4>
-
-							<div id="protectorInfo" class="g-elemento">
-					    		<h4>Protector de voltaje</h4>
-					    		<img class="apariencia" src="img/protector_on.svg">
-					    		<button class="g-boton boton" hightlightTarget="protector"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este dispositivo de protección se encenderá (junto con una luz roja) cuando el voltaje de 220 V (proveniente de dos líneas de 110 V) se halle en un rango seguro de operación.</p>
-
-					    		<p>Cuando el voltaje se salga del rango seguro de operación, se apagara (y la luz también)  y cortara el paso de corriente a los elementos del tablero.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<div id="termicoInfo" class="g-elemento">
-					    		<h4>Relé térmico</h4>
-					    		<div class="placeholder"></div>
-					    		<button class="g-boton boton" hightlightTarget="termico"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Este elemento supervisa la corriente usada por la bomba del proceso, y se disparara cuando esta supere los X amperios. Al dispararse, desconectara el contactor y a la bomba, además, se encenderá la Luz de Sobrecarga.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-						
-						</div>
-
-						<h3 class="text-left">Elementos de Control</h3>
-
-						<div class="elementos-grid">
-							<h4 class="g-titulo">Nombre</h4>
-							<h4 class="g-titulo">Informacion</h4>
-
-							<div id="contactorInfo" class="g-elemento">
-					    		<h4>Contactor</h4>
-					    		<img class="apariencia" src="img/contactor_on.svg">
-					    		<button class="g-boton boton" hightlightTarget="contactor"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Cuando se energiza pondrá en marcha a la bomba del proceso.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<div id="rele1Info" class="g-elemento">
-					    		<h4>Relé 1</h4>
-					    		<img class="apariencia" src="img/rele.svg">
-					    		<button class="g-boton boton" hightlightTarget="rele1"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Se activa cuando el Presostato se halla desactivado (lo cual sucede durante una falla de suministro neumático). Se usa para energizar la Válvula solenoide del proceso (y así evitar una sobrecarga en la bomba) y la Luz de Válvula Solenoide.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-
-					    	<div id="rele2Info" class="g-elemento">
-					    		<h4>Relé 2</h4>
-					    		<img class="apariencia" src="img/rele.svg">
-					    		<button class="g-boton boton" hightlightTarget="rele2"><i class="fas fa-eye"></i>Ver</button>
-					    	</div>
-					    	<div class="g-info">
-					    		<p>Se activa cuando ninguno de los Interruptores de Emergencia se halle accionado. Cuando este desactivado, energizara a la Luz de Control de Proceso Bloqueado.</p>
-					    		<button class="g-boton boton">Leer más</button>
-					    	</div>
-					    </div>
-					</div>
-
-					<div id="planos" class="planos">
-						<h2>Diagrama Escalera del Tablero de Control</h2>
-						<a href="img/planos/control.png" target="_blank">
-							<img class="plano" src="img/planos/control.svg" alt="">
-						</a>
-						
-						<br>
-						<br>
-
-						<h2>Diagrama de Tuberías e Instrumentación del Modulo Didactico</h2>
-						<a href="img/planos/proceso.svg" target="_blank">
-							<img class="plano" src="img/planos/proceso.svg" alt="">
-						</a>
-						
-					</div>
-
-					<div id="practicas" class="practicas">
-						<h2>Practicas</h2>
-
-						<div class="input-fila">
-							<div>
-								<label for="nombre">Nombre y Apellido</label>
-								<input id="nombre" class="practica-input" type="text" placeholder="Escriba su nombre y apellido" preguntaId="nombre">
-							</div>
-								
-							<div>
-								<label for="cedula">Cedúla</label>
-								<input id="cedula" class="practica-input" type="number" placeholder="Escriba el numero de su cedúla" preguntaId="cedula">
-							</div>
-						</div>
-
-						<div class="input-fila">
-							<div>
-								<label for="carrera">Carrera</label>
-								<input id="carrera" class="practica-input" type="text" placeholder="Escriba el nombre de su carrera" preguntaId="carrera">
-							</div>
-								
-							<div>
-								<label for="trayecto">Trayecto</label>
-								<input id="trayecto" class="practica-input" type="number" placeholder="Escriba el numero de su cedula" preguntaId="trayecto">
-							</div>
-						</div>
-						
-						<div class="input-fila">
-							<div>
-								<label for="asignatura">Asignatura</label>
-								<input id="asignatura" class="practica-input" type="text" placeholder="Escriba el nombre de la asignatura" preguntaId="asignatura">
-							</div>
-							
-							<div>
-								<label for="profesor">Profesor/a</label>
-								<input id="profesor" class="practica-input" type="text" placeholder="Escriba el nombre de su profesor/a" preguntaId="profesor">
-							</div>
-						</div>
-
-						<div id="practicasError" class="error hide">
-							<p>Debe ingresar todos sus datos personales arriba para poder iniciar una práctica de laboratorio.</p>
-							<span class="icono">
-								<i class="fas fa-exclamation-triangle"></i>
-							</span>
-						</div>
-
-						<div id="practicasArea" class="hide">
-							<div class="pestanas">
-								<button class="pestana boton" for="practica1" type="practicas">Practica 1</button>
-								<button class="pestana boton" for="practica2" type="practicas">Practica 2</button>
-								<button class="pestana boton" for="practica3" type="practicas">Practica 3</button>
-								<button class="pestana boton" for="practica4" type="practicas">Practica 4</button>
-							</div>
-
-							<div class="practica-contenido">
-								<div id="practica1">
-									<h2>Practica N°1</h2>
-
-									<h3>Objetivo de la Práctica</h3>
-
-									<p>Aquí se explicara los conocimientos que se adquirirán a través de la ejecución de esta práctica.</p>
-									<br>
-
-									<h3>Conceptos Teóricos</h3>
-
-									<p>Aquí se darán todos los fundamentos y principios sobre los dispositivos utilizados durante la práctica. A su vez, de los planos del proceso, se explicara la sección que está involucrada.</p>
-									<br>
-
-									<h3>Equipo a Utilizar</h3>
-									<ul>
-									    <li>En esta sección se enlistan los dispositivos del proceso que estarán involucrados en la práctica.</li>
-									    <li>Motor.</li>
-									    <li>Tablero.</li>
-									    <li>Relé</li>
-									    <li>Etc</li>
-									</ul>
-									<br>
-
-									<h3>Procedimiento</h3>
-
-									<ol>
-									    <li>En esta sección se explican cada uno de los pasos de la práctica.</li>
-
-									    <li>
-									    	<p>Además, algunos pasos irán acompañados de preguntas sobre el compartimiento que haya presentado el proceso y el tablero durante el procedimiento.</p>
-
-									    	<p>¿Pregunta del paso numero 1?</p>
-									    	<textarea preguntaId="1_procedimiento_2"placeholder="Escriba su respuesta aquí…"></textarea>
-									    </li>
-
-									    <li>Paso numero tres.</li>
-
-									    <li>
-									    	<p>Paso número cuatro.</p>
-									    	<p>¿Pregunta del paso numero 4?</p>
-									    	<textarea preguntaId="1_procedimiento_4" placeholder="Escriba su respuesta aquí…"></textarea>
-									    </li>
-									</ol>
-									<br>
-
-									<h3>Preguntas</h3>
-
-									<ol>
-									    <li>
-									    	<p>Aquí al final de la práctica se harán preguntas (o se le ordenara al estudiante que escriba sobre algo relacionado) para que el estudiante saque conclusiones sobre lo aprendido.</p>
-									    	<textarea preguntaId="1_pregunta_1" placeholder="Escriba su respuesta aquí…"></textarea>
-									    </li>
-
-									    <li>
-									    	<p>¿Pregunta numero dos?</p>
-									    	<textarea preguntaId="1_pregunta_2" placeholder="Escriba su respuesta aquí…"></textarea>
-									    </li>
-									</ol>
-									<br>
-
-									<h3>Finalizar</h3>
-									<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
-
-									<div class="boton-imprimir-padre">
-										<a class="boton-imprimir boton" href="practica1.html" target="_blank">Imprimir</a>
-									</div>
-									
-								</div>
-
-								<div id="practica2">
-									<h2>Practica 2</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
-								</div>
-
-								<div id="practica3">
-									<h2>Practica 3</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
-								</div>
-
-								<div id="practica4">
-									<h2>Practica 4</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate tellus sit amet risus egestas, et lacinia lacus lobortis. Ut ut ante mauris. Maecenas id consectetur eros. Suspendisse erat nulla, finibus nec dui ut, pretium rhoncus velit. Nulla magna neque, aliquet eu massa eu, ullamcorper euismod odio.</p>
-								</div>
-							</div>
-						</div>
-
-						
-					</div>
+				</div>
+			</div>
 		</div>
 	</header>
 

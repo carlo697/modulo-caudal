@@ -4,6 +4,7 @@ const datosInputs = document.querySelectorAll(".practica-input");
 const preguntasInputs = document.querySelectorAll("[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
 const practicasError = document.querySelector("#practicasError");
+const esconderBoton = document.querySelector("#esconder");
 
 // Variables de pestanas
 const botonesPestanas = [];
@@ -11,6 +12,7 @@ let ultimaPestana = "";
 
 // Event listeners
 eventListeners();
+cargarBienvenida();
 
 function eventListeners () {
 	inicializarPestanas();
@@ -23,6 +25,8 @@ function eventListeners () {
 	for (let input of datosInputs) {
 		input.addEventListener("input", alModificarInputDato);
 	}
+
+	esconderBoton.addEventListener("click", esconderBienvenida);
 
 	cargarInputs();
 }
@@ -163,3 +167,14 @@ function cargarInputs() {
 	actualizarContenidoPracticas();
 }
 
+
+function cargarBienvenida() {
+	if (!localStorage.getItem("esconderBienvenida")) {
+		header.classList.add("bienvenida-on");
+	}
+}
+
+function esconderBienvenida() {
+	header.classList.remove("bienvenida-on");
+	localStorage.setItem("esconderBienvenida", true);
+}

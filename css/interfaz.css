@@ -243,7 +243,7 @@ main .titulo {
 	background-color: #ff0000;
 	color: white;
 	border-radius: 4px;
-	padding: 5px;
+	padding: 5px 10px;
 	font-weight: lighter;
 	transition: background 0.2s;
 }
@@ -288,7 +288,7 @@ a.boton {
 
 
 .hide {
-	display: none;
+	display: none !important;
 }
 
 
@@ -536,4 +536,43 @@ a.boton {
 	resize: vertical;
 	font-size: 1em;
 	padding: 0.5em;
+}
+
+
+
+
+
+.bienvenida {
+	position: fixed;
+	height: 60%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 200;
+	background-color: rgb(50, 50, 50);
+	color: white;
+
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	padding: 20px;
+	text-align: justify;
+	transition: 0.5s;
+}
+
+.bienvenida p {
+	color: rgb(190, 190, 190);
+	max-width: 800px;
+	font-size: 1.1em;
+}
+
+
+.header.bienvenida-on {
+	top: 60%;
+}
+
+.header.bienvenida-on .bienvenida {
+	display: flex;
 }
