@@ -162,6 +162,10 @@ function elementDrag(e) {
 	// Asignar la posicion nueva al elemento
 	let newX = (fondo.offsetTop - pos2);
 	let newY = (fondo.offsetLeft - pos1);
+
+	/*newX = Math.max(newX, 0);
+	newY = Math.max(newY, 0);*/
+
 	fondo.style.top = newX + "px";
 	fondo.style.left = newY + "px";
 }

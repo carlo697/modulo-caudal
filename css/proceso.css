@@ -131,9 +131,9 @@
 
 .chorro-agua {
 	position: relative;
-	width: 0.5em;
+	/*width: 0.5em;
 	height: 0.5em;
-	background-color: red;
+	background-color: red;*/
 }
 
 .particula-agua1 {
@@ -221,6 +221,21 @@
 
 .zoom-botones button {
 	margin-bottom: 4px;
+	background-color: rgb(193, 193, 193);
+	width: 30px;
+	height: 30px;
+	border-right: 3px solid rgb(106, 106, 119);
+	border-bottom: 3px solid rgb(106, 106, 119);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media (min-width: 600px) {
+	.zoom-botones button {
+		width: 40px;
+		height: 40px;
+	}
 }
 
 .zoom-botones button:last-child {
