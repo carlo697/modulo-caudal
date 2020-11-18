@@ -25,66 +25,107 @@
 
 #transmisor {
 	position: absolute;
-	top: 8em;
-	left: 10em;
-	width: 5em;
-	height: 5em;
+
+	left: calc(178.062px - (24.567px / 2));
+	top: calc(448.511px - (24.567px / 2));
+	
+	width: 24.567px;
+	height: 24.567px;
 }
 
 #valvulaControl {
 	position: absolute;
-	top: 10.3em;
-	left: 18.7em;
-	width: 10em;
-	height: 10em;
+
+	left: calc(371.793px - (64.074px / 2));
+	top: calc(455.745px - (64.074px / 2));
+	
+	width: 64.074px;
+	height: 64.074px;
 }
 
 #vastago {
 	position: absolute;
-	top: 10.3em;
-	left: 18.7em;
-	width: 10em;
-	height: 10em;
+	
+	left: calc(371.793px - (64.074px / 2));
+	top: calc(455.745px - (64.074px / 2));
+	
+	width: 64.074px;
+	height: 64.074px;
 }
 
 #bomba {
 	position: absolute;
-	top: 71%;
-	left: 80.5%;
-	width: 8em;
-	height: 8em;
 
-	background-image: url("../img/pumps_centrifugal_pump_2.svg");
-	background-size: 100% 100%;
+	left: calc(831.743px - (45.883px / 2));
+	top: calc(545.062px - (45.883px / 2));
+	
+	width: 45.883px;
+	height: 45.883px;
 }
 
 #tanque {
 	position: absolute;
-	top: 35%;
-	left: 66.5%;
-	width: 8em;
-	height: 17em;
+	
+	left: calc(695.667px - (70px / 2));
+	top: calc(471.943px - (162.449px / 2));
+	
+	width: 70px;
+	height: 162.449px;
 }
 
 
 #solenoide {
 	position: absolute;
-	top: 32%;
-	left: 81%;
-	width: 4em;
-	height: 4em;
+
+	left: calc(752.751px - (16.687px / 2));
+	top: calc(404.432px - (16.687px / 2));
+	
+	width: 16.687px;
+	height: 16.687px;
+}
+
+#placaOrificio {
+	position: absolute;
+
+	left: calc(177.708px - (16px / 2));
+	top: calc(422.724px - (16px / 2));
+	
+	width: 16px;
+	height: 16px;
+}
+
+#venturi {
+	position: absolute;
+
+	left: calc(178.033px - (7.808px / 2));
+	top: calc(482.845px - (7.808px / 2));
+	
+	width: 7.808px;
+	height: 7.808px;
+}
+
+#rotametro {
+	position: absolute;
+
+	left: calc(573.01px - (17.496px / 2));
+	top: calc(406.088px - (62.931px / 2));
+	
+	width: 17.496px;
+	height: 62.931px;
 }
 
 #chorro1 {
 	position: absolute;
-	top: 40.5%;
-	left: 68%;
+
+	left: 670.5px;
+	top: 406.674px;
 }
 
 #chorro2 {
 	position: absolute;
-	top: 40.5%;
-	left: 77.5%;
+	
+	left: 719.75px;
+	top: 407.674px;
 }
 
 

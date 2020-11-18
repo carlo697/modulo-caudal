@@ -147,56 +147,62 @@
 
 		<h1 class="titulo">Proceso</h1>
 
-		<div class="proceso-fondo simulacion">
-			<div class="panel-informacion">
-				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
-				<p id="Texto"></p>
-			</div>
-
-			<div id="transmisor" helpTarget="transmisorInfo">
-				<img class="imagen" src="img/transmisor.svg" alt="">
-			</div>
-
-			<div id="vastago">
-				<img class="imagen" src="img/valvula_control_vastago.svg" alt="">
-			</div>
-			
-			<div id="valvulaControl" helpTarget="valvulaControlInfo">
-				<img class="imagen" src="img/valvula_control sin_vastago.svg" alt="">
-			</div>
-
-			<div id="chorro1" class="chorro-agua"></div>
-
-			<div id="chorro2" class="chorro-agua"></div>
-
-			<div id="tanque" helpTarget="tanqueInfo">
-				<img class="imagen" src="img/tanque_abierto.svg" alt="">
-			</div>
-
-			<div id="bomba" helpTarget="bombaInfo">
-				<audio loop playWhileOn>
-					<source src="sound/bomba.wav">
-				</audio>
-			</div>
-
-			<div id="solenoide" helpTarget="solenoideInfo">
-				<img class="imagen" src="img/solenoide.svg" alt="">
-			</div>
-
-		</div>
-
-		<h1 class="titulo">Proceso</h1>
-
 		<div id="zoomContenedor" class="zoom-contenedor">
-
 			<div id="procedoFondo" class="zoom-contenido">
+				<div id="bomba" helpTarget="bombaInfo">
+					<img class="imagen" src="img/pumps_centrifugal_pump_2.svg">
+
+					<audio loop playWhileOn>
+						<source src="sound/bomba.wav">
+					</audio>
+				</div>
+
+				<div id="solenoide" helpTarget="solenoideInfo">
+					<img class="imagen" src="img/solenoide.svg" alt="">
+				</div>
+
+				<div id="transmisor" helpTarget="transmisorInfo">
+					<img class="imagen" src="img/transmisor.svg" alt="">
+				</div>
+
+				<div id="vastago">
+					<img class="imagen" src="img/valvula_control_vastago.svg" alt="">
+				</div>
 				
+				<div id="valvulaControl" helpTarget="valvulaControlInfo">
+					<img class="imagen" src="img/valvula_control sin_vastago.svg" alt="">
+				</div>
+
+				<div id="tanque" helpTarget="tanqueInfo">
+					<img class="imagen" src="img/tanque_abierto.svg" alt="">
+				</div>
+
+				<div id="placaOrificio" helpTarget="placaOrificioInfo">
+					<img class="imagen" src="img/placa_orificio_bridas.svg" alt="">
+				</div>
+
+				<div id="venturi" helpTarget="venturiInfo">
+					<img class="imagen" src="img/venturi.svg" alt="">
+				</div>
+
+				<div id="rotametro" helpTarget="rotametroInfo">
+					<img class="imagen" src="img/rotametro.svg" alt="">
+				</div>
+
+				<div id="chorro1" class="chorro-agua"></div>
+
+				<div id="chorro2" class="chorro-agua"></div>
 			</div>
 
 
 			<div class="zoom-botones">
 				<button id="aumentar" class="boton">+</button>
 				<button id="disminuir" class="boton">-</button>
+			</div>
+
+			<div class="panel-informacion">
+				<p>Tiempo Transcurrido: <span id="ElapsedTime">0</span></p>
+				<p id="Texto"></p>
 			</div>
 
 			<div id="zoomCentro" class="zoom-centro">
@@ -333,10 +339,10 @@
 			    	</div>
 
 			    	<!-- Placa Orificio -->
-					<div class="g-elemento">
+					<div id="placaOrificioInfo" class="g-elemento">
 			    		<h4>Placa Orificio</h4>
-			    		<div class="placeholder"></div>
-			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    		<img class="apariencia" src="img/placa_orificio.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="placaOrificio"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
 			    	<div class="g-info">
 			    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
@@ -344,24 +350,13 @@
 			    	</div>
 
 			    	<!-- Tubo Venturi -->
-					<div class="g-elemento">
+					<div id="venturiInfo" class="g-elemento">
 			    		<h4>Tubo Venturi</h4>
-			    		<div class="placeholder"></div>
-			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    		<img class="apariencia" src="img/venturi.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="venturi"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
 			    	<div class="g-info">
 			    		<p>Este elemento primario produce una diferencia de presión en el lugar de la tubería donde se halla instalado. Esta diferencia de presión es medida por el Transmisor, para así calcular el caudal a través de la tubería.</p>
-			    		<button class="g-boton boton">Leer más</button>
-			    	</div>
-
-			    	<!-- Controlador -->
-					<div class="g-elemento">
-			    		<h4>Controlador</h4>
-			    		<div class="placeholder"></div>
-			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
-			    	</div>
-			    	<div class="g-info">
-			    		<p>Este dispositivo recibe la medición de caudal producida por el Transmisor y la compara con un caudal ingresado por el operador, para así generar una señal eléctrica que será recibida por el Convertidor I/P y así ser usada para mover la Válvula de Control.</p>
 			    		<button class="g-boton boton">Leer más</button>
 			    	</div>
 

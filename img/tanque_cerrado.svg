@@ -4,21 +4,19 @@
 <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="65px" height="170px" viewBox="0 0 65 170" style="enable-background:new 0 0 65 170;" xml:space="preserve">
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="5.333" y1="87.9746" x2="59.667" y2="87.9746">
-	<stop  offset="0" style="stop-color:#1A6372"/>
+	<stop  offset="0" style="stop-color:#00783F"/>
 	<stop  offset="0.5182" style="stop-color:#FFFFFF"/>
 	<stop  offset="0.5507" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#1C6574"/>
+	<stop  offset="1" style="stop-color:#00783F"/>
 </linearGradient>
-<polyline style="fill:url(#SVGID_1_);stroke:#1C6574;stroke-width:2;stroke-miterlimit:10;" points="59.667,11.533 59.667,164.417 
-	5.333,164.417 5.333,11.533 "/>
+<polyline style="fill:url(#SVGID_1_);" points="59.667,11.533 59.667,164.417 5.333,164.417 5.333,11.533 "/>
 <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="2.0005" y1="8.5869" x2="63" y2="8.5869">
-	<stop  offset="0" style="stop-color:#1A6372"/>
+	<stop  offset="0" style="stop-color:#00783F"/>
 	<stop  offset="0.5182" style="stop-color:#FFFFFF"/>
 	<stop  offset="0.5507" style="stop-color:#FFFFFF"/>
-	<stop  offset="1" style="stop-color:#1C6574"/>
+	<stop  offset="1" style="stop-color:#00783F"/>
 </linearGradient>
-<path style="fill:url(#SVGID_2_);stroke:#1C6574;stroke-miterlimit:10;" d="M2,15.2c0,0,0,0.533,0-7.333s61-7.866,61,0
-	c0,4.5,0,7.333,0,7.333"/>
+<path style="fill:url(#SVGID_2_);" d="M2,15.2c0,0,0,0.533,0-7.333s61-7.866,61,0c0,4.5,0,7.333,0,7.333"/>
 <path style="fill:none;stroke:#1A6372;stroke-width:3;stroke-miterlimit:10;" d="M52.375-5.634"/>
 <g>
 </g>
