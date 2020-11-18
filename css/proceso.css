@@ -150,3 +150,56 @@
 		transform: translate(-3em, 10em);
 	}
 }
+
+
+
+
+
+
+
+.zoom-contenedor {
+	width: 92em;
+	height: 46em;
+	background-color: white;
+	overflow: hidden;
+	position: relative;
+	font-size: 1vw;
+
+	touch-action: none;
+}
+
+.zoom-botones {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin: 5px;
+	font-size: 20px;
+}
+
+.zoom-botones button {
+	margin-bottom: 4px;
+}
+
+.zoom-botones button:last-child {
+	margin-bottom: 0;
+}
+
+.zoom-contenido {
+	background-color: white;
+	width: 1200px;
+	height: 600px;
+	background-image: url("../img/proceso/proceso.svg");
+	transform-origin: 0 0 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.zoom-centro {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-color: blue;
+}
