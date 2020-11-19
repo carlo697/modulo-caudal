@@ -127,6 +127,12 @@ const log = document.getElementById("log");
 const emergencia1 = new Interruptor(document.getElementById("stopPulsador"));
 emergencia1.setSound("sound/emergencia.mp3", false);
 
+const emergencia2 = new Interruptor(document.getElementById("emergencia2"));
+emergencia2.setSound("sound/emergencia.mp3", false);
+
+const emergencia3 = new Interruptor(document.getElementById("emergencia3"));
+emergencia3.setSound("sound/emergencia.mp3", false);
+
 const breaker = new Interruptor(document.getElementById("breaker"));
 breaker.setSound("sound/breaker.mp3", false);
 
@@ -365,8 +371,8 @@ function update(deltaTime) {
 	let _interruptor2 = interruptor2.getState();
 
 	let _emergencia1 = emergencia1.getState();
-	let _emergencia2 = false;
-	let _emergencia3 = false;
+	let _emergencia2 = emergencia2.getState();
+	let _emergencia3 = emergencia3.getState();
 
 	let _selectorPosicion = parseInt(selector.getAttribute("state"));
 	

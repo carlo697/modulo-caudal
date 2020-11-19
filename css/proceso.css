@@ -114,6 +114,27 @@
 	height: 62.931px;
 }
 
+
+#emergencia2 {
+	position: absolute;
+
+	left: calc(295.724px - (25px / 2));
+	top: calc(505.207px - (25px / 2));
+	
+	width: 25px;
+	height: 25px;
+}
+
+#emergencia3 {
+	position: absolute;
+
+	left: calc(860.673px - (25px / 2));
+	top: calc(505.207px - (25px / 2));
+	
+	width: 25px;
+	height: 25px;
+}
+
 #chorro1 {
 	position: absolute;
 

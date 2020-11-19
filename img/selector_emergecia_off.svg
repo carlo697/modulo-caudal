@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100px"
+	 height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g id="Layer_1">
+	
+		<rect x="15.75" y="1.417" fill="#E6E6E6" stroke="#CCCCCC" stroke-width="2" stroke-miterlimit="10" width="68.5" height="97.166"/>
+	<path fill="#EFA53A" stroke="#D38E33" stroke-miterlimit="10" d="M76.721,20.875H55.667v-3.376h-12v3.376H23.28
+		c-1.397,0-2.53,0.896-2.53,2v54.25c0,1.104,1.133,2,2.53,2h20.387v5.041h12v-5.041h21.054c1.396,0,2.529-0.896,2.529-2v-54.25
+		C79.25,21.771,78.117,20.875,76.721,20.875z"/>
+	<g>
+		<circle fill="#B7B7B7" stroke="#666666" stroke-miterlimit="10" cx="49.872" cy="10.115" r="4.221"/>
+		
+			<line fill="#626463" stroke="#707070" stroke-linecap="round" stroke-miterlimit="10" x1="48.69" y1="11.233" x2="50.955" y2="8.833"/>
+		
+			<line fill="#626463" stroke="#707070" stroke-linecap="round" stroke-miterlimit="10" x1="48.664" y1="8.858" x2="50.982" y2="11.208"/>
+	</g>
+	<g>
+		<circle fill="#B7B7B7" stroke="#666666" stroke-miterlimit="10" cx="49.872" cy="90.365" r="4.221"/>
+		
+			<line fill="#626463" stroke="#707070" stroke-linecap="round" stroke-miterlimit="10" x1="48.69" y1="91.482" x2="50.955" y2="89.084"/>
+		
+			<line fill="#626463" stroke="#707070" stroke-linecap="round" stroke-miterlimit="10" x1="48.664" y1="89.108" x2="50.982" y2="91.458"/>
+	</g>
+</g>
+<g id="off">
+	<radialGradient id="SVGID_1_" cx="50" cy="50" r="27.625" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.0788" style="stop-color:#FFC6A9"/>
+		<stop  offset="0.7094" style="stop-color:#FF0000"/>
+		<stop  offset="0.734" style="stop-color:#AE0000"/>
+		<stop  offset="0.867" style="stop-color:#AE0000"/>
+		<stop  offset="0.8966" style="stop-color:#FF0000"/>
+		<stop  offset="1" style="stop-color:#FF6B2A"/>
+	</radialGradient>
+	<radialGradient id="SVGID_2_" cx="50" cy="50" r="28.125" gradientUnits="userSpaceOnUse">
+		<stop  offset="0.0788" style="stop-color:#FFC6A9"/>
+		<stop  offset="0.7094" style="stop-color:#FF0000"/>
+		<stop  offset="0.734" style="stop-color:#AE0000"/>
+		<stop  offset="0.867" style="stop-color:#AE0000"/>
+		<stop  offset="0.8966" style="stop-color:#FF0000"/>
+		<stop  offset="0.9803" style="stop-color:#FF6B2A"/>
+		<stop  offset="1" style="stop-color:#AE0000"/>
+	</radialGradient>
+	<circle fill="url(#SVGID_1_)" stroke="url(#SVGID_2_)" stroke-miterlimit="10" cx="50" cy="50" r="27.625"/>
+	<polygon fill="#AE0000" points="49.667,38.125 40.729,42.334 43.667,62.084 43.667,79.125 55.667,79.125 55.667,62.084 
+		58.604,42.334 	"/>
+	<polygon fill="#FF1916" points="49.667,39.167 41.476,43.162 45.667,61.908 45.667,78.083 53.667,78.083 53.667,61.908 
+		57.858,43.162 	"/>
+	<circle fill="#BDCCD4" stroke="#999999" stroke-miterlimit="10" cx="49.667" cy="50" r="2.688"/>
+	<path fill="#EFA53A" stroke="#D38E33" stroke-width="0.8" stroke-miterlimit="10" d="M53.626,35.975c0,0.659-0.447,1.192-1,1.192
+		h-5.917c-0.552,0-1-0.534-1-1.192v-2.782c0-0.659,0.448-1.192,1-1.192h5.917c0.553,0,1,0.534,1,1.192V35.975z"/>
+	<ellipse fill="#CE0000" cx="29.959" cy="51.188" rx="1.459" ry="4.813"/>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+</svg>
