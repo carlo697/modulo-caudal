@@ -14,6 +14,7 @@
 
 .flex {
 	display: flex;
+
 }
 
 .superior {
@@ -30,11 +31,16 @@
 	grid-template-rows: 3em auto 3em 3em 3em auto 5em auto;
 	justify-items: center;
 	align-items: center;
+	background-image: url("../img/tablero_exterior_superior.svg");
+	background-size: contain;
 }
 
 .superior-in {
 	height: 30em;
 	width: 30em;
+
+	background-image: url("../img/tablero_interior_superior.svg");
+	background-size: contain;
 }
 
 .inferior {
@@ -42,11 +48,17 @@
 	width: 30em;
 	padding: 2em 3em;
 	margin-right: 1em;
+
+	background-image: url("../img/tablero_exterior_inferior.svg");
+	background-size: contain;
 }
 
 .inferior-in {
 	height: 13em;
 	width: 30em;
+
+	background-image: url("../img/tablero_interior_inferior.svg");
+	background-size: contain;
 }
 
 /* Grid */

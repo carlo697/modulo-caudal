@@ -1,13 +1,13 @@
 .interruptor {
-	width: 7em;
-	height: 8em;
+	width: 6em;
+	height: 7em;
 	cursor: pointer;
 }
 
 .i1 {
 	position: absolute;
-	top: 15%;
-	left: 45%;
+	top: 20%;
+	left: 44%;
 }
 
 .i2 {
@@ -18,40 +18,40 @@
 
 .breaker {
 	width: 7em;
-	height: 11.6em;
+	height: 11em;
 	/*background-color: gray;*/
 
 	position: absolute;
-	top: 10%;
-	left: 63%;
+	top: 14%;
+	left: 60%;
 
 	cursor: pointer;
 }
 
 .protector {
-	width: 7em;
-	height: 10em;
+	width: 5em;
+	height: 8.5em;
 
 	position: absolute;
-	top: 50%;
-	left: 10%;
+	top: 55%;
+	left: 24%;
 }
 
 .rele {
 	width: 4em;
-	height: 6em;
+	height: 5em;
 }
 
 .r1 {
 	position: absolute;
 	top: 55%;
-	left: 30%;
+	left: 40%;
 }
 
 .r2 {
 	position: absolute;
 	top: 55%;
-	left: 45%;
+	left: 52%;
 }
 
 .contactor {
@@ -59,7 +59,7 @@
 	height: 8em;
 
 	position: absolute;
-	top: 55%;
+	top: 50%;
 	left: 65%;
 }
 
@@ -68,7 +68,7 @@
 	height: 5em;
 
 	position: absolute;
-	top: 80.5%;
+	top: 74%;
 	left: 65%;
 }
 
