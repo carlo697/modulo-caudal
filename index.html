@@ -319,7 +319,7 @@
 			    	</div>
 			    	<div class="g-info">
 			    		<p>Almacena el agua que se usara en el proceso. En un proceso industrial real, este tanque podría almacenar una materia prima necesaria para la elaboración de un producto.</p>
-			    		<button class="g-boton boton">Leer más</button>
+			    		<button class="g-boton boton" data-dispositivo="tanque">Leer más</button>
 			    	</div>
 
 			    	<!-- Bomba Centrifuga -->
@@ -670,9 +670,21 @@
 			    		<button class="g-boton boton">Leer más</button>
 			    	</div>
 			    </div>
+
+			    <div id="informacion" class="submenu informacion hide">
+				    	<h2 id="informacionTitulo">Titulo</h2>
+				    	<div id="informacionContenido">
+				    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar, tortor vitae imperdiet porttitor, lorem mi interdum dolor, vel congue nisl libero sed nunc. Sed interdum elit tempus, maximus dolor at, fringilla sapien. Maecenas consequat, sem ut finibus aliquet, lectus neque finibus dolor, et ullamcorper lacus lacus ac est. Donec ut elit id sem fringilla laoreet. Nam justo lorem, fringilla ultrices porta sit amet, ullamcorper in velit. Morbi at eros odio. Aliquam urna justo, aliquet in aliquet placerat, consequat id enim. Nam eu volutpat libero, sit amet lobortis ante. Duis finibus lectus porta nisi cursus aliquam. Sed turpis est, consectetur sed lobortis eu, euismod vitae diam. Nam nec nulla eget dolor varius dapibus ut a lacus. Vestibulum mollis, tortor a dapibus varius, augue velit pharetra sem, sed feugiat dolor eros quis mi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In vel condimentum turpis. Etiam non turpis in risus pretium suscipit eget efficitur mauris.</p>
+				    	</div>
+
+				    	<button id="botonCerrarInformacion" class="boton">X</button>
+				    	
+			    </div>
 			</div>
 
-			<div id="planos" class="planos">
+				
+
+			<div id="planos" class="planos submenu">
 				<h2>Diagrama Escalera del Tablero de Control</h2>
 				<a href="img/planos/control.svg" target="_blank">
 					<img class="plano" src="img/planos/control.svg" alt="">
@@ -688,7 +700,7 @@
 				
 			</div>
 
-			<div id="practicas" class="practicas">
+			<div id="practicas" class="practicas submenu">
 				<h2>Practicas</h2>
 
 				<div class="input-fila">
@@ -836,6 +848,7 @@
 	<br>
 	<br>
 
+	<script src="js/informacion.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/interfaz.js"></script>
 	<script src="js/zoom.js"></script>

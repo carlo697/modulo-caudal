@@ -152,9 +152,7 @@ main {
 	transition: 0.1s right;
 
 	font-size: 13px;
-
-	overflow: auto;
-	padding: 1.5em;
+	
 	text-align: justify;
 }
 
@@ -166,6 +164,11 @@ main {
 
 .header.on .menu {
 	right: 0%;
+}
+
+.submenu {
+	overflow: auto;
+	padding: 1.5em;
 }
 
 .menu h2 {
@@ -438,6 +441,27 @@ a.boton {
 .g-boton {
 	width: 100%;
 }
+
+
+
+.informacion {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 90%);
+}
+
+#botonCerrarInformacion {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 5px;
+}
+
+
+
 
 
 

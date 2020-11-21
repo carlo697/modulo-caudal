@@ -6,6 +6,14 @@ const contenidoPracticas = document.querySelector("#practicasArea");
 const practicasError = document.querySelector("#practicasError");
 const esconderBoton = document.querySelector("#esconder");
 
+const dispositivos = document.querySelector("#guias");
+const informacion = document.querySelector("#informacion");
+const informacionTitulo = document.querySelector("#informacionTitulo");
+const informacionContenido = document.querySelector("#informacionContenido");
+const botonCerrarInformacion = document.querySelector("#botonCerrarInformacion");
+
+const menu = document.querySelector(".menu");
+
 // Variables de pestanas
 const botonesPestanas = [];
 let ultimaPestana = "";
@@ -27,6 +35,8 @@ function eventListeners () {
 	}
 
 	esconderBoton.addEventListener("click", esconderBienvenida);
+	dispositivos.addEventListener("click", clickEnDispositivos);
+	botonCerrarInformacion.addEventListener("click", clickEnCerrarInformacion);
 
 	cargarInputs();
 }
@@ -177,4 +187,36 @@ function cargarBienvenida() {
 function esconderBienvenida() {
 	header.classList.remove("bienvenida-on");
 	localStorage.setItem("esconderBienvenida", true);
+}
+
+function clickEnDispositivos(e) {
+	const target = e.target;
+
+	if (target.classList.contains("g-boton")) {
+		const id = target.getAttribute("data-dispositivo");
+
+		const dispositivo = obtenerDispositivo(id);
+
+		if (dispositivo != null) {
+			informacion.classList.remove("hide");
+
+			informacionTitulo.textContent = dispositivo.titulo;
+			informacionContenido.innerHTML = dispositivo.contenido;
+		}
+			
+	}
+}
+
+function obtenerDispositivo(id) {
+	for (let dispositivo of db) {
+		if (dispositivo.id == id) {
+			return dispositivo;
+		}
+	}
+
+	return null;
+}
+
+function clickEnCerrarInformacion() {
+	informacion.classList.add("hide");
 }
