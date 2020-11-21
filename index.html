@@ -189,6 +189,10 @@
 					<img class="imagen" src="img/rotametro.svg" alt="">
 				</div>
 
+				<div id="presostato" helpTarget="presostatoInfo">
+					<img class="imagen" src="img/presostato.svg" alt="">
+				</div>
+
 				<div id="chorro1" class="chorro-agua"></div>
 
 				<div id="chorro2" class="chorro-agua"></div>
@@ -201,10 +205,6 @@
 				<div id="emergencia3" class="iconos" helpTarget="aa">
 					<img  class="imagen hide-on" src="img/selector_emergecia_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/selector_emergecia_on.svg" alt="">
-				</div>
-
-				<div id="protector" class="protector iconos" helpTarget="protectorInfo">
-					
 				</div>
 			</div>
 
@@ -408,10 +408,10 @@
 			    	</div>
 
 			    	<!-- Presostato -->
-					<div class="g-elemento">
+					<div id="presostatoInfo" class="g-elemento">
 			    		<h4>Presostato</h4>
-			    		<div class="placeholder"></div>
-			    		<button class="g-boton boton"><i class="fas fa-eye"></i>Ver</button>
+			    		<img class="apariencia" src="img/presostato.svg" alt="">
+			    		<button class="g-boton boton" hightlightTarget="presostato"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
 			    	<div class="g-info">
 			    		<p>Este dispositivo de dos posiciones (encendido y apagado) se encenderá cuando haya correcto suministro neumático al modulo, y se apagara si no lo hubiese. Es usado para abrir la Válvula Solenoide cuando no haya suministro de aire, evitando que la bomba trabaje forzada.</p>
