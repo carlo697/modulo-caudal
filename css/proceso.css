@@ -124,6 +124,16 @@
 	height: 30px;
 }
 
+#convertidor {
+	position: absolute;
+
+	left: calc(370px - (25px / 2));
+	top: calc(510px - (25px / 2));
+	
+	width: 25px;
+	height: 25px;
+}
+
 
 #emergencia2 {
 	position: absolute;
