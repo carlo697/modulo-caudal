@@ -362,6 +362,8 @@ let sobreCarga = false;
 
 let vastagoPosicionActual = 0;
 
+let tiempoSobrecarga = 0;
+
 function update(deltaTime) {
 	const elapsedTime = document.getElementById("ElapsedTime");
 	elapsedTime.innerHTML = (performance.now() / 1000).toFixed(2);
@@ -456,7 +458,7 @@ function update(deltaTime) {
 		_contactor = false;
 	}
 
-	if (_contactor && !_luzFalloAire) {
+	if (_contactor && !_luzFalloAire && _controlador) {
 		activarChorro1 = true;
 	} else {
 		activarChorro1 = false;
@@ -466,6 +468,21 @@ function update(deltaTime) {
 		activarChorro2 = true;
 	} else {
 		activarChorro2 = false;
+	}
+
+	// Activar termico cuando la bomba esta en marcha sin encender el controlador
+	if (_contactor && !_luzFalloAire && !_controlador) {
+		tiempoSobrecarga += deltaTime;
+
+		if (tiempoSobrecarga > 10000) {
+			termico.setState(true);
+			termico.enable = true;
+			document.getElementById("sobreCarga").checked = true;
+			tiempoSobrecarga = 0;
+		}
+
+	} else {
+		tiempoSobrecarga = 0;
 	}
 
 	_luzStart = _contactor;
@@ -488,10 +505,10 @@ function update(deltaTime) {
 	let _vastagoAbierto = _controlador && !fallaAire;
 
 	vastagoPosicionActual += _vastagoAbierto ? (0.0005 * deltaTime) : (-0.0005 * deltaTime);
-	vastagoPosicionActual = Math.min(1, vastagoPosicionActual);
+	vastagoPosicionActual = Math.min(0.5, vastagoPosicionActual);
 	vastagoPosicionActual = Math.max(0, vastagoPosicionActual);
 
-	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.01 * vastagoPosicionActual;
+	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.012 * vastagoPosicionActual;
 
 	vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
 }
