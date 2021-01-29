@@ -460,8 +460,16 @@ a.boton {
 	margin: 5px;
 }
 
+.informacion img {
+	width: 100%;
+}
 
 
+@media (min-width: 600px) {
+	.informacion img {
+		max-width: 50%;
+	}
+}
 
 
 
