@@ -505,8 +505,206 @@ a.boton {
 }
 
 .plano {
+	position: relative;
 	width: 100%;
 }
+
+.plano img {
+	width: 100%;
+}
+
+.planoArea {
+	position: absolute !important;
+	background-color: transparent;
+	min-width: 10px;
+	min-height: 10px;
+	display: block;
+}
+
+#pReleProtectorVoltaje {
+    left: 53.68%;
+    top: 10.87%;
+    width: 3.79%;
+    height: 5.69%;
+}
+
+#pContactoProtectorVoltaje {
+    left: 6.72%;
+    top: 20.43%;
+    width: 3.4%;
+    height: 6.2%;
+}
+
+#pParoEmergencia1 {
+    left: 12.57%;
+    top: 19.11%;
+    width: 3.48%;
+    height: 5.39%;
+}
+
+#pParoEmergencia2 {
+    left: 17.63%;
+    top: 19.11%;
+    width: 3.56%;
+    height: 5.59%;
+}
+
+#pParoEmergencia3 {
+    left: 22.37%;
+    top: 19%;
+    width: 4.27%;
+    height: 5.69%;
+}
+
+#pSelectorOperacion {
+    left: 29.49%;
+    top: 17.99%;
+    width: 9.09%;
+    height: 7.11%;
+}
+
+#pPulsadorApagado {
+    left: 40.32%;
+    top: 19.61%;
+    width: 3.16%;
+    height: 4.07%;
+}
+
+#pPulsadorEncendido {
+    left: 46.88%;
+    top: 18.6%;
+    width: 3.32%;
+    height: 4.47%;
+}
+
+#pContacto1Contactor {
+    left: 45.69%;
+    top: 24.59%;
+    width: 5.14%;
+    height: 3.15%;
+}
+
+#pContactor {
+    left: 53.75%;
+    top: 19.41%;
+    width: 3.56%;
+    height: 4.78%;
+}
+
+#pLuzEncendido {
+    left: 53.75%;
+    top: 26.63%;
+    width: 3.56%;
+    height: 4.78%;
+}
+
+#pContacto1Termico {
+    left: 62.13%;
+    top: 19.72%;
+    width: 3.56%;
+    height: 4.78%;
+}
+
+#pContacto2Contactor {
+    left: 42.06%;
+    top: 32.52%;
+    width: 3.56%;
+    height: 4.78%;
+}
+
+#pLuzApagado {
+    left: 59.68%;
+    top: 32.22%;
+    width: 3.56%;
+    height: 4.78%;
+}
+
+#pContactoPresostato {
+    left: 40.16%;
+    top: 38.82%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pContacto3Contactor {
+    left: 45.93%;
+    top: 38.72%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pReleSolenoide {
+    left: 59.76%;
+    top: 38.31%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pContactoReleSolenoide {
+    left: 51.94%;
+    top: 44.41%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pValvulaSolenoide {
+    left: 59.76%;
+    top: 44.11%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pLuzSolenoide {
+    left: 59.76%;
+    top: 49.49%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pLuzFallaAire {
+    left: 60%;
+    top: 55.18%;
+    width: 3.24%;
+    height: 4.57%;
+}
+
+#pContactoReleSistemaBloqueo {
+    left: 40.79%;
+    top: 61.99%;
+    width: 3.16%;
+    height: 4.67%;
+}
+
+#pLuzSistemaBloqueado {
+    left: 59.68%;
+    top: 61.69%;
+    width: 3.16%;
+    height: 4.67%;
+} 
+
+#pReleSistemaBloqueo {
+    left: 59.84%;
+    top: 67.78%;
+    width: 3.16%;
+    height: 4.37%;
+}
+
+#pContacto2Termico {
+    left: 46.09%;
+    top: 73.78%;
+    width: 3.16%;
+    height: 4.37%;
+}
+
+#pLuzSobrecarga {
+    left: 59.92%;
+    top: 73.37%;
+    width: 3.16%;
+    height: 4.37%;
+}
+
+
+
 
 
 
