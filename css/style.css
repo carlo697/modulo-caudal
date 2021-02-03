@@ -142,10 +142,6 @@
 	cursor: pointer;
 }
 
-.señal.boton:hover {
-	filter: brightness(50%);
-}
-
 /* Botones pulsadores*/
 
 .pulsador {
@@ -186,51 +182,58 @@
 
 
 
-.pulsador-l {
+.pulsador-luminoso  {
+	width: 3em;
+	height: 3em;
+	background-color: transparent;
+}
+
+.pulsador-luminoso .boton {
+	display: block;
+	height: 100%;
 	border: 0.2em #b8b8b8 solid;
-	width: 4em;
-	height: 4em;
 	border-radius: 50%;
 	color: white;
 	cursor: pointer;
 	font-size: 0.75em;
 	font-weight: bold;
 	box-shadow: 0.3em 0.3em 0.2em rgba(0, 0, 0, 50%);
+	pointer-events: none;
 }
 
 .pulsador-l:focus {
 	outline: none;
 }
 
-.pulsador-l.off {
+.pulsador-luminoso.off .boton {
 	filter: brightness(50%);
 }
 
-.pulsador-l.off:hover {
+.pulsador-luminoso.off .boton:hover {
 	filter: brightness(60%);
 }
 
-.pulsador-l.off:active {
+.pulsador-luminoso.off .boton:active {
 	filter: brightness(70%);
 }
 
-.pulsador-l.on {
+.pulsador-luminoso.on .boton {
 	filter: brightness(100%);
 }
 
-.pulsador-l.on:hover {
+.pulsador-luminoso.on .boton:hover {
 	filter: brightness(110%);
 }
 
-.pulsador-l.on:active {
+.pulsador-luminoso.on .boton:active {
 	filter: brightness(120%);
 }
 
-.pulsador-l.rojo {
+.pulsador-luminoso .boton.rojo {
 	background-color: red;
 }
 
-.pulsador-l.verde {
+.pulsador-luminoso .boton.verde {
 	background-color: green;
 }
 
@@ -239,26 +242,33 @@
 .luz {
 	width: 3em;
 	height: 3em;
+}
+
+.luz .hijo {
+	display: block;
+	width: 100%;
+	height: 100%;
 	background-color: white;
 	border-radius: 50%;
 	filter: brightness(20%);
 	border: 0.1em solid black;
 	box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 30%);
+	pointer-events: none;
 }
 
-.luz.on {
+.luz.on .hijo {
 	filter: brightness(100%);
 }
 
-.luz.verde {
+.luz .hijo.verde {
 	background-color: green;
 }
 
-.luz.roja {
+.luz .hijo.rojo {
 	background-color: red;
 }
 
-.luz.amarillo {
+.luz .hijo.amarillo {
 	background-color: yellow;
 }
 

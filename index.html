@@ -69,19 +69,21 @@
 				<div class="señal">Fallo de aire</div>
 				<div class="señal">Sobrecarga</div>
 
-				<button id="botonStart" class="pulsador-l verde tooltip" helpTarget="botonStartInfo">
+				<button id="botonStart" class="pulsador-luminoso tooltip" helpTarget="botonStartInfo">
 					<audio>
 						<source src="sound/pulsador.mp3">
 					</audio>
-					START
+					<span class="boton verde"></span>
 					<span class="tooltip-text">Pulsador Luminoso de Encendido</span>
 				</button>
 
-				<div id="luzFalloAire" class="luz amarillo tooltip" helpTarget="luzFalloAireInfo">
+				<div id="luzFalloAire" class="luz tooltip" helpTarget="luzFalloAireInfo">
+					<span class="hijo amarillo"></span>
 					<span class="tooltip-text">Luz de Fallo de Aire</span>
 				</div>
 
-				<div id="luzSobrecarga" class="luz roja tooltip" helpTarget="luzSobrecargaInfo">
+				<div id="luzSobrecarga" class="luz tooltip" helpTarget="luzSobrecargaInfo">
+					<span class="hijo rojo"></span>
 					<span class="tooltip-text">Luz de Sobrecarga</span>
 				</div>
 
@@ -89,19 +91,21 @@
 				<div class="señal">Control de proceso<br>bloqueado</div>
 				<div class="señal">Válvula solenoide</div>
 
-				<button id="botonStop" class="pulsador-l rojo tooltip" helpTarget="botonStopInfo">
+				<button id="botonStop" class="pulsador-luminoso tooltip" helpTarget="botonStopInfo">
 					<audio>
 						<source src="sound/pulsador.mp3">
 					</audio>
-					STOP
+					<span class="boton rojo"></span>
 					<span class="tooltip-text">Pulsador Luminoso de Apagado</span>
 				</button>
 
 				<div id="luzProcesoBloqueado" class="luz tooltip" helpTarget="luzProcesoBloqueadoInfo">
+					<span class="hijo"></span>
 					<span class="tooltip-text">Luz de Control de Proceso Bloqueado</span>
 				</div>
 
-				<div id="luzSolenoide" class="luz amarillo tooltip" helpTarget="luzSolenoideInfo">
+				<div id="luzSolenoide" class="luz tooltip" helpTarget="luzSolenoideInfo">
+					<span class="hijo amarillo"></span>
 					<span class="tooltip-text">Luz de Válvula Solenoide</span>
 				</div>
 			</div>
@@ -554,9 +558,13 @@
 			    	</div>
 			    	<div class="g-info">
 			    		<p>Este selector tiene tres posiciones:</p>
+
 			    		<p><strong>Modo manual:</strong> La Bomba Centrífuga solo se podrá poner en marcha al presionar el Pulsador Luminoso de Encendido.</p>
+
 			    		<p><strong>Modo off:</strong> La Bomba Centrífuga se mantendrá apagada en todo momento.</p>
+
 			    		<p><strong>Modo automático:</strong> La Bomba Centrífuga se pondrá en marcha automáticamente al colocarse el selector en esta posición.</p>
+
 			    		<p>Para cambiar la posición del selector debe presionar alguna de las etiquetas “MANUAL”, “OFF” o “AUTOMATICO” que se hallan arriba del selector.</p>
 			    		<button class="g-boton boton" data-dispositivo="selector">Leer más</button>
 			    	</div>
@@ -564,7 +572,9 @@
 			    	<div id="botonStartInfo" class="g-elemento">
 			    		<h4>Pulsador Luminoso de Encendido</h4>
 			    		<div class="apariencia">
-			    			<button class="pulsador-l verde">START</button>
+			    			<button class="pulsador-luminoso">
+			    				<span class="boton verde"></span>
+			    			</button>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="botonStart"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
@@ -577,7 +587,9 @@
 			    	<div id="botonStopInfo" class="g-elemento">
 			    		<h4>Pulsador Luminoso de Apagado</h4>
 			    		<div class="apariencia">
-			    			<button class="pulsador-l rojo">STOP</button>
+			    			<button class="pulsador-luminoso">
+			    				<span class="boton rojo"></span>
+			    			</button>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="botonStop"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
@@ -590,7 +602,9 @@
 			    	<div class="g-elemento">
 			    		<h4>Luces indicadoras</h4>
 			    		<div class="apariencia">
-			    			<div class="luz"></div>
+			    			<div class="luz off">
+			    				<span class="hijo"></span>
+			    			</div>
 			    		</div>
 			    	</div>
 			    	<div class="g-info">
@@ -601,7 +615,9 @@
 			    	<div id="luzFalloAireInfo" class="g-elemento">
 			    		<h4>Luz de Fallo de Aire</h4>
 			    		<div class="apariencia">
-			    			<div class="luz amarillo on"></div>
+			    			<div class="luz on">
+			    				<span class="hijo amarillo"></span>
+			    			</div>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="luzFalloAire"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
@@ -614,7 +630,9 @@
 			    	<div id="luzSobrecargaInfo" class="g-elemento">
 			    		<h4>Luz de Sobrecarga</h4>
 			    		<div class="apariencia">
-			    			<div class="luz roja on"></div>
+			    			<div class="luz on">
+			    				<span class="hijo rojo"></span>
+			    			</div>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="luzSobrecarga"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
@@ -626,7 +644,9 @@
 			    	<div id="luzProcesoBloqueadoInfo" class="g-elemento">
 			    		<h4>Luz de Control de Proceso Bloqueado</h4>
 			    		<div class="apariencia">
-			    			<div class="luz on"></div>
+			    			<div class="luz on">
+			    				<span class="hijo"></span>
+			    			</div>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="luzProcesoBloqueado"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
@@ -639,7 +659,9 @@
 			    	<div id="luzSolenoideInfo" class="g-elemento">
 			    		<h4>Luz de Válvula Solenoide</h4>
 			    		<div class="apariencia">
-			    			<div class="luz amarillo on"></div>
+			    			<div class="luz on">
+			    				<span class="hijo amarillo"></span>
+			    			</div>
 			    		</div>
 			    		<button class="g-boton boton" hightlightTarget="luzSolenoide"><i class="fas fa-eye"></i>Ver</button>
 			    	</div>
