@@ -666,3 +666,45 @@ a.boton {
 .bienvenida h2 {
 	font-weight: 400;
 }
+
+
+
+
+
+
+
+
+.tooltip {
+	position: relative;
+
+}
+
+.tooltip .tooltip-text {
+	display: block;
+	position: absolute;
+
+	top: -2px;
+	left: 0;
+
+	padding: 5px;
+	text-align: center;
+	font-size: 12px;
+	text-transform: none;
+	font-weight: normal;
+
+	color: white;
+	background-color: #555;
+	border-radius: 6px;
+	box-shadow: rgba(1, 1, 1, 0.5) 4px 4px 8px;
+
+	opacity: 0;
+
+	transition: opacity 0.3s;
+	pointer-events: none;
+
+	z-index: 1000;
+}
+
+.tooltip:hover .tooltip-text {
+	opacity: 1;
+}

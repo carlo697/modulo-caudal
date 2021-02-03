@@ -39,6 +39,52 @@ function eventListeners () {
 	botonCerrarInformacion.addEventListener("click", clickEnCerrarInformacion);
 
 	cargarInputs();
+
+	document.body.addEventListener("mouseover", overTooltips);
+}
+
+const tooltipOffset = -2;
+
+function overTooltips(e) {
+	let tooltipParent;
+
+	if (e.target.classList.contains("tooltip")) {
+		tooltipParent = e.target;
+	} else {
+		if (e.target.parentElement.classList.contains("tooltip")) {
+			tooltipParent = e.target.parentElement;
+		} else {
+			return;
+		}
+	}
+
+	let tooltipText = tooltipParent.querySelector(".tooltip-text");
+
+	if (tooltipText == null) {
+		return;
+	}
+
+	/*
+	const parentBounds = tooltipParent.getBoundingClientRect();
+	const textBounds = tooltipText.getBoundingClientRect();
+	*/
+
+
+	if (tooltipText.tooltipWidth == undefined)
+	{
+		tooltipText.tooltipWidth = tooltipText.offsetWidth * 1.4;
+	}
+
+	width = tooltipText.tooltipWidth;
+
+	tooltipText.style.width = width + "px";
+	
+
+	const xOffset = (tooltipParent.offsetWidth / 2 - tooltipText.offsetWidth / 2);
+	const yOffset = tooltipText.offsetHeight;
+
+	tooltipText.style.transform = `translate(${xOffset}px, -${yOffset}px)`;
+	
 }
 
 // Funciones

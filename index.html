@@ -36,92 +36,121 @@
 
 				<button id="stopPulsador" class="grid-i-boton-parada pulsador rojo" helpTarget="emergenciaInfo">STOP</button>
 
-				<div id="botonManual" class="señal boton" helpTarget="selectorInfo">
+				<div id="botonManual" class="señal boton tooltip" helpTarget="selectorInfo">
 					Manual
 					<audio>
 						<source src="sound/rele.mp3">
 					</audio>
+					<span class="tooltip-text">Modo Manual</span>
 				</div>
-				<div id="botonOff" class="señal boton" helpTarget="selectorInfo">
+
+				<div id="botonOff" class="señal boton tooltip" helpTarget="selectorInfo">
 					OFF
 					<audio>
 						<source src="sound/rele.mp3">
 					</audio>
+					<span class="tooltip-text">Modo Apagado</span>
 				</div>
-				<div id="botonAutomatico" class="señal boton" helpTarget="selectorInfo">
+
+				<div id="botonAutomatico" class="señal boton tooltip" helpTarget="selectorInfo">
 					Automatico
 					<audio>
 						<source src="sound/rele.mp3">
 					</audio>
+					<span class="tooltip-text">Modo Automático</span>
 				</div>
 
-				<div id="selector" state="1" class="grid-i-selector selector" helpTarget="selectorInfo">
+				<div id="selector" state="1" class="grid-i-selector selector tooltip" helpTarget="selectorInfo">
 					<div class="perrilla"></div>
+					<span class="tooltip-text">Selector de Modo de Operación</span>
 				</div>
 
 				<div class="señal encendido">Encendido</div>
 				<div class="señal">Fallo de aire</div>
 				<div class="señal">Sobrecarga</div>
 
-				<button id="botonStart" class="pulsador-l verde" helpTarget="botonStartInfo">
+				<button id="botonStart" class="pulsador-l verde tooltip" helpTarget="botonStartInfo">
 					<audio>
 						<source src="sound/pulsador.mp3">
 					</audio>
 					START
+					<span class="tooltip-text">Pulsador Luminoso de Encendido</span>
 				</button>
-				<div id="luzFalloAire" class="luz amarillo" helpTarget="luzFalloAireInfo"></div>
-				<div id="luzSobrecarga" class="luz roja" helpTarget="luzSobrecargaInfo"></div>
+
+				<div id="luzFalloAire" class="luz amarillo tooltip" helpTarget="luzFalloAireInfo">
+					<span class="tooltip-text">Luz de Fallo de Aire</span>
+				</div>
+
+				<div id="luzSobrecarga" class="luz roja tooltip" helpTarget="luzSobrecargaInfo">
+					<span class="tooltip-text">Luz de Sobrecarga</span>
+				</div>
 
 				<div class="señal">Apagado</div>
 				<div class="señal">Control de proceso<br>bloqueado</div>
 				<div class="señal">Válvula solenoide</div>
 
-				<button id="botonStop" class="pulsador-l rojo" helpTarget="botonStopInfo">
+				<button id="botonStop" class="pulsador-l rojo tooltip" helpTarget="botonStopInfo">
 					<audio>
 						<source src="sound/pulsador.mp3">
 					</audio>
 					STOP
+					<span class="tooltip-text">Pulsador Luminoso de Apagado</span>
 				</button>
-				<div id="luzProcesoBloqueado" class="luz" helpTarget="luzProcesoBloqueadoInfo"></div>
-				<div id="luzSolenoide" class="luz amarillo" helpTarget="luzSolenoideInfo"></div>
+
+				<div id="luzProcesoBloqueado" class="luz tooltip" helpTarget="luzProcesoBloqueadoInfo">
+					<span class="tooltip-text">Luz de Control de Proceso Bloqueado</span>
+				</div>
+
+				<div id="luzSolenoide" class="luz amarillo tooltip" helpTarget="luzSolenoideInfo">
+					<span class="tooltip-text">Luz de Válvula Solenoide</span>
+				</div>
 			</div>
 
 			<div class="panel superior-in">
-				<div id="interruptor1" class="interruptor i1 iconos" helpTarget="interruptor1Info">
+				<div id="interruptor1" class="interruptor i1 iconos tooltip" helpTarget="interruptor1Info">
 					<img  class="imagen hide-on" src="img/interruptor_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/interruptor_on.svg" alt="">
 					<img  class="imagen" src="img/interruptor_franja_verde.svg" alt="">
+
+					<span class="tooltip-text">Breaker de Control 1</span>
 				</div>
 
-				<div id="breaker" class="breaker iconos ayuda" helpTarget="breakerInfo">
+				<div id="breaker" class="breaker iconos ayuda tooltip" helpTarget="breakerInfo">
 					<img  class="imagen hide-on" src="img/breaker_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/breaker_on.svg" alt="">
+
+					<span class="tooltip-text">Breaker Principal de Control</span>
 				</div>
 
-				<div id="protector" class="protector iconos" helpTarget="protectorInfo">
+				<div id="protector" class="protector iconos tooltip" helpTarget="protectorInfo">
 					<img  class="imagen hide-on" src="img/protector_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/protector_on.svg" alt="">
+					<span class="tooltip-text">Protector de Voltaje</span>
 				</div>
 
-				<div id="rele1" class="rele r1 iconos" helpTarget="rele1Info">
+				<div id="rele1" class="rele r1 iconos tooltip" helpTarget="rele1Info">
 					<img  class="imagen" src="img/rele.svg" alt="">
 					<i class="icono-on fas fa-bolt"></i>
+					<span class="tooltip-text">Relé 1</span>
 				</div>
 
-				<div id="rele2" class="rele r2 iconos" helpTarget="rele2Info">
+				<div id="rele2" class="rele r2 iconos tooltip" helpTarget="rele2Info" title="Rele 2">
 					<img  class="imagen" src="img/rele.svg" alt="">
 					<i class="icono-on fas fa-bolt"></i>
+					<span class="tooltip-text">Relé 2</span>
 				</div>
 
-				<div id="contactor" class="contactor iconos" helpTarget="contactorInfo">
+				<div id="contactor" class="contactor iconos tooltip" helpTarget="contactorInfo">
 					<img  class="imagen hide-on" src="img/contactor_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/contactor_on.svg" alt="">
 					<i class="icono-on fas fa-bolt"></i>
+					<span class="tooltip-text">Contactor</span>
 				</div>
 
-				<div id="termico" class="termico iconos" helpTarget="termicoInfo">
+				<div id="termico" class="termico iconos tooltip" helpTarget="termicoInfo">
 					<img  class="imagen" src="img/termico.svg" alt="">
 					<i class="icono-on fas fa-exclamation-circle"></i>
+					<span class="tooltip-text">Relé Térmico</span>
 				</div>
 			</div>
 		</div>
@@ -130,15 +159,18 @@
 			<div class="panel inferior">
 				<div class="señal-proyecto">Modulo de caudal de lazo cerrado</div>
 				<div class="señal señal-c">Controlador</div>
-				<div id="controlador" class="controlador elemento" helpTarget="controladorInfo"></div>
+				<div id="controlador" class="controlador elemento tooltip" helpTarget="controladorInfo">
+					<span class="tooltip-text">Controlador Electrónico</span>
+				</div>
 			</div>
 
 			<div class="panel inferior-in">
 
-				<div id="interruptor2" class="interruptor i2 iconos" helpTarget="interruptor2Info">
+				<div id="interruptor2" class="interruptor i2 iconos tooltip" helpTarget="interruptor2Info">
 					<img  class="imagen hide-on" src="img/interruptor_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/interruptor_on.svg" alt="">
 					<img  class="imagen" src="img/interruptor_franja_roja.svg" alt="">
+					<span class="tooltip-text">Breaker de Control 2</span>
 				</div>
 			</div>
 		</div>
@@ -147,66 +179,79 @@
 
 		<div id="zoomContenedor" class="zoom-contenedor">
 			<div id="procedoFondo" class="zoom-contenido">
-				<div id="bomba" helpTarget="bombaInfo">
+				<div id="bomba" helpTarget="bombaInfo" class="tooltip">
 					<img class="imagen" src="img/pumps_centrifugal_pump_2.svg">
 
 					<audio loop playWhileOn>
 						<source src="sound/bomba.wav">
 					</audio>
+
+					<span class="tooltip-text">Bomba Centrifuga</span>
 				</div>
 
-				<div id="solenoide" helpTarget="solenoideInfo">
+				<div id="solenoide" helpTarget="solenoideInfo" class="tooltip">
 					<img class="imagen" src="img/solenoide.svg" alt="">
+					<span class="tooltip-text">Válvula Solenoide</span>
 				</div>
 
-				<div id="transmisor" helpTarget="transmisorInfo">
+				<div id="transmisor" helpTarget="transmisorInfo" class="tooltip">
 					<img class="imagen" src="img/transmisor.svg" alt="">
+					<span class="tooltip-text">Transmisor</span>
 				</div>
 
 				<div id="vastago">
 					<img class="imagen" src="img/valvula_control_vastago.svg" alt="">
 				</div>
 				
-				<div id="valvulaControl" helpTarget="valvulaControlInfo">
+				<div id="valvulaControl" helpTarget="valvulaControlInfo" class="tooltip">
 					<img class="imagen" src="img/valvula_control sin_vastago.svg" alt="">
+					<span class="tooltip-text">Válvula de Control</span>
 				</div>
 
-				<div id="tanque" helpTarget="tanqueInfo">
+				<div id="tanque" helpTarget="tanqueInfo" class="tooltip">
 					<img class="imagen" src="img/tanque_abierto.svg" alt="">
+					<span class="tooltip-text">Tanque</span>
 				</div>
 
-				<div id="placaOrificio" helpTarget="placaOrificioInfo">
+				<div id="placaOrificio" helpTarget="placaOrificioInfo" class="tooltip">
 					<img class="imagen" src="img/placa_orificio_bridas.svg" alt="">
+					<span class="tooltip-text">Placa Orificio</span>
 				</div>
 
-				<div id="venturi" helpTarget="venturiInfo">
+				<div id="venturi" helpTarget="venturiInfo" class="tooltip">
 					<img class="imagen" src="img/venturi.svg" alt="">
+					<span class="tooltip-text">Tubo Venturi</span>
 				</div>
 
-				<div id="rotametro" helpTarget="rotametroInfo">
+				<div id="rotametro" helpTarget="rotametroInfo" class="tooltip">
 					<img class="imagen" src="img/rotametro.svg" alt="">
+					<span class="tooltip-text">Rotámetro</span>
 				</div>
 
-				<div id="presostato" helpTarget="presostatoInfo">
+				<div id="presostato" helpTarget="presostatoInfo" class="tooltip">
 					<img class="imagen" src="img/presostato.svg" alt="">
+					<span class="tooltip-text">Presostato</span>
 				</div>
 
-				<div id="convertidor" helpTarget="convertidorInfo">
+				<div id="convertidor" helpTarget="convertidorInfo" class="tooltip">
 					<img class="imagen" src="img/convertidor.svg" alt="">
+					<span class="tooltip-text">Convertidor I/P</span>
 				</div>
 
 				<div id="chorro1" class="chorro-agua"></div>
 
 				<div id="chorro2" class="chorro-agua"></div>
 
-				<div id="emergencia2" class="iconos" helpTarget="aa">
+				<div id="emergencia2" class="iconos tooltip" helpTarget="emergenciaInfo">
 					<img  class="imagen hide-on" src="img/selector_emergecia_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/selector_emergecia_on.svg" alt="">
+					<span class="tooltip-text">Interruptor de Emergencia</span>
 				</div>
 
-				<div id="emergencia3" class="iconos" helpTarget="aa">
+				<div id="emergencia3" class="iconos tooltip" helpTarget="emergenciaInfo">
 					<img  class="imagen hide-on" src="img/selector_emergecia_off.svg" alt="">
 					<img  class="imagen hide-off" src="img/selector_emergecia_on.svg" alt="">
+					<span class="tooltip-text">Interruptor de Emergencia</span>
 				</div>
 			</div>
 
