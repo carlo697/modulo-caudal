@@ -14,6 +14,8 @@ const botonCerrarInformacion = document.querySelector("#botonCerrarInformacion")
 
 const menu = document.querySelector(".menu");
 
+const procesoImagenes = document.querySelectorAll(".proceso-imagen");
+
 // Variables de pestanas
 const botonesPestanas = [];
 let ultimaPestana = "";
@@ -41,6 +43,12 @@ function eventListeners () {
 	cargarInputs();
 
 	document.body.addEventListener("mouseover", overTooltips);
+
+	for (let procesoImagen of procesoImagenes) {
+		procesoImagen.addEventListener("pointerdown", clickEnImagenesProceso);
+
+		agregarCirculos(procesoImagen);
+	}
 }
 
 const tooltipOffset = -2;
@@ -265,4 +273,91 @@ function obtenerDispositivo(id) {
 
 function clickEnCerrarInformacion() {
 	informacion.classList.add("hide");
+}
+
+
+let diferenciaX = 0;
+let diferenciaY = 0;
+let procesoMouseX = 0;
+let procesoMouseY = 0;
+let imagenArrastrada = null;
+let procesoImagen = null;
+
+function agregarCirculos(imagen) {
+	if (!imagen.hasAttribute("data-cantidad")) {
+		return;
+	}
+
+	const cantidad = parseInt(imagen.getAttribute("data-cantidad"));
+
+	for (var i = 0; i < cantidad; i++) {
+		const circulo = document.createElement("button");
+		circulo.classList.add("proceso-circulo");
+		//circulo.textContent = "o";
+		circulo.innerHTML = "<i class='far fa-circle'></i>";
+
+		const x = Math.random() * 20;
+		const y = Math.random() * 20;
+		
+		circulo.style.top = x + "%";
+		circulo.style.left = y + "%";
+
+		imagen.appendChild(circulo);
+	}
+}
+
+
+function clickEnImagenesProceso(e) {
+	e.preventDefault();
+
+	const target = e.target;
+
+	if (target.classList.contains("proceso-circulo")) {
+		// Guardar la posicion del cursor.
+		procesoMouseX = e.clientX;
+		procesoMouseY = e.clientY;
+
+		imagenArrastrada = target;
+		procesoImagen = target.parentElement;
+
+		target.addEventListener("pointermove", moverImagenProceso);
+		target.addEventListener("pointerup", soltarImagenProceso);
+
+		procesoImagen.addEventListener("pointermove", moverImagenProceso);
+		procesoImagen.addEventListener("pointerup", soltarImagenProceso);
+	}
+}
+
+function soltarImagenProceso(e) {
+	const target = e.target;
+	target.removeEventListener("pointermove", moverImagenProceso);
+	target.removeEventListener("pointerup", soltarImagenProceso);
+
+	procesoImagen.removeEventListener("pointermove", moverImagenProceso);
+	procesoImagen.removeEventListener("pointerup", soltarImagenProceso);
+}
+
+function moverImagenProceso(e) {
+	const target = imagenArrastrada;
+
+	// Calcular que tanto se movio el cursor.
+	diferenciaX = procesoMouseX - e.clientX;
+	diferenciaY = procesoMouseY - e.clientY;
+
+	// Guardar la posicion nueva del cursor.
+	procesoMouseX = e.clientX;
+	procesoMouseY = e.clientY;
+
+	// Asignar la posicion nueva al elemento
+	//let newX = (target.offsetTop - diferenciaY) / procesoImagen.offsetHeight;
+	//let newY = (target.offsetLeft - diferenciaX)  / procesoImagen.offsetWidth;
+
+	//let newY = (target.offsetTop - diferenciaY);
+	//let newX = (target.offsetLeft - diferenciaX);
+
+	let newY = ((target.offsetTop - diferenciaY) / procesoImagen.offsetHeight) * 100;
+	let newX = ((target.offsetLeft - diferenciaX) / procesoImagen.offsetWidth) * 100;
+
+	target.style.top = newY + "%";
+	target.style.left = newX + "%";
 }

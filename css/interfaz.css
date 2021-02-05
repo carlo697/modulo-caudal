@@ -759,6 +759,8 @@ a.boton {
 	padding: 1.5em;
 	background-color: black;
 	font-size: 1.1em;
+
+	text-align: left;
 }
 
 .pestanas {
@@ -775,16 +777,28 @@ a.boton {
 
 .practica-contenido h3 {
 	text-align: left;
+	margin-bottom: 0.5em;
 }
 
-.practica-contenido ul li {
-	margin-left: 2em;
-	margin-bottom: 0.2em;
+.practica-contenido ol {
+	margin-left: 3em;
+	counter-reset: item;
 }
 
 .practica-contenido li {
-	margin-left: 2em;
+	margin-bottom: 1.5em;
+	display: block;
 }
+
+.practica-contenido li:before {
+    content: counters(item, ".") ") ";
+    counter-increment: item;
+}
+
+.practica-contenido p {
+	margin-bottom: 2em;
+}
+
 
 .practica-contenido textarea, .practicas input {
 	display: inline-block;
@@ -792,10 +806,46 @@ a.boton {
 	resize: vertical;
 	font-size: 1em;
 	padding: 0.5em;
+	margin-top: 0.5em;
 }
 
+ 
 
 
+
+.proceso-imagen {
+	background-color: white;
+	margin-bottom: 2em;
+	margin-top: 2em;
+	position: relative;
+}
+
+.proceso-imagen img {
+	width: 100%;
+}
+
+.proceso-circulo {
+	position: absolute;
+
+	width: 0.8em;
+	height: 0.8em;
+	font-size: 1.5em;
+
+	left: 0;
+	top: 0;
+
+	background-color: transparent;
+	color: red;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.proceso-circulo .fa-circle {
+	pointer-events: none;
+}
 
 
 
