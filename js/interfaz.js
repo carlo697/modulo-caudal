@@ -291,7 +291,7 @@ function agregarCirculos(imagen) {
 	const cantidad = parseInt(imagen.getAttribute("data-cantidad"));
 
 	for (var i = 0; i < cantidad; i++) {
-		const circulo = document.createElement("button");
+		const circulo = document.createElement("div");
 		circulo.classList.add("proceso-circulo");
 		//circulo.textContent = "o";
 		circulo.innerHTML = "<i class='far fa-circle'></i>";

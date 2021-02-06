@@ -831,6 +831,8 @@ a.boton {
 	height: 0.8em;
 	font-size: 1.5em;
 
+	transform: translate(-0.4em, -0.4em);
+
 	left: 0;
 	top: 0;
 
@@ -843,6 +845,8 @@ a.boton {
 	align-items: center;
 
 	touch-action: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent; 
 }
 
 .proceso-circulo .fa-circle {
