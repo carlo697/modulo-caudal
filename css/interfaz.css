@@ -849,7 +849,7 @@ a.boton {
 	-webkit-tap-highlight-color: transparent; 
 }
 
-.proceso-circulo .fa-circle {
+.proceso-circulo .fa-times {
 	pointer-events: none;
 }
 

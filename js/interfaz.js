@@ -294,7 +294,7 @@ function agregarCirculos(imagen) {
 		const circulo = document.createElement("div");
 		circulo.classList.add("proceso-circulo");
 		//circulo.textContent = "o";
-		circulo.innerHTML = "<i class='far fa-circle'></i>";
+		circulo.innerHTML = "<i class='fas fa-times'></i>";
 
 		const x = Math.random() * 20;
 		const y = Math.random() * 20;
