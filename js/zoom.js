@@ -8,6 +8,7 @@ const centroContenedor = document.querySelector("#zoomCentro");
 const fondoAncho = 1200;
 let completeScale = 0;
 let currentScale = 1.0;
+let ultimoAncho = 0;
 
 const minimo = 1;
 const maximo = 7;
@@ -25,11 +26,14 @@ function eventListeners() {
 }
 
 function alCambiarTamano() {
-	var w = document.body.clientWidth;
+	const anchoNuevo = document.body.clientWidth;
+	if (anchoNuevo != ultimoAncho) {
+		ultimoAncho = anchoNuevo;
 
-	completeScale = (w * 0.95)/fondoAncho;
+		completeScale = (anchoNuevo * 0.95)/fondoAncho;
 
-	actualizarTamano(true);
+		actualizarTamano(true);
+	}
 }
 
 function posicionRelativa (a, b) {
@@ -148,7 +152,6 @@ function alHacerClick(e) {
 }
 
 function elementDrag(e) {
-	e = e || window.event;
 	e.preventDefault();
 
 	// Calcular que tanto se movio el cursor.
@@ -160,14 +163,14 @@ function elementDrag(e) {
 	pos4 = e.clientY;
 
 	// Asignar la posicion nueva al elemento
-	let newX = (fondo.offsetTop - pos2);
-	let newY = (fondo.offsetLeft - pos1);
+	let newX = ((fondo.offsetTop - pos2) / contenedor.offsetHeight) * 100;
+	let newY = ((fondo.offsetLeft - pos1) / contenedor.offsetWidth) * 100;
 
 	/*newX = Math.max(newX, 0);
 	newY = Math.max(newY, 0);*/
 
-	fondo.style.top = newX + "px";
-	fondo.style.left = newY + "px";
+	fondo.style.top = newX + "%";
+	fondo.style.left = newY + "%";
 }
 
 function terminarMovimiento() {
