@@ -15,6 +15,7 @@ const botonCerrarInformacion = document.querySelector("#botonCerrarInformacion")
 const menu = document.querySelector(".menu");
 
 const procesoImagenes = document.querySelectorAll(".proceso-imagen");
+let circuloPosiciones = {};
 
 // Variables de pestanas
 const botonesPestanas = [];
@@ -40,15 +41,17 @@ function eventListeners () {
 	dispositivos.addEventListener("click", clickEnDispositivos);
 	botonCerrarInformacion.addEventListener("click", clickEnCerrarInformacion);
 
-	cargarInputs();
-
 	document.body.addEventListener("mouseover", overTooltips);
+
+	cargarPosicionCirculos();
 
 	for (let procesoImagen of procesoImagenes) {
 		procesoImagen.addEventListener("pointerdown", clickEnImagenesProceso);
 
 		agregarCirculos(procesoImagen);
 	}
+
+	cargarInputs();
 }
 
 const tooltipOffset = -2;
@@ -288,19 +291,31 @@ function agregarCirculos(imagen) {
 		return;
 	}
 
+	const id = imagen.getAttribute("data-imagen-id");
+
+	if (!circuloPosiciones.hasOwnProperty(id)) {
+		circuloPosiciones[id] = [];
+	}
+
 	const cantidad = parseInt(imagen.getAttribute("data-cantidad"));
 
 	for (var i = 0; i < cantidad; i++) {
 		const circulo = document.createElement("div");
-		circulo.classList.add("proceso-circulo");
-		//circulo.textContent = "o";
-		circulo.innerHTML = "<i class='fas fa-times'></i>";
 
-		const x = Math.random() * 20;
-		const y = Math.random() * 20;
-		
-		circulo.style.top = x + "%";
-		circulo.style.left = y + "%";
+		circulo.classList.add("proceso-circulo");
+		circulo.innerHTML = "<i class='fas fa-times'></i>";
+		circulo.setAttribute("data-indice", i);
+		circulo.setAttribute("data-padre", id);
+
+		if (i > circuloPosiciones[id].length - 1) {
+			const x = (Math.random() * 20) + "%";
+			const y = (Math.random() * 20) + "%";
+
+			circuloPosiciones[id].push([x, y]);
+		}
+
+		circulo.style.left = circuloPosiciones[id][i][0];
+		circulo.style.top = circuloPosiciones[id][i][1];
 
 		imagen.appendChild(circulo);
 	}
@@ -335,6 +350,13 @@ function soltarImagenProceso(e) {
 
 	procesoImagen.removeEventListener("pointermove", moverImagenProceso);
 	procesoImagen.removeEventListener("pointerup", soltarImagenProceso);
+
+	const indice = target.getAttribute("data-indice");
+	const indicePadre = target.getAttribute("data-padre");
+
+	circuloPosiciones[indicePadre][indice] = [target.style.left, target.style.top];
+
+	localStorage.setItem("circuloPosiciones", JSON.stringify(circuloPosiciones));
 }
 
 function moverImagenProceso(e) {
@@ -360,4 +382,12 @@ function moverImagenProceso(e) {
 
 	target.style.top = newY + "%";
 	target.style.left = newX + "%";
+}
+
+function cargarPosicionCirculos() {
+	const guardado = localStorage.getItem("circuloPosiciones");
+
+	if (guardado != null) {
+		circuloPosiciones = JSON.parse(guardado);
+	}
 }
