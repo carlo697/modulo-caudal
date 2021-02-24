@@ -27,4 +27,6 @@ function actualizarFecha() {
 	fecha.textContent = `${dia}-${mes}-${year}`;
 }
 
-print();
+window.onload = () => {
+	print();
+}

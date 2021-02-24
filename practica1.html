@@ -3,11 +3,12 @@
 <head>
 	<title>Practica 1</title>
 	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/practica.css">
 </head>
 
 <body>
-	<img src="img/logo_iutval.png" alt="">
+	<img class="logo" src="img/logo_iutval.png" alt="logo">
 	<div class="header-fila">
 		<h3>Nombre y Apellido: <span class="respuesta" preguntaId="nombre">vacio...</span></h3>
 		<h3>Carrera: <span class="respuesta" preguntaId="carrera">vacio...</span></h3>
@@ -28,63 +29,62 @@
 		<h3>Profesor: <span class="respuesta" preguntaId="profesor">vacio...</span></h3>
 	</div>
 	
-	<h1>Practica N°1</h1>
+	<h1>Practica Nº 1 IDENTIFICACION DE LOS ELEMENTOS PRESENTES EN EL MODULO.</h1>
+	<br>
 
 	<h2>Objetivo General</h2>
 
-	<p>Los conocimientos que se adquirirán a través de la ejecución de esta práctica.</p>
+	<p>Conocer los componentes presentes en el del Modulo Didáctico de Control de Caudal de Lazo Cerrado.</p>
 	<br>
 
 	<h2>Objetivos Específicos</h2>
 	<ol>
-	    <li>Objetivo 1</li>
-	    <br>
-
-	    <li>Objetivo 2</li>
-	    <br>
+	    <li>Identificar y contabilizar cada elemento presente en el Modulo Didáctico de Control de Caudal de Lazo Cerrado.</li>
+	    <li>Conocer la función que cumple cada elemento presente en el modulo.</li>
 	</ol>
-	
 	<br>
 
 	<h2>Procedimiento</h2>
 
 	<ol>
-	    <li>En esta sección se explican cada uno de los pasos de la práctica.</li>
-	    <br>
+		<li>Señalar en la imagen con una “X” las válvulas tipo bola presentes en el modulo. (Presione una “X” y arrástrela para moverla).
+	    	<div class="proceso-imagen" data-imagen-id="1_1" data-cantidad="22">
+	    		<img src="img/proceso/proceso_completo.png" alt="">
+	    	</div>
 
-	    <li>
-	    	<p>Además, algunos pasos irán acompañados de preguntas sobre el compartimiento que haya presentado el proceso y el tablero durante el procedimiento.</p>
+	    	<ol>
+	    	    <li>¿Cuántas llaves de paso manual se encuentran en el modulo?
+    	    		<p preguntaId="1_1_1"placeholder="Escriba su respuesta aquí…" class="respuesta"></p>
+	    	    </li>
 
-	    	<p>¿Pregunta del paso numero 1?</p>
-	    	<p preguntaId="1_procedimiento_2" class="respuesta">No se ha escrito una respuesta…</p>
+	    	    <li>¿Qué tipo de elemento es una llave de paso Manual?
+	    	    	<p preguntaId="1_1_2"placeholder="Escriba su respuesta aquí…" class="respuesta"></p>
+	    	    </li>
+
+	    	    <li>¿Qué función cumple una llave de paso?
+	    	    	<p preguntaId="1_1_3"placeholder="Escriba su respuesta aquí…" class="respuesta"></p>
+	    	    </li>
+	    	</ol>
 	    </li>
-	    <br>
 
-	    <li>Paso numero tres.</li>
-	    <br>
+	    <li>Señalar en la imagen con una “X” la placa orificio presente en el modulo.
+	    	<div class="proceso-imagen" data-imagen-id="1_2" data-cantidad="1">
+	    		<img src="img/proceso/proceso_completo.png" alt="">
+	    	</div>
 
-	    <li>
-	    	<p>Paso número cuatro.</p>
-	    	<p>¿Pregunta del paso numero 4?</p>
-	    	<p preguntaId="1_procedimiento_4" class="respuesta">No se ha escrito una respuesta…</p>
+	    	<ol>
+	    	    <li>¿Qué tipo de instrumento es una placa orificio?
+    	    		<p preguntaId="1_2_1"placeholder="Escriba su respuesta aquí…" class="respuesta"></p>
+	    	    </li>
+
+	    	    <li>¿Qué función cumple una placa de orificio?
+	    	    	<p preguntaId="1_2_2" placeholder="Escriba su respuesta aquí…" class="respuesta"></p>
+	    	    </li>
+	    	</ol>
 	    </li>
-	    <br>
 	</ol>
 
-	<h2>Preguntas</h2>
-
-	<ol>
-	    <li>
-	    	<p>Aquí al final de la práctica se harán preguntas (o se le ordenara al estudiante que escriba sobre algo relacionado) para que el estudiante saque conclusiones sobre lo aprendido.</p>
-
-	    	<p preguntaId="1_pregunta_1" class="respuesta">No se ha escrito una respuesta…</p>
-	    </li>
-	    <li>
-	    	<p>¿Pregunta numero dos?</p>
-	    	<p preguntaId="1_pregunta_2" class="respuesta">No se ha escrito una respuesta…</p>
-	    </li>
-	</ol>
-
+	<script src="js/procesoCirculos.js"></script>
 	<script src="js/practica.js"></script>
 </body>
 

@@ -10,18 +10,13 @@ html {
 	text-align: justify;
 }
 
-@media print {
-    body {
-        width: 21cm;
-        height: 29.7cm;
-    }
-}
-
 body {
-	padding: 1.5cm 1.5cm;
+    width: 21cm;
+    height: 29.7cm;
+    padding: 1.5cm 1.5cm;
 }
 
-img {
+.logo {
 	width: 3cm;
 	margin-bottom: 0.3cm;
 }
@@ -30,6 +25,7 @@ h1 {
 	text-align: center;
 	margin-top: 20pt;
 	margin-bottom: 10pt;
+	font-size: 1.5em;
 }
 
 h2 {
@@ -45,6 +41,10 @@ li {
 	margin-bottom: 3pt;
 }
 
+ol ol li {
+	page-break-inside: avoid;
+}
+
 .respuesta {
 	text-decoration: underline;
 }
@@ -53,4 +53,42 @@ li {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 4pt;
+}
+
+
+
+
+.proceso-imagen {
+	position: relative;
+	width: 18cm;
+	margin: 0.5cm 0;
+}
+
+.proceso-imagen img {
+	width: 100%;
+}
+
+.proceso-circulo {
+	position: absolute;
+
+	width: 0.8em;
+	height: 0.8em;
+	font-size: 1.5em;
+
+	transform: translate(-0.4em, -0.4em);
+
+	left: 0;
+	top: 0;
+
+	background-color: transparent;
+	color: red;
+	font-weight: bold;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	touch-action: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent; 
 }
