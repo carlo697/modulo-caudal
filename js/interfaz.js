@@ -47,6 +47,17 @@ function eventListeners () {
 	cargarInputs();
 }
 
+function iterarElementos (elemento, callback) {
+	callback(elemento);
+
+	const _elemento = elemento.firstElementChild;
+
+	while (_elemento) {
+		iterarElementos(elemento, callback);
+		_elemento = elemento.nextElementSibling;
+	}
+}
+
 const tooltipOffset = -2;
 
 function overTooltips(e) {

@@ -11,6 +11,11 @@ function cargarDatos() {
 		if (valor != null) {
 			input.textContent = valor;
 		}
+
+		if (!valor) {
+			input.textContent = "Esta pregunta no fue respondida.";
+			input.classList.add("alerta");
+		}
 	}
 }
 

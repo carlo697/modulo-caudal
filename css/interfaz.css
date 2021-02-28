@@ -796,7 +796,13 @@ a.boton {
 }
 
 .practica-contenido p {
-	margin-bottom: 2em;
+	margin-bottom: 1.5em;
+}
+
+.practica-contenido img {
+	max-width: 80vw;
+	max-height: 80vh;
+	display: block;
 }
 
 
@@ -822,6 +828,8 @@ a.boton {
 
 .proceso-imagen img {
 	width: 100%;
+	max-width: initial;
+	max-height: initial;
 }
 
 .proceso-circulo {
