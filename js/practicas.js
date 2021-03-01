@@ -67,7 +67,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” las válvulas tipo bola presentes en el modulo. (Presione una “X” y arrástrela para moverla).",
 
-				procesoCirculos: "22",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "22"
+				},
 
 				preguntas: [
 					"¿Cuántas válvulas tipo bola se encuentran en el modulo?",
@@ -79,7 +82,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” la placa orificio presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué clase de instrumento es una placa orificio?",
@@ -90,7 +96,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el tubo venturi presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué clase de instrumento es un tubo venturi?",
@@ -101,7 +110,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el rotámetro presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué clase de instrumento es un rotámetro?",
@@ -112,7 +124,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” la bomba centrifuga presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué tipo de elemento es una bomba centrifuga?",
@@ -123,7 +138,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” la válvula de control.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué clase de instrumento es una válvula de control?",
@@ -134,7 +152,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” la válvula solenoide.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué tipo de elemento es una válvula solenoide?",
@@ -145,7 +166,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen  con una “X” los selectores de parada de emergencia.",
 
-				procesoCirculos: "2",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "2"
+				},
 
 				preguntas: [
 					"¿Cuántos selectores de parada de emergencia se encuentran en el modulo?",
@@ -156,7 +180,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el presostato presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué tipo de elemento es un presostato?",
@@ -167,7 +194,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el filtro de línea de la bomba centrifuga.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué tipo de elemento es un filtro de línea?",
@@ -178,7 +208,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el convertidor I/P presente en el modulo.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué clase de instrumento es un convertidor I/P?",
@@ -189,7 +222,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” el tanque de almacenamiento de agua.",
 
-				procesoCirculos: "1",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "1"
+				},
 
 				preguntas: [
 					"¿Qué tipo de elemento es un tanque de almacenamiento de agua?",
@@ -200,7 +236,10 @@ const practicas = [
 			{
 				texto: "Señalar en la imagen con una “X” los manómetros.",
 
-				procesoCirculos: "2",
+				imagen: {
+					src: "img/proceso/proceso_completo.png",
+					circulos: "2"
+				},
 
 				preguntas: [
 					"¿Cuántos manómetros se encuentran en el módulo?",
@@ -208,6 +247,247 @@ const practicas = [
 					"¿Qué función realizan los manómetros?",
 				],
 			},
+		],
+	},
+
+
+	{
+		id: "2",
+
+		titulo: "IDENTIFICACION DE LOS ELEMENTOS DE MANIOBRA EN EL TABLERO",
+
+		objetivoGeneral: "Conocer los elementos que conforman el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+		objetivosEspecificos: [
+			"Identificar los elementos de maniobra presentes en el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Reconocer los elementos de protección presentes en el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+		],
+
+		teoria: `
+			<p>El tablero de control alberga la mayoría de los dispositivos eléctricos del modulo y constituye un centro de operación desde el cual los estudiantes o los profesores pueden poner en marcha el modulo. Desde él se pueden realizar diversas tareas:</p>
+
+			<ul>
+				<li><strong>Puesta en marcha y parada de la bomba centrifuga:</strong> El tablero cuenta con un selector y botones para controlar la bomba.</li>
+
+				<li><strong>Ajuste del controlador y del set-point:</strong> El controlador electrónico en el tablero se encarga de guiar la válvula de control para  controlar el caudal. Desde él se puede configurar el caudal deseado (el punto de consigna o set-point).</li>
+
+				<li><strong>Inspección de fallas que puedan surgir en el modulo:</strong> como un problema en el suministro eléctrico (bajo voltaje, sobre voltaje y pérdida de fase), sobrecarga en la bomba y falla de aire.</li>
+			</ul>
+
+			<p>La Figura 1 muestra la sección superior del tablero de control, donde se pueden observar los distintos elementos de maniobra que un operador puede usar.</p>
+
+			<h4>Figura 1. Sección superior del tablero de control.</h4>
+			<img src="img/informacion/tablero_exterior_superior.jpg" />
+
+			<p>A continuación se explican todos los elementos que constituyen el tablero de control:</p>
+
+			<p><strong>Botón de parada de emergencia.</strong> Este botón cumple la misma función que los selectores de parada de emergencia. Este botón es un elemento de maniobra usado para parar la bomba centrifuga inmediatamente en caso de que se presente una emergencia.</p>
+
+			<p><strong>Selector de Modo de Operación.</strong> Este selector es un elemento de maniobra y permite que el operador seleccione el modo en el que opera la bomba centrifuga. Existen tres modos de operación:</p>
+
+			<ul>
+				<li><strong>Modo Manual:</strong> En este modo la bomba se pondrá en marcha al accionar el pulsador luminoso de encendido y una vez en marcha se podrá parar accionando el pulsador luminoso de apagado.</li>
+
+				<li><strong>Modo Apagado (OFF):</strong> La bomba se mantendrá apagada en todo momento y ningún elemento del tablero podrá ponerla en marcha.</li>
+
+				<li><strong>Modo Automático:</strong> La bomba se pondrá en marcha automáticamente, es decir, la bomba se mantendrá en marcha en todo momento y ningún pulsador podrá detenerla.</li>
+			</ul>
+
+			<p><strong>Pulsador Luminoso de Encendido.</strong> Este pulsador es usado para poner en marcha la bomba centrifuga (cuando esta seleccionado el modo manual) y además cuenta con una luz de color verde que se encenderá siempre que la bomba este en marcha.</p>
+
+			<p><strong>Pulsador Luminoso de Apagado.</strong> Este pulsador es usado para parar la bomba centrifuga (cuando esta seleccionado el modo manual) y además cuenta con una luz de color rojo que se encenderá siempre que la bomba centrifuga este detenida.</p>
+
+			<p><strong>Luz de Fallo de Aire.</strong> Esta luz indicadora de color amarillo informa cuando se presenta una falla de aire, lo cual representa una situación riesgosa que provocara el cierre de la válvula de control del proceso.</p>
+
+			<p><strong>Luz de Sobrecarga.</strong> Esta luz indicadora de color rojo informa cuando el relé térmico se ha accionado debido a un exceso de corriente en la bomba centrifuga. Cuando se presenta esta situación es imposible poner en marcha la bomba nuevamente sin antes reiniciar manualmente el relé térmico (con su botón “reset”).</p>
+
+			<p><strong>Luz de Control de Proceso Bloqueado.</strong> Es una luz indicadora de color blanco que informa el accionamiento de cualquiera de los tres interruptores de emergencia, lo cual produce la parada inmediata de la bomba centrifuga. La bomba no podrá ser puesta en marcha mientras alguno de los interruptores este accionado.</p>
+
+			<p><strong>Luz de Válvula Solenoide.</strong> Esta luz indicadora de color amarillo se encenderá siempre que la válvula solenoide del proceso sea accionada durante una falla de aire y a la vez estando la bomba centrífuga en marcha.</p>
+
+			<p><strong>Controlador Electrónico.</strong> La pantalla del controlador y sus botones permiten al operador cambiar el set-point (este procedimiento debe buscarse en su manual de operación). El controlador compara la señal del transmisor (que representa el caudal actual) con el set-point asignado (el caudal deseado) para así producir una señal de salida que accionara la válvula de control, haciendo que el caudal se acerca lo más posible al set-point.</p>
+
+			<p><strong>Breaker Principal.</strong> Este breaker permite el paso de corriente a todos los dispositivos eléctricos del modulo y funciona de protección contra corrientes elevadas (como aquellas ocasionadas por un cortocircuito). Si no se activa, el modulo no se podrá encender.</p>
+
+			<p><strong>Breaker de Control N°1.</strong> Este breaker permite el paso de corriente a todos los dispositivos de la sección superior del tablero. Si no se activa, no se podrá poner en marcha la bomba centrifuga y tampoco funcionaran las luces y botones del tablero.</p>
+
+			<p><strong>Breaker de Control N°2.</strong> Este breaker permite el paso de corriente a la sección inferior del tablero de control. De no activarse, no se suministrara corriente al controlador electrónico, a la fuente de 30 V DC del transmisor de presión diferencial ni al convertidor I/P.</p>
+
+			<p><strong>Protector de Voltaje.</strong> Este dispositivo protege el tablero de control contra fallas con el suministro eléctrico, específicamente en caso de una sobretensión, una baja tensión o una pérdida de fase.</p>
+
+			<p><strong>Relé N°1.</strong> Este relé es usado por el circuito de control del tablero para suministrar corriente a la válvula solenoide y a la luz de la válvula solenoide durante una falla de suministro neumático.</p>
+
+			<p><strong>Relé N°2.</strong> Es usado por el circuito de control del tablero para encender la luz de control de proceso bloqueado cuando alguno de los interruptores de emergencia se accione.</p>
+
+			<p><strong>Contactor.</strong> Este elemento de maniobra es un contactor trifásico que permite o interrumpe el suministro eléctrico a la bomba centrífuga. El circuito de control del tablero gobierna la activación de este contactor.</p>
+
+			<p><strong>Relé Térmico.</strong> Este dispositivo protege a la bomba centrifuga contra sobrecargas de corriente. Al dispararse el rete térmico, desconecta la bomba centrífuga y se enciende la luz de sobrecarga del tablero.</p>
+
+			<p>Un exceso de corriente en la bomba puede dañarla a causa del sobrecalentamiento que se produciría, dañando el aislamiento entre sus bobinados. </p>
+		`,
+
+		pasos: [
+			{
+				texto: "Señalar en la imagen con una “X” el botón de parada de emergencia presente en el tablero de control.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el botón de parada de emergencia?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el selector de modo de operación.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el selector de modo de operación?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el pulsador luminoso de encendido.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el pulsador luminoso de encendido?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” o con O el pulsador luminoso de apagado.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el pulsador luminoso de apagado?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” las luces indicadoras de fallo de aire, sobrecarga, control de proceso bloqueado y válvula solenoide presentes en el tablero.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "4"
+				},
+
+				preguntas: [
+					"¿Qué función cumplen las luces indicadoras en el tablero?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el controlador Venetrol 3000 presente en el tablero de control.",
+
+				imagen: {
+					src: "img/tablero_exterior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el controlador Venetrol 3000?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el breaker principal del tablero.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el breaker principal del tablero?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” los breakers de control.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "2"
+				},
+
+				preguntas: [
+					"¿Cuántos breakers de control hay en el tablero?",
+					"¿Cuál es la función de los breakers de control?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el protector de voltaje.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el protector de voltaje?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” los relés presentes en el tablero de control.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "2"
+				},
+
+				preguntas: [
+					"¿Cuántos relés hay en el tablero de control?",
+					"¿Qué función cumplen los relés?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el contactor.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el contactor?",
+				],
+			},
+
+			{
+				texto: "Señalar en la imagen con una “X” el relé térmico.",
+
+				imagen: {
+					src: "img/tablero_interior.png",
+					circulos: "1"
+				},
+
+				preguntas: [
+					"¿Qué función cumple el relé térmico?",
+				],
+			},
+
+
+
 		],
 	},
 ];

@@ -54,6 +54,10 @@ ol ol li {
 	page-break-inside: avoid;
 }
 
+ol li {
+	page-break-inside: avoid;
+}
+
 .respuesta {
 	text-decoration: underline;
 }
@@ -74,14 +78,15 @@ ol ol li {
 
 .proceso-imagen {
 	position: relative;
-	width: 18cm;
 	margin: 0.5cm 0;
-	width: 70%;
+
+	display: table;
+	page-break-inside: avoid;
 }
 
 .proceso-imagen img {
-	width: 100%;
-	display: block;
+	max-width: 18cm;
+	max-height: 8cm;
 }
 
 .proceso-circulo {

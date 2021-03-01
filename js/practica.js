@@ -1,10 +1,13 @@
 const preguntas = document.querySelectorAll("[preguntaId]");
 const fecha = document.querySelector("#fecha");
 
+actualizarTitulo();
 cargarDatos();
 actualizarFecha();
 
 function cargarDatos() {
+	
+
 	for (input of preguntas) {
 		const valor = localStorage.getItem(input.getAttribute("preguntaId"));
 
@@ -17,6 +20,13 @@ function cargarDatos() {
 			input.classList.add("alerta");
 		}
 	}
+}
+
+function actualizarTitulo() {
+	const parametrosURL = new URLSearchParams(window.location.search);
+	const id = parametrosURL.get("id");
+
+	document.title = `Practica ${id}`;
 }
 
 function actualizarFecha() {

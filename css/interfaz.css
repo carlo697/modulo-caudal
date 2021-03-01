@@ -760,7 +760,13 @@ a.boton {
 	background-color: black;
 	font-size: 1.1em;
 
+	font-weight: lighter;
+
 	text-align: left;
+}
+
+.practica-contenido p {
+	text-indent: 2em;
 }
 
 .pestanas {
@@ -780,17 +786,29 @@ a.boton {
 	margin-bottom: 0.5em;
 }
 
+.practica-contenido ul {
+	margin-left: 3em;
+}
+
+.practica-contenido ul li {
+	margin-bottom: 1.5em;
+}
+
+.practica-contenido ul li:last-child {
+	margin-bottom: 2em;
+}
+
 .practica-contenido ol {
 	margin-left: 3em;
 	counter-reset: item;
 }
 
-.practica-contenido li {
+.practica-contenido ol li {
 	margin-bottom: 1.5em;
 	display: block;
 }
 
-.practica-contenido li:before {
+.practica-contenido ol li:before {
     content: counters(item, ".") ") ";
     counter-increment: item;
 }
@@ -803,6 +821,7 @@ a.boton {
 	max-width: 80vw;
 	max-height: 80vh;
 	display: block;
+	margin-bottom: 2em;
 }
 
 
@@ -821,15 +840,16 @@ a.boton {
 
 .proceso-imagen {
 	background-color: white;
-	margin-bottom: 2em;
-	margin-top: 2em;
+	margin: 2em auto;
 	position: relative;
+
+	display: table;
 }
 
 .proceso-imagen img {
-	width: 100%;
-	max-width: initial;
-	max-height: initial;
+	max-width: 100%;
+	max-height: 80vh;
+	margin-bottom: 0;
 }
 
 .proceso-circulo {
