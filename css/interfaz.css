@@ -756,13 +756,18 @@ a.boton {
 
 
 .practica-contenido {
-	padding: 1.5em;
+	padding: 4em 1.5em;
 	background-color: black;
 	font-size: 1.1em;
 
 	font-weight: lighter;
 
 	text-align: left;
+}
+
+.practica-centro {
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 .practica-contenido p {

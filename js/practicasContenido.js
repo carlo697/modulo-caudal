@@ -1,5 +1,5 @@
 const pestanasContenedor = document.querySelector("#practicasArea .pestanas");
-const practicasContenedor = document.querySelector(".practica-contenido");
+const practicasContenedor = document.querySelector(".practica-centro");
 
 if (pestanasContenedor) {
 	inicializarPestanas();
