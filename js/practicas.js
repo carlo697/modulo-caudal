@@ -730,4 +730,165 @@ const practicas = [
 
 		],
 	},
+
+
+
+
+
+
+
+	{
+		id: "4",
+
+		titulo: "PARADA DE EMERGENCIA DE LA BOMBA CENTRÍFUGA",
+
+		objetivoGeneral: "Conocer la función de los tres interruptores de emergencia disponibles en el Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+		objetivosEspecificos: [
+			"Entender el funcionamiento del circuito encargado de la parada de emergencia de la bomba centrifuga del modulo didáctico de control de caudal de lazo cerrado.",
+
+			"Instruirse en el uso de los tres interruptores de emergencia del modulo didáctico de control de caudal de lazo cerrado.",
+		],
+
+		teoria: `
+
+			<p>El tablero de control del modulo didáctico cuenta con un botón de parada de emergencia en su sección superior. El modulo también dispone de dos interruptores localizados a la izquierda y a la derecha. Estos tres elementos de maniobra constituyen los interruptores de emergencia del modulo y tienen la función de parar instantáneamente la bomba centrifuga en caso una emergencia.</p>
+
+			<p>La forma en la que estos interruptores logran su función se explicara por medio de la Figura 1 (y su leyenda en la Tabla 1), que representa la sección del diagrama de control encargada de controlar la bomba centrifuga. </p>
+
+			<h4>Figura 1. Diagrama de control de la bomba con interruptores de emergencia</h4>
+
+			<img src="img/practicas/4-figura-1.png"/>
+
+			<h4>Tabla 1. Leyenda del diagrama de control</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>R1</td>
+					<td>Relé del Protector de Voltaje (220 V)</td>
+				</tr>
+				<tr>
+					<td>S1</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S2</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S3</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>OL</td>
+					<td>Relé Térmico</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+			</table>
+
+			<p>Se observan los interruptores S1, S2 y S3, que representan los interruptores de parada de emergencia. El circuito hace uso de los contactos normalmente cerrados de estos interruptores en serie con los elementos que ponen en marcha la bomba. Por lo tanto, al ser accionado cualquiera de los interruptores, se cortara cualquier posible conexión al contactor K1. Esto detendrá la bomba (en caso de que se háyase en marcha) e inhabilita al selector de modo de operación y a los pulsadores. De este modo, será imposible poner en marcha la bomba hasta que el interruptor en cuestión se coloque en su posición original.</p>
+
+			<p>Cuando ningún interruptor se halle accionado, se energizara la bobina del relé R3  y esto apagara la luz indicadora L5 (luz de control de proceso bloqueado). El accionamiento de cualquiera de los interruptores provocara la desactivación de R3 y encenderá la luz de proceso bloqueado, dando una advertencia visual al operador.</p>
+		`,
+
+		pasos: [
+			{
+				texto: "Colocar el breaker principal en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el selector de modo de operación en la posición “AUTOMATICO”.",
+			},
+
+			{
+				texto: "Accionar el botón de parada de emergencia localizado en la parte superior del tablero de control.",
+				
+				preguntas: [
+					"¿Qué cambios observó en el modulo y en el tablero?",
+					"¿Qué función cumple la luz de control de proceso bloqueado?",
+				],
+			},
+
+			{
+				texto: "Colocar el tablero en el modo de operación manual e intente poner en marcha la bomba centrifuga mediante los pulsadores de encendido y apagado.",
+				
+				preguntas: [
+					"¿Por qué la bomba no puede ponerse en marcha mientras el proceso está bloqueado?",
+				],
+			},
+
+			{
+				texto: "Liberar el botón de parada de emergencia que accionó en el paso numero 5.",
+				
+				preguntas: [
+					"¿Qué cambios observó?",
+				],
+			},
+
+			{
+				texto: "Repetir los pasos 5, 6 y 7 con los dos interruptores de emergencia restantes por separado, localizados a la izquierda y derecha del modulo.",
+				
+				preguntas: [
+					"¿Explique si existe alguna diferencia o similitud entre los tres interruptores de emergencia?",
+
+					"¿En qué ayuda tener un sistema de parada de emergencia para la bomba?",
+				],
+			},
+
+			{
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+			},
+
+
+
+
+		],
+	},
 ];
