@@ -490,4 +490,244 @@ const practicas = [
 
 		],
 	},
+
+
+
+
+	{
+		id: "3",
+
+		titulo: "PUESTA EN MARCHA Y PARADA DE LA BOMBA CENTRIFUGA",
+
+		objetivoGeneral: "Conocer el procedimiento para la puesta en marcha y parada de la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado y sus modos de operación.",
+
+		objetivosEspecificos: [
+			"Conocer los breakers de protección del tablero de control y usarlos para hacer funcionar el Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Entender el funcionamiento del circuito encargado de controlar la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Instruirse en el uso de los tres modos de operación de la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+		],
+
+		teoria: `
+			<p>El modulo de caudal cuenta con una bomba centrifuga para hacer circular el agua almacenada en el tanque. Dicha bomba puede ser puesta en marcha y puede pararse desde el tablero de control mediante el uso de un selector y dos botones pulsadores (los cuales integran luces indicadoras para informar el estado de la bomba).</p>
+
+			<p>Antes de poder poner en marcha la bomba centrifuga o encender cualquier elemento del modulo didáctico, el tablero de control debe energizarse, para ello el tablero cuenta con tres breakers que deben activarse para que la corriente pueda ser suministrada:</p>
+
+			<ul>
+				<li><strong>Breaker Principal:</strong> suministra corriente a todo el tablero de control y al modulo en su totalidad.</li>
+
+				<li><strong>Breaker de Control 1:</strong> suministra corriente a la sección superior del tablero de control, donde están localizados los elementos de maniobra como botones, luces, relés, etc.</li>
+
+				<li><strong>Breaker de Control 2:</strong> suministra corriente a la sección inferior del tablero de control, en donde están localizados el controlador y la fuente de poder del transmisor de presión diferencial.</li>
+			</ul>
+
+			<p>Estos breakers cumplen una función de protección importante: protegen el circuito del daño provocado por un exceso de corriente (causado por alguna sobrecarga o por un cortocircuito).</p>
+
+			<p>La Figura 1 muestra una sección simplificada del diagrama de escalera del tablero de control y la Tabla 1 es la leyenda de dicho diagrama. </p>
+
+			<h4>Figura 1. Diagrama escalera simplificado del control de la bomba centrifuga.</h4>
+
+			<img src="img/practicas/3-figura-1.png" />
+
+			<h4>Tabla 1. Leyenda del diagrama escalera simplificado.</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+			</table>
+
+			<p>El selector de 3 posiciones en el diagrama representa al selector de modo de operación. Al colocar el selector en la posición “manual” y se procede a presionar el botón START (pulsador luminoso de encendido) se energiza la bobina del contactor K1 (el cual pone en marcha la bomba) y la luz piloto L1 (luz piloto del pulsador luminoso de encendido). El contacto normalmente abierto K1 se cierra y este mantiene energizado al contactor K1 incluso luego de soltar el pulsador. Además, el contacto normalmente cerrado K1 se abre y apaga la luz L2 (luz piloto del pulsador de apagado).</p>
+
+			<p>Si el selector es colocado en la posición “off” o si se presiona el botón STOP (pulsador luminoso de apagado) estando la bomba en marcha en el modo manual, se cortara la corriente hacia el contactor K1 y provocara la parada de la bomba, el apagado de la luz piloto de encendido y finalmente el encendido de la luz piloto de apagado.</p>
+
+			<p>Si el selector es colocado en la posición “automático”, se energiza directamente al contactor K1 (y a la luz de encendido), se enciende la bomba y se apaga la luz de apagado; lo mismo que ocurría al presionar el botón de encendido durante el modo manual. Note que los botones de encendido y apagado no influyen en la bomba mientras el modo automático esté en uso.</p>
+
+			<p>La Figura 2 representa una sección sin simplificar del diagrama escalera y la Tabla 2 constituye su leyenda. </p>
+
+			<h4>Figura 2. Diagrama escalera del control de la bomba centrifuga.</h4>
+
+			<img src="img/practicas/3-figura-2.png" />
+
+			<h4>Tabla 2. Leyenda del diagrama de escalera.</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>R1</td>
+					<td>Relé del Protector de Voltaje (220 V)</td>
+				</tr>
+				<tr>
+					<td>S1</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S2</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S3</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>OL</td>
+					<td>Relé Térmico</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+			</table>
+
+			<p>Se pueden observar los elementos de maniobra del primer diagrama escalera, más otros elementos extras: una bobina R1 que pertenece al protector de voltaje del tablero, tres interruptores (S1, S2, S3) que corresponden a los interruptores de emergencia, y el contacto OL que pertenece al relé térmico usado para proteger la bomba contra sobrecargas de corriente.</p>
+		`,
+
+		pasos: [
+			{
+				texto: "Colocar el breaker principal en su posición de encendido (ON).",
+				preguntas: [
+					"¿Qué sucede si no se activa este breaker?",
+				],
+			},
+
+			{
+				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+				preguntas: [
+					"¿Qué cambio observó en las luces de los pulsadores de encendido y apagado?",
+					"¿Qué cambio observó en el protector de voltaje?",
+					"¿Qué sucede si no se activa este breaker?",
+				],
+			},
+
+			{
+				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+				preguntas: [
+					"¿Qué cambios observó en el controlador electrónico?",
+					"¿Contra qué protegen los breakers al circuito?"
+				],
+			},
+
+			{
+				texto: "Colocar el selector en la posición “MANUAL”.",
+				preguntas: [
+					"¿Qué función cumple este selector?",
+					"¿Cuál es la función del modo manual?",
+				],
+			},
+
+			{
+				texto: "Accionar el pulsador luminoso de encendido.",
+				preguntas: [
+					"¿Qué funciona realiza este botón pulsador?",
+					"¿Para qué sirve la luz indicadora de este pulsador?",
+				],
+			},
+
+			{
+				texto: "Accionar el pulsador luminoso de apagado.",
+				preguntas: [
+					"¿Qué funciona realiza este botón pulsador?",
+					"¿Para qué sirve la luz indicadora de este pulsador?",
+				],
+			},
+
+			{
+				texto: "Colocar el selector en la posición “OFF”.",
+				preguntas: [
+					"¿Qué función cumple el modo de operación off?",
+				],
+			},
+
+			{
+				texto: "Colocar el selector en la posición “AUTOMATICO”.",
+				preguntas: [
+					"¿Qué ocurrió con la bomba centrifuga?",
+					"¿Qué función cumple el modo automático?",
+				],
+			},
+
+			{
+				texto: "Intentar accionar los pulsadores luminosos de encendido y apagado.",
+				preguntas: [
+					"¿La operación de la bomba centrifuga se vio afectada de alguna forma?",
+				],
+			},
+
+			{
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+			},
+
+
+
+		],
+	},
 ];

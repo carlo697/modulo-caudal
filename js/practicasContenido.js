@@ -120,30 +120,32 @@ function mostrarPractica(practica, contenido) {
 	    	</div>`;
 		}
 
-		// Crear las preguntas
-		preguntas.forEach((pregunta, preguntaIndice) => {
-			// Crear un elemento de lista para la pregunta
-			const li = document.createElement("li");
-			li.textContent = pregunta;
+		if (preguntas) {
+			// Crear las preguntas
+			preguntas.forEach((pregunta, preguntaIndice) => {
+				// Crear un elemento de lista para la pregunta
+				const li = document.createElement("li");
+				li.textContent = pregunta;
 
-			// Crear el textarea para la pregunta
-			const textarea = document.createElement(pestanasContenedor ? "textarea" : "p");
-			if (!pestanasContenedor) {
-				textarea.classList.add("respuesta");
-			}
-			textarea.setAttribute("placeholder", "Escriba su respuesta aquí…");
-			textarea.setAttribute("preguntaId", `${idCompleto}_${pasoIndice}_${preguntaIndice}`);
+				// Crear el textarea para la pregunta
+				const textarea = document.createElement(pestanasContenedor ? "textarea" : "p");
+				if (!pestanasContenedor) {
+					textarea.classList.add("respuesta");
+				}
+				textarea.setAttribute("placeholder", "Escriba su respuesta aquí…");
+				textarea.setAttribute("preguntaId", `${idCompleto}_${pasoIndice}_${preguntaIndice}`);
 
-			// Cargar input
-			const valor = localStorage.getItem(idCompleto);
+				// Cargar input
+				const valor = localStorage.getItem(idCompleto);
 
-			if (valor != null) {
-				textarea.value = valor;
-			}
+				if (valor != null) {
+					textarea.value = valor;
+				}
 
-			li.appendChild(textarea);
-			subLista.appendChild(li);
-		});
+				li.appendChild(textarea);
+				subLista.appendChild(li);
+			});
+		}
 
 		li.appendChild(subLista);
 		lista.appendChild(li);
