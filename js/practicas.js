@@ -15,7 +15,7 @@ const practicas = [
 		teoria: `
 			<p>El Modulo Didáctico de Control de Caudal de Lazo Cerrado (Figura 1) se encuentra en el laboratorio de Instrumentación y Control de la UPTValencia y brinda la posibilidad a los estudiantes de las distintas carreras impartidas en la universidad de interactuar con un proceso de control real.</p>
 
-			<h4>Figura 1. Modulo didáctico de control de caudal Cerrado.</h4>
+			<h4>Figura 1. Modulo didáctico de control de caudal Cerrado</h4>
 			<img src="img/fondo.jpg" />
 
 			<p>El proceso del modulo didáctico tiene por objeto controlar el caudal en un sistema de tuberías, llevando el valor del caudal lo más cercano a un valor establecido (conocido como set-point o punto de consigna) por el operador del proceso.</p>
@@ -277,7 +277,7 @@ const practicas = [
 
 			<p>La Figura 1 muestra la sección superior del tablero de control, donde se pueden observar los distintos elementos de maniobra que un operador puede usar.</p>
 
-			<h4>Figura 1. Sección superior del tablero de control.</h4>
+			<h4>Figura 1. Sección superior del tablero de control</h4>
 			<img src="img/informacion/tablero_exterior_superior.jpg" />
 
 			<p>A continuación se explican todos los elementos que constituyen el tablero de control:</p>
@@ -526,11 +526,11 @@ const practicas = [
 
 			<p>La Figura 1 muestra una sección simplificada del diagrama de escalera del tablero de control y la Tabla 1 es la leyenda de dicho diagrama. </p>
 
-			<h4>Figura 1. Diagrama escalera simplificado del control de la bomba centrifuga.</h4>
+			<h4>Figura 1. Diagrama escalera simplificado del control de la bomba centrifuga</h4>
 
 			<img src="img/practicas/3-figura-1.png" />
 
-			<h4>Tabla 1. Leyenda del diagrama escalera simplificado.</h4>
+			<h4>Tabla 1. Leyenda del diagrama escalera simplificado</h4>
 
 			<table>
 				<tr>
@@ -579,11 +579,11 @@ const practicas = [
 
 			<p>La Figura 2 representa una sección sin simplificar del diagrama escalera y la Tabla 2 constituye su leyenda. </p>
 
-			<h4>Figura 2. Diagrama escalera del control de la bomba centrifuga.</h4>
+			<h4>Figura 2. Diagrama escalera del control de la bomba centrifuga</h4>
 
 			<img src="img/practicas/3-figura-2.png" />
 
-			<h4>Tabla 2. Leyenda del diagrama de escalera.</h4>
+			<h4>Tabla 2. Leyenda del diagrama de escalera</h4>
 
 			<table>
 				<tr>
@@ -886,6 +886,184 @@ const practicas = [
 				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
 			},
 
+
+
+
+		],
+	},
+
+
+
+
+
+
+	{
+		id: "5",
+
+		titulo: "FALLA DE TENSION ELÉCTRICA EN EL MODULO DIDACTICO",
+
+		objetivoGeneral: "Identificar una falla de tensión eléctrica en el tablero de Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+		objetivosEspecificos: [
+			"Entender el funcionamiento del circuito de control durante una falla de tensión eléctrica.",
+
+			"Conocer el comportamiento del Modulo Didáctico de Control de Caudal de Lazo Cerrado durante una falla de tensión eléctrica.",
+		],
+
+		teoria: `
+
+			<p>El tablero de control dispone de un protector de voltaje que desempeña una función de seguridad bastante importante porque desconecta la electricidad del tablero cada vez que se presenten los siguientes problemas con el suministro eléctrico:</p>
+
+			<ul>
+				<li>Sobretensión.</li>
+				<li>Baja tensión.</li>
+				<li>Perdida de fase (conocida también como falla de fase).</li>
+			</ul>
+
+			<p>Cualquiera de las situaciones anteriores podría ocasionar daños a los equipos eléctricos del tablero de control, como por ejemplo: sobrecalentamiento, reducción de la vida útil y destrucción de los mismos. Otro ejemplo es la bomba centrifuga, donde dichos problemas provocaran un exceso de corriente y como resultado sobrecalentamiento, dañando el aislamiento entre sus bobinados.</p>
+
+			<p>El protector de voltaje es capaz de desconectar los equipos durante una falla gracias a que posee en su interior un relé, el cual se energiza cuando la tensión sea normal y se desenergiza cuando una de las fallas mencionadas se presenta.</p>
+
+			<p>La Figura 1 muestra una versión simplificada del diagrama de control del tablero y el Tabla 1 muestra su leyenda. La bobina R1 representa al protector de voltaje y note que este es alimentado con dos líneas de 120 V desfasadas 120°, ya que esté supervisa la tensión de 240 V del modulo. El contacto R1 pertenece al relé interno del protector.</p>
+
+			<h4>Figura 1. Diagrama de control simplificado del tablero</h4>
+
+			<img src="img/practicas/3-figura-2.png"/>
+
+			<h4>Tabla 1. Leyenda del diagrama de control</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>R1</td>
+					<td>Relé del Protector de Voltaje (220 V)</td>
+				</tr>
+				<tr>
+					<td>S1</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S2</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S3</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>OL</td>
+					<td>Relé Térmico</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+			</table>
+
+			<p>Cuando la tensión del suministro eléctrico se encuentra en un rango seguro, el contacto normalmente abierto R1 se cierra  (y se enciende una luz roja en protector de voltaje denominada “on”) y permite el paso de corriente al resto del circuito para que trabaje con normalidad.</p>
+
+			<p>Cuando se presenta una falla, por ejemplo, una sobretensión, el contacto R1 se abrirá (y se apagara la luz “on” del protector) y cortara la corriente al resto del circuito. Esto apagara todos los dispositivos de maniobra y la bomba instantáneamente. </p>
+		`,
+
+		pasos: [
+			{
+				texto: "Colocar el breaker principal en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+				
+				preguntas: [
+					"¿Qué cambio observo en el protector de voltaje al encender este breaker?",
+				],
+			},
+
+			{
+				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Abrir la pestaña “Fallas” de la página y activar la casilla “Falla de tensión eléctrica” para simular una falla con la tensión eléctrica.",
+				
+				preguntas: [
+					"¿Qué cambio observo en el protector de voltaje durante la falla?",
+
+					"¿Por qué es importante que un tablero de control cuente con un protector de voltaje?",
+
+					"¿Contra qué tipo de fallas de tensión protege el protector de voltaje?",
+				],
+			},
+
+			{
+				texto: "Intentar poner en marcha la bomba colocando el selector de modo de operación en la posición “AUTOMATICO”.",
+				
+				preguntas: [
+					"A nivel del circuito de control ¿Por qué la bomba no se puede poner en marcha durante una falla de tensión?",
+
+					"¿De qué forma puede afectar una falla de tensión a la bomba centrifuga?",
+				],
+			},
+
+			{
+				texto: "Remover la falla de tensión eléctrica dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de tensión eléctrica”.",
+				
+				preguntas: [
+					"¿Se encendió la bomba centrifuga esta vez?",
+				],
+			},
+
+			{
+				texto: "Activar la falla de tensión nuevamente (como en el paso 4) estando la bomba centrifuga en marcha.",
+				
+				preguntas: [
+					"¿Qué destaca en las luces del tablero de control cuando el protector de voltaje está protegiendo al modulo?",
+
+					"¿Cómo puede el operador percatarse en el tablero de que una falla de tensión está ocurriendo?",
+				],
+			},
+
+			{
+				texto: "Desactivar la falla de tensión eléctrica como en el paso 6.",
+			},
+
+			{
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+			},
 
 
 
