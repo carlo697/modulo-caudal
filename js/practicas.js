@@ -1069,4 +1069,178 @@ const practicas = [
 
 		],
 	},
+
+
+	{
+		id: "6",
+
+		titulo: "FALLA DE SOBRECARGA DE LA BOMBA CENTRIFUGA",
+
+		objetivoGeneral: "Comprender el compartimiento del tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado durante una sobrecarga de corriente en la bomba centrifuga.",
+
+		objetivosEspecificos: [
+			"Entender como un relé térmico es capaz de proteger a la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Comprender como opera el relé térmico en el circuito de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Identificar una sobrecarga en la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+		],
+
+		teoria: `
+
+			<p>El tablero de control del modulo cuenta con un relé térmico, cuya tarea es proteger a la bomba centrifuga contra sobrecargas de corriente. Un exceso de corriente en la bomba centrífuga puede dañarla a causa del sobrecalentamiento que se produciría. Si el sobrecalentamiento es excesivo, se dañara el aislamiento de las bobinas de la bomba y se estropeara.</p>
+
+			<p>Cuando el relé térmico detecta una sobrecarga de corriente, este se dispara y su mecanismo interno conmuta una serie de contactos eléctricos usados para parar la bomba centrifuga y evitar que se dañe. Una vez que el relé térmico se dispara, su mecanismo continuara en esta posición de disparo hasta que se sea reiniciado manualmente por un operador.</p>
+
+			<p>La Figura 1 muestra una versión simplificada del diagrama de control del tablero (y la Tabla 1 es su leyenda). Los contactos OL pertenecen al relé térmico y son accionados cuando se produce una sobrecarga de corriente en la bomba centrifuga.</p>
+
+			<h4>Figura 1. Diagrama de control simplificado del tablero</h4>
+
+			<img src="img/practicas/6-figura-1.png"/>
+
+			<h4>Tabla 1. Leyenda del diagrama de control</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>R1</td>
+					<td>Relé del Protector de Voltaje (220 V)</td>
+				</tr>
+				<tr>
+					<td>S1</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S2</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S3</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>OL</td>
+					<td>Relé Térmico</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L5</td>
+					<td>Luz de Control de Proceso Bloqueado</td>
+				</tr>
+				<tr>
+					<td>L6</td>
+					<td>Luz de Control de Proceso Bloqueado</td>
+				</tr>
+				<tr>
+					<td>R3</td>
+					<td>Relé N°2 (Relé de Control de Proceso Bloqueado)</td>
+				</tr>
+			</table>
+
+			<p>El disparo del relé térmico provoca que el contacto normalmente cerrado de OL se abra, lo que desconecta la bobina del contactor K1, produciendo la parada de la bomba centrifuga y evitando que los botones y el selector de modo de operación la puedan poner en marcha.</p>
+
+			<p>Además, el disparo del relé térmico produce el cierre del contacto normalmente abierto de OL y esto hace que se encienda la luz indicadora L6, la cual corresponde a luz de sobrecarga y le informa al operador que se ha presentando una sobrecarga en la bomba centrífuga.</p>
+
+			<p>Si el relé térmico es reiniciado manualmente por un operador, los contactos volverán a sus posiciones normales, la luz L6 se apagara y la operación de la bomba se restaurara.</p>
+		`,
+
+		pasos: [
+			{
+				texto: "Colocar el breaker principal en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el selector de modo de operación en la posición “MANUAL”.",
+			},
+
+			{
+				texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido.",
+			},
+
+
+			{
+				texto: "Abrir la pestaña “Fallas” de la página y activar la casilla llamada “Sobrecarga en la bomba centrífuga” para simular una sobrecarga en la bomba centrífuga.",
+				
+				preguntas: [
+					"¿Qué cambios observó en el tablero de control y en el modulo?",
+					"¿Qué es una sobrecarga en la bomba centrífuga?",
+				],
+			},
+
+			{
+				texto: "Intentar poner en marcha la bomba presionando el pulsador de encendido.",
+				
+				preguntas: [
+					"A nivel del circuito de control ¿Por qué no es posible poner en marcha la bomba?",
+				],
+			},
+
+			{
+				texto: "Reiniciar el relé térmico haciendo clic sobre él.",
+				
+				preguntas: [
+					"¿Para qué debe reiniciarse el relé térmico?",
+				],
+			},
+
+			{
+				texto: "Intentar poner en marcha la bomba presionando el pulsador luminoso de encendido.",
+				
+				preguntas: [
+					"¿Por qué esta vez la bomba si pudo ser puesta en marcha?",
+					"¿Qué función cumple el relé térmico a nivel de protección?",
+				],
+			},
+
+			{
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+			},
+		],
+	},
 ];
