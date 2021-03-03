@@ -784,6 +784,10 @@ const practicas = [
 					<td>Relé del Protector de Voltaje (220 V)</td>
 				</tr>
 				<tr>
+					<td>R3</td>
+					<td>Relé N°2 (Relé de Control de Proceso Bloqueado)</td>
+				</tr>
+				<tr>
 					<td>S1</td>
 					<td>Interruptor de Emergencia</td>
 				</tr>
@@ -822,6 +826,10 @@ const practicas = [
 				<tr>
 					<td>L2</td>
 					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L5</td>
+					<td>Luz de Control de Proceso Bloqueado</td>
 				</tr>
 			</table>
 
@@ -1122,6 +1130,10 @@ const practicas = [
 					<td>Relé del Protector de Voltaje (220 V)</td>
 				</tr>
 				<tr>
+					<td>R3</td>
+					<td>Relé N°2 (Relé de Control de Proceso Bloqueado)</td>
+				</tr>
+				<tr>
 					<td>S1</td>
 					<td>Interruptor de Emergencia</td>
 				</tr>
@@ -1167,11 +1179,7 @@ const practicas = [
 				</tr>
 				<tr>
 					<td>L6</td>
-					<td>Luz de Control de Proceso Bloqueado</td>
-				</tr>
-				<tr>
-					<td>R3</td>
-					<td>Relé N°2 (Relé de Control de Proceso Bloqueado)</td>
+					<td>Luz de Sobrecarga</td>
 				</tr>
 			</table>
 
@@ -1241,6 +1249,209 @@ const practicas = [
 			{
 				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
 			},
+		],
+	},
+
+
+
+
+
+
+
+	{
+		id: "7",
+
+		titulo: "FALLA DE SUMINISTRO NEUMÁTICO",
+
+		objetivoGeneral: "Identificar una falla de suministro neumático desde el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+		objetivosEspecificos: [
+			"Comprender como puede una falla en el suministro neumático perjudicar a la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+
+			"Entender el comportamiento del circuito de control del tablero durante una falla de suministro neumático.",
+
+			"Identificar la presencia de una falla de suministro neumático mediante las luces indicadoras del tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado",
+		],
+
+		teoria: `
+
+			<p>El modulo didáctico utiliza aire comprimido para accionar la válvula de control y así poder controlar el caudal. Este aire comprimido es producido por un compresor de aire lejos del laboratorio y es transportado por medio de tuberías de color azul hasta el modulo.</p>
+
+			<p>La válvula de control del modulo es de acción inversa, es decir, la válvula se encuentra normalmente cerrada y se abrirá al inyectarle aire comprimido (observe la Figura 1 para diferenciar sus posiciones). Como consecuencia, la válvula se cerrara si por algún motivo el modulo deja de recibir aire comprimido. Esto crea una situación peligrosa en la que si la bomba centrífuga se encuentra en marcha y a la vez ocurre la mencionada situación (falla de suministro neumático), la válvula de control se cerrara y no existirá retorno del agua hacia el tanque y la bomba trabajara forzada y entrara en proceso de cavitación.</p>
+
+			<h4>Figura 1. Posiciones de la válvula de control</h4>
+
+			<img src="img/practicas/7-figura-1.png"/>
+
+			<p>El modulo didáctico lidia con esta falla gracias a la válvula solenoide normalmente cerrada que se muestra en la Figura 2. Cuando esta válvula se acciona, abre un retorno para el agua y la bomba no correrá riesgos. El modulo cuenta con un presostato para detectar la presencia de aire en el suministro neumático.</p>
+
+			<h4>Figura 2. Válvula solenoide del modulo didáctico</h4>
+
+			<img src="img/practicas/7-figura-2.png"/>
+
+			<p>La Figura 3 muestra el diagrama de control del tablero en su totalidad y la Tabla 1 muestra su leyenda. La sección que se encarga de la falla de aire está constituida por las luces indicadoras L3 (luz de válvula solenoide) y L4 (luz de fallo de aire); la bobina del relé R2 (que energiza la válvula solenoide); el contacto normalmente abierto R2 y el contactor normalmente cerrado K2 del presostato.</p>
+
+			<h4>Figura 3. Diagrama de control del modulo didáctico de caudal de lazo cerrado</h4>
+
+			<img src="img/practicas/7-figura-3.png"/>
+
+			<h4>Tabla 1. Leyenda del diagrama de control</h4>
+
+			<table>
+				<tr>
+					<th>Símbolo</th>
+					<th>Significado</th>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Fase de 120 V</td>
+				</tr>
+				<tr>
+					<td>N</td>
+					<td>Neutro</td>
+				</tr>
+				<tr>
+					<td>R1</td>
+					<td>Relé del Protector de Voltaje (220 V)</td>
+				</tr>
+				<tr>
+					<td>R2</td>
+					<td>Relé N°1 (Relé de Control de la Válvula Solenoide)</td>
+				</tr>
+				<tr>
+					<td>R3</td>
+					<td>Relé N°2 (Relé de Control de Proceso Bloqueado)</td>
+				</tr>
+				<tr>
+					<td>S1</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S2</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>S3</td>
+					<td>Interruptor de Emergencia</td>
+				</tr>
+				<tr>
+					<td>Selector</td>
+					<td>Selector de Modo de Operación</td>
+				</tr>
+				<tr>
+					<td>STOP</td>
+					<td>Pulsador de Apagado</td>
+				</tr>
+				<tr>
+					<td>START</td>
+					<td>Pulsador de Encendido</td>
+				</tr>
+				<tr>
+					<td>K1</td>
+					<td>Contactor de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>OL</td>
+					<td>Relé Térmico</td>
+				</tr>
+				<tr>
+					<td>L1</td>
+					<td>Luz Piloto de Encendido de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L2</td>
+					<td>Luz Piloto de Apagado de la Bomba Centrifuga</td>
+				</tr>
+				<tr>
+					<td>L3</td>
+					<td>Luz de Válvula Solenoide</td>
+				</tr>
+				<tr>
+					<td>L4</td>
+					<td>Luz de Fallo de Aire</td>
+				</tr>
+				<tr>
+					<td>L5</td>
+					<td>Luz de Control de Proceso Bloqueado</td>
+				</tr>
+				<tr>
+					<td>L6</td>
+					<td>Luz de Sobrecarga</td>
+				</tr>
+			</table>
+
+			<p>Ante la presencia de aire en el suministro neumático, el modulo trabaja correctamente y el presostato K1 se acciona (ya que detecta la presión del aire). Esto abre el contacto normalmente abierto K2 del presostato. Como resultado, queda aislada la sección del relé R2 y la válvula solenoide no se accionara y ninguna de las luces L3 y L4 se encenderá.</p>
+
+			<p>Durante una falla de suministro neumático, la falta de presión hace que el presostato se desactive, por lo tanto, su contacto K2 vuelve a su posición normalmente cerrado y se enciende L4 (luz de fallo de aire) para dar una advertencia visual al operador.</p>
+
+			<p>En caso de que la bomba centrífuga se encuentre en marcha o se ponga en marcha durante la falla de suministro de aire, el contacto normalmente cerrado K1 del contactor se encuentra cerrado y se energiza la bobina del relé R2. El contacto normalmente abierto R2 se cierra y energiza la válvula solenoide (permitiendo el retorno del agua desde la bomba hacia el tanque) y se enciende la luz indicadora L3 (luz de válvula solenoide) dando una advertencia visual al operador.</p>
+		`,
+
+		pasos: [
+			{
+				texto: "Colocar el breaker principal en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+			},
+
+			{
+				texto: "Colocar el selector de modo de operación en la posición “MANUAL”.",
+			},
+
+
+			{
+				texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido.",
+				
+				preguntas: [
+					"¿Está accionada la válvula solenoide?",
+					"¿En qué posición se encuentra la válvula de control?",
+				],
+			},
+
+			{
+				texto: "Abrir la pestaña “Fallas” en el menú lateral de la página y activar la casilla “Falla de suministro de aire”.",
+				
+				preguntas: [
+					"¿En qué posición se encuentra la válvula de control durante una falla de suministro de aire?",
+
+					"¿Qué indica la luz de falla de aire?",
+
+					"¿Qué indica la luz de la válvula solenoide?",
+
+					"¿Por dónde se retorna el agua al tanque durante una falla de aire?",
+				],
+			},
+
+			{
+				texto: "Detener la bomba accionando el pulsador de apagado.",
+				
+				preguntas: [
+					"¿Por qué se apaga la válvula solenoide al apagar la bomba centrifuga?",
+
+					"¿Por qué se cierra la válvula de control durante una falla de suministro de aire?",
+
+					"¿Por qué se necesita un retorno para el agua durante una falla de suministro de aire?",
+				],
+			},
+
+			{
+				texto: "Remover la falla de suministro de aire dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de suministro de aire”.",
+			},
+
+			{
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+			},
+
 		],
 	},
 ];
