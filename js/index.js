@@ -504,11 +504,11 @@ function update(deltaTime) {
 
 	let _vastagoAbierto = _controlador && !fallaAire;
 
-	vastagoPosicionActual += _vastagoAbierto ? (0.0005 * deltaTime) : (-0.0005 * deltaTime);
+	vastagoPosicionActual += _vastagoAbierto ? (0.0001 * deltaTime) : (-0.0001 * deltaTime);
 	vastagoPosicionActual = Math.min(0.5, vastagoPosicionActual);
 	vastagoPosicionActual = Math.max(0, vastagoPosicionActual);
 
-	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.012 * vastagoPosicionActual;
+	vastagoPosicionActual += Math.sin((performance.now() / 300)) * 0.006 * vastagoPosicionActual;
 
 	vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
 }
