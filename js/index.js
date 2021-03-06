@@ -402,11 +402,11 @@ function update(deltaTime) {
 		_protector = !sobreVoltaje;
 	}
 
-	if (_protector &&_breaker && _interruptor1) {
+	if (_protector && _breaker && _interruptor1) {
 		_luzSobrecarga = _termico;
 	}
 	
-	if (_breaker && _interruptor2 && _interruptor1) {
+	if (_breaker && !sobreVoltaje && _interruptor2 && _interruptor1) {
 		_controlador = true;
 	}
 
