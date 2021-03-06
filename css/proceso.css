@@ -117,8 +117,8 @@
 #presostato {
 	position: absolute;
 
-	left: calc(350px - (30px / 2));
-	top: calc(360.088px - (30px / 2));
+	left: calc(420.4px - (30px / 2));
+	top: calc(374.3px - (30px / 2));
 	
 	width: 30px;
 	height: 30px;
@@ -127,8 +127,8 @@
 #convertidor {
 	position: absolute;
 
-	left: calc(370px - (25px / 2));
-	top: calc(510px - (25px / 2));
+	left: calc(372.194px - (25px / 2));
+	top: calc(507.344px - (25px / 2));
 	
 	width: 25px;
 	height: 25px;
