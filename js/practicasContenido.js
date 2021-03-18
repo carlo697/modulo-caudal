@@ -110,14 +110,45 @@ function mostrarPractica(practica, contenido) {
 		if (imagen) {
 			const { src, circulos } = imagen;
 
-			li.innerHTML += `
-			<div
-				class="proceso-imagen"
-				data-imagen-id="${idCompleto}_${pasoIndice}"
-				${circulos ? `data-cantidad="${circulos}"` : ""}
-			">
-	    		<img src="${src}" alt="">
-	    	</div>`;
+			const imagenId = `imagen_${idCompleto}_${pasoIndice}`;
+
+			let html = `
+				<div class="pregunta-img-contendor">
+	    	`;
+
+	    	if (pestanasContenedor) {
+	    		html += `
+		    		<div>
+						<button
+							class="boton agregar"
+							data-imagen-id="${imagenId}"
+						>
+							Agregar X
+						</button>
+						<button
+							class="boton eliminar"
+							data-imagen-id="${imagenId}"
+						>
+							Eliminar X
+						</button>
+					</div>
+		    	`;
+	    	}
+
+	    	html += `
+					<div
+						id="${imagenId}"
+						class="proceso-imagen"
+						data-imagen-id="${imagenId}"
+						${circulos ? `data-cantidad="${circulos}"` : ""}
+					">
+			    		<img src="${src}" alt="">
+			    	</div>
+		    	</div>
+	    	`;
+
+			li.innerHTML += html;
+	    	
 		}
 
 		if (preguntas) {

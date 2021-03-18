@@ -1,5 +1,5 @@
 const procesoImagenes = document.querySelectorAll(".proceso-imagen");
-let circuloPosiciones = {};
+let circuloPosiciones = [];
 
 cargarCirculos();
 
@@ -9,40 +9,31 @@ function cargarCirculos () {
 	for (let procesoImagen of procesoImagenes) {
 		agregarCirculos(procesoImagen);
 	}
-
-	console.log("circulos agregados")
 }
 
 function agregarCirculos(imagen) {
-	if (!imagen.hasAttribute("data-cantidad")) {
-		return;
-	}
-
 	const id = imagen.getAttribute("data-imagen-id");
 
-	if (!circuloPosiciones.hasOwnProperty(id)) {
-		circuloPosiciones[id] = [];
+	let conjunto = circuloPosiciones.find(item => item.id === id);
+
+	if (!conjunto) {
+		circuloPosiciones.push({
+			id,
+			circulos: [],
+		});
 	}
 
-	const cantidad = parseInt(imagen.getAttribute("data-cantidad"));
+	conjunto = circuloPosiciones.find(item => item.id === id);
 
-	for (var i = 0; i < cantidad; i++) {
+	for (var i = 0; i < conjunto.circulos.length; i++) {
 		const circulo = document.createElement("div");
 
 		circulo.classList.add("proceso-circulo");
-		circulo.innerHTML = "x";
-		circulo.setAttribute("data-indice", i);
+		circulo.textContent = "x";
 		circulo.setAttribute("data-padre", id);
 
-		if (i > circuloPosiciones[id].length - 1) {
-			const x = (Math.random() * 20) + "%";
-			const y = (Math.random() * 20) + "%";
-
-			circuloPosiciones[id].push([x, y]);
-		}
-
-		circulo.style.left = circuloPosiciones[id][i][0];
-		circulo.style.top = circuloPosiciones[id][i][1];
+		circulo.style.left = conjunto.circulos[i][0];
+		circulo.style.top = conjunto.circulos[i][1];
 
 		imagen.appendChild(circulo);
 	}

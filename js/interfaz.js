@@ -40,6 +40,8 @@ function eventListeners () {
 
 	document.body.addEventListener("mouseover", overTooltips);
 
+	contenidoPracticas.addEventListener("pointerdown", clickPracticas);
+
 	for (let imagen of procesoImagenes) {
 		imagen.addEventListener("pointerdown", clickEnImagenesProceso);
 	}
@@ -289,9 +291,58 @@ let procesoMouseX = 0;
 let procesoMouseY = 0;
 let imagenArrastrada = null;
 let procesoImagen = null;
+let eliminandoProcesoImagen = false;
+let imagenObjetivo = null;
 
 
+function clickPracticas(e) {
+	const {target} = e;
 
+	if (target.classList.contains("agregar") && !imagenArrastrada) {
+		const id = target.getAttribute("data-imagen-id");
+
+		const contenedor = document.querySelector("#" + id);
+
+		const circulo = document.createElement("div");
+
+		circulo.classList.add("proceso-circulo");
+		circulo.textContent = "x";
+		circulo.setAttribute("data-padre", id);
+
+		circulo.style.left = (Math.random() * 20) + "%";
+		circulo.style.top = (Math.random() * 20) + "%";
+
+		contenedor.appendChild(circulo);
+
+		terminarEliminarCirculos(contenedor);
+
+		guardarCirculos();
+	}
+
+	if (target.classList.contains("eliminar") && !imagenArrastrada) {
+		const id = target.getAttribute("data-imagen-id");
+
+		comenzarEliminarCirculos(document.querySelector("#" + id));
+	}
+}
+
+function comenzarEliminarCirculos(contenedor) {
+	if (imagenObjetivo != null) {
+		imagenObjetivo.classList.remove("eliminando");
+	}
+
+	eliminandoProcesoImagen = true;
+	imagenObjetivo = contenedor;
+	imagenObjetivo.classList.add("eliminando");
+}
+
+function terminarEliminarCirculos(contenedor) {
+	eliminandoProcesoImagen = false;
+	if (imagenObjetivo != null) {
+		imagenObjetivo.classList.remove("eliminando");
+		imagenObjetivo = null;
+	}
+}
 
 function clickEnImagenesProceso(e) {
 	e.preventDefault();
@@ -299,18 +350,27 @@ function clickEnImagenesProceso(e) {
 	const target = e.target;
 
 	if (target.classList.contains("proceso-circulo")) {
-		// Guardar la posicion del cursor.
-		procesoMouseX = e.clientX;
-		procesoMouseY = e.clientY;
+		if (eliminandoProcesoImagen) {
+			console.log(target.parentElement)
+			terminarEliminarCirculos();
 
-		imagenArrastrada = target;
-		procesoImagen = target.parentElement;
+			target.remove();
 
-		target.addEventListener("pointermove", moverImagenProceso);
-		target.addEventListener("pointerup", soltarImagenProceso);
+			guardarCirculos();
+		} else {
+			// Guardar la posicion del cursor.
+			procesoMouseX = e.clientX;
+			procesoMouseY = e.clientY;
 
-		procesoImagen.addEventListener("pointermove", moverImagenProceso);
-		procesoImagen.addEventListener("pointerup", soltarImagenProceso);
+			imagenArrastrada = target;
+			procesoImagen = target.parentElement;
+
+			target.addEventListener("pointermove", moverImagenProceso);
+			target.addEventListener("pointerup", soltarImagenProceso);
+
+			procesoImagen.addEventListener("pointermove", moverImagenProceso);
+			procesoImagen.addEventListener("pointerup", soltarImagenProceso);
+		}
 	}
 }
 
@@ -322,10 +382,30 @@ function soltarImagenProceso(e) {
 	procesoImagen.removeEventListener("pointermove", moverImagenProceso);
 	procesoImagen.removeEventListener("pointerup", soltarImagenProceso);
 
-	const indice = target.getAttribute("data-indice");
-	const indicePadre = target.getAttribute("data-padre");
+	imagenArrastrada = null;
 
-	circuloPosiciones[indicePadre][indice] = [target.style.left, target.style.top];
+	// guardar en localstorage
+	guardarCirculos();
+}
+
+function guardarCirculos() {
+	circuloPosiciones.forEach((item) => {
+		const {id, circulos} = item;
+
+		// obtener el contenedor y los elementos de los circulos
+		const contenedor = document.querySelector("#" + id);
+		const htmlCirculos = contenedor.querySelectorAll(".proceso-circulo");
+
+		// vaciar el array de circulos
+		circulos.length = 0;
+
+		htmlCirculos.forEach((circulo) => {
+			const x = circulo.style.left;
+			const y = circulo.style.top;
+
+			circulos.push([x, y]);
+		});
+	});
 
 	localStorage.setItem("circuloPosiciones", JSON.stringify(circuloPosiciones));
 }
@@ -342,12 +422,6 @@ function moverImagenProceso(e) {
 	procesoMouseY = e.clientY;
 
 	// Asignar la posicion nueva al elemento
-	//let newX = (target.offsetTop - diferenciaY) / procesoImagen.offsetHeight;
-	//let newY = (target.offsetLeft - diferenciaX)  / procesoImagen.offsetWidth;
-
-	//let newY = (target.offsetTop - diferenciaY);
-	//let newX = (target.offsetLeft - diferenciaX);
-
 	let newY = ((target.offsetTop - diferenciaY) / procesoImagen.offsetHeight) * 100;
 	let newX = ((target.offsetLeft - diferenciaX) / procesoImagen.offsetWidth) * 100;
 

@@ -868,15 +868,23 @@ a.boton {
 	margin-top: 0.5em;
 }
 
- 
 
 
+.pregunta-img-contendor {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 2em 0;
+}
+
+.pregunta-img-contendor .boton {
+	padding: 0.5em 1em;
+	margin-bottom: 0.5em;
+}
 
 .proceso-imagen {
 	background-color: white;
-	margin: 2em auto;
 	position: relative;
-
 	display: table;
 }
 
@@ -914,6 +922,10 @@ a.boton {
 
 .proceso-circulo .fa-times {
 	pointer-events: none;
+}
+
+.proceso-imagen.eliminando .proceso-circulo {
+	color: blue;
 }
 
 
