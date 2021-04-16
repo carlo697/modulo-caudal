@@ -69,7 +69,7 @@ function mostrarPractica(practica, contenido) {
 
 	// Objetivos especificos
 	contenido.innerHTML += `
-		<h3>Objetivo General</h3>
+		<h3>Objetivos Específicos</h3>
 
 		<ol>
 			${
