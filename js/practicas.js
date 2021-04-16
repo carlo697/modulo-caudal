@@ -723,7 +723,7 @@ const practicas = [
 			},
 
 			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
 			},
 
 
@@ -891,7 +891,7 @@ const practicas = [
 			},
 
 			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
 			},
 
 
@@ -1070,7 +1070,7 @@ const practicas = [
 			},
 
 			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
 			},
 
 
@@ -1247,7 +1247,7 @@ const practicas = [
 			},
 
 			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
 			},
 		],
 	},
@@ -1449,9 +1449,8 @@ const practicas = [
 			},
 
 			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF”, y apagar (colocándolos en la posición “OFF”) el breaker de control N°2, el breaker de control N°2 y finalmente el breaker principal.",
+				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
 			},
-
 		],
 	},
 ];
