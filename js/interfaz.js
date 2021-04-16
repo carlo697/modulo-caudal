@@ -180,10 +180,12 @@ function abrirMenu(pestana) {
 	}
 
 	header.classList.add("on");
+	document.body.style.overflow = "hidden";
 }
 
 function cerrarMenu() {
 	header.classList.remove("on");
+	document.body.style.overflow = "auto";
 }
 
 function toggleMenu() {
