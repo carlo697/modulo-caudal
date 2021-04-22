@@ -350,7 +350,7 @@ const db = [
 
 	{
 		id: "protector",
-		titulo: "Tanque de Suministro de Agua",
+		titulo: "Protector de Voltaje",
 		contenido: `
 			<p>El tablero del modulo didáctico cuenta con un Protector de Voltaje, este dispositivo posee en su interior un relé que se activara cuando la tensión en las líneas de suministro eléctrico no presenten fallas, y dicho relé se desactivara siempre que se presenten las siguientes situaciones por más de tres segundos:</p>
 			<ul>
