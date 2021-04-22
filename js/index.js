@@ -365,8 +365,6 @@ let vastagoPosicionActual = 0;
 let tiempoSobrecarga = 0;
 
 function update(deltaTime) {
-	const elapsedTime = document.getElementById("ElapsedTime");
-	elapsedTime.innerHTML = (performance.now() / 1000).toFixed(2);
 
 	let _breaker = breaker.getState();
 	let _interruptor1 = interruptor1.getState();
