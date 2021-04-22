@@ -141,7 +141,7 @@ let pos3 = 0;
 let pos4 = 0;
 
 if (tieneTouch) {
-	joystick.onpointerdown = joystickClic;
+	joystickFondo.onpointerdown = joystickClic;
 } else {
 	fondo.onpointerdown = alHacerClick;
 	joystickFondo.style.display = "none";
@@ -187,48 +187,27 @@ function terminarMovimiento() {
 
 
 let intervalo = null;
+const joystickDistanciaMaxima = 0.25;
+const joystickVelocidad = 40;
 
 function joystickClic(e) {
 	e.preventDefault();
 
+	// Actualizar la posicion del pointer
+	pos1 = e.clientX;
+	pos2 = e.clientY;
+
 	document.onpointerup = joystickFinalizar;
 	document.onpointermove = joystickMovimiento;
-
 	intervalo = setInterval(joystickIntervalo, 1000 / 30);
 }
 
 function joystickMovimiento(e) {
 	e.preventDefault();
 
+	// Actualizar la posicion del pointer
 	pos1 = e.clientX;
 	pos2 = e.clientY;
-
-	/*
-	// posicion del joystick
-	const fondoPos = joystickFondo.getBoundingClientRect();
-	const centroX = fondoPos.left + (joystickFondo.offsetWidth / 2);
-	const centroY = fondoPos.top + (joystickFondo.offsetHeight / 2);
-
-	// Obtener la posicion del jostick con respecto al centro
-	let movimientoX = (e.clientX - centroX) / joystickFondo.offsetWidth;
-	let movimientoY = (e.clientY - centroY) / joystickFondo.offsetHeight;
-
-	// Limitar el movimiento del joystick
-	movimientoX = limitarNumeroPositivoNegativo(movimientoX, 0.2);
-	movimientoY = limitarNumeroPositivoNegativo(movimientoY, 0.2);
-
-	// Asignar la posicion del joystick
-	joystick.style.left = (50 + movimientoX * 100) + "%";
-	joystick.style.top = (50 + movimientoY * 100) + "%";
-	
-    // Calcula la nueva posicion del proceso
-	let newY = ((fondo.offsetTop - (movimientoY * 20)) / contenedor.offsetHeight) * 100;
-	let newX = ((fondo.offsetLeft - (movimientoX * 20)) / contenedor.offsetWidth) * 100;
-
-	// Asignar la posicion del proceso
-	fondo.style.left = newX + "%";
-	fondo.style.top = newY + "%";
-	*/
 }
 
 function joystickIntervalo() {
@@ -242,16 +221,19 @@ function joystickIntervalo() {
 	let movimientoY = (pos2 - centroY) / joystickFondo.offsetHeight;
 
 	// Limitar el movimiento del joystick
-	movimientoX = limitarNumeroPositivoNegativo(movimientoX, 0.2);
-	movimientoY = limitarNumeroPositivoNegativo(movimientoY, 0.2);
+	let distancia = Math.sqrt(movimientoX * movimientoX + movimientoY * movimientoY);
+	if (distancia > joystickDistanciaMaxima) {
+		movimientoX = (movimientoX / distancia) * joystickDistanciaMaxima;
+		movimientoY = (movimientoY / distancia) * joystickDistanciaMaxima;
+	}
 
 	// Asignar la posicion del joystick
 	joystick.style.left = (50 + movimientoX * 100) + "%";
 	joystick.style.top = (50 + movimientoY * 100) + "%";
 	
     // Calcula la nueva posicion del proceso
-	let newY = ((fondo.offsetTop - (movimientoY * 50)) / contenedor.offsetHeight) * 100;
-	let newX = ((fondo.offsetLeft - (movimientoX * 50)) / contenedor.offsetWidth) * 100;
+	let newY = ((fondo.offsetTop - (movimientoY * joystickVelocidad)) / contenedor.offsetHeight) * 100;
+	let newX = ((fondo.offsetLeft - (movimientoX * joystickVelocidad)) / contenedor.offsetWidth) * 100;
 
 	// Asignar la posicion del proceso
 	fondo.style.left = newX + "%";
@@ -265,16 +247,5 @@ function joystickFinalizar() {
 
 	document.onpointerup = null;
 	document.onpointermove = null;
-
 	clearInterval(intervalo);
-}
-
-function limitarNumeroPositivoNegativo (numero, limitar) {
-	if (numero > limitar) {
-		numero = limitar;
-	} else if (numero < -limitar) {
-		numero = -limitar;
-	}
-
-	return numero;
 }
