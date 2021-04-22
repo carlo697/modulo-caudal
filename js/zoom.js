@@ -1,9 +1,12 @@
+const tieneTouch = ('ontouchstart' in document.documentElement);
+
 const fondo = document.querySelector("#procedoFondo");
 const contenedor = document.querySelector("#zoomContenedor");
 const botonAumentar = document.querySelector("#aumentar");
 const botonDisminuir = document.querySelector("#disminuir");
-
 const centroContenedor = document.querySelector("#zoomCentro");
+const joystickFondo = document.querySelector(".joystick");
+const joystick = document.querySelector(".joystick-handle");
 
 const fondoAncho = 1200;
 let completeScale = 0;
@@ -137,10 +140,14 @@ let pos2 = 0;
 let pos3 = 0;
 let pos4 = 0;
 
-fondo.onpointerdown = alHacerClick;
+if (tieneTouch) {
+	joystick.onpointerdown = joystickClic;
+} else {
+	fondo.onpointerdown = alHacerClick;
+	joystickFondo.style.display = "none";
+}
 
 function alHacerClick(e) {
-	e = e || window.event;
 	e.preventDefault();
 
 	// Guardar la posicion del cursor.
@@ -176,4 +183,98 @@ function elementDrag(e) {
 function terminarMovimiento() {
 	document.onpointerup = null;
 	document.onpointermove = null;
+}
+
+
+let intervalo = null;
+
+function joystickClic(e) {
+	e.preventDefault();
+
+	document.onpointerup = joystickFinalizar;
+	document.onpointermove = joystickMovimiento;
+
+	intervalo = setInterval(joystickIntervalo, 1000 / 30);
+}
+
+function joystickMovimiento(e) {
+	e.preventDefault();
+
+	pos1 = e.clientX;
+	pos2 = e.clientY;
+
+	/*
+	// posicion del joystick
+	const fondoPos = joystickFondo.getBoundingClientRect();
+	const centroX = fondoPos.left + (joystickFondo.offsetWidth / 2);
+	const centroY = fondoPos.top + (joystickFondo.offsetHeight / 2);
+
+	// Obtener la posicion del jostick con respecto al centro
+	let movimientoX = (e.clientX - centroX) / joystickFondo.offsetWidth;
+	let movimientoY = (e.clientY - centroY) / joystickFondo.offsetHeight;
+
+	// Limitar el movimiento del joystick
+	movimientoX = limitarNumeroPositivoNegativo(movimientoX, 0.2);
+	movimientoY = limitarNumeroPositivoNegativo(movimientoY, 0.2);
+
+	// Asignar la posicion del joystick
+	joystick.style.left = (50 + movimientoX * 100) + "%";
+	joystick.style.top = (50 + movimientoY * 100) + "%";
+	
+    // Calcula la nueva posicion del proceso
+	let newY = ((fondo.offsetTop - (movimientoY * 20)) / contenedor.offsetHeight) * 100;
+	let newX = ((fondo.offsetLeft - (movimientoX * 20)) / contenedor.offsetWidth) * 100;
+
+	// Asignar la posicion del proceso
+	fondo.style.left = newX + "%";
+	fondo.style.top = newY + "%";
+	*/
+}
+
+function joystickIntervalo() {
+		// posicion del joystick
+	const fondoPos = joystickFondo.getBoundingClientRect();
+	const centroX = fondoPos.left + (joystickFondo.offsetWidth / 2);
+	const centroY = fondoPos.top + (joystickFondo.offsetHeight / 2);
+
+	// Obtener la posicion del jostick con respecto al centro
+	let movimientoX = (pos1 - centroX) / joystickFondo.offsetWidth;
+	let movimientoY = (pos2 - centroY) / joystickFondo.offsetHeight;
+
+	// Limitar el movimiento del joystick
+	movimientoX = limitarNumeroPositivoNegativo(movimientoX, 0.2);
+	movimientoY = limitarNumeroPositivoNegativo(movimientoY, 0.2);
+
+	// Asignar la posicion del joystick
+	joystick.style.left = (50 + movimientoX * 100) + "%";
+	joystick.style.top = (50 + movimientoY * 100) + "%";
+	
+    // Calcula la nueva posicion del proceso
+	let newY = ((fondo.offsetTop - (movimientoY * 50)) / contenedor.offsetHeight) * 100;
+	let newX = ((fondo.offsetLeft - (movimientoX * 50)) / contenedor.offsetWidth) * 100;
+
+	// Asignar la posicion del proceso
+	fondo.style.left = newX + "%";
+	fondo.style.top = newY + "%";
+}
+
+function joystickFinalizar() {
+	// Restablecer la posicion del joystick
+	joystick.style.left = "50%";
+	joystick.style.top = "50%";
+
+	document.onpointerup = null;
+	document.onpointermove = null;
+
+	clearInterval(intervalo);
+}
+
+function limitarNumeroPositivoNegativo (numero, limitar) {
+	if (numero > limitar) {
+		numero = limitar;
+	} else if (numero < -limitar) {
+		numero = -limitar;
+	}
+
+	return numero;
 }

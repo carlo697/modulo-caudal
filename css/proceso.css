@@ -246,21 +246,47 @@
 	overflow: hidden;
 	position: relative;
 	font-size: 1vw;
+}
 
+.joystick {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 5px;
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	border-radius: 100%;
+	border: 1px solid black;
 	touch-action: none;
+}
+
+.joystick-handle {
+	position: absolute;
+	background-color: gray;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 60%;
+	transform: translate(-50%, -50%);
+	border-radius: 100%;
+	margin: 0;
+	border: 10px solid #6C6C6C;
 }
 
 .zoom-botones {
 	display: flex;
-	flex-direction: column;
 	position: absolute;
 	bottom: 0;
 	right: 0;
 	margin: 5px;
-	font-size: 20px;
+	touch-action: none;
+	display: flex;
+	flex-direction: column;
 }
 
 .zoom-botones button {
+	font-size: 20px;
 	margin-bottom: 4px;
 	background-color: rgb(193, 193, 193);
 	width: 30px;
