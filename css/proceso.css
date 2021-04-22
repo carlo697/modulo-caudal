@@ -241,7 +241,7 @@
 
 .zoom-contenedor {
 	width: 92em;
-	height: 46em;
+	height: calc(100vh - var(--header-width) - 40px);
 	background-color: white;
 	overflow: hidden;
 	position: relative;

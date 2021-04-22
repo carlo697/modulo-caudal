@@ -5,6 +5,7 @@
 	--vinotinto: rgb(166, 0, 0);
 	--rojo: #ff0000;;
 	--azul: #005082;
+    --header-width: 80px;
 }
 
 @font-face {
@@ -32,7 +33,7 @@ html {
 
 	background: url("../img/fondo.jpg");
 	background-size: contain;
-	background-position: 0 80px;
+	background-position: 0 var(--header-width);
 }
 
 body {
@@ -50,6 +51,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    margin-top: var(--header-width);
 }
 
 .header {
@@ -62,7 +64,7 @@ main {
 	padding: 10px;
 	z-index: 100;
 	width: 100%;
-	height: 80px;
+	height: var(--header-width);
 	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -125,24 +127,29 @@ main {
 }
 
 
-.espacio-vacio {
-	height: 80px;
-}
-
-
 @media (min-width: 600px) {
 	.nav-logo {
 		width: 100px;
 	}
 }
 
+@media (max-width: 1000px) and (orientation: landscape) {
+    :root {
+        --header-width: 60px;
+    }
+
+    .nav-logo {
+        width: 60px;
+    }
+}
+
 
 
 .menu {
 	position: fixed;
-	top: 80px;
+	top: var(--header-width);
 	right: calc(-100%);
-	height: calc(100% - 80px);
+	height: calc(100% - var(--header-width));
 	width: 100%;
 	background-color: rgba(0, 0, 0, 85%);
 
@@ -933,10 +940,9 @@ a.boton {
 
 .bienvenida {
 	position: fixed;
-	height: 65%;
 	width: 100%;
 	left: 0;
-	top: -65%;
+	top: -100%;
 	background-color: #00a8cc;
 	color: white;
 
@@ -952,15 +958,20 @@ a.boton {
 	transition: 0.5s;
 }
 
+.bienvenida h2 {
+    margin-bottom: 0.3em;
+}
+
 .bienvenida p {
 	color: white;
 	max-width: 800px;
 	font-weight: lighter;
 	text-align: center;
+    margin-bottom: 0.3em;
 }
 
 .header.bienvenida-on .bienvenida {
-	top: 80px;
+	top: 0;
 }
 
 .esconder-boton {
