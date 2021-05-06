@@ -47,6 +47,13 @@ function eventListeners () {
 	}
 
 	cargarInputs();
+
+	// Desactivar los enlaces en los planos en dispositivos con pantallas tactiles
+	if ('ontouchstart' in document.documentElement) {
+		document.querySelectorAll("img.plano").forEach(plano => {
+			plano.parentElement.parentElement.removeAttribute("href");
+		});
+	}
 }
 
 function iterarElementos (elemento, callback) {
