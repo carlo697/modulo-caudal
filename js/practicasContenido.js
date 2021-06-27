@@ -27,6 +27,7 @@ function inicializarPestanas() {
 			pestana.classList.add("pestana", "boton");
 			pestana.setAttribute("for", idCompleto);
 			pestana.setAttribute("type", "practicas");
+			pestana.setAttribute("data-pregunta-id", id);
 			pestanasContenedor.appendChild(pestana);
 		}
 
@@ -165,6 +166,7 @@ function mostrarPractica(practica, contenido) {
 				}
 				textarea.setAttribute("placeholder", "Escriba su respuesta aquí…");
 				textarea.setAttribute("preguntaId", `${idCompleto}_${pasoIndice}_${preguntaIndice}`);
+				textarea.setAttribute("data-pregunta-id", id);
 
 				// Cargar input
 				const valor = localStorage.getItem(idCompleto);
@@ -191,10 +193,15 @@ function mostrarPractica(practica, contenido) {
 			<br>
 
 			<h3>Finalizar</h3>
-			<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
+			<div data-practica-id=${id} data-practica-incompleta class="card bg-danger">
+				<p class="text-center">Debe responder todas las preguntas de la práctica para poder imprimirla.</p>
+			</div>
 
-			<div class="boton-imprimir-padre">
-				<a class="boton-imprimir boton" href="practica.html?id=${id}" target="_blank">Imprimir</a>
+			<div data-practica-id=${id} data-practica-completa class="hide">
+				<p>A continuación puede guardar o imprimir los resultados escritos en la práctica.</p>
+				<div class="boton-imprimir-padre">
+					<a class="boton-imprimir boton" href="practica.html?id=${id}" target="_blank">Imprimir</a>
+				</div>
 			</div>
 		`;
 	}

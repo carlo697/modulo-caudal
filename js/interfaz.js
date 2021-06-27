@@ -56,6 +56,12 @@ function eventListeners () {
 			plano.parentElement.parentElement.removeAttribute("href");
 		});
 	}
+
+	const pestanasPracticas = Array.from(document.querySelectorAll(`.pestana[type="practicas"]`));
+	pestanasPracticas.forEach(item => {
+		const practicaId = item.getAttribute("data-pregunta-id");
+		item.addEventListener("click", () => actualizarFinalPracticas(practicaId));
+	});
 }
 
 function iterarElementos (elemento, callback) {
@@ -211,6 +217,36 @@ function estaMenuAbierto() {
 
 function alModificarInputPractica(e) {
 	localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
+
+	const practicaId = e.target.getAttribute("data-pregunta-id");
+	if (practicaId) {
+		actualizarFinalPracticas(practicaId);
+	}
+	
+}
+
+function actualizarFinalPracticas(practicaId) {
+	// Obtener todos los textarea de la practica
+	const inputs = Array.from(document.querySelectorAll(`textarea[data-pregunta-id="${practicaId}"]`));
+	
+	// Ver si ya se rellenaron todos los campos
+	let faltan = false;
+	inputs.forEach(item => {
+		if (!item.value) {
+			faltan = true;
+		}
+	});
+
+	// Mostrar un mensaje dependiendo si ya se llenaron todos los campos
+	const mensajePracticaIncompleta = document.querySelector(`[data-practica-id="${practicaId}"][data-practica-incompleta]`);
+	const mensajePracticaCompleta = document.querySelector(`[data-practica-id="${practicaId}"][data-practica-completa]`);
+	if (faltan) {
+		mensajePracticaIncompleta.classList.remove("hide");
+		mensajePracticaCompleta.classList.add("hide");
+	} else {
+		mensajePracticaIncompleta.classList.add("hide");
+		mensajePracticaCompleta.classList.remove("hide");
+	}
 }
 
 function alModificarInputDato(e) {
@@ -247,7 +283,6 @@ function actualizarContenidoPracticas() {
 			practicasConfirmacion.classList.remove("hide");
 			contenidoPracticas.classList.add("hide");
 		}
-		
 	}
 }
 
