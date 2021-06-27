@@ -26,7 +26,7 @@ function actualizarTitulo() {
 	const parametrosURL = new URLSearchParams(window.location.search);
 	const id = parametrosURL.get("id");
 
-	document.title = `Practica ${id}`;
+	document.title = `Práctica ${id}`;
 }
 
 function actualizarFecha() {

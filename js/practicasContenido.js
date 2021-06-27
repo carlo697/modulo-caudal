@@ -23,7 +23,7 @@ function inicializarPestanas() {
 		if (pestanasContenedor != null) {
 			const pestana = document.createElement("button");
 
-			pestana.textContent = `Practica ${id}`;
+			pestana.textContent = `Práctica ${id}`;
 			pestana.classList.add("pestana", "boton");
 			pestana.setAttribute("for", idCompleto);
 			pestana.setAttribute("type", "practicas");
@@ -56,7 +56,7 @@ function mostrarPractica(practica, contenido) {
 
 	// Titulo
 	contenido.innerHTML += `
-		<h2>Practica N°${id} ${titulo}</h2>
+		<h2>Práctica N°${id} ${titulo}</h2>
 		<br>
 	`;
 
