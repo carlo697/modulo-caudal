@@ -328,7 +328,7 @@ function actualizarContenidoPracticas() {
         errores.push("El campo asignatura tiene caracteres inválidos");
     }
 
-    const profesor = document.getElementById("asignatura").profesor;
+    const profesor = document.getElementById("profesor").value;
     if (profesor === "") {
         errores.push("El campo profesor es obligatorio");
     } else if (!textoTest.test(profesor)) {
