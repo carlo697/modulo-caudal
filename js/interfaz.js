@@ -1,9 +1,10 @@
 // Elementos
 const header = document.querySelector(".header");
 const datosInputs = document.querySelectorAll(".practica-input");
-const preguntasInputs = document.querySelectorAll("[preguntaId]");
+const preguntasInputs = document.querySelectorAll("textarea[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
 const practicasError = document.querySelector("#practicasError");
+const practicasListaErrores = document.querySelector("#practicasListaErrores");
 const practicasConfirmacion = document.querySelector("#practicasConfirmacion");
 const esconderBoton = document.querySelector("#esconder");
 
@@ -16,6 +17,10 @@ const botonCerrarInformacion = document.querySelector(
 );
 
 const menu = document.querySelector(".menu");
+const textoTest =
+    /^[aábcdeéfghijklmnñoópqrstuúüvwxyzAÁBCDEÉFGHIJKLMNÑOÓPQRSTUÚÜVWXYZ ]+$/;
+
+const numeroEnteroTest = /^[1-9]\d*$/;
 
 // Variables de pestanas
 const botonesPestanas = [];
@@ -259,10 +264,18 @@ function actualizarFinalPracticas(practicaId) {
     }
 }
 
+const letrasPermitidas = "abcdefghijklmnñopqrstuvwxyzáéíóú".split("");
+
+function estaPermitido(texto) {}
+
 function alModificarInputDato(e) {
+    const input = e.target;
+    const preguntaId = input.getAttribute("preguntaId");
+
     // Guardar en localStorage el valor.
     localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
     localStorage.removeItem("datos_confirmados");
+    console.log(e.target.value);
 
     actualizarContenidoPracticas();
 }
@@ -275,6 +288,69 @@ function actualizarContenidoPracticas() {
             faltan = true;
             break;
         }
+    }
+
+    let errores = [];
+
+    const nombre = document.getElementById("nombre").value;
+    if (nombre === "") {
+        errores.push("El campo nombre es obligatorio");
+    } else if (!textoTest.test(nombre)) {
+        errores.push("El campo nombre tiene caracteres inválidos");
+    }
+
+    const cedula = document.getElementById("cedula").value;
+
+    if (cedula === "") {
+        errores.push("El campo cedula es obligatorio");
+    } else if (!numeroEnteroTest.test(cedula) || Number(cedula) > 99999999) {
+        errores.push("El campo cedula tiene un valor incoherente");
+    }
+
+    const carrera = document.getElementById("carrera").value;
+    if (carrera === "") {
+        errores.push("El campo carrera es obligatorio");
+    } else if (!textoTest.test(carrera)) {
+        errores.push("El campo carrera tiene caracteres inválidos");
+    }
+
+    const trayecto = document.getElementById("trayecto").value;
+    if (trayecto === "") {
+        errores.push("El campo trayecto es obligatorio");
+    } else if (!numeroEnteroTest.test(trayecto) || Number(trayecto) > 9) {
+        errores.push("El campo trayecto tiene caracteres inválidos");
+    }
+
+    const asignatura = document.getElementById("asignatura").value;
+    if (asignatura === "") {
+        errores.push("El campo asignatura es obligatorio");
+    } else if (!textoTest.test(asignatura)) {
+        errores.push("El campo asignatura tiene caracteres inválidos");
+    }
+
+    const profesor = document.getElementById("asignatura").profesor;
+    if (profesor === "") {
+        errores.push("El campo profesor es obligatorio");
+    } else if (!textoTest.test(profesor)) {
+        errores.push("El campo profesor tiene caracteres inválidos");
+    }
+
+    if (errores.length > 0) {
+        practicasError.classList.remove("hide");
+        practicasConfirmacion.classList.add("hide");
+        contenidoPracticas.classList.add("hide");
+
+        while (practicasListaErrores.firstChild) {
+            practicasListaErrores.firstChild.remove();
+        }
+
+        errores.forEach((error) => {
+            const child = document.createElement("li");
+            child.textContent = error;
+            practicasListaErrores.appendChild(child);
+        });
+
+        return;
     }
 
     if (faltan) {
@@ -304,6 +380,14 @@ function clicEnConfirmar() {
 
 function cargarInputs() {
     for (input of preguntasInputs) {
+        const valor = localStorage.getItem(input.getAttribute("preguntaId"));
+
+        if (valor != null) {
+            input.value = valor;
+        }
+    }
+
+    for (input of datosInputs) {
         const valor = localStorage.getItem(input.getAttribute("preguntaId"));
 
         if (valor != null) {

@@ -278,15 +278,13 @@ a.boton {
 
 
 
-.error {
-	background-color: var(--rojo);
-	padding: 1em 0.5em;
+.d-flex {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.error .icono {
+.icono-error {
 	font-size: 3em;
 	margin-left: 10px;
 	width: 1.3em;
