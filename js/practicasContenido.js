@@ -2,123 +2,114 @@ const pestanasContenedor = document.querySelector("#practicasArea .pestanas");
 const practicasContenedor = document.querySelector(".practica-centro");
 
 if (pestanasContenedor) {
-	inicializarPestanas();
+    inicializarPestanas();
 } else {
-	const contenedor = document.querySelector("#practicaContenido");
-	const parametrosURL = new URLSearchParams(window.location.search);
-	const id = parametrosURL.get("id");
-	const practica = practicas.find(valor => valor.id === id);
-	mostrarPractica(practica, contenedor);
+    const contenedor = document.querySelector("#practicaContenido");
+    const parametrosURL = new URLSearchParams(window.location.search);
+    const id = parametrosURL.get("id");
+    const practica = practicas.find((valor) => valor.id === id);
+    mostrarPractica(practica, contenedor);
 }
 
 function inicializarPestanas() {
-	practicas.forEach(practica => {
-		const {
-			id
-		} = practica;
+    practicas.forEach((practica) => {
+        const { id } = practica;
 
-		const idCompleto = `practica${id}`;
+        const idCompleto = `practica${id}`;
 
-		// Crear pestana
-		if (pestanasContenedor != null) {
-			const pestana = document.createElement("button");
+        // Crear pestana
+        if (pestanasContenedor != null) {
+            const pestana = document.createElement("button");
 
-			pestana.textContent = `Práctica ${id}`;
-			pestana.classList.add("pestana", "boton");
-			pestana.setAttribute("for", idCompleto);
-			pestana.setAttribute("type", "practicas");
-			pestana.setAttribute("data-pregunta-id", id);
-			pestanasContenedor.appendChild(pestana);
-		}
+            pestana.textContent = `Práctica ${id}`;
+            pestana.classList.add("pestana", "boton");
+            pestana.setAttribute("for", idCompleto);
+            pestana.setAttribute("type", "practicas");
+            pestana.setAttribute("data-pregunta-id", id);
+            pestanasContenedor.appendChild(pestana);
+        }
 
-		const contenido = document.createElement("div");
-		contenido.id = idCompleto;
+        const contenido = document.createElement("div");
+        contenido.id = idCompleto;
 
-		mostrarPractica(practica, contenido);
-
-	});
+        mostrarPractica(practica, contenido);
+    });
 }
 
 function mostrarPractica(practica, contenido) {
-	const {
-			id,
-			titulo,
-			objetivoGeneral,
-			objetivosEspecificos,
-			teoria,
-			pasos
-		} = practica;
+    const { id, titulo, objetivoGeneral, objetivosEspecificos, teoria, pasos } =
+        practica;
 
-	const idCompleto = `practica${id}`;
+    const idCompleto = `practica${id}`;
 
-	contenido.id = idCompleto;
+    contenido.id = idCompleto;
 
-	// 			Rellenar informacion
+    // 			Rellenar informacion
 
-	// Titulo
-	contenido.innerHTML += `
+    // Titulo
+    contenido.innerHTML += `
 		<h2>Práctica N°${id} ${titulo}</h2>
 		<br>
 	`;
 
-	// Objetivo general
-	contenido.innerHTML += `
+    // Objetivo general
+    contenido.innerHTML += `
 		<h3>Objetivo General</h3>
 
 		<p>${objetivoGeneral}</p>
 	`;
 
-	// Objetivos especificos
-	contenido.innerHTML += `
+    // Objetivos especificos
+    contenido.innerHTML += `
 		<h3>Objetivos Específicos</h3>
 
 		<ol>
-			${
-				objetivosEspecificos.map(texto => {
-					return `<li>${texto}</li>`;
-				}).join("")
-			}
+			${objetivosEspecificos
+                .map((texto) => {
+                    return `<li>${texto}</li>`;
+                })
+                .join("")}
 		</ol>
 	`;
 
-	// Teoria
-	if (pestanasContenedor) {
-		contenido.innerHTML += `
+    // Teoria
+    if (pestanasContenedor) {
+        contenido.innerHTML += `
 			<h3>Teoría</h3>
 
 			${teoria}
 		`;
-	}
+    }
 
-	// Procedimiento
-	contenido.innerHTML += `
+    // Procedimiento
+    contenido.innerHTML += `
 		<h3>Preguntas</h3>
 	`;
 
-	const lista = document.createElement("ol");
+    const lista = document.createElement("ol");
 
-	pasos.forEach((paso, pasoIndice) => {
-		const { texto, preguntas, imagen } = paso;
+    pasos.forEach((paso, pasoIndice) => {
+        const { texto, preguntas, imagen } = paso;
 
-		// Crear un elemento de lista
-		const li = document.createElement("li");
-		li.textContent = texto;
+        // Crear un elemento de lista
+        const li = document.createElement("li");
+        li.textContent = texto;
 
-		// Crear una sublista para las preguntas
-		const subLista = document.createElement("ol");
+        // Crear una sublista para las preguntas
+        const subLista = document.createElement("ol");
 
-		// Crear imagen del proceso si se requiere
-		if (imagen) {
-			const { src, circulos } = imagen;
+        // Crear imagen del proceso si se requiere
+        if (imagen) {
+            const { src, circulos } = imagen;
 
-			const imagenId = `imagen_${idCompleto}_${pasoIndice}`;
+            const imagenId = `imagen_${idCompleto}_${pasoIndice}`;
 
-			let html = `
+            let html = `
 				<div class="pregunta-img-contendor">
 	    	`;
 
-	    	if (pestanasContenedor) {
-	    		html += `
+            if (pestanasContenedor) {
+                html += `
 		    		<div>
 						<button
 							class="boton agregar"
@@ -134,9 +125,9 @@ function mostrarPractica(practica, contenido) {
 						</button>
 					</div>
 		    	`;
-	    	}
+            }
 
-	    	html += `
+            html += `
 					<div
 						id="${imagenId}"
 						class="proceso-imagen"
@@ -148,48 +139,55 @@ function mostrarPractica(practica, contenido) {
 		    	</div>
 	    	`;
 
-			li.innerHTML += html;
-	    	
-		}
+            li.innerHTML += html;
+        }
 
-		if (preguntas) {
-			// Crear las preguntas
-			preguntas.forEach((pregunta, preguntaIndice) => {
-				// Crear un elemento de lista para la pregunta
-				const li = document.createElement("li");
-				li.textContent = pregunta;
+        if (preguntas) {
+            // Crear las preguntas
+            preguntas.forEach((pregunta, preguntaIndice) => {
+                // Crear un elemento de lista para la pregunta
+                const li = document.createElement("li");
+                li.textContent = pregunta;
 
-				// Crear el textarea para la pregunta
-				const textarea = document.createElement(pestanasContenedor ? "textarea" : "p");
-				if (!pestanasContenedor) {
-					textarea.classList.add("respuesta");
-				}
-				textarea.setAttribute("placeholder", "Escriba su respuesta aquí…");
-				textarea.setAttribute("preguntaId", `${idCompleto}_${pasoIndice}_${preguntaIndice}`);
-				textarea.setAttribute("data-pregunta-id", id);
+                // Crear el textarea para la pregunta
+                const textarea = document.createElement(
+                    pestanasContenedor ? "textarea" : "p"
+                );
+                if (!pestanasContenedor) {
+                    textarea.classList.add("respuesta");
+                }
+                textarea.setAttribute(
+                    "placeholder",
+                    "Escriba su respuesta aquí…"
+                );
+                textarea.setAttribute(
+                    "preguntaId",
+                    `${idCompleto}_${pasoIndice}_${preguntaIndice}`
+                );
+                textarea.setAttribute("data-pregunta-id", id);
 
-				// Cargar input
-				const valor = localStorage.getItem(idCompleto);
+                // Cargar input
+                const valor = localStorage.getItem(idCompleto);
 
-				if (valor != null) {
-					textarea.value = valor;
-				}
+                if (valor != null) {
+                    textarea.value = valor;
+                }
 
-				li.appendChild(textarea);
-				subLista.appendChild(li);
-			});
-		}
+                li.appendChild(textarea);
+                subLista.appendChild(li);
+            });
+        }
 
-		li.appendChild(subLista);
-		lista.appendChild(li);
-	});
+        li.appendChild(subLista);
+        lista.appendChild(li);
+    });
 
-	contenido.appendChild(lista);
+    contenido.appendChild(lista);
 
-	if (pestanasContenedor) {
-		const footer = document.createElement("footer");
+    if (pestanasContenedor) {
+        const footer = document.createElement("footer");
 
-		contenido.innerHTML += `
+        contenido.innerHTML += `
 			<br>
 
 			<h3>Finalizar</h3>
@@ -204,9 +202,9 @@ function mostrarPractica(practica, contenido) {
 				</div>
 			</div>
 		`;
-	}
-	
-	if (practicasContenedor) {
-		practicasContenedor.appendChild(contenido);
-	}
+    }
+
+    if (practicasContenedor) {
+        practicasContenedor.appendChild(contenido);
+    }
 }
