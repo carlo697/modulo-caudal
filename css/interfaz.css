@@ -271,14 +271,16 @@ a.boton {
 	background: var(--naranja);
 }
 
-
+.boton.boton-verde {
+	background-color: green;
+}
 
 
 
 
 .error {
 	background-color: var(--rojo);
-	padding: 0.5em;
+	padding: 1em 0.5em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -291,6 +293,15 @@ a.boton {
 	height: 1.3em;
 
 	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.confirmacion {
+	background-color: var(--azul);
+	padding: 1em 0.5em;
+	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }

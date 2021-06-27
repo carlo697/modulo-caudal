@@ -4,6 +4,7 @@ const datosInputs = document.querySelectorAll(".practica-input");
 const preguntasInputs = document.querySelectorAll("[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
 const practicasError = document.querySelector("#practicasError");
+const practicasConfirmacion = document.querySelector("#practicasConfirmacion");
 const esconderBoton = document.querySelector("#esconder");
 
 const dispositivos = document.querySelector("#guias");
@@ -41,6 +42,7 @@ function eventListeners () {
 	document.body.addEventListener("mouseover", overTooltips);
 
 	contenidoPracticas.addEventListener("pointerdown", clickPracticas);
+	botonConfirmar.addEventListener("pointerdown", clicEnConfirmar);
 
 	for (let imagen of procesoImagenes) {
 		imagen.addEventListener("pointerdown", clickEnImagenesProceso);
@@ -214,6 +216,7 @@ function alModificarInputPractica(e) {
 function alModificarInputDato(e) {
 	// Guardar en localStorage el valor.
 	localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
+	localStorage.removeItem("datos_confirmados");
 
 	actualizarContenidoPracticas();
 }
@@ -229,12 +232,29 @@ function actualizarContenidoPracticas() {
 	}
 
 	if (faltan) {
-		contenidoPracticas.classList.add("hide");
 		practicasError.classList.remove("hide");
+		practicasConfirmacion.classList.add("hide");
+		contenidoPracticas.classList.add("hide");
+
+		localStorage.removeItem("datos_confirmados");
 	} else {
-		contenidoPracticas.classList.remove("hide");
-		practicasError.classList.add("hide");
+		if (localStorage.getItem("datos_confirmados")) {
+			practicasError.classList.add("hide");
+			practicasConfirmacion.classList.add("hide");
+			contenidoPracticas.classList.remove("hide");
+		} else {
+			practicasError.classList.add("hide");
+			practicasConfirmacion.classList.remove("hide");
+			contenidoPracticas.classList.add("hide");
+		}
+		
 	}
+}
+
+function clicEnConfirmar() {
+	localStorage.setItem("datos_confirmados", true);
+
+	actualizarContenidoPracticas();
 }
 
 function cargarInputs() {
