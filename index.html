@@ -438,7 +438,7 @@
                             <source src="sound/bomba.wav" />
                         </audio>
 
-                        <span class="tooltip-text">Bomba Centrifuga</span>
+                        <span class="tooltip-text">Bomba Centrífuga</span>
                     </div>
 
                     <div
@@ -678,7 +678,7 @@
                     </ul>
 
                     <p>
-                        , para obtener el título de Técnico Superior
+                        Para obtener el título de Técnico Superior
                         Universitario en Instrumentación y Control, en la
                         <strong
                             >Universidad Politécnica Territorial de
@@ -757,9 +757,9 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Almacena el agua del proceso. En un proceso
+                                El tanque presente en el modulo se encarga de almacenar el agua del proceso. En un proceso
                                 industrial real, este tanque podría almacenar
-                                una materia prima para la elaboración de un
+                                materia prima para la elaboración de un
                                 producto.
                             </p>
                             <button
@@ -770,9 +770,9 @@
                             </button>
                         </div>
 
-                        <!-- Bomba Centrifuga -->
+                        <!-- Bomba Centrífuga -->
                         <div class="g-elemento" id="bombaInfo">
-                            <h4>Bomba Centrifuga</h4>
+                            <h4>Bomba Centrífuga</h4>
                             <img
                                 class="apariencia"
                                 src="img/pumps_centrifugal_pump_2.svg"
@@ -787,8 +787,7 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Esta bomba centrifuga de 2 HP se encarga de
-                                hacer circular el agua del tanque a través del
+                                La bomba centrífuga de 2 HP presete en el modulo se encarga de hacer circular el agua del tanque a través del
                                 sistema de tuberías del proceso.
                             </p>
                             <button
@@ -817,7 +816,7 @@
                         <div class="g-info">
                             <p>
                                 Este dispositivo y el Elemento Primario del
-                                proceso miden el caudal, el transmisor producen
+                                proceso miden el caudal, el transmisor produce
                                 entonces una señal eléctrica estándar de 4 a 20
                                 mA que representa el resultado de la medición
                                 para ser enviado al Controlador Electrónico.
@@ -899,7 +898,7 @@
                             <p>
                                 Este elemento primario produce una diferencia de
                                 presión en el agua, que es medida por el
-                                Transmisor para así medir el caudal.
+                                Transmisor para así obtener el caudal que circula por él.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -926,7 +925,7 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Recibe la señal eléctrica estándar proveniente
+                                El Convertidor I/P recibe la señal eléctrica estándar proveniente
                                 del Controlador Electrónico y la convierte en
                                 una señal neumática estándar equivalente para
                                 accionar la Válvula de Control.
@@ -956,14 +955,9 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Esta válvula se abre y cierra dependiendo de la
+                                La Válvula de Control se encarga de abrir y cerrar el paso del agua a través de ella dependiendo de la
                                 señal producida por el Convertidor I/P para así
-                                regular el caudal del proceso. Necesita de un
-                                suministro neumático para poder accionarse y es
-                                acción inversa, es decir, sin aire comprimido la
-                                válvula se cerrara y podría ocasionar problemas
-                                a la bomba (la cual trabajara forzada si esto
-                                sucede).
+                                regular el caudal del proceso.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -990,13 +984,7 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Al accionarse abre una tubería de retorno para
-                                el agua. Esto es para evitar que la bomba se
-                                sobrecargue cuando no exista suministro
-                                neumático, que ocasionaría que la válvula se
-                                cerrara, provocando que no existiese retorno del
-                                agua al tanque, haciendo que la bomba trabajase
-                                forzada.
+                                La Válvula Solenoide cumple la tarea de abrir un retorno de agua al tanque en caso de que no exista suministro neumatico y se cierre la Válvula de Control.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -1023,14 +1011,10 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Este dispositivo de dos posiciones (encendido y
-                                apagado) se activa cuando haya correcto
+                                El Presostato es un dispositivo que cuenta con dos posiciones de trabajo, encendido y
+                                apagado, este se activa cuando haya correcto
                                 suministro neumático al modulo y se desactiva si
-                                no lo hubiese. Es usado para accionar la Válvula
-                                Solenoide cuando no haya suministro de aire,
-                                evitando que la bomba trabaje forzada. La
-                                activación de este dispositivo también enciende
-                                la Luz de Fallo de Aire del tablero.
+                                no lo hubiese.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -1041,7 +1025,7 @@
                         </div>
                     </div>
 
-                    <h3>Dispositivos en el tablero</h3>
+                    <h3 class="text-center mb-2">Dispositivos en el tablero</h3>
 
                     <h3 class="text-left">
                         Elementos de operación en el interior del tablero
@@ -1141,9 +1125,8 @@
                                 Este dispositivo permite el paso de corriente
                                 hacia la sección inferior del tablero. Si no se
                                 activa el Controlador Electrónico no se
-                                encenderá.
+                                encenderá. No se energizara sin activar el Breaker.
                             </p>
-                            <p>No se energizara sin activar el Breaker.</p>
                             <button
                                 class="g-boton boton"
                                 data-dispositivo="interruptor2"
@@ -1203,9 +1186,8 @@
                                 Un botón de emergencia y dos selectores de
                                 emergencia, son usados para apagar la bomba
                                 inmediatamente. Al accionarse, se encenderá la
-                                luz de Control de Proceso Bloqueado.
+                                luz de Control de Proceso Bloqueado. No se energizara sin activar el Breaker.
                             </p>
-                            <p>No se energizara sin activar el Breaker.</p>
                         </div>
 
                         <div id="selectorInfo" class="g-elemento">
@@ -1223,31 +1205,7 @@
                             </button>
                         </div>
                         <div class="g-info">
-                            <p>Este selector tiene tres posiciones:</p>
-
-                            <p>
-                                <strong>Modo manual:</strong> La Bomba
-                                Centrífuga solo se podrá poner en marcha al
-                                presionar el Pulsador Luminoso de Encendido.
-                            </p>
-
-                            <p>
-                                <strong>Modo off:</strong> La Bomba Centrífuga
-                                se mantendrá apagada en todo momento.
-                            </p>
-
-                            <p>
-                                <strong>Modo automático:</strong> La Bomba
-                                Centrífuga se pondrá en marcha automáticamente
-                                al colocarse el selector en esta posición.
-                            </p>
-
-                            <p>
-                                Para cambiar la posición del selector debe
-                                presionar alguna de las etiquetas “MANUAL”,
-                                “OFF” o “AUTOMATICO” que se hallan arriba del
-                                selector.
-                            </p>
+                            <p>Este selector permite que el operador seleccione el modo en el que operara la Bomba Centrifuga del proceso.</p>
                             <button
                                 class="g-boton boton"
                                 data-dispositivo="selector"
@@ -1273,12 +1231,11 @@
                         <div class="g-info">
                             <p>
                                 Este botón pulsador es usado para poner en
-                                marcha la Bomba Centrifuga cuando el Selector de
+                                marcha la Bomba Centrífuga cuando el Selector de
                                 Modo de Operación se halle en el modo manual.
                                 También cuenta una luz integrada de color verde
                                 que se encenderá siempre y cuando la bomba se
-                                halle en marcha (sin importar el modo de
-                                operación seleccionado).
+                                halle en marcha.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -1304,12 +1261,11 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Este botón pulsador es usado para parar la Bomba
-                                Centrifuga cuando el Selector de Modo de
+                                Este botón pulsador es usado para detener la Bomba
+                                Centrífuga cuando el Selector de Modo de
                                 Operación se halle en el modo manual. También
-                                cuenta una luz integrada de color rojo que se
-                                encenderá cuando la bomba se halle detenida (sin
-                                importar el modo de operación seleccionado).
+                                cuenta con una luz integrada de color rojo que se
+                                encenderá cuando la bomba se halle detenida.
                             </p>
                             <button
                                 class="g-boton boton"
@@ -1383,7 +1339,7 @@
                             <p>
                                 Esta luz indicadora informa cuando el Relé
                                 Térmico se ha accionado debido a una sobrecarga
-                                en la Bomba Centrifuga. Cuando esto sucede se
+                                en la Bomba Centrífuga. Cuando esto sucede se
                                 debe averiguar la causa de la sobrecarga y será
                                 imposible poner en marcha la bomba nuevamente
                                 sin antes reiniciar manualmente el relé térmico.
@@ -1477,8 +1433,7 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                Este dispositivo de protección se encenderá
-                                (indicado por su luz roja) cuando la tensión de
+                                El Protector de Voltaje es un dispositivo de protección que se encenderá (indicado por su luz roja) cuando la tensión de
                                 220 V (proveniente de dos líneas de 110 V) se
                                 halle en un rango seguro de operación. Cuando el
                                 voltaje se salga del rango seguro de operación,
@@ -1542,10 +1497,7 @@
                         </div>
                         <div class="g-info">
                             <p>
-                                La Bomba Centrífuga está conectada a los
-                                contactos eléctricos de este dispositivo. Cuando
-                                se energiza el contactor se pondrá en marcha a
-                                la bomba del proceso.
+                                El contactor se encarga de suministrar las dos líneas de 110 V necesarias para activar la bomba centrífuga y a su vez otorga protección a la misma.
                             </p>
                             <button
                                 class="g-boton boton"

@@ -14,12 +14,12 @@ const db = [
 		id: "bomba",
 		titulo: "Bomba Centrifuga",
 		contenido: `
-			<p>Esta Bomba Centrifuga (Figura 1) transporta el agua almacenada en el Tanque de Suministro de Agua a través del sistema de tuberías del modulo didáctico. El agua es succionada por la bomba centrifuga y luego de recorrer todo el proceso, es retornada al tanque, donde nuevamente es succionada por la bomba y el ciclo se repite continuamente.</p>
+			<p>La Bomba Centrífuga (Figura 1) transporta el agua almacenada en el Tanque de Suministro de Agua a través del sistema de tuberías del modulo didáctico. El agua es succionada por la bomba centrifuga y luego de recorrer todo el proceso, es retornada al tanque, donde nuevamente es succionada por la bomba y el ciclo se repite continuamente.</p>
 			<p>La tubería de succión de la bomba posee un filtro de línea de 1 ¼’’ para evitar que impurezas en el agua lleguen al proceso e interfieran con los distintos instrumentos instalados en él.</p>
 			<p>Esta bomba es monofásica y trabaja con una tensión de 220 V AC suministrada por dos líneas de 110 V AC desfasadas 120°. Estas líneas y una conexión a tierra (Figura 2) llegan a la bomba a través de tubos conduit galvanizada de ¾’’ de color negro.</p>
-			<p><strong>Figura 1. Bomba Centrifuga de 2 hp</strong></p>
+			<p><strong>Figura 1. Bomba Centrífuga de 2 hp</strong></p>
 			<img src="img/informacion/bomba_1.jpg">
-			<p><strong>Figura 2. Cables eléctricos de la bomba centrifuga</strong></p>
+			<p><strong>Figura 2. Cables eléctricos de la bomba centrífuga</strong></p>
 			<img src="img/informacion/bomba_2.jpg">
 			<p>La Tabla 1 muestras varias características de la bomba centrífuga.</p>
 			<table>
@@ -81,11 +81,14 @@ const db = [
 			<p><strong>Figura 1. Animación del movimiento de un fluido al pasar por una placa orificio</strong></p>
 			<img src="img/informacion/placa_orificio_1.gif">
 			<p>La diferencia de presión ocasionada por la placa orificio del proceso (Figura 2) es medida por el Transmisor de Presión Diferencial para así determinar el caudal en la tubería donde se halla instalada la placa orificio. La placa orificio se halla instalada entre dos bridas (Figura 3), lo que permite el fácil desmontaje de la placa orificio en caso de mantenimiento.</p>
-			<p>El proceso cuenta con un segundo elemento primario: un Tubo Venturi, de este modo, es posible cambiar el elemento primario a usar cambiando las conexiones del Transmisor de Presión Diferencial y ajustando las válvulas tipo bola instaladas junto a los elementos primarios. </p>
+
 			<p><strong>Figura 2. Placa orificio del modulo didáctico</strong></p>
 			<img src="img/informacion/placa_orificio_2.jpg">
 			<p><strong>Figura 3. Bridas para instalar la placa orificio del modulo didáctico</strong></p>
 			<img src="img/informacion/placa_orificio_3.jpg">
+
+			<p>El proceso cuenta con un segundo elemento primario: un Tubo Venturi, de este modo, es posible cambiar el elemento primario a usar cambiando las conexiones del Transmisor de Presión Diferencial y ajustando las válvulas tipo bola instaladas junto a los elementos primarios. De manera que, el transmisor pueda
+			medir el caudal usando la Placa Orificio en un tramo de la tuberia o usando el tubo Venturi en otro tramo de la tubería.</p>
 		`
 	},
 	{
@@ -97,12 +100,12 @@ const db = [
 			<p><strong>Figura 1. Forma y secciones de un Tubo Venturi</strong></p>
 			<img src="img/informacion/venturi_1.jpg">
 			<p>La Figura 2 muestra el Tubo Venturi del modulo didáctico, en la imagen se pueden observar las tomas de alta y baja presión. La Figura 3 muestra el tubo venturi instalado en el modulo junto con dos uniones universales para fácil desmontaje en caso de mantenimiento y dos válvulas tipo bola en las tomas de presión. </p>
-			<p>La diferencia de presión ocasionada por el tubo venturi del modulo didáctico es medida por el Transmisor de Presión Diferencial para así determinar el caudal en la tubería donde se halla instalado el tubo venturi.</p>
-			<p>El proceso cuenta con un segundo elemento primario: una Placa Orificio, de este modo, es posible cambiar el elemento primario a usar cambiando las conexiones del Transmisor de Presión Diferencial y ajustando las válvulas tipo bola instaladas junto a los elementos primarios.</p>
 			<p><strong>Figura 2. Tubo Venturi del modulo didáctico</strong></p>
 			<img src="img/informacion/venturi_2.jpg">
 			<p><strong>Figura 3. Tubo Venturi instalado en el modulo didáctico</strong></p>
 			<img src="img/informacion/venturi_3.jpg">
+			<p>La diferencia de presión ocasionada por el tubo venturi del modulo didáctico es medida por el Transmisor de Presión Diferencial para así determinar el caudal en la tubería donde se halla instalado el tubo venturi.</p>
+			<p>El proceso cuenta con un segundo elemento primario: una Placa Orificio, de este modo, es posible cambiar el elemento primario a usar cambiando las conexiones del Transmisor de Presión Diferencial y ajustando las válvulas tipo bola instaladas junto a los elementos primarios. De manera que, el transmisor pueda medir el caudal usando el Tubo Venturi en un tramo de la tuberia o usando la Placa Orificio en otro tramo de la tubería.</p>
 		`
 	},
 	{
@@ -111,8 +114,7 @@ const db = [
 		contenido: `
 			<p>Para que el modulo didáctico pueda controlar el caudal exitosamente, es necesario que el sistema de control accione la Válvula de Control del proceso, sin embargo, esta ultima requiere una señal neumática de 3 a 15 psi para trabajar y el controlador del proceso produce una señal eléctrica de 4 a 20 mA.</p>
 			<p>El trabajo del Convertidor I/P es de llevar la señal eléctrica de 4 a 20 mA proveniente del controlador a una señal neumática equivalente de 3 a 15 psi, permitiendo al controlador poder accionar la válvula de control.</p>
-			<p>El convertidor I/P del proceso es el modelo “Type 1000” de la empresa “MARSH BELLOFRAM”. La Figura 1 muestra un equipo nuevo, mientras que la Figura 2 muestra el equipo usado en el modulo didáctico.</p>
-			<p style="color:red">El modulo didáctico en la actualidad no cuenta con este instrumento, lo que impide el control de caudal. La Figura 3 y la Figura 4 muestran donde originalmente se hallaba instalado: un cajetín localizado debajo de la válvula de control, sujeto a la estructura de soporte de color amarillo de esta última.</p>
+			<p>El convertidor I/P del proceso es el modelo “Type 1000” de la empresa “MARSH BELLOFRAM”. La (Figura 1) muestra un equipo nuevo, mientras que la (Figura 2) muestra el equipo usado en el modulo didáctico.</p>
 			<p><strong>Figura 1. Convertidor I/P</strong></p>
 			<img src="img/informacion/convertidor_1.jpg">
 			<p><strong>Figura 2. Convertidor I/P del modulo didáctico</strong></p>
@@ -121,6 +123,7 @@ const db = [
 			<img src="img/informacion/convertidor_3.jpg">
 			<p><strong>Figura 4. Cajetín del convertidor I/P</strong></p>
 			<img src="img/informacion/convertidor_4.jpg">
+			<p style="color:red">El modulo didáctico en la actualidad (2021) no cuenta con este instrumento, lo que impide el control de caudal. La Figura 3 y la Figura 4 muestran donde originalmente se hallaba instalado: un cajetín localizado debajo de la válvula de control, sujeto a la estructura de soporte de color amarillo de esta última.</p>
 		`
 	},
 	{
@@ -129,9 +132,10 @@ const db = [
 		contenido: `
 			<p>Cada sistema de control necesita un elemento final de control, que se encarga de modificar la variable a controlar para así mantenerla en el valor deseado, denominado punto de consigna o set-point. En un sistema de control de lazo cerrado el elemento final de control actuara dependiendo de la señal que reciba del controlador.</p>
 			<p>El modulo didáctico cuenta con una Válvula de Control neumática (Figura 1) como elemento final de control, permitiendo al sistema de control de lazo cerrado alterar el caudal que fluye a través del sistema de tuberías.</p>
-			<p>El Controlador del proceso gobierna la posición de esta válvula, sin embargo, para ser accionada la válvula requiere de una señal estándar neumática de 3 a 15 psi y la señal de salida del controlador es una señal estándar eléctrica de 4 a 20 mA, así que una conexión directa entre el controlador y la válvula es imposible. Esto se soluciona por medio del Convertidor I/P del proceso, que convierte la señal eléctrica de salida del controlador en una señal neumática de 3 a 15 psi para accionar la válvula de control.</p>
 			<p><strong>Figura 1. Válvula de control neumático del modulo didáctico</strong></p>
 			<img src="img/informacion/valvula_control_1.jpg">
+			<p>El Controlador del proceso posiciona esta válvula, sin embargo, para ser accionada la válvula requiere de una señal estándar neumática de 3 a 15 psi y la señal de salida del controlador es una señal estándar eléctrica de 4 a 20 mA, así que una conexión directa entre el controlador y la válvula es imposible. Esto se soluciona por medio del Convertidor I/P del proceso, que convierte la señal eléctrica de salida del controlador en una señal neumática de 3 a 15 psi para accionar la válvula de control.</p>
+			
 			<p>La Tabla 1 muestra varias características de esta válvula de control.</p>
 			<p><strong>Tabla 1. Características de la válvula de control</strong></p>
 			<table>
@@ -194,13 +198,13 @@ const db = [
 		contenido: `
 			<p>Este dispositivo posee dos posiciones: encendido y apagado. Un presostato mide la presión en la tubería donde se instala y cuando la presión alcanza un valor definido, el presostato se acciona y alterna sus contactos eléctricos.</p>
 			<p>El Presostato (Figura 1) usado en el proceso del modulo didáctico es de la marca “Honeywell” y es el modelo “L404”. Este presostato supervisa la presión del aire en la tubería de suministro de aire comprimido (estas tuberías son de color azul y están etiquetadas con la palabra “Aire”).</p>
-			<p>Cuando hay un fallo con el suministro de aire el presostato alternara sus contactos, esto activara un relé que suministrara corriente a la Válvula Solenoide del proceso, haciendo que está pase de su posición normalmente cerrada a su posición abierta. Esto se hace con el propósito de darle un retorno al agua del proceso, porque cuando no existe suministro de aire comprimido la Válvula de Control se cierra. Con la válvula de control cerrada, no existirá retorno para el agua y la Bomba Centrifuga trabajara forzada y entrara en proceso de cavitación.</p>
 			<p><strong>Figura 1. Presostato del modulo didáctico</strong></p>
 			<img src="img/informacion/presostato_1.jpg">
+			<p>Cuando hay un fallo con el suministro de aire el presostato alternara sus contactos, esto activara un relé que suministrara corriente a la Válvula Solenoide del proceso, haciendo que está pase de su posición normalmente cerrada a su posición abierta. Esto se hace con el propósito de darle un retorno al agua del proceso, porque cuando no existe suministro de aire comprimido la Válvula de Control se cierra. Con la válvula de control cerrada, no existirá retorno para el agua y la Bomba Centrífuga trabajara forzada y entrara en proceso de cavitación.</p>
 			<p>El presostato está ubicado en la tubería de suministro neumático junto a la tubería en donde se halla instalada la válvula de control. Esto se puede apreciar en la Figura 2 y en la Figura 3.</p>
 			<p><strong>Figura 2. Presostato junto a la Válvula de Control</strong></p>
 			<img src="img/informacion/presostato_2.jpg">
-			<p><strong>Figura 2. Presostato del proceso.</strong></p>
+			<p><strong>Figura 3. Presostato del proceso.</strong></p>
 			<img src="img/informacion/presostato_3.jpg">
 		`
 	},
@@ -255,9 +259,9 @@ const db = [
 			<p><strong>Figura 1. Controlador Venetrol del modulo didáctico</strong></p>
 			<img src="img/informacion/controlador_1.jpg">
 			<p>La pantalla del controlador y sus botones permiten al operador cambiar el punto de consigna (este procedimiento debe buscarse en su manual de operación). El controlador compara la señal del transmisor con el punto de consigna para así producir la señal de salida que controlara a la válvula de control.</p>
-			<p style="color:red">El modulo didáctico en la actualidad no cuenta con este instrumento, lo que impide el control de caudal. La Figura 2 muestra donde originalmente se hallaba instalado: la sección inferior del tablero de control.</p>
 			<p><strong>Figura 2. Sección inferior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/controlador_2.jpg">
+			<p style="color:red">El modulo didáctico en la actualidad (2021) no cuenta con este instrumento, lo que impide el control de caudal. La Figura 2 muestra donde originalmente se hallaba instalado: la sección inferior del tablero de control.</p>
 		`
 	},
 	{
@@ -282,7 +286,7 @@ const db = [
 		contenido: `
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Cuando el Selector de Modo de Operación se halla en el modo manual, el operador del modulo didáctico puede poner en marcha y parar la Bomba Centrifuga a voluntad.</p>
-			<p>El Pulsador Luminoso de Encendido es usado para poner en marcha la bomba centrifuga en el modo manual y además cuenta con una luz de color verde que se encenderá siempre que la bomba este en marcha (sin importar el modo de operación seleccionado).</p>
+			<p>El Pulsador Luminoso de Encendido (Figura 1) es usado para poner en marcha la bomba centrifuga en el modo manual y además cuenta con una luz de color verde que se encenderá siempre que la bomba este en marcha (sin importar el modo de operación seleccionado).</p>
 			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
@@ -294,8 +298,7 @@ const db = [
 		contenido: `
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Cuando el Selector de Modo de Operación se halla en el modo manual, el operador del modulo didáctico puede poner en marcha y parar la Bomba Centrifuga a voluntad.</p>
-			<p>El Pulsador Luminoso de Apagado es usado para parar la bomba centrifuga en el modo manual y además cuenta con una luz de color rojo que se encenderá siempre que la bomba centrifuga este detenida (sin importar el modo de operación seleccionado).</p>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
+			<p>El Pulsador Luminoso de Apagado (Figura 1) es usado para parar la bomba centrifuga en el modo manual y además cuenta con una luz de color rojo que se encenderá siempre que la bomba centrifuga este detenida (sin importar el modo de operación seleccionado).</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
 		`
@@ -304,8 +307,7 @@ const db = [
 		id: "luzFalloAire",
 		titulo: "Luz de Fallo de Aire",
 		contenido: `
-			<p>La Luz de Fallo de Aire es una luz indicadora de color amarillo que informa cuando se presenta una falla con el suministro neumático, es decir, cuando no haya aire comprimido en circulación a través de las tuberías azules etiquetadas con la palabra “Aire”. Esta situación es riesgosa puesto a que si no se cuenta con suministro neumático, la válvula de control regresara a su posición cerrada provocando que no exista retorno para el agua hacia el tanque.</p>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
+			<p>La Luz de Fallo de Aire (Figura 1) es una luz indicadora de color amarillo que informa cuando se presenta una falla con el suministro neumático, es decir, cuando no haya aire comprimido en circulación a través de las tuberías azules etiquetadas con la palabra “Aire”. Esta situación es riesgosa puesto a que si no se cuenta con suministro neumático, la válvula de control regresara a su posición cerrada provocando que no exista retorno para el agua hacia el tanque.</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
 		`
@@ -314,11 +316,9 @@ const db = [
 		id: "luzSobrecarga",
 		titulo: "Luz de Sobrecarga",
 		contenido: `
-			<p>La Luz de Sobrecarga es una luz indicadora que informa cuando el Relé Térmico se ha accionado debido a una sobrecarga en la Bomba Centrifuga. Cuando esto sucede se debe averiguar la causa de la sobrecarga y será imposible poner en marcha la bomba nuevamente sin antes reiniciar manualmente el relé térmico.</p>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
+			<p>La Luz de Sobrecarga (Figura 1) es una luz indicadora que informa cuando el Relé Térmico (Figura 2) se ha accionado debido a una sobrecarga en la Bomba Centrifuga. Cuando esto sucede se debe averiguar la causa de la sobrecarga y será imposible poner en marcha la bomba nuevamente sin antes reiniciar manualmente el relé térmico.</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
-			<p>La Figura 2 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el relé térmico. </p>
 			<p><strong>Figura 2. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
@@ -327,8 +327,7 @@ const db = [
 		id: "luzProcesoBloqueado",
 		titulo: "Luz de Control de Proceso Bloqueado",
 		contenido: `
-			<p>La Luz de Control de Proceso Bloqueado es una luz indicadora que informa cuando cualquiera de los tres Interruptores de Emergencia del modulo ha sido accionado, provocando la parada inmediata de la Bomba Centrifuga. Además, la bomba tampoco podrá ser puesta en marcha mientras alguno de los interruptores este accionado.</p>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
+			<p>La Luz de Control de Proceso Bloqueado (Figura 1) es una luz indicadora que informa cuando cualquiera de los tres Interruptores de Emergencia del modulo ha sido accionado, provocando la parada inmediata de la Bomba Centrifuga. Además, la bomba tampoco podrá ser puesta en marcha mientras alguno de los interruptores este accionado.</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
 		`
@@ -337,7 +336,7 @@ const db = [
 		id: "luzSolenoide",
 		titulo: "Luz de Válvula Solenoide",
 		contenido: `
-			<p>La Luz de Válvula Solenoide es una luz indicadora que se encenderá siempre que la  válvula solenoide del proceso sea accionada. La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
+			<p>La Luz de Válvula Solenoide (Figura 1) es una luz indicadora que se encenderá siempre que la  válvula solenoide del proceso sea accionada. La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
 			<p>Cuando se presente una falla con el suministro de aire comprimido, la Válvula de Control se cerrara y provocara una situación riesgosa en la que el agua no tendrá un retorno hacia el tanque. Este problema se soluciona activando una Válvula Solenoide (Figura 2) que abre un retorno para el agua. Esta válvula solenoide solo se activara estando la bomba en marcha durante una falla con el suministro de aire.</p>
 			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
 			<img src="img/informacion/tablero_exterior_superior.jpg">
@@ -352,7 +351,7 @@ const db = [
 		id: "protector",
 		titulo: "Protector de Voltaje",
 		contenido: `
-			<p>El tablero del modulo didáctico cuenta con un Protector de Voltaje, este dispositivo posee en su interior un relé que se activara cuando la tensión en las líneas de suministro eléctrico no presenten fallas, y dicho relé se desactivara siempre que se presenten las siguientes situaciones por más de tres segundos:</p>
+			<p>El tablero del modulo didáctico cuenta con un Protector de Voltaje (Figura 1), este dispositivo posee en su interior un relé que se activara cuando la tensión en las líneas de suministro eléctrico no presenten fallas, y dicho relé se desactivara siempre que se presenten las siguientes situaciones por más de tres segundos:</p>
 			<ul>
 				<li>Sobretensión.</li>
 				<li>Baja tensión.</li>
@@ -360,8 +359,7 @@ const db = [
 			</ul>
 			<p>Cuando el protector detecte que alguna de las irregularidades con la tensión haya finalizado, el relé se volverá a activar luego de 0.5 segundos.</p>
 			<p>El protector de voltaje desempeña una función de seguridad importante, ya que cualquiera de las situaciones anteriores podría ocasionar daños a los dispositivos eléctricos del tablero de control, a los instrumentos electrónicos y/o a la Bomba Centrífuga.</p>
-			<p>Este protector de voltaje es el modelo “VP-002” de la marca “Camsco”. Este protector supervisa la tensión de 220 V del tablero de control proveniente de dos líneas de 120 V desfasadas 120°.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el protector de voltaje. </p>
+			<p>Este protector de voltaje es el modelo “VP-002” de la marca “Camsco”. Dicho protector supervisa la tensión de 220 V del tablero de control proveniente de dos líneas de 120 V desfasadas 120°.</p>
 			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
@@ -371,9 +369,8 @@ const db = [
 		titulo: "Relé Térmico",
 		contenido: `
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para reiniciarlo luego de una sobrecarga en la bomba.</p>
-			<p>Una sobrecarga de corriente en la Bomba Centrifuga puede averiarla gravemente, principalmente porque una corriente alta produce recalentamiento que causa daño al aislamiento de sus bobinas, produciendo que partes del bobinado puedan cortocircuitarse.</p>
-			<p>Debido a lo anterior, una protección contra una sobrecarga es de gran importancia al momento de usar motores eléctricos. El Relé Térmico logra esta tarea, ya que supervisa la corriente usada por la bomba centrífuga y se dispara cuando ésta corriente supera un límite de 13 amperios. Al dispararse, desconecta el Contactor y por ende a la bomba centrífuga, además, se encenderá también la Luz de Sobrecarga del tablero.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el relé térmico acoplado debajo del contactor.</p>
+			<p>Una sobrecarga de corriente en la Bomba Centrifuga puede averiarla gravemente, principalmente porque una corriente alta produce recalentamiento, lo que causa daño al aislamiento de sus bobinas, provocando cortocircuitos al bobinado.</p>
+			<p>Debido a lo anterior, una protección contra una sobrecarga es de gran importancia al momento de usar motores eléctricos. El Relé Térmico (Figura 1) logra esta tarea, ya que supervisa la corriente usada por la bomba centrífuga y se dispara cuando ésta corriente supera un límite de 13 amperios. Al dispararse, desconecta el Contactor y por ende a la bomba centrífuga, además, se encenderá también la Luz de Sobrecarga del tablero.</p>
 			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
@@ -385,7 +382,7 @@ const db = [
 		id: "contactor",
 		titulo: "Contactor",
 		contenido: `
-			<p>Este es un Contactor trifásico que habilita o interrumpe el suministro eléctrico de la Bomba Centrífuga. La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el contactor.</p>
+			<p>Este es un Contactor trifásico que habilita o interrumpe el suministro eléctrico de la Bomba Centrífuga.
 			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
@@ -395,8 +392,7 @@ const db = [
 		titulo: "Relé 1",
 		contenido: `
 			<p>Los relés son dispositivos electromecánicos que actúan como interruptores, cuyo accionamiento se logra por medio de la energización de un electroimán en su interior para lograr la conmutación de sus contactos.</p>
-			<p>El Relé 1 es usado por el circuito de control del tablero para suministrar corriente a la válvula solenoide y a la Luz de Válvula Solenoide durante una falla de suministro neumático.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el relé 1.</p>
+			<p>El Relé 1 (Figura 1) es usado por el circuito de control del tablero para suministrar corriente a la válvula solenoide y a la Luz de Válvula Solenoide durante una falla de suministro neumático.</p>
 			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
@@ -406,8 +402,7 @@ const db = [
 		titulo: "Relé 2",
 		contenido: `
 			<p>Los relés son dispositivos electromecánicos que actúan como interruptores, cuyo accionamiento se logra por medio de la energización de un electroimán en su interior para lograr la conmutación de sus contactos.</p>
-			<p>El Relé 2 es usado por el circuito de control del tablero para encender la Luz de Control de Proceso Bloqueado cuando alguno de los Interruptores de Emergencia se accione.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el relé 2.</p>
+			<p>El Relé 2 (Figura 1) es usado por el circuito de control del tablero para encender la Luz de Control de Proceso Bloqueado cuando alguno de los Interruptores de Emergencia se accione.</p>
 			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
 			<img src="img/informacion/tablero_interior_superior.jpg">
 		`
