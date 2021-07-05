@@ -133,7 +133,8 @@ function mostrarPractica(practica, contenido) {
 						class="proceso-imagen"
 						data-imagen-id="${imagenId}"
 						${circulos ? `data-cantidad="${circulos}"` : ""}
-					">
+					>
+                        <canvas class="proceso-imagen-zoom"></canvas>
 			    		<img src="${src}" alt="">
 			    	</div>
 		    	</div>

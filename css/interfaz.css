@@ -873,7 +873,7 @@ a.boton {
 }
 
 .practica-contenido ol {
-	margin-left: 3em;
+	margin-left: 2em;
 	counter-reset: item;
 }
 
@@ -991,6 +991,16 @@ a.boton {
 
 .proceso-imagen.eliminando .proceso-circulo {
 	color: blue;
+}
+
+.proceso-imagen-zoom {
+	position: absolute;
+	width: 20vh;
+	height: 20vh;
+	background: black;
+	transform: translate(-10vh, -10vh);
+	pointer-events: none;
+	display: none;
 }
 
 

@@ -53,6 +53,48 @@ function eventListeners() {
 
     for (let imagen of procesoImagenes) {
         imagen.addEventListener("pointerdown", clickEnImagenesProceso);
+
+        const target = imagen.parentElement;
+        const canvas = target.querySelector(".proceso-imagen-zoom");
+        const context = canvas.getContext("2d");
+
+        imagen.addEventListener("mouseenter", () => {
+            canvas.style.display = "initial";
+        });
+
+        imagen.addEventListener("mouseout", () => {
+            canvas.style.display = "none";
+        });
+
+        imagen.addEventListener("mousemove", (e) => {
+            console.log(e.offsetX, e.offsetY)
+            console.log(target.offsetWidth, target.offsetHeight)
+            console.log(target.getBoundingClientRect())
+
+            let x = e.offsetX;
+            x = Math.min(x, target.offsetWidth - canvas.offsetWidth / 2);
+            x = Math.max(x, canvas.offsetWidth / 2);
+
+            let y = e.offsetY;
+            y = Math.min(y, target.offsetHeight - canvas.offsetHeight / 2);
+            y = Math.max(y, canvas.offsetHeight / 2);
+
+            let relativeX = x / target.offsetWidth;
+            let relativeY = y / target.offsetHeight;
+
+            canvas.style.top = `${relativeY * 100}%`;
+            canvas.style.left = `${relativeX * 100}%`;
+
+            // Render
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            const offsetX = canvas.offsetWidth;
+            const offsetY = canvas.offsetHeight;
+
+            context.translate(offsetX, offsetY);
+            context.scale(2, 2);
+            context.translate(-offsetX, -offsetY);
+        });
     }
 
     cargarInputs();
@@ -275,7 +317,6 @@ function alModificarInputDato(e) {
     // Guardar en localStorage el valor.
     localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
     localStorage.removeItem("datos_confirmados");
-    console.log(e.target.value);
 
     actualizarContenidoPracticas();
 }
