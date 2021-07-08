@@ -87,6 +87,7 @@ function mostrarPractica(practica, contenido) {
 	`;
 
     const lista = document.createElement("ol");
+    lista.style.marginLeft = "0";
 
     pasos.forEach((paso, pasoIndice) => {
         const { texto, preguntas, imagen } = paso;
@@ -130,12 +131,12 @@ function mostrarPractica(practica, contenido) {
             html += `
 					<div
 						id="${imagenId}"
-						class="proceso-imagen"
+						class="proceso-imagen-padre"
 						data-imagen-id="${imagenId}"
 						${circulos ? `data-cantidad="${circulos}"` : ""}
 					>
                         <canvas class="proceso-imagen-zoom"></canvas>
-			    		<img src="${src}" alt="">
+			    		<canvas class="proceso-imagen" src="${src}" alt="">
 			    	</div>
 		    	</div>
 	    	`;

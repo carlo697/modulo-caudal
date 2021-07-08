@@ -831,7 +831,7 @@ a.boton {
 }
 
 .practica-centro {
-	max-width: 800px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 
@@ -917,6 +917,7 @@ a.boton {
 }
 
 .practica-contenido img {
+	width: 100%;
 	max-width: 80vw;
 	max-height: 80vh;
 	display: block;
@@ -936,9 +937,6 @@ a.boton {
 
 
 .pregunta-img-contendor {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	margin: 2em 0;
 }
 
@@ -947,27 +945,35 @@ a.boton {
 	margin-bottom: 0.5em;
 }
 
-.proceso-imagen {
+.proceso-imagen-padre {
 	background-color: white;
 	position: relative;
-	display: table;
 }
 
-.proceso-imagen img {
+.proceso-imagen-padre img {
 	max-width: 100%;
 	max-height: 80vh;
 	margin-bottom: 0;
+
+	cursor: none;
+}
+
+.proceso-imagen {
+	width: 100%;
+    display: block;
+	background: red;
+	cursor: none;
 }
 
 .proceso-circulo {
 	position: absolute;
 
-	width: 0.8em;
-	height: 0.8em;
-	font-size: 1.5em;
+	width: 10px;
+	height: 10px;
+	font-size: 20px;
 	text-shadow: 0px 0px 0.2em black;
 
-	transform: translate(-0.4em, -0.4em);
+	transform: translate(-5px, -5px);
 
 	left: 0;
 	top: 0;
@@ -989,18 +995,23 @@ a.boton {
 	pointer-events: none;
 }
 
-.proceso-imagen.eliminando .proceso-circulo {
+.proceso-imagen-padre.eliminando .proceso-circulo {
 	color: blue;
 }
 
 .proceso-imagen-zoom {
 	position: absolute;
-	width: 20vh;
-	height: 20vh;
+	width: 40vw;
+	height: 20vw;
 	background: black;
-	transform: translate(-10vh, -10vh);
+	transform: translate(-20vw, -10vw);
 	pointer-events: none;
 	display: none;
+	border: 1px solid rgb(99, 99, 99);
+	z-index: 2000;
+
+
+	
 }
 
 

@@ -30,6 +30,9 @@ let ultimaPestana = "";
 eventListeners();
 cargarBienvenida();
 
+var scale = 4;
+const cursorSize = 20;
+
 function eventListeners() {
     inicializarPestanas();
     header.addEventListener("click", clickEnMenu);
@@ -51,50 +54,125 @@ function eventListeners() {
     contenidoPracticas.addEventListener("pointerdown", clickPracticas);
     botonConfirmar.addEventListener("pointerdown", clicEnConfirmar);
 
-    for (let imagen of procesoImagenes) {
-        imagen.addEventListener("pointerdown", clickEnImagenesProceso);
+    for (let padre of procesoImagenes) {
+        padre.addEventListener("pointerdown", clickEnImagenesProceso);
 
-        const target = imagen.parentElement;
-        const canvas = target.querySelector(".proceso-imagen-zoom");
+        const canvas = padre.querySelector(".proceso-imagen-zoom");
         const context = canvas.getContext("2d");
+        const id = padre.getAttribute("data-imagen-id");
 
-        imagen.addEventListener("mouseenter", () => {
-            canvas.style.display = "initial";
-        });
+        if (!tienePantallaTactil) {
+            padre.addEventListener("mouseenter", () => {
+                canvas.style.display = "block";
+            });
 
-        imagen.addEventListener("mouseout", () => {
-            canvas.style.display = "none";
-        });
+            padre.addEventListener("mouseout", () => {
+                canvas.style.display = "none";
+            });
 
-        imagen.addEventListener("mousemove", (e) => {
-            console.log(e.offsetX, e.offsetY)
-            console.log(target.offsetWidth, target.offsetHeight)
-            console.log(target.getBoundingClientRect())
+            padre.addEventListener("mouseclick", (e) => {
+                let relativeX = e.offsetX / padre.offsetWidth;
+                let relativeY = e.offsetY / padre.offsetHeight;
 
-            let x = e.offsetX;
-            x = Math.min(x, target.offsetWidth - canvas.offsetWidth / 2);
-            x = Math.max(x, canvas.offsetWidth / 2);
+                const id = padre.getAttribute("data-imagen-id");
 
-            let y = e.offsetY;
-            y = Math.min(y, target.offsetHeight - canvas.offsetHeight / 2);
-            y = Math.max(y, canvas.offsetHeight / 2);
+                //     const { id, circulos } = item;
 
-            let relativeX = x / target.offsetWidth;
-            let relativeY = y / target.offsetHeight;
+                //     // obtener el contenedor y los elementos de los circulos
+                //     const contenedor = document.getElementById(id);
+                //     const htmlCirculos = contenedor.querySelectorAll(".proceso-circulo");
 
-            canvas.style.top = `${relativeY * 100}%`;
-            canvas.style.left = `${relativeX * 100}%`;
+                //     // vaciar el array de circulos
+                //     circulos.length = 0;
 
-            // Render
-            context.clearRect(0, 0, canvas.width, canvas.height);
+                //     htmlCirculos.forEach((circulo) => {
+                //         const x = circulo.style.left;
+                //         const y = circulo.style.top;
 
-            const offsetX = canvas.offsetWidth;
-            const offsetY = canvas.offsetHeight;
+                //         circulos.push([x, y]);
+                //     });
+                // });
 
-            context.translate(offsetX, offsetY);
-            context.scale(2, 2);
-            context.translate(-offsetX, -offsetY);
-        });
+                // const contenedor = document.getElementById(id);
+
+                // const circulo = document.createElement("div");
+
+                // circulo.classList.add("proceso-circulo");
+                // circulo.textContent = "x";
+                // circulo.setAttribute("data-padre", id);
+
+                // circulo.style.left = relativeX * 100 + "%";
+                // circulo.style.top = relativeY * 100 + "%";
+
+                // contenedor.appendChild(circulo);
+
+                terminarEliminarCirculos(contenedor);
+                renderizarCanvasPadre(padre);
+                guardarCirculos();
+            });
+
+            padre.addEventListener("mousemove", (e) => {
+                canvas.style.display = "block";
+                // console.log(e.offsetX, e.offsetY)
+                // console.log(target.offsetWidth, target.offsetHeight)
+                // console.log(target.getBoundingClientRect())
+
+                let x = e.offsetX;
+                x = Math.min(x, padre.offsetWidth - canvas.offsetWidth / 2);
+                x = Math.max(x, canvas.offsetWidth / 2);
+
+                let y = e.offsetY;
+                y = Math.min(y, padre.offsetHeight - canvas.offsetHeight / 2);
+                y = Math.max(y, canvas.offsetHeight / 2);
+
+                let relativeX = x / padre.offsetWidth;
+                let relativeY = y / padre.offsetHeight;
+
+                canvas.style.top = `${relativeY * 100}%`;
+                canvas.style.left = `${relativeX * 100}%`;
+
+                // Render
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+
+                const offsetX =
+                    -(e.offsetX / padre.offsetWidth) * canvas.width * scale +
+                    canvas.width / 2;
+                const offsetY =
+                    -(e.offsetY / padre.offsetHeight) * canvas.height * scale +
+                    canvas.height / 2;
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                context.drawImage(
+                    procesoImg,
+                    offsetX,
+                    offsetY,
+                    canvas.width * scale,
+                    canvas.height * scale
+                );
+
+                // Dibujar la cruz del cursor
+                context.fillStyle = "green";
+                context.strokeStyle = "black";
+                context.lineWidth = 3;
+
+                const cursorLeft = canvas.width / 2 - cursorSize / 2;
+                const cursorTop = canvas.height / 2 - cursorSize / 2;
+
+                dibujarCruz(
+                    context,
+                    cursorLeft,
+                    cursorTop,
+                    cursorSize,
+                    cursorSize
+                );
+
+                context.setTransform(1, 0, 0, 1, 0, 0);
+
+                renderizarCanvasPadre(padre, context, offsetX, offsetY, scale);
+            });
+        }
     }
 
     cargarInputs();
@@ -111,9 +189,10 @@ function eventListeners() {
     );
     pestanasPracticas.forEach((item) => {
         const practicaId = item.getAttribute("data-pregunta-id");
-        item.addEventListener("click", () =>
-            actualizarFinalPracticas(practicaId)
-        );
+        item.addEventListener("click", () => {
+            actualizarFinalPracticas(practicaId);
+            renderizarCirculos();
+        });
     });
 }
 
@@ -312,7 +391,6 @@ function estaPermitido(texto) {}
 
 function alModificarInputDato(e) {
     const input = e.target;
-    const preguntaId = input.getAttribute("preguntaId");
 
     // Guardar en localStorage el valor.
     localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
@@ -496,21 +574,14 @@ function clickPracticas(e) {
     if (target.classList.contains("agregar") && !imagenArrastrada) {
         const id = target.getAttribute("data-imagen-id");
 
-        const contenedor = document.querySelector("#" + id);
-
-        const circulo = document.createElement("div");
-
-        circulo.classList.add("proceso-circulo");
-        circulo.textContent = "x";
-        circulo.setAttribute("data-padre", id);
-
-        circulo.style.left = Math.random() * 20 + "%";
-        circulo.style.top = Math.random() * 20 + "%";
-
-        contenedor.appendChild(circulo);
+        // Agregar un circulo
+        let conjunto = circuloPosiciones.find((item) => item.id === id);
+        const x = Math.random();
+        const y = Math.random();
+        conjunto.circulos.push([x, y]);
 
         terminarEliminarCirculos(contenedor);
-
+        renderizarCirculos();
         guardarCirculos();
     }
 
@@ -531,7 +602,7 @@ function comenzarEliminarCirculos(contenedor) {
     imagenObjetivo.classList.add("eliminando");
 }
 
-function terminarEliminarCirculos(contenedor) {
+function terminarEliminarCirculos() {
     eliminandoProcesoImagen = false;
     if (imagenObjetivo != null) {
         imagenObjetivo.classList.remove("eliminando");
@@ -546,12 +617,13 @@ function clickEnImagenesProceso(e) {
 
     if (target.classList.contains("proceso-circulo")) {
         if (eliminandoProcesoImagen) {
-            console.log(target.parentElement);
             terminarEliminarCirculos();
 
             target.remove();
-
-            guardarCirculos();
+            construirConjuntoConHTML(
+                getConjuntoCirculos(target.getAttribute("data-padre"))
+            );
+            //renderizarCanvasPadre(target.parentElement);
         } else {
             // Guardar la posicion del cursor.
             procesoMouseX = e.clientX;
@@ -579,32 +651,8 @@ function soltarImagenProceso(e) {
 
     imagenArrastrada = null;
 
-    // guardar en localstorage
-    guardarCirculos();
-}
-
-function guardarCirculos() {
-    circuloPosiciones.forEach((item) => {
-        const { id, circulos } = item;
-
-        // obtener el contenedor y los elementos de los circulos
-        const contenedor = document.querySelector("#" + id);
-        const htmlCirculos = contenedor.querySelectorAll(".proceso-circulo");
-
-        // vaciar el array de circulos
-        circulos.length = 0;
-
-        htmlCirculos.forEach((circulo) => {
-            const x = circulo.style.left;
-            const y = circulo.style.top;
-
-            circulos.push([x, y]);
-        });
-    });
-
-    localStorage.setItem(
-        "circuloPosiciones",
-        JSON.stringify(circuloPosiciones)
+    construirConjuntoConHTML(
+        getConjuntoCirculos(target.getAttribute("data-padre"))
     );
 }
 
@@ -620,11 +668,21 @@ function moverImagenProceso(e) {
     procesoMouseY = e.clientY;
 
     // Asignar la posicion nueva al elemento
-    let newY =
-        ((target.offsetTop - diferenciaY) / procesoImagen.offsetHeight) * 100;
-    let newX =
-        ((target.offsetLeft - diferenciaX) / procesoImagen.offsetWidth) * 100;
+    const x = target.offsetLeft + diferenciaX / procesoImagen.offsetWidth;
+    const y = target.offsetTop;
 
-    target.style.top = newY + "%";
-    target.style.left = newX + "%";
+    let relativeX =
+        parseFloat(target.style.left) -
+        (diferenciaX / procesoImagen.offsetWidth) * 100;
+    relativeX = Math.min(relativeX, 100);
+    relativeX = Math.max(relativeX, 0);
+
+    let relativeY =
+        parseFloat(target.style.top) -
+        (diferenciaY / procesoImagen.offsetHeight) * 100;
+    relativeY = Math.min(relativeY, 100);
+    relativeY = Math.max(relativeY, 0);
+
+    target.style.top = relativeY + "%";
+    target.style.left = relativeX + "%";
 }
