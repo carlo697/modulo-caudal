@@ -60,9 +60,13 @@ function renderizarImagenPadre(padre) {
     renderizarCanvasPadre(padre, context);
 }
 
-function eliminarCirculo(conjunto, circulo) {}
-
-function renderizarCanvasPadre(padre, context, offsetX = 0, offsetY = 0, scale = 1) {
+function renderizarCanvasPadre(
+    padre,
+    context,
+    offsetX = 0,
+    offsetY = 0,
+    scale = 1
+) {
     const id = padre.getAttribute("data-imagen-id");
 
     let conjunto = getConjuntoCirculos(id);
@@ -132,24 +136,6 @@ function dibujarCruz(context, x, y, sizeX, sizeY) {
 }
 
 function guardarCirculos() {
-    // circuloPosiciones.forEach((item) => {
-    //     const { id, circulos } = item;
-
-    //     // obtener el contenedor y los elementos de los circulos
-    //     const contenedor = document.getElementById(id);
-    //     const htmlCirculos = contenedor.querySelectorAll(".proceso-circulo");
-
-    //     // vaciar el array de circulos
-    //     circulos.length = 0;
-
-    //     htmlCirculos.forEach((circulo) => {
-    //         const x = circulo.style.left;
-    //         const y = circulo.style.top;
-
-    //         circulos.push([x, y]);
-    //     });
-    // });
-
     localStorage.setItem(
         "circuloPosiciones",
         JSON.stringify(circuloPosiciones)

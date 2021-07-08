@@ -70,52 +70,28 @@ function eventListeners() {
                 canvas.style.display = "none";
             });
 
-            padre.addEventListener("mouseclick", (e) => {
+            padre.addEventListener("click", (e) => {
                 let relativeX = e.offsetX / padre.offsetWidth;
                 let relativeY = e.offsetY / padre.offsetHeight;
 
-                const id = padre.getAttribute("data-imagen-id");
+                const conjunto = getConjuntoCirculos(id);
+                conjunto.circulos.push([relativeX, relativeY]);
 
-                //     const { id, circulos } = item;
-
-                //     // obtener el contenedor y los elementos de los circulos
-                //     const contenedor = document.getElementById(id);
-                //     const htmlCirculos = contenedor.querySelectorAll(".proceso-circulo");
-
-                //     // vaciar el array de circulos
-                //     circulos.length = 0;
-
-                //     htmlCirculos.forEach((circulo) => {
-                //         const x = circulo.style.left;
-                //         const y = circulo.style.top;
-
-                //         circulos.push([x, y]);
-                //     });
-                // });
-
-                // const contenedor = document.getElementById(id);
-
-                // const circulo = document.createElement("div");
-
-                // circulo.classList.add("proceso-circulo");
-                // circulo.textContent = "x";
-                // circulo.setAttribute("data-padre", id);
-
-                // circulo.style.left = relativeX * 100 + "%";
-                // circulo.style.top = relativeY * 100 + "%";
-
-                // contenedor.appendChild(circulo);
+                const offsetX =
+                    -(e.offsetX / padre.offsetWidth) * canvas.width * scale +
+                    canvas.width / 2;
+                const offsetY =
+                    -(e.offsetY / padre.offsetHeight) * canvas.height * scale +
+                    canvas.height / 2;
 
                 terminarEliminarCirculos(contenedor);
-                renderizarCanvasPadre(padre);
+                renderizarCanvasPadre(padre, context, offsetX, offsetY, scale);
+                renderizarImagenPadre(padre);
                 guardarCirculos();
             });
 
             padre.addEventListener("mousemove", (e) => {
                 canvas.style.display = "block";
-                // console.log(e.offsetX, e.offsetY)
-                // console.log(target.offsetWidth, target.offsetHeight)
-                // console.log(target.getBoundingClientRect())
 
                 let x = e.offsetX;
                 x = Math.min(x, padre.offsetWidth - canvas.offsetWidth / 2);
@@ -576,8 +552,8 @@ function clickPracticas(e) {
 
         // Agregar un circulo
         let conjunto = circuloPosiciones.find((item) => item.id === id);
-        const x = Math.random();
-        const y = Math.random();
+        const x = Math.random() * 0.1;
+        const y = Math.random() * 0.1;
         conjunto.circulos.push([x, y]);
 
         terminarEliminarCirculos(contenedor);
