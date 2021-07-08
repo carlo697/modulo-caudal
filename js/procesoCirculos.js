@@ -60,7 +60,23 @@ function renderizarImagenPadre(padre) {
     canvas.width = ancho;
     canvas.height = ancho / 2;
 
+    // Renderizar la imagen del proceso
     context.drawImage(procesoImg, 0, 0, canvas.width, canvas.height);
+
+    // Renderizar el texto "Cantidad de X colocadas:"
+    context.font = "20px serif";
+    context.fillStyle = "black";
+    const text = "Cantidad de X colocadas: ";
+    const measure = context.measureText(text);
+    context.fillText(text, 10, measure.actualBoundingBoxAscent + 10);
+
+    // Renderizar el numero de X
+    context.fillStyle = "blue";
+    context.fillText(
+        conjunto.circulos.length,
+        measure.width + 10,
+        measure.actualBoundingBoxAscent + 10
+    );
 
     renderizarCanvasPadre(padre, context);
 }
