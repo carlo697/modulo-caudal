@@ -29,9 +29,6 @@ function renderizarCirculos() {
 
 function renderizarImagenPadre(padre) {
     const id = padre.getAttribute("data-imagen-id");
-    const canvas = padre.querySelector(".proceso-imagen");
-    const context = canvas.getContext("2d");
-
     let conjunto = getConjuntoCirculos(id);
 
     if (!conjunto) {
@@ -43,7 +40,15 @@ function renderizarImagenPadre(padre) {
 
     conjunto = getConjuntoCirculos(id);
     conjunto.padre = padre;
+
+    const canvas = padre.querySelector(".proceso-imagen");
     conjunto.canvas = canvas;
+
+    const context =
+        conjunto.context != null && conjunto.context.canvas
+            ? conjunto.context
+            : canvas.getContext("2d");
+
     conjunto.context = context;
 
     const ancho = tienePantallaTactil

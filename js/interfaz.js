@@ -71,11 +71,8 @@ function eventListeners() {
             });
 
             padre.addEventListener("click", (e) => {
-                let relativeX = e.offsetX / padre.offsetWidth;
-                let relativeY = e.offsetY / padre.offsetHeight;
-
-                const conjunto = getConjuntoCirculos(id);
-                conjunto.circulos.push([relativeX, relativeY]);
+                let mouseRelativeX = e.offsetX / padre.offsetWidth;
+                let mouseRelativeY = e.offsetY / padre.offsetHeight;
 
                 const offsetX =
                     -(e.offsetX / padre.offsetWidth) * canvas.width * scale +
@@ -84,7 +81,33 @@ function eventListeners() {
                     -(e.offsetY / padre.offsetHeight) * canvas.height * scale +
                     canvas.height / 2;
 
-                terminarEliminarCirculos(contenedor);
+                // Verificar si el mouse está sobre una x
+                const conjunto = getConjuntoCirculos(id);
+
+                let circuloDebajo = conjunto.circulos.find((circulo) => {
+                    let relativeX = circulo[0];
+                    let relativeY = circulo[1];
+
+                    const xDistance = Math.abs(relativeX - mouseRelativeX);
+                    const yDistance = Math.abs(relativeY - mouseRelativeY);
+
+                    if (
+                        xDistance < 5 / canvas.width &&
+                        yDistance < 5 / canvas.height
+                    ) {
+                        return true;
+                    }
+
+                    return false;
+                });
+
+                if (circuloDebajo) {
+                    const index = conjunto.circulos.indexOf(circuloDebajo);
+                    conjunto.circulos.splice(index, 1);
+                } else {
+                    conjunto.circulos.push([mouseRelativeX, mouseRelativeY]);
+                }
+
                 renderizarCanvasPadre(padre, context, offsetX, offsetY, scale);
                 renderizarImagenPadre(padre);
                 guardarCirculos();

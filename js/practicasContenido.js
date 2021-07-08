@@ -109,7 +109,7 @@ function mostrarPractica(practica, contenido) {
 				<div class="pregunta-img-contendor">
 	    	`;
 
-            if (pestanasContenedor) {
+            if (pestanasContenedor && tienePantallaTactil) {
                 html += `
 		    		<div>
 						<button
