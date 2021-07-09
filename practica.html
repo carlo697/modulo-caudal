@@ -1,57 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>Práctica</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/practica.css" />
-    </head>
 
-    <body>
-        <img class="logo" src="img/logo_iutval.png" alt="logo" />
-        <div class="header-fila">
-            <h3>
-                Nombre y Apellido:
-                <span class="respuesta" preguntaId="nombre">vacio...</span>
-            </h3>
-            <h3>
-                Carrera:
-                <span class="respuesta" preguntaId="carrera">vacio...</span>
-            </h3>
-        </div>
+<head>
+    <title>Práctica</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/practica.css" />
+</head>
 
-        <div class="header-fila">
-            <h3>
-                Cedúla:
-                <span class="respuesta" preguntaId="cedula">vacio...</span>
-            </h3>
-            <h3>
-                Trayecto:
-                <span class="respuesta" preguntaId="trayecto">vacio...</span>
-            </h3>
-        </div>
+<body>
+    <img class="logo" src="/img/proceso/proceso_completo.png" alt="logo" />
 
-        <div class="header-fila">
-            <h3>Fecha: <span id="fecha" class="respuesta">vacio...</span></h3>
-            <h3>
-                Asignatura:
-                <span class="respuesta" preguntaId="asignatura">vacio...</span>
-            </h3>
-        </div>
+    <img class="logo" src="img/logo_iutval.png" alt="logo" />
+    <div class="header-fila">
+        <h3>
+            Nombre y Apellido:
+            <span class="respuesta" preguntaId="nombre">vacio...</span>
+        </h3>
+        <h3>
+            Carrera:
+            <span class="respuesta" preguntaId="carrera">vacio...</span>
+        </h3>
+    </div>
 
-        <div class="header-fila">
-            <h3></h3>
-            <h3>
-                Profesor:
-                <span class="respuesta" preguntaId="profesor">vacio...</span>
-            </h3>
-        </div>
+    <div class="header-fila">
+        <h3>
+            Cedúla:
+            <span class="respuesta" preguntaId="cedula">vacio...</span>
+        </h3>
+        <h3>
+            Trayecto:
+            <span class="respuesta" preguntaId="trayecto">vacio...</span>
+        </h3>
+    </div>
 
-        <div id="practicaContenido"></div>
+    <div class="header-fila">
+        <h3>Fecha: <span id="fecha" class="respuesta">vacio...</span></h3>
+        <h3>
+            Asignatura:
+            <span class="respuesta" preguntaId="asignatura">vacio...</span>
+        </h3>
+    </div>
 
-        <script src="js/practicas.js"></script>
-        <script src="js/practicasContenido.js"></script>
-        <script src="js/procesoCirculos.js"></script>
-        <script src="js/practica.js"></script>
-    </body>
+    <div class="header-fila">
+        <h3></h3>
+        <h3>
+            Profesor:
+            <span class="respuesta" preguntaId="profesor">vacio...</span>
+        </h3>
+    </div>
+
+    <div id="practicaContenido"></div>
+    <script src="js/util.js"></script>
+    <script src="js/practicas.js"></script>
+    <script src="js/practicasContenido.js"></script>
+    <script src="js/procesoCirculos.js"></script>
+    <script src="js/practica.js"></script>
+</body>
+
 </html>

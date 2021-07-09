@@ -6,7 +6,9 @@ let circuloPosiciones = [];
 const procesoImg = new Image();
 procesoImg.src = "./img/proceso/proceso_completo.png";
 
-cargarCirculos();
+procesoImg.onload = function () {
+    cargarCirculos();
+};
 
 window.addEventListener("resize", () => {
     renderizarCirculos();
@@ -34,7 +36,7 @@ function renderizarImagenPadre(padre) {
     if (!conjunto) {
         circuloPosiciones.push({
             id,
-            circulos: [],
+            circulos: []
         });
     }
 
@@ -51,11 +53,14 @@ function renderizarImagenPadre(padre) {
 
     conjunto.context = context;
 
-    const ancho = tienePantallaTactil
-        ? canvas.offsetWidth < 1500
-            ? 1500
-            : canvas.offsetWidth
-        : canvas.offsetWidth;
+    console.log(imprimiendo);
+
+    const ancho =
+        tienePantallaTactil || imprimiendo
+            ? canvas.offsetWidth < 1500
+                ? 1500
+                : canvas.offsetWidth
+            : canvas.offsetWidth;
 
     canvas.width = ancho;
     canvas.height = ancho / 2;
@@ -173,7 +178,7 @@ function construirConjuntoConHTML(conjunto) {
     htmlCirculos.forEach((circulo) => {
         conjunto.circulos.push([
             parseFloat(circulo.style.left) / 100,
-            parseFloat(circulo.style.top) / 100,
+            parseFloat(circulo.style.top) / 100
         ]);
     });
 

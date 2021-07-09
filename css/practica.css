@@ -1,13 +1,13 @@
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
 html {
-	font-size: 12pt;
-	font-family: Arial;
-	text-align: justify;
+    font-size: 12pt;
+    font-family: Arial;
+    text-align: justify;
 }
 
 body {
@@ -17,98 +17,97 @@ body {
 }
 
 .logo {
-	width: 3cm;
-	margin-bottom: 0.3cm;
+    width: 3cm;
+    margin-bottom: 0.3cm;
 }
 
 h2 {
-	text-align: center;
-	margin-top: 20pt;
-	margin-bottom: 10pt;
-	font-size: 1.5em;
+    text-align: center;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+    font-size: 1.5em;
 }
 
 h3 {
-	margin-top: 10pt;
-	margin-bottom: 10pt;
+    margin-top: 10pt;
+    margin-bottom: 10pt;
 }
 
 p {
-	margin-bottom: 10pt;
+    margin-bottom: 10pt;
 }
 
 .alerta {
-	color: red;
+    color: red;
 }
 
 li {
-	margin-left: 1cm;
-	margin-bottom: 10pt;
+    margin-left: 1cm;
+    margin-bottom: 10pt;
 }
 
 li:last-child {
-	margin-bottom: 15pt;
+    margin-bottom: 15pt;
 }
 
 ol ol li {
-	page-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 ol li {
-	page-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .respuesta {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .header-fila {
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 4pt;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4pt;
 }
 
 .header-fila h3 {
-	margin-top: 2pt;
-	margin-bottom: 0;
+    margin-top: 2pt;
+    margin-bottom: 0;
 }
 
-
-
 .proceso-imagen {
-	position: relative;
-	margin: 0.5cm 0;
+    position: relative;
+    margin: 0.5cm 0;
+    width: 100%;
 
-	display: table;
-	page-break-inside: avoid;
+    display: table;
+    page-break-inside: avoid;
 }
 
 .proceso-imagen img {
-	max-width: 18cm;
-	max-height: 8cm;
+    max-width: 18cm;
+    max-height: 8cm;
 }
 
 .proceso-circulo {
-	position: absolute;
+    position: absolute;
 
-	width: 0.8em;
-	height: 0.8em;
-	font-size: 1.5em;
+    width: 0.8em;
+    height: 0.8em;
+    font-size: 1.5em;
 
-	transform: translate(-0.4em, -0.4em);
+    transform: translate(-0.4em, -0.4em);
 
-	left: 0;
-	top: 0;
+    left: 0;
+    top: 0;
 
-	background-color: transparent;
-	color: red;
-	font-weight: bold;
+    background-color: transparent;
+    color: red;
+    font-weight: bold;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-	touch-action: none;
-	cursor: pointer;
-	-webkit-tap-highlight-color: transparent; 
+    touch-action: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }

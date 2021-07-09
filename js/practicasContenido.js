@@ -1,9 +1,12 @@
 const pestanasContenedor = document.querySelector("#practicasArea .pestanas");
 const practicasContenedor = document.querySelector(".practica-centro");
+let imprimiendo = false;
 
 if (pestanasContenedor) {
     inicializarPestanas();
 } else {
+    imprimiendo = true;
+
     const contenedor = document.querySelector("#practicaContenido");
     const parametrosURL = new URLSearchParams(window.location.search);
     const id = parametrosURL.get("id");
@@ -135,8 +138,13 @@ function mostrarPractica(practica, contenido) {
 						data-imagen-id="${imagenId}"
 						${circulos ? `data-cantidad="${circulos}"` : ""}
 					>
-                        <canvas class="proceso-imagen-zoom"></canvas>
-			    		<canvas class="proceso-imagen" src="${src}" alt="">
+                        ${
+                            !tienePantallaTactil && pestanasContenedor
+                                ? '<canvas class="proceso-imagen-zoom"></canvas>'
+                                : ""
+                        }
+                        
+			    		<canvas class="proceso-imagen" alt="">
 			    	</div>
 		    	</div>
 	    	`;
