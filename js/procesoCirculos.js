@@ -3,12 +3,52 @@ const procesoImagenes = Array.from(
 );
 let circuloPosiciones = [];
 
-const procesoImg = new Image();
-procesoImg.src = "./img/proceso/proceso_completo.png";
+const imagenes = {};
+let cantidadImagenesCargadas = 0;
+let cargadas = false;
 
-procesoImg.onload = function () {
-    cargarCirculos();
-};
+practicas.forEach((practica) => {
+    practica.pasos.forEach((paso) => {
+        const { imagen } = paso;
+
+        if (imagen) {
+            if (!(imagen.src in imagenes)) {
+                const img = new Image();
+                img.src = imagen.src;
+
+                img.onload = function () {
+                    cantidadImagenesCargadas++;
+
+                    if (cantidadImagenesCargadas === Object.keys(imagenes).length) {
+                        cargadas = true;
+
+                        cargarCirculos();
+                    }
+                };
+
+                imagenes[imagen.src] = {
+                    img: img
+                };
+            }
+        }
+    });
+});
+
+// const procesoImg = new Image();
+// procesoImg.src = "./img/proceso/proceso_completo.png";
+
+// const tableroImg = new Image();
+// tableroImg.src = "./img/tablero_completo.png";
+
+// procesoImagenes.forEach((padre) => {
+//     renderizarImagenPadre(padre);
+// });
+
+// procesoImg.onload = function () {
+//     tableroImg.onload = function () {
+//         cargarCirculos();
+//     };
+// };
 
 window.addEventListener("resize", () => {
     renderizarCirculos();
@@ -53,8 +93,6 @@ function renderizarImagenPadre(padre) {
 
     conjunto.context = context;
 
-    console.log(imprimiendo);
-
     const ancho =
         tienePantallaTactil || imprimiendo
             ? canvas.offsetWidth < 1500
@@ -66,7 +104,8 @@ function renderizarImagenPadre(padre) {
     canvas.height = ancho / 2;
 
     // Renderizar la imagen del proceso
-    context.drawImage(procesoImg, 0, 0, canvas.width, canvas.height);
+    const img = new Image();
+    context.drawImage(imagenes[canvas.getAttribute("data-imagen-src")].img, 0, 0, canvas.width, canvas.height);
 
     // Renderizar el texto "Cantidad de X colocadas:"
     context.font = "20px serif";

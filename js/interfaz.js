@@ -57,11 +57,12 @@ function eventListeners() {
     for (let padre of procesoImagenes) {
         padre.addEventListener("pointerdown", clickEnImagenesProceso);
 
-        const canvas = padre.querySelector(".proceso-imagen-zoom");
-        const context = canvas.getContext("2d");
         const id = padre.getAttribute("data-imagen-id");
 
         if (!tienePantallaTactil) {
+            const canvas = padre.querySelector(".proceso-imagen-zoom");
+            const context = canvas.getContext("2d");
+
             padre.addEventListener("mouseenter", () => {
                 canvas.style.display = "block";
             });
@@ -142,9 +143,8 @@ function eventListeners() {
                     canvas.height / 2;
 
                 context.clearRect(0, 0, canvas.width, canvas.height);
-
                 context.drawImage(
-                    procesoImg,
+                    imagenes[padre.getAttribute("data-imagen-src")].img,
                     offsetX,
                     offsetY,
                     canvas.width * scale,

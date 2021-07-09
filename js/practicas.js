@@ -332,7 +332,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el botón de parada de emergencia presente en el tablero de control.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -345,7 +345,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el selector de modo de operación.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -358,7 +358,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el pulsador luminoso de encendido.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -371,7 +371,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” o con O el pulsador luminoso de apagado.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -384,7 +384,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” las luces indicadoras de fallo de aire, sobrecarga, control de proceso bloqueado y válvula solenoide presentes en el tablero.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "4"
 				},
 
@@ -397,7 +397,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el controlador Venetrol 3000 presente en el tablero de control.",
 
 				imagen: {
-					src: "img/tablero_exterior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -410,7 +410,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el breaker principal del tablero.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -423,7 +423,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” los breakers de control.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "2"
 				},
 
@@ -437,7 +437,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el protector de voltaje.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -450,7 +450,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” los relés presentes en el tablero de control.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "2"
 				},
 
@@ -464,7 +464,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el contactor.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -477,7 +477,7 @@ const practicas = [
 				texto: "Señalar en la imagen con una “X” el relé térmico.",
 
 				imagen: {
-					src: "img/tablero_interior.png",
+					src: "img/tablero_completo.png",
 					circulos: "1"
 				},
 

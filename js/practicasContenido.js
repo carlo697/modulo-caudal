@@ -137,6 +137,7 @@ function mostrarPractica(practica, contenido) {
 						class="proceso-imagen-padre"
 						data-imagen-id="${imagenId}"
 						${circulos ? `data-cantidad="${circulos}"` : ""}
+                        data-imagen-src="${src}"
 					>
                         ${
                             !tienePantallaTactil && pestanasContenedor
@@ -144,7 +145,7 @@ function mostrarPractica(practica, contenido) {
                                 : ""
                         }
                         
-			    		<canvas class="proceso-imagen" alt="">
+			    		<canvas class="proceso-imagen" alt="" data-imagen-src="${src}">
 			    	</div>
 		    	</div>
 	    	`;
