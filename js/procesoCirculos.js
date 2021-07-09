@@ -19,7 +19,10 @@ practicas.forEach((practica) => {
                 img.onload = function () {
                     cantidadImagenesCargadas++;
 
-                    if (cantidadImagenesCargadas === Object.keys(imagenes).length) {
+                    if (
+                        cantidadImagenesCargadas ===
+                        Object.keys(imagenes).length
+                    ) {
                         cargadas = true;
 
                         cargarCirculos();
@@ -105,7 +108,13 @@ function renderizarImagenPadre(padre) {
 
     // Renderizar la imagen del proceso
     const img = new Image();
-    context.drawImage(imagenes[canvas.getAttribute("data-imagen-src")].img, 0, 0, canvas.width, canvas.height);
+    context.drawImage(
+        imagenes[canvas.getAttribute("data-imagen-src")].img,
+        0,
+        0,
+        canvas.width,
+        canvas.height
+    );
 
     // Renderizar el texto "Cantidad de X colocadas:"
     context.font = "20px serif";
