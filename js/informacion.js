@@ -217,23 +217,21 @@ const db = [
 		contenido: `
 			<p style="color:green;">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Un breaker (también conocido como interruptor magnetotérmico) es un dispositivo de seguridad que interrumpe el paso de corriente cuando ésta supera un valor límite máximo, cuando sucede, el breaker abre sus contactos e impide que la corriente siga circulando, protegiendo al sistema de sobrecargas y cortocircuitos.</p>
-			<p>El Breaker Principal del tablero de control del modulo didáctico soporta una corriente máxima de 32 A antes de abrirse para proteger el circuito. Este breaker permite el paso de corriente a todos los dispositivos eléctricos del modulo. Si no se activa (colocando su palanca hacia arriba, en la posición “on”), el modulo no se podrá encender.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el breaker principal.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p>El Breaker Principal (Figura 1) del tablero de control del modulo didáctico soporta una corriente máxima de 32 A antes de abrirse para proteger el circuito. Este breaker permite el paso de corriente a todos los dispositivos eléctricos del modulo. Si no se activa (colocando su palanca hacia arriba, en la posición “on”), el modulo no se podrá encender.</p>
+			<p><strong>Figura 1. Breaker Principal del tablero de control</strong></p>
+			<img src="img/informacion/componentes/breaker_principal.jpg">
 		`
 	},
 	{
 		id: "interruptor1",
-		titulo: "Breaker de Control 1",
+		titulo: "Breaker de Control N°1",
 		contenido: `
 			<p style="color:green;">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Un breaker (también conocido como interruptor magnetotérmico) es un dispositivo de seguridad que interrumpe el paso de corriente cuando ésta supera un valor límite máximo, cuando sucede, el breaker abre sus contactos e impide que la corriente siga circulando, protegiendo al sistema de sobrecargas y cortocircuitos.</p>
-			<p>El Breaker de Control 1 del tablero de control soporta una corriente máxima de 3 A antes de abrirse para proteger al circuito. Este breaker permite el paso de corriente a todos los dispositivos de la sección superior del tablero de control y solo llegara corriente a este breaker si se activa el Breaker Principal.</p>
+			<p>El Breaker de Control 1 (Figura 1) del tablero de control soporta una corriente máxima de 3 A antes de abrirse para proteger al circuito. Este breaker permite el paso de corriente a todos los dispositivos de la sección superior del tablero de control y solo llegara corriente a este breaker si se activa el Breaker Principal.</p>
 			<p>De no activarse el breaker de control 1 (colocando su palanca hacia arriba, en la posición “on”) los dispositivos como luces indicadoras, selectores y botones no funcionaran.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección superior del tablero de control donde se puede observar el breaker de control 1.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Breaker de Control N°1 del tablero de control</strong></p>
+			<img src="img/informacion/componentes/breaker_control_1.jpg">
 		`
 	},
 	{
@@ -242,11 +240,10 @@ const db = [
 		contenido: `
 			<p style="color:green;">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Un breaker (también conocido como interruptor magnetotérmico) es un dispositivo de seguridad que interrumpe el paso de corriente cuando ésta supera un valor límite máximo, cuando sucede, el breaker abre sus contactos e impide que la corriente siga circulando, protegiendo al sistema de sobrecargas y cortocircuitos.</p>
-			<p>El Breaker de Control 2 del tablero de control soporta una corriente máxima de 2 A antes de abrirse para proteger al circuito. Este breaker permite el paso de corriente a la sección inferior del tablero de control y solo llegara corriente a este breaker si se activa el Breaker Principal y el Breaker de Control 1.</p>
+			<p>El Breaker de Control 2 (Figura 1) del tablero de control soporta una corriente máxima de 2 A antes de abrirse para proteger al circuito. Este breaker permite el paso de corriente a la sección inferior del tablero de control y solo llegara corriente a este breaker si se activa el Breaker Principal y el Breaker de Control 1.</p>
 			<p>De no activarse el breaker de control 2, no se suministrara corriente al Controlador Electrónico, a la fuente de 30 V DC del Transmisor de Presión Diferencial y al Convertidor I/P.</p>
-			<p>La Figura 1 muestra una foto del interior de la sección inferior del tablero de control donde se puede observar el breaker de control 2.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección inferior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_inferior.jpg">
+			<p><strong>Figura 1. Breaker de Control N°2 del tablero de control</strong></p>
+			<img src="img/informacion/componentes/breaker_control_2.jpg">
 		`
 	},
 	{
@@ -269,15 +266,14 @@ const db = [
 		titulo: "Selector de Modo de Operación",
 		contenido: `
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Para cambiar la posición del selector debe presionar alguna de las etiquetas “MANUAL”, “OFF” o “AUTOMATICO” que se hallan arriba del selector.</p>
-			<p>Este selector permite que el operador seleccione el modo en el que operara la Bomba Centrifuga del proceso. Cuenta con tres posibles posiciones:</p>
+			<p>Este selector (Figura 1) permite que el operador seleccione el modo en el que operara la Bomba Centrifuga del proceso. Cuenta con tres posibles posiciones:</p>
 			<ul>
 				<li><strong>Modo manual:</strong> En este modo la bomba solo se podrá poner en marcha al presionar el Pulsador Luminoso de Encendido y una vez encendida, se podrá detener presionando el Pulsador Luminoso de Apagado.</li>
 				<li><strong>Modo Apagado (OFF):</strong> La bomba se mantendrá apagada en todo momento y ningún elemento del tablero podrá ponerla en marcha.</li>
 				<li><strong>Modo automático:</strong> La bomba se pondrá en marcha automáticamente al colocarse el selector en esta posición. La bomba se mantendrá en marcha en todo momento y ningún pulsador podrá detenerla.</li>
 			</ul>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Selector de Modo de Operación</strong></p>
+			<img src="img/informacion/componentes/selector_operacion.jpg">
 		`
 	},
 	{
@@ -287,9 +283,8 @@ const db = [
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Cuando el Selector de Modo de Operación se halla en el modo manual, el operador del modulo didáctico puede poner en marcha y parar la Bomba Centrifuga a voluntad.</p>
 			<p>El Pulsador Luminoso de Encendido (Figura 1) es usado para poner en marcha la bomba centrifuga en el modo manual y además cuenta con una luz de color verde que se encenderá siempre que la bomba este en marcha (sin importar el modo de operación seleccionado).</p>
-			<p>La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Pulsador Luminoso de Encendido</strong></p>
+			<img src="img/informacion/componentes/pulsador_encendido.jpg">
 		`
 	},
 	{
@@ -299,8 +294,8 @@ const db = [
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para accionarlo.</p>
 			<p>Cuando el Selector de Modo de Operación se halla en el modo manual, el operador del modulo didáctico puede poner en marcha y parar la Bomba Centrifuga a voluntad.</p>
 			<p>El Pulsador Luminoso de Apagado (Figura 1) es usado para parar la bomba centrifuga en el modo manual y además cuenta con una luz de color rojo que se encenderá siempre que la bomba centrifuga este detenida (sin importar el modo de operación seleccionado).</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Pulsador Luminoso de Apagado</strong></p>
+			<img src="img/informacion/componentes/pulsador_apagado.jpg">
 		`
 	},
 	{
@@ -308,8 +303,8 @@ const db = [
 		titulo: "Luz de Fallo de Aire",
 		contenido: `
 			<p>La Luz de Fallo de Aire (Figura 1) es una luz indicadora de color amarillo que informa cuando se presenta una falla con el suministro neumático, es decir, cuando no haya aire comprimido en circulación a través de las tuberías azules etiquetadas con la palabra “Aire”. Esta situación es riesgosa puesto a que si no se cuenta con suministro neumático, la válvula de control regresara a su posición cerrada provocando que no exista retorno para el agua hacia el tanque.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Luz de Fallo de Aire</strong></p>
+			<img src="img/informacion/componentes/luz_aire.jpg">
 		`
 	},
 	{
@@ -317,10 +312,10 @@ const db = [
 		titulo: "Luz de Sobrecarga",
 		contenido: `
 			<p>La Luz de Sobrecarga (Figura 1) es una luz indicadora que informa cuando el Relé Térmico (Figura 2) se ha accionado debido a una sobrecarga en la Bomba Centrifuga. Cuando esto sucede se debe averiguar la causa de la sobrecarga y será imposible poner en marcha la bomba nuevamente sin antes reiniciar manualmente el relé térmico.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
-			<p><strong>Figura 2. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Luz de Sobrecarga</strong></p>
+			<img src="img/informacion/componentes/luz_sobrecarga.jpg">
+			<p><strong>Figura 2. Relé Térmico</strong></p>
+			<img src="img/informacion/componentes/rele_termico.jpg">
 		`
 	},
 	{
@@ -328,8 +323,8 @@ const db = [
 		titulo: "Luz de Control de Proceso Bloqueado",
 		contenido: `
 			<p>La Luz de Control de Proceso Bloqueado (Figura 1) es una luz indicadora que informa cuando cualquiera de los tres Interruptores de Emergencia del modulo ha sido accionado, provocando la parada inmediata de la Bomba Centrifuga. Además, la bomba tampoco podrá ser puesta en marcha mientras alguno de los interruptores este accionado.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Luz de Control de Proceso Bloqueado</strong></p>
+			<img src="img/informacion/componentes/luz_bloqueo.jpg">
 		`
 	},
 	{
@@ -338,8 +333,8 @@ const db = [
 		contenido: `
 			<p>La Luz de Válvula Solenoide (Figura 1) es una luz indicadora que se encenderá siempre que la  válvula solenoide del proceso sea accionada. La Figura 1 muestra todos los dispositivos del exterior de la sección superior del tablero de control.</p>
 			<p>Cuando se presente una falla con el suministro de aire comprimido, la Válvula de Control se cerrara y provocara una situación riesgosa en la que el agua no tendrá un retorno hacia el tanque. Este problema se soluciona activando una Válvula Solenoide (Figura 2) que abre un retorno para el agua. Esta válvula solenoide solo se activara estando la bomba en marcha durante una falla con el suministro de aire.</p>
-			<p><strong>Figura 1. Dispositivos de la sección superior del tablero de control</strong></p>
-			<img src="img/informacion/tablero_exterior_superior.jpg">
+			<p><strong>Figura 1. Luz de Válvula Solenoide</strong></p>
+			<img src="img/informacion/componentes/luz_solenoide.jpg">
 			<p><strong>Figura 2. Válvula solenoide del proceso</strong></p>
 			<img src="img/informacion/solenoide_2.jpg">
 		`
@@ -360,8 +355,8 @@ const db = [
 			<p>Cuando el protector detecte que alguna de las irregularidades con la tensión haya finalizado, el relé se volverá a activar luego de 0.5 segundos.</p>
 			<p>El protector de voltaje desempeña una función de seguridad importante, ya que cualquiera de las situaciones anteriores podría ocasionar daños a los dispositivos eléctricos del tablero de control, a los instrumentos electrónicos y/o a la Bomba Centrífuga.</p>
 			<p>Este protector de voltaje es el modelo “VP-002” de la marca “Camsco”. Dicho protector supervisa la tensión de 220 V del tablero de control proveniente de dos líneas de 120 V desfasadas 120°.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Protector de Voltaje</strong></p>
+			<img src="img/informacion/componentes/protector_voltaje.jpg">
 		`
 	},
 	{
@@ -371,8 +366,8 @@ const db = [
 			<p style="color:green">Este dispositivo es un elemento interactivo del aula virtual. Puede hacer clic sobre él con el ratón (o tocar con su dedo, en caso de estar en un dispositivo móvil) para reiniciarlo luego de una sobrecarga en la bomba.</p>
 			<p>Una sobrecarga de corriente en la Bomba Centrifuga puede averiarla gravemente, principalmente porque una corriente alta produce recalentamiento, lo que causa daño al aislamiento de sus bobinas, provocando cortocircuitos al bobinado.</p>
 			<p>Debido a lo anterior, una protección contra una sobrecarga es de gran importancia al momento de usar motores eléctricos. El Relé Térmico (Figura 1) logra esta tarea, ya que supervisa la corriente usada por la bomba centrífuga y se dispara cuando ésta corriente supera un límite de 13 amperios. Al dispararse, desconecta el Contactor y por ende a la bomba centrífuga, además, se encenderá también la Luz de Sobrecarga del tablero.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Rele Térmico del tablero de control</strong></p>
+			<img src="img/informacion/componentes/rele_termico.jpg">
 		`
 	},
 
@@ -383,8 +378,8 @@ const db = [
 		titulo: "Contactor",
 		contenido: `
 			<p>Este es un Contactor trifásico que habilita o interrumpe el suministro eléctrico de la Bomba Centrífuga.
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Contactor del tablero de control</p>
+			<img src="img/informacion/componentes/contactor.jpg">
 		`
 	},
 	{
@@ -393,8 +388,8 @@ const db = [
 		contenido: `
 			<p>Los relés son dispositivos electromecánicos que actúan como interruptores, cuyo accionamiento se logra por medio de la energización de un electroimán en su interior para lograr la conmutación de sus contactos.</p>
 			<p>El Relé 1 (Figura 1) es usado por el circuito de control del tablero para suministrar corriente a la válvula solenoide y a la Luz de Válvula Solenoide durante una falla de suministro neumático.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Relé 1 del tablero de control</strong></p>
+			<img src="img/informacion/componentes/rele_1.jpg">
 		`
 	},
 	{
@@ -403,8 +398,8 @@ const db = [
 		contenido: `
 			<p>Los relés son dispositivos electromecánicos que actúan como interruptores, cuyo accionamiento se logra por medio de la energización de un electroimán en su interior para lograr la conmutación de sus contactos.</p>
 			<p>El Relé 2 (Figura 1) es usado por el circuito de control del tablero para encender la Luz de Control de Proceso Bloqueado cuando alguno de los Interruptores de Emergencia se accione.</p>
-			<p><strong>Figura 1. Elementos del interior de la sección superior del tablero de control del modulo didáctico</strong></p>
-			<img src="img/informacion/tablero_interior_superior.jpg">
+			<p><strong>Figura 1. Relé 2 del tablero de control</strong></p>
+			<img src="img/informacion/componentes/rele_2.jpg">
 		`
 	},
 ];
