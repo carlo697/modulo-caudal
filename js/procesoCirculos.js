@@ -117,7 +117,12 @@ function renderizarImagenPadre(padre) {
     );
 
     // Renderizar el texto "Cantidad de X colocadas:"
-    context.font = "20px serif";
+    if (pestanasContenedor) {
+        context.font = "20px serif";
+    } else {
+        context.font = "40px serif";
+    }
+    
     context.fillStyle = "black";
     const text = "Cantidad de X colocadas: ";
     const measure = context.measureText(text);

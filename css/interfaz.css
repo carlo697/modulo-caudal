@@ -566,7 +566,7 @@ a.boton {
 
 
 .planos {
-
+	width: 100%;
 }
 
 .plano {
@@ -917,7 +917,7 @@ a.boton {
 }
 
 .practica-contenido img {
-	width: 100%;
+	/* width: 100%; */
 	max-width: 80vw;
 	max-height: 80vh;
 	display: block;
