@@ -87,6 +87,10 @@ ol li {
     max-height: 8cm;
 }
 
+.proceso-imagen-padre {
+    position: relative;
+}
+
 .proceso-circulo {
     position: absolute;
 

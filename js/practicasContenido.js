@@ -1,6 +1,8 @@
 const pestanasContenedor = document.querySelector("#practicasArea .pestanas");
 const practicasContenedor = document.querySelector(".practica-centro");
-let imprimiendo = false;
+
+let imprimiendo = !pestanasContenedor;
+let usarImg = (!imprimiendo && tienePantallaTactil) || imprimiendo;
 
 if (pestanasContenedor) {
     inicializarPestanas();
@@ -104,9 +106,11 @@ function mostrarPractica(practica, contenido) {
 
         // Crear imagen del proceso si se requiere
         if (imagen) {
-            const { src, circulos } = imagen;
+            const { src, svg, circulos } = imagen;
 
             const imagenId = `imagen_${idCompleto}_${pasoIndice}`;
+            const imagenUrl =
+                (tienePantallaTactil && pestanasContenedor && svg) || src;
 
             let html = `
 				<div class="pregunta-img-contendor">
@@ -137,15 +141,22 @@ function mostrarPractica(practica, contenido) {
 						class="proceso-imagen-padre"
 						data-imagen-id="${imagenId}"
 						${circulos ? `data-cantidad="${circulos}"` : ""}
-                        data-imagen-src="${src}"
+                        data-imagen-src="${imagenUrl}"
 					>
                         ${
-                            !tienePantallaTactil && pestanasContenedor
+                            !usarImg
                                 ? '<canvas class="proceso-imagen-zoom"></canvas>'
                                 : ""
                         }
+
+                        ${
+                            usarImg
+                                ? `<img src="${imagenUrl}" class="proceso-imagen" data-imagen-src="${imagenUrl}">
+                                <span class="x-colocadas">Cantidad de X colocadas: <span class="x-numero">0</span></span>`
+                                : `<canvas class="proceso-imagen" data-imagen-src="${imagenUrl}">`
+                        }
                         
-			    		<canvas class="proceso-imagen" alt="" data-imagen-src="${src}">
+			    		
 			    	</div>
 		    	</div>
 	    	`;

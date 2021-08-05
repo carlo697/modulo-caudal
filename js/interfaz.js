@@ -575,8 +575,8 @@ function clickPracticas(e) {
 
         // Agregar un circulo
         let conjunto = circuloPosiciones.find((item) => item.id === id);
-        const x = Math.random() * 0.1;
-        const y = Math.random() * 0.1;
+        const x = 0.1 + Math.random() * 0.1;
+        const y = 0.2 + Math.random() * 0.1;
         conjunto.circulos.push([x, y]);
 
         terminarEliminarCirculos(contenedor);
@@ -616,13 +616,16 @@ function clickEnImagenesProceso(e) {
 
     if (target.classList.contains("proceso-circulo")) {
         if (eliminandoProcesoImagen) {
+            const padre = target.parentElement;
+
             terminarEliminarCirculos();
 
             target.remove();
             construirConjuntoConHTML(
                 getConjuntoCirculos(target.getAttribute("data-padre"))
             );
-            //renderizarCanvasPadre(target.parentElement);
+
+            renderizarCanvasPadre(padre), null;
         } else {
             // Guardar la posicion del cursor.
             procesoMouseX = e.clientX;

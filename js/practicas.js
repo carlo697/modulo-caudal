@@ -69,6 +69,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "22"
 				},
 
@@ -84,6 +85,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -98,6 +100,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -112,6 +115,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -126,6 +130,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -140,6 +145,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -154,6 +160,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -168,6 +175,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "2"
 				},
 
@@ -182,6 +190,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -196,6 +205,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -210,6 +220,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -224,6 +235,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "1"
 				},
 
@@ -238,6 +250,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/proceso/proceso_completo.png",
+					svg: "img/proceso/proceso_completo.svg",
 					circulos: "2"
 				},
 
@@ -333,6 +346,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -346,6 +360,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -359,6 +374,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -372,6 +388,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -385,6 +402,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "4"
 				},
 
@@ -398,6 +416,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -411,6 +430,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -424,6 +444,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "2"
 				},
 
@@ -438,6 +459,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -451,6 +473,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "2"
 				},
 
@@ -465,6 +488,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
@@ -478,6 +502,7 @@ const practicas = [
 
 				imagen: {
 					src: "img/tablero_completo.png",
+					svg: "img/tablero_completo.png",
 					circulos: "1"
 				},
 
