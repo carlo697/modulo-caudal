@@ -183,7 +183,19 @@ document.body.addEventListener("change", changeGlobal);
 let ultimoHightlight = null;
 let usandoAyuda = false;
 
+const fallaInputs = Array.from(document.querySelectorAll(".falla-input"));
+
 function clickGlobal(e) {
+    const target = e.target;
+
+    if (target.classList.contains("falla-input")) {
+        fallaInputs.forEach((item) => {
+            if (item != target) {
+                item.checked = false;
+            }
+        });
+    }
+
     if (usandoAyuda) {
         if (
             e.target.id == "textoAyuda" ||

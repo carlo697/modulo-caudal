@@ -437,6 +437,10 @@ a.boton {
 	align-items: center;
 }
 
+.falla-fila label {
+	user-select: none;
+}
+
 .fallas input[type="checkbox"] {
 	height: 30px;
 	width: 30px;
