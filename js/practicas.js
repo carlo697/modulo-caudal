@@ -1,291 +1,292 @@
 const practicas = [
-	{
-		id: "1",
+    {
+        id: "1",
 
-		titulo: "IDENTIFICACION DE LOS ELEMENTOS PRESENTES EN EL MODULO",
+        titulo: "IDENTIFICACION DE LOS ELEMENTOS PRESENTES EN EL MODULO",
 
-		objetivoGeneral: "Conocer los componentes presentes en el del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        objetivoGeneral:
+            "Conocer los componentes presentes en el del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-		objetivosEspecificos: [
-			"Identificar y contabilizar cada elemento presente en el Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        objetivosEspecificos: [
+            "Identificar y contabilizar cada elemento presente en el Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-			"Conocer la función que cumple cada elemento presente en el modulo.",
-		],
+            "Conocer la función que cumple cada elemento presente en el módulo."
+        ],
 
-		teoria: `
-			<p>El Modulo Didáctico de Control de Caudal de Lazo Cerrado (Figura 1) se encuentra en el laboratorio de Instrumentación y Control de la UPTValencia y brinda la posibilidad a los estudiantes de las distintas carreras impartidas en la universidad de interactuar con un proceso de control real.</p>
+        teoria: `
+			<p>El Módulo Didáctico de Control de Caudal de Lazo Cerrado (Figura 1) se encuentra en el laboratorio de Instrumentación y Control de la UPTValencia y brinda la posibilidad a los estudiantes de las distintas carreras impartidas en la universidad de interactuar con un proceso de control real.</p>
 
-			<h4>Figura 1. Modulo didáctico de control de caudal Cerrado</h4>
+			<h4>Figura 1. Módulo didáctico de control de caudal Cerrado</h4>
 			<img src="img/fondo.jpg" />
 
-			<p>El proceso del modulo didáctico tiene por objeto controlar el caudal en un sistema de tuberías, llevando el valor del caudal lo más cercano a un valor establecido (conocido como set-point o punto de consigna) por el operador del proceso.</p>
+			<p>El proceso del módulo didáctico tiene por objeto controlar el caudal en un sistema de tuberías, llevando el valor del caudal lo más cercano a un valor establecido (conocido como set-point o punto de consigna) por el operador del proceso.</p>
 
-			<p>A continuación se describen los distintos elementos que conforman el modulo didáctico (excluyendo a aquellos pertenecientes al tablero de control del mismo):</p>
+			<p>A continuación se describen los distintos elementos que conforman el módulo didáctico (excluyendo a aquellos pertenecientes al tablero de control del mismo):</p>
 
-			<p><strong>Tanque de Suministro de Agua.</strong> Un tanque de agua es un contenedor diseñado para almacenar agua para su posterior uso en un proceso o para su consumo. El modulo cuenta con un tanque de 460 litros para almacenar el agua de todo el proceso.</p>
+			<p><strong>Tanque de Suministro de Agua.</strong> Un tanque de agua es un contenedor diseñado para almacenar agua para su posterior uso en un proceso o para su consumo. El módulo cuenta con un tanque de 460 litros para almacenar el agua de todo el proceso.</p>
 
-			<p><strong>Sistema de Tuberías de Agua.</strong> El modulo consta de un sistema de tuberías de hierro y de PVC para transportar el agua almacenada en el tanque. Estas tuberías son de color verde y tienen adheridas 4 tipos de etiquetas: “Limpieza”, “Suministro”, “Decapado” y “Agua”.</p>
+			<p><strong>Sistema de Tuberías de Agua.</strong> El módulo consta de un sistema de tuberías de hierro y de PVC para transportar el agua almacenada en el tanque. Estas tuberías son de color verde y tienen adheridas 4 tipos de etiquetas: “Limpieza”, “Suministro”, “Decapado” y “Agua”.</p>
 
-			<p><strong>Válvulas Tipo Bola.</strong> Una válvula de tipo bola es una clase de llave de paso y su función es regular un fluido canalizado. El modulo cuenta con múltiples válvulas de este tipo, para así cortar o permitir el flujo de agua en caso de: ser necesario desmontar un instrumento para su mantenimiento, para llenar o vaciar el tanque y/o para permitir a los estudiantes estudiar el flujo del agua.</p>
+			<p><strong>Válvulas Tipo Bola.</strong> Una válvula de tipo bola es una clase de llave de paso y su función es regular un fluido canalizado. El módulo cuenta con múltiples válvulas de este tipo, para así cortar o permitir el flujo de agua en caso de: ser necesario desmontar un instrumento para su mantenimiento, para llenar o vaciar el tanque y/o para permitir a los estudiantes estudiar el flujo del agua.</p>
 
-			<p><strong>Bomba Centrifuga.</strong> Una bomba centrifuga es un tipo de bomba hidráulica y su fin es de aumentar la velocidad de los fluidos para que estos puedan desplazarse a grandes distancias. El modulo cuenta con una bomba centrifuga de 2 hp que se encarga de hacer circular el agua del tanque a través del sistema de tuberías.</p>
+			<p><strong>Bomba Centrifuga.</strong> Una bomba centrifuga es un tipo de bomba hidráulica y su fin es de aumentar la velocidad de los fluidos para que estos puedan desplazarse a grandes distancias. El módulo cuenta con una bomba centrifuga de 2 hp que se encarga de hacer circular el agua del tanque a través del sistema de tuberías.</p>
 
-			<p><strong>Filtro de Línea de la Bomba Centrifuga.</strong> Se trata de un filtro hidráulico que se encuentra instalado en la tubería de succión de la bomba centrifuga. Su función es de retirar impurezas del agua para que estas no alcancen a los equipos e instrumentos del modulo y evitando así que estos se deterioren.</p>
+			<p><strong>Filtro de Línea de la Bomba Centrifuga.</strong> Se trata de un filtro hidráulico que se encuentra instalado en la tubería de succión de la bomba centrifuga. Su función es de retirar impurezas del agua para que estas no alcancen a los equipos e instrumentos del módulo y evitando así que estos se deterioren.</p>
 
-			<p><strong>Selectores de Parada de Emergencia.</strong> Estos elementos de maniobra son interruptores eléctricos de dos posiciones. El modulo cuenta con 2 de ellos (uno junto a la válvula de control y otro junto a la bomba centrifuga) y son usados para detener la bomba centrifuga inmediatamente en caso de emergencia.</p>
+			<p><strong>Selectores de Parada de Emergencia.</strong> Estos elementos de maniobra son interruptores eléctricos de dos posiciones. El módulo cuenta con 2 de ellos (uno junto a la válvula de control y otro junto a la bomba centrifuga) y son usados para detener la bomba centrifuga inmediatamente en caso de emergencia.</p>
 
-			<p><strong>Placa Orificio.</strong> Este dispositivo se clasifica como un elemento primario y produce una diferencia de presión en el fluido, la cual es usada por un transmisor en el proceso para medir el caudal. El modulo cuenta con dos elementos primarios incluyendo la placa orificio.</p>
+			<p><strong>Placa Orificio.</strong> Este dispositivo se clasifica como un elemento primario y produce una diferencia de presión en el fluido, la cual es usada por un transmisor en el proceso para medir el caudal. El módulo cuenta con dos elementos primarios incluyendo la placa orificio.</p>
 
-			<p><strong>Tubo Venturi.</strong> Este elemento primario es un tubo con un estrechamiento en su centro. Cuando un fluido pasa por el tubo venturi se crea una diferencia de presión que es usada por el transmisor del proceso para medir el caudal. Este es el segundo elemento primario del modulo.</p>
+			<p><strong>Tubo Venturi.</strong> Este elemento primario es un tubo con un estrechamiento en su centro. Cuando un fluido pasa por el tubo venturi se crea una diferencia de presión que es usada por el transmisor del proceso para medir el caudal. Este es el segundo elemento primario del módulo.</p>
 
 			<p><strong>Transmisor de Presión Diferencial.</strong> Este dispositivo se clasifica como un transmisor. Los transmisores utilizan un elemento primario para medir una variable física y transmitirla en forma de una señal estándar.</p>
 
-			<p>El transmisor de presión diferencial del modulo mide la diferencia de presión causada ya sea por la placa orificio o por el tubo venturi; así determina el caudal en el sistema de tuberías y transmite dicho valor (en forma de una señal de 4 a 20 mA) al controlador electrónico del modulo.</p>
+			<p>El transmisor de presión diferencial del módulo mide la diferencia de presión causada ya sea por la placa orificio o por el tubo venturi; así determina el caudal en el sistema de tuberías y transmite dicho valor (en forma de una señal de 4 a 20 mA) al controlador electrónico del módulo.</p>
 
 			<p><strong>Controlador Electrónico.</strong> Este dispositivo se clasifica como un controlador. Los controladores son instrumentos encargados de comparar la variable controlada del proceso con el valor deseado para dicha variable, para generar como señal de salida una corrección que será enviada al elemento final de control. El controlador del proceso es electrónico y está instalado en el tablero de control.</p>
 
-			<p><strong>Convertidor I/P. </strong> Un convertidor es un dispositivo que recibe como entrada una señal estándar y la transforma en otro tipo de señal estándar equivalente. El convertidor I/P (convertidor corriente a presión) del modulo recibe la señal eléctrica (de 4 a 20 mA) de salida  del controlador y la transforma en una señal de presión neumática (de 3 a 15 psi) que es usada para accionar la válvula de control del modulo.</p>
+			<p><strong>Convertidor I/P. </strong> Un convertidor es un dispositivo que recibe como entrada una señal estándar y la transforma en otro tipo de señal estándar equivalente. El convertidor I/P (convertidor corriente a presión) del módulo recibe la señal eléctrica (de 4 a 20 mA) de salida  del controlador y la transforma en una señal de presión neumática (de 3 a 15 psi) que es usada para accionar la válvula de control del módulo.</p>
 
-			<p><strong>Sistema de Suministro Neumático.</strong> El modulo consta de un sistema de tuberías galvanizadas para transportar aire comprimido que se necesita para la válvula de control. Estas tuberías están pintadas de color azul.</p>
+			<p><strong>Sistema de Suministro Neumático.</strong> El módulo consta de un sistema de tuberías galvanizadas para transportar aire comprimido que se necesita para la válvula de control. Estas tuberías están pintadas de color azul.</p>
 
-			<p><strong>Válvula de control.</strong> Una válvula de control es un tipo de válvula que controla el flujo de un fluido según la señal producida por un controlador. Estas válvulas se clasifican como un elemento final de control. La válvula de control del modulo es neumática y trabaja con una señal de 3 a 15 psi proporcionada por el convertidor I/P.</p>
+			<p><strong>Válvula de control.</strong> Una válvula de control es un tipo de válvula que controla el flujo de un fluido según la señal producida por un controlador. Estas válvulas se clasifican como un elemento final de control. La válvula de control del módulo es neumática y trabaja con una señal de 3 a 15 psi proporcionada por el convertidor I/P.</p>
 
-			<p><strong>Presostato.</strong> Un presostato es un interruptor de presión que acciona un contacto eléctrico cuando un fluido a su entrada alcanza una presión preestablecida. El modulo cuenta con un presostato para detectar la presencia de aire comprimido en el sistema de suministro neumático.</p>
+			<p><strong>Presostato.</strong> Un presostato es un interruptor de presión que acciona un contacto eléctrico cuando un fluido a su entrada alcanza una presión preestablecida. El módulo cuenta con un presostato para detectar la presencia de aire comprimido en el sistema de suministro neumático.</p>
 
-			<p>Ante la falta de aire comprimido (dicha situación se denomina en el modulo como un “fallo de aire”), la válvula de control se cerrara imprevistamente y esto podría forzar la bomba centrifuga al no haber retorno del agua hacia el tanque. Esto hará que la bomba entre en proceso de cavitación, ocasionándole daños. El presostato y la válvula solenoide evitan que esto suceda.</p>
+			<p>Ante la falta de aire comprimido (dicha situación se denomina en el módulo como un “fallo de aire”), la válvula de control se cerrara imprevistamente y esto podría forzar la bomba centrifuga al no haber retorno del agua hacia el tanque. Esto hará que la bomba entre en proceso de cavitación, ocasionándole daños. El presostato y la válvula solenoide evitan que esto suceda.</p>
 
-			<p><strong>Válvula Solenoide.</strong> Una válvula solenoide es una válvula electromecánica de dos posiciones: abierta y cerrada. Cuando es energizada, se conmuta y cierra o abre el paso en una tubería. El modulo cuenta con una válvula solenoide normalmente cerrada para permitir el retorno del agua al tanque durante una falla de aire. Durante dicha falla (detectada gracias al presostato), se energiza la válvula y esta abre una tubería de retorno que se encuentra adyacente a la tubería de salida de la bomba, permitiendo que el agua se retorne al tanque.</p>
+			<p><strong>Válvula Solenoide.</strong> Una válvula solenoide es una válvula electromecánica de dos posiciones: abierta y cerrada. Cuando es energizada, se conmuta y cierra o abre el paso en una tubería. El módulo cuenta con una válvula solenoide normalmente cerrada para permitir el retorno del agua al tanque durante una falla de aire. Durante dicha falla (detectada gracias al presostato), se energiza la válvula y esta abre una tubería de retorno que se encuentra adyacente a la tubería de salida de la bomba, permitiendo que el agua se retorne al tanque.</p>
 
-			<p><strong>Rotámetro.</strong> Un rotámetro es un instrumento indicador que mide el caudal volumétrico de un fluido que circula por un tubo cerrado. El modulo cuenta con un rotámetro que permite al operador leer el caudal en el sistema de tuberías, permitiéndole comprobar que el caudal este siendo controlado por los instrumentos del modulo.</p>
+			<p><strong>Rotámetro.</strong> Un rotámetro es un instrumento indicador que mide el caudal volumétrico de un fluido que circula por un tubo cerrado. El módulo cuenta con un rotámetro que permite al operador leer el caudal en el sistema de tuberías, permitiéndole comprobar que el caudal este siendo controlado por los instrumentos del módulo.</p>
 
-			<p><strong>Manómetro.</strong> Un manómetro es un instrumento indicador usado para la medición de presión de fluidos en tanques, recipientes o en tuberías. El modulo cuenta con múltiples manómetros, algunos en el sistema de suministro de aire y otros en el sistema de tuberías de agua.</p>
+			<p><strong>Manómetro.</strong> Un manómetro es un instrumento indicador usado para la medición de presión de fluidos en tanques, recipientes o en tuberías. El módulo cuenta con múltiples manómetros, algunos en el sistema de suministro de aire y otros en el sistema de tuberías de agua.</p>
 
-			<p>De todos los manómetros del modulo, dos resaltan debido a su propósito. Están instalados juntos al transmisor y están destinados a usarse para realizar mediciones de la presión del agua en los elementos primarios.</p>
+			<p>De todos los manómetros del módulo, dos resaltan debido a su propósito. Están instalados juntos al transmisor y están destinados a usarse para realizar mediciones de la presión del agua en los elementos primarios.</p>
 		`,
 
-		pasos: [
-			{
-				texto: "Señalar en la imagen con una “X” las válvulas tipo bola presentes en el modulo. (Presione una “X” y arrástrela para moverla).",
+        pasos: [
+            {
+                texto: "Señalar en la imagen con una “X” las válvulas tipo bola presentes en el módulo. (Presione una “X” y arrástrela para moverla).",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "22"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "22"
+                },
 
-				preguntas: [
-					"¿Cuántas válvulas tipo bola se encuentran en el modulo?",
-					"¿Qué clase de dispositivo es una válvula tipo bola?",
-					"¿Qué función cumple una válvula tipo bola?",
-				],
-			},
+                preguntas: [
+                    "¿Cuántas válvulas tipo bola se encuentran en el módulo?",
+                    "¿Qué clase de dispositivo es una válvula tipo bola?",
+                    "¿Qué función cumple una válvula tipo bola?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” la placa orificio presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” la placa orificio presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué clase de instrumento es una placa orificio?",
-					"¿Qué función cumple una placa de orificio?",
-				],
-			},
+                preguntas: [
+                    "¿Qué clase de instrumento es una placa orificio?",
+                    "¿Qué función cumple una placa de orificio?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el tubo venturi presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” el tubo venturi presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué clase de instrumento es un tubo venturi?",
-					"¿Qué función cumple un tubo venturi?",
-				],
-			},
+                preguntas: [
+                    "¿Qué clase de instrumento es un tubo venturi?",
+                    "¿Qué función cumple un tubo venturi?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el rotámetro presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” el rotámetro presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué clase de instrumento es un rotámetro?",
-					"¿Qué función cumple un rotámetro?",
-				],
-			},
+                preguntas: [
+                    "¿Qué clase de instrumento es un rotámetro?",
+                    "¿Qué función cumple un rotámetro?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” la bomba centrifuga presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” la bomba centrifuga presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué tipo de elemento es una bomba centrifuga?",
-					"¿Qué función cumple una bomba centrifuga?",
-				],
-			},
+                preguntas: [
+                    "¿Qué tipo de elemento es una bomba centrifuga?",
+                    "¿Qué función cumple una bomba centrifuga?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” la válvula de control.",
+            {
+                texto: "Señalar en la imagen con una “X” la válvula de control.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué clase de instrumento es una válvula de control?",
-					"¿Qué función cumple una válvula de control?",
-				],
-			},
+                preguntas: [
+                    "¿Qué clase de instrumento es una válvula de control?",
+                    "¿Qué función cumple una válvula de control?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” la válvula solenoide.",
+            {
+                texto: "Señalar en la imagen con una “X” la válvula solenoide.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué tipo de elemento es una válvula solenoide?",
-					"¿Qué función cumple una válvula solenoide?",
-				],
-			},
+                preguntas: [
+                    "¿Qué tipo de elemento es una válvula solenoide?",
+                    "¿Qué función cumple una válvula solenoide?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen  con una “X” los selectores de parada de emergencia.",
+            {
+                texto: "Señalar en la imagen  con una “X” los selectores de parada de emergencia.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "2"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "2"
+                },
 
-				preguntas: [
-					"¿Cuántos selectores de parada de emergencia se encuentran en el modulo?",
-					"¿Qué función cumple un selector de parada de emergencia?",
-				],
-			},
+                preguntas: [
+                    "¿Cuántos selectores de parada de emergencia se encuentran en el módulo?",
+                    "¿Qué función cumple un selector de parada de emergencia?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el presostato presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” el presostato presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué tipo de elemento es un presostato?",
-					"¿Qué función cumple un presostato?",
-				],
-			},
+                preguntas: [
+                    "¿Qué tipo de elemento es un presostato?",
+                    "¿Qué función cumple un presostato?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el filtro de línea de la bomba centrifuga.",
+            {
+                texto: "Señalar en la imagen con una “X” el filtro de línea de la bomba centrifuga.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué tipo de elemento es un filtro de línea?",
-					"¿Qué función cumple un filtro de línea?",
-				],
-			},
+                preguntas: [
+                    "¿Qué tipo de elemento es un filtro de línea?",
+                    "¿Qué función cumple un filtro de línea?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el convertidor I/P presente en el modulo.",
+            {
+                texto: "Señalar en la imagen con una “X” el convertidor I/P presente en el módulo.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué clase de instrumento es un convertidor I/P?",
-					"¿Qué función cumple un convertidor I/P?",
-				],
-			},
+                preguntas: [
+                    "¿Qué clase de instrumento es un convertidor I/P?",
+                    "¿Qué función cumple un convertidor I/P?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el tanque de almacenamiento de agua.",
+            {
+                texto: "Señalar en la imagen con una “X” el tanque de almacenamiento de agua.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué tipo de elemento es un tanque de almacenamiento de agua?",
-					"¿Qué función cumple un tanque de almacenamiento de agua?",
-				],
-			},
+                preguntas: [
+                    "¿Qué tipo de elemento es un tanque de almacenamiento de agua?",
+                    "¿Qué función cumple un tanque de almacenamiento de agua?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” los manómetros.",
+            {
+                texto: "Señalar en la imagen con una “X” los manómetros.",
 
-				imagen: {
-					src: "img/proceso/proceso_completo.png",
-					svg: "img/proceso/proceso_completo.svg",
-					circulos: "2"
-				},
+                imagen: {
+                    src: "img/proceso/proceso_completo.png",
+                    svg: "img/proceso/proceso_completo.svg",
+                    circulos: "2"
+                },
 
-				preguntas: [
-					"¿Cuántos manómetros se encuentran en el módulo?",
-					"¿Qué clase de instrumento es un manómetro?",
-					"¿Qué función realizan los manómetros?",
-				],
-			},
-		],
-	},
+                preguntas: [
+                    "¿Cuántos manómetros se encuentran en el módulo?",
+                    "¿Qué clase de instrumento es un manómetro?",
+                    "¿Qué función realizan los manómetros?"
+                ]
+            }
+        ]
+    },
 
+    {
+        id: "2",
 
-	{
-		id: "2",
+        titulo: "IDENTIFICACION DE LOS ELEMENTOS DE MANIOBRA EN EL TABLERO",
 
-		titulo: "IDENTIFICACION DE LOS ELEMENTOS DE MANIOBRA EN EL TABLERO",
+        objetivoGeneral:
+            "Conocer los elementos que conforman el tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-		objetivoGeneral: "Conocer los elementos que conforman el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        objetivosEspecificos: [
+            "Identificar los elementos de maniobra presentes en el tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-		objetivosEspecificos: [
-			"Identificar los elementos de maniobra presentes en el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+            "Reconocer los elementos de protección presentes en el tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado."
+        ],
 
-			"Reconocer los elementos de protección presentes en el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-		],
-
-		teoria: `
-			<p>El tablero de control alberga la mayoría de los dispositivos eléctricos del modulo y constituye un centro de operación desde el cual los estudiantes o los profesores pueden poner en marcha el modulo. Desde él se pueden realizar diversas tareas:</p>
+        teoria: `
+			<p>El tablero de control alberga la mayoría de los dispositivos eléctricos del módulo y constituye un centro de operación desde el cual los estudiantes o los profesores pueden poner en marcha el módulo. Desde él se pueden realizar diversas tareas:</p>
 
 			<ul>
 				<li><strong>Puesta en marcha y parada de la bomba centrifuga:</strong> El tablero cuenta con un selector y botones para controlar la bomba.</li>
 
 				<li><strong>Ajuste del controlador y del set-point:</strong> El controlador electrónico en el tablero se encarga de guiar la válvula de control para  controlar el caudal. Desde él se puede configurar el caudal deseado (el punto de consigna o set-point).</li>
 
-				<li><strong>Inspección de fallas que puedan surgir en el modulo:</strong> como un problema en el suministro eléctrico (bajo voltaje, sobre voltaje y pérdida de fase), sobrecarga en la bomba y falla de aire.</li>
+				<li><strong>Inspección de fallas que puedan surgir en el módulo:</strong> como un problema en el suministro eléctrico (bajo voltaje, sobre voltaje y pérdida de fase), sobrecarga en la bomba y falla de aire.</li>
 			</ul>
 
 			<p>La Figura 1 muestra la sección superior del tablero de control, donde se pueden observar los distintos elementos de maniobra que un operador puede usar.</p>
@@ -321,7 +322,7 @@ const practicas = [
 
 			<p><strong>Controlador Electrónico.</strong> La pantalla del controlador y sus botones permiten al operador cambiar el set-point (este procedimiento debe buscarse en su manual de operación). El controlador compara la señal del transmisor (que representa el caudal actual) con el set-point asignado (el caudal deseado) para así producir una señal de salida que accionara la válvula de control, haciendo que el caudal se acerca lo más posible al set-point.</p>
 
-			<p><strong>Breaker Principal.</strong> Este breaker permite el paso de corriente a todos los dispositivos eléctricos del modulo y funciona de protección contra corrientes elevadas (como aquellas ocasionadas por un cortocircuito). Si no se activa, el modulo no se podrá encender.</p>
+			<p><strong>Breaker Principal.</strong> Este breaker permite el paso de corriente a todos los dispositivos eléctricos del módulo y funciona de protección contra corrientes elevadas (como aquellas ocasionadas por un cortocircuito). Si no se activa, el módulo no se podrá encender.</p>
 
 			<p><strong>Breaker de Control N°1.</strong> Este breaker permite el paso de corriente a todos los dispositivos de la sección superior del tablero. Si no se activa, no se podrá poner en marcha la bomba centrifuga y tampoco funcionaran las luces y botones del tablero.</p>
 
@@ -340,207 +341,194 @@ const practicas = [
 			<p>Un exceso de corriente en la bomba puede dañarla a causa del sobrecalentamiento que se produciría, dañando el aislamiento entre sus bobinados. </p>
 		`,
 
-		pasos: [
-			{
-				texto: "Señalar en la imagen con una “X” el botón de parada de emergencia presente en el tablero de control.",
+        pasos: [
+            {
+                texto: "Señalar en la imagen con una “X” el botón de parada de emergencia presente en el tablero de control.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el botón de parada de emergencia?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumple el botón de parada de emergencia?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el selector de modo de operación.",
+            {
+                texto: "Señalar en la imagen con una “X” el selector de modo de operación.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el selector de modo de operación?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumple el selector de modo de operación?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el pulsador luminoso de encendido.",
+            {
+                texto: "Señalar en la imagen con una “X” el pulsador luminoso de encendido.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el pulsador luminoso de encendido?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumple el pulsador luminoso de encendido?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” o con O el pulsador luminoso de apagado.",
+            {
+                texto: "Señalar en la imagen con una “X” o con O el pulsador luminoso de apagado.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el pulsador luminoso de apagado?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumple el pulsador luminoso de apagado?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” las luces indicadoras de fallo de aire, sobrecarga, control de proceso bloqueado y válvula solenoide presentes en el tablero.",
+            {
+                texto: "Señalar en la imagen con una “X” las luces indicadoras de fallo de aire, sobrecarga, control de proceso bloqueado y válvula solenoide presentes en el tablero.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "4"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "4"
+                },
 
-				preguntas: [
-					"¿Qué función cumplen las luces indicadoras en el tablero?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumplen las luces indicadoras en el tablero?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el controlador Venetrol 3000 presente en el tablero de control.",
+            {
+                texto: "Señalar en la imagen con una “X” el controlador Venetrol 3000 presente en el tablero de control.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el controlador Venetrol 3000?",
-				],
-			},
+                preguntas: ["¿Qué función cumple el controlador Venetrol 3000?"]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el breaker principal del tablero.",
+            {
+                texto: "Señalar en la imagen con una “X” el breaker principal del tablero.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el breaker principal del tablero?",
-				],
-			},
+                preguntas: [
+                    "¿Qué función cumple el breaker principal del tablero?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” los breakers de control.",
+            {
+                texto: "Señalar en la imagen con una “X” los breakers de control.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "2"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "2"
+                },
 
-				preguntas: [
-					"¿Cuántos breakers de control hay en el tablero?",
-					"¿Cuál es la función de los breakers de control?",
-				],
-			},
+                preguntas: [
+                    "¿Cuántos breakers de control hay en el tablero?",
+                    "¿Cuál es la función de los breakers de control?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el protector de voltaje.",
+            {
+                texto: "Señalar en la imagen con una “X” el protector de voltaje.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el protector de voltaje?",
-				],
-			},
+                preguntas: ["¿Qué función cumple el protector de voltaje?"]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” los relés presentes en el tablero de control.",
+            {
+                texto: "Señalar en la imagen con una “X” los relés presentes en el tablero de control.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "2"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "2"
+                },
 
-				preguntas: [
-					"¿Cuántos relés hay en el tablero de control?",
-					"¿Qué función cumplen los relés?",
-				],
-			},
+                preguntas: [
+                    "¿Cuántos relés hay en el tablero de control?",
+                    "¿Qué función cumplen los relés?"
+                ]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el contactor.",
+            {
+                texto: "Señalar en la imagen con una “X” el contactor.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el contactor?",
-				],
-			},
+                preguntas: ["¿Qué función cumple el contactor?"]
+            },
 
-			{
-				texto: "Señalar en la imagen con una “X” el relé térmico.",
+            {
+                texto: "Señalar en la imagen con una “X” el relé térmico.",
 
-				imagen: {
-					src: "img/tablero_completo.png",
-					svg: "img/tablero_completo.png",
-					circulos: "1"
-				},
+                imagen: {
+                    src: "img/tablero_completo.png",
+                    svg: "img/tablero_completo.png",
+                    circulos: "1"
+                },
 
-				preguntas: [
-					"¿Qué función cumple el relé térmico?",
-				],
-			},
+                preguntas: ["¿Qué función cumple el relé térmico?"]
+            }
+        ]
+    },
 
+    {
+        id: "3",
 
+        titulo: "PUESTA EN MARCHA Y PARADA DE LA BOMBA CENTRIFUGA",
 
-		],
-	},
+        objetivoGeneral:
+            "Conocer el procedimiento para la puesta en marcha y parada de la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado y sus modos de operación.",
 
+        objetivosEspecificos: [
+            "Conocer los breakers de protección del tablero de control y usarlos para hacer funcionar el Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
+            "Entender el funcionamiento del circuito encargado de controlar la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
+            "Instruirse en el uso de los tres modos de operación de la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado."
+        ],
 
-	{
-		id: "3",
+        teoria: `
+			<p>El módulo de caudal cuenta con una bomba centrifuga para hacer circular el agua almacenada en el tanque. Dicha bomba puede ser puesta en marcha y puede pararse desde el tablero de control mediante el uso de un selector y dos botones pulsadores (los cuales integran luces indicadoras para informar el estado de la bomba).</p>
 
-		titulo: "PUESTA EN MARCHA Y PARADA DE LA BOMBA CENTRIFUGA",
-
-		objetivoGeneral: "Conocer el procedimiento para la puesta en marcha y parada de la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado y sus modos de operación.",
-
-		objetivosEspecificos: [
-			"Conocer los breakers de protección del tablero de control y usarlos para hacer funcionar el Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-
-			"Entender el funcionamiento del circuito encargado de controlar la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-
-			"Instruirse en el uso de los tres modos de operación de la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-		],
-
-		teoria: `
-			<p>El modulo de caudal cuenta con una bomba centrifuga para hacer circular el agua almacenada en el tanque. Dicha bomba puede ser puesta en marcha y puede pararse desde el tablero de control mediante el uso de un selector y dos botones pulsadores (los cuales integran luces indicadoras para informar el estado de la bomba).</p>
-
-			<p>Antes de poder poner en marcha la bomba centrifuga o encender cualquier elemento del modulo didáctico, el tablero de control debe energizarse, para ello el tablero cuenta con tres breakers que deben activarse para que la corriente pueda ser suministrada:</p>
+			<p>Antes de poder poner en marcha la bomba centrifuga o encender cualquier elemento del módulo didáctico, el tablero de control debe energizarse, para ello el tablero cuenta con tres breakers que deben activarse para que la corriente pueda ser suministrada:</p>
 
 			<ul>
-				<li><strong>Breaker Principal:</strong> suministra corriente a todo el tablero de control y al modulo en su totalidad.</li>
+				<li><strong>Breaker Principal:</strong> suministra corriente a todo el tablero de control y al módulo en su totalidad.</li>
 
 				<li><strong>Breaker de Control 1:</strong> suministra corriente a la sección superior del tablero de control, donde están localizados los elementos de maniobra como botones, luces, relés, etc.</li>
 
@@ -676,108 +664,96 @@ const practicas = [
 			<p>Se pueden observar los elementos de maniobra del primer diagrama escalera, más otros elementos extras: una bobina R1 que pertenece al protector de voltaje del tablero, tres interruptores (S1, S2, S3) que corresponden a los interruptores de emergencia, y el contacto OL que pertenece al relé térmico usado para proteger la bomba contra sobrecargas de corriente.</p>
 		`,
 
-		pasos: [
-			{
-				texto: "Colocar el breaker principal en su posición de encendido (ON).",
-				preguntas: [
-					"¿Qué sucede si no se activa este breaker?",
-				],
-			},
+        pasos: [
+            {
+                texto: "Colocar el breaker principal en su posición de encendido (ON).",
+                preguntas: ["¿Qué sucede si no se activa este breaker?"]
+            },
 
-			{
-				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
-				preguntas: [
-					"¿Qué cambio observó en las luces de los pulsadores de encendido y apagado?",
-					"¿Qué cambio observó en el protector de voltaje?",
-					"¿Qué sucede si no se activa este breaker?",
-				],
-			},
+            {
+                texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
+                preguntas: [
+                    "¿Qué cambio observó en las luces de los pulsadores de encendido y apagado?",
+                    "¿Qué cambio observó en el protector de voltaje?",
+                    "¿Qué sucede si no se activa este breaker?"
+                ]
+            },
 
-			{
-				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
-				preguntas: [
-					"¿Qué cambios observó en el controlador electrónico?",
-					"¿Contra qué protegen los breakers al circuito?"
-				],
-			},
+            {
+                texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
+                preguntas: [
+                    "¿Qué cambios observó en el controlador electrónico?",
+                    "¿Contra qué protegen los breakers al circuito?"
+                ]
+            },
 
-			{
-				texto: "Colocar el selector en la posición “MANUAL”.",
-				preguntas: [
-					"¿Qué función cumple este selector?",
-					"¿Cuál es la función del modo manual?",
-				],
-			},
+            {
+                texto: "Colocar el selector en la posición “MANUAL”.",
+                preguntas: [
+                    "¿Qué función cumple este selector?",
+                    "¿Cuál es la función del modo manual?"
+                ]
+            },
 
-			{
-				texto: "Accionar el pulsador luminoso de encendido.",
-				preguntas: [
-					"¿Qué funciona realiza este botón pulsador?",
-					"¿Para qué sirve la luz indicadora de este pulsador?",
-				],
-			},
+            {
+                texto: "Accionar el pulsador luminoso de encendido.",
+                preguntas: [
+                    "¿Qué funciona realiza este botón pulsador?",
+                    "¿Para qué sirve la luz indicadora de este pulsador?"
+                ]
+            },
 
-			{
-				texto: "Accionar el pulsador luminoso de apagado.",
-				preguntas: [
-					"¿Qué funciona realiza este botón pulsador?",
-					"¿Para qué sirve la luz indicadora de este pulsador?",
-				],
-			},
+            {
+                texto: "Accionar el pulsador luminoso de apagado.",
+                preguntas: [
+                    "¿Qué funciona realiza este botón pulsador?",
+                    "¿Para qué sirve la luz indicadora de este pulsador?"
+                ]
+            },
 
-			{
-				texto: "Colocar el selector en la posición “OFF”.",
-				preguntas: [
-					"¿Qué función cumple el modo de operación off?",
-				],
-			},
+            {
+                texto: "Colocar el selector en la posición “OFF”.",
+                preguntas: ["¿Qué función cumple el modo de operación off?"]
+            },
 
-			{
-				texto: "Colocar el selector en la posición “AUTOMATICO”.",
-				preguntas: [
-					"¿Qué ocurrió con la bomba centrifuga?",
-					"¿Qué función cumple el modo automático?",
-				],
-			},
+            {
+                texto: "Colocar el selector en la posición “AUTOMATICO”.",
+                preguntas: [
+                    "¿Qué ocurrió con la bomba centrifuga?",
+                    "¿Qué función cumple el modo automático?"
+                ]
+            },
 
-			{
-				texto: "Intentar accionar los pulsadores luminosos de encendido y apagado.",
-				preguntas: [
-					"¿La operación de la bomba centrifuga se vio afectada de alguna forma?",
-				],
-			},
+            {
+                texto: "Intentar accionar los pulsadores luminosos de encendido y apagado.",
+                preguntas: [
+                    "¿La operación de la bomba centrifuga se vio afectada de alguna forma?"
+                ]
+            },
 
-			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
-			},
+            {
+                texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal."
+            }
+        ]
+    },
 
+    {
+        id: "4",
 
+        titulo: "PARADA DE EMERGENCIA DE LA BOMBA CENTRÍFUGA",
 
-		],
-	},
+        objetivoGeneral:
+            "Conocer la función de los tres interruptores de emergencia disponibles en el Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
+        objetivosEspecificos: [
+            "Entender el funcionamiento del circuito encargado de la parada de emergencia de la bomba centrifuga del módulo didáctico de control de caudal de lazo cerrado.",
 
+            "Instruirse en el uso de los tres interruptores de emergencia del módulo didáctico de control de caudal de lazo cerrado."
+        ],
 
+        teoria: `
 
-
-
-
-	{
-		id: "4",
-
-		titulo: "PARADA DE EMERGENCIA DE LA BOMBA CENTRÍFUGA",
-
-		objetivoGeneral: "Conocer la función de los tres interruptores de emergencia disponibles en el Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-
-		objetivosEspecificos: [
-			"Entender el funcionamiento del circuito encargado de la parada de emergencia de la bomba centrifuga del modulo didáctico de control de caudal de lazo cerrado.",
-
-			"Instruirse en el uso de los tres interruptores de emergencia del modulo didáctico de control de caudal de lazo cerrado.",
-		],
-
-		teoria: `
-
-			<p>El tablero de control del modulo didáctico cuenta con un botón de parada de emergencia en su sección superior. El modulo también dispone de dos interruptores localizados a la izquierda y a la derecha. Estos tres elementos de maniobra constituyen los interruptores de emergencia del modulo y tienen la función de parar instantáneamente la bomba centrifuga en caso una emergencia.</p>
+			<p>El tablero de control del módulo didáctico cuenta con un botón de parada de emergencia en su sección superior. El módulo también dispone de dos interruptores localizados a la izquierda y a la derecha. Estos tres elementos de maniobra constituyen los interruptores de emergencia del módulo y tienen la función de parar instantáneamente la bomba centrifuga en caso una emergencia.</p>
 
 			<p>La forma en la que estos interruptores logran su función se explicara por medio de la Figura 1 (y su leyenda en la Tabla 1), que representa la sección del diagrama de control encargada de controlar la bomba centrifuga. </p>
 
@@ -863,87 +839,77 @@ const practicas = [
 			<p>Cuando ningún interruptor se halle accionado, se energizara la bobina del relé R3  y esto apagara la luz indicadora L5 (luz de control de proceso bloqueado). El accionamiento de cualquiera de los interruptores provocara la desactivación de R3 y encenderá la luz de proceso bloqueado, dando una advertencia visual al operador.</p>
 		`,
 
-		pasos: [
-			{
-				texto: "Colocar el breaker principal en su posición de encendido (ON).",
-			},
+        pasos: [
+            {
+                texto: "Colocar el breaker principal en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°1 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°2 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el selector de modo de operación en la posición “AUTOMATICO”.",
-			},
+            {
+                texto: "Colocar el selector de modo de operación en la posición “AUTOMATICO”."
+            },
 
-			{
-				texto: "Accionar el botón de parada de emergencia localizado en la parte superior del tablero de control.",
-				
-				preguntas: [
-					"¿Qué cambios observó en el modulo y en el tablero?",
-					"¿Qué función cumple la luz de control de proceso bloqueado?",
-				],
-			},
+            {
+                texto: "Accionar el botón de parada de emergencia localizado en la parte superior del tablero de control.",
 
-			{
-				texto: "Colocar el tablero en el modo de operación manual e intente poner en marcha la bomba centrifuga mediante los pulsadores de encendido y apagado.",
-				
-				preguntas: [
-					"¿Por qué la bomba no puede ponerse en marcha mientras el proceso está bloqueado?",
-				],
-			},
+                preguntas: [
+                    "¿Qué cambios observó en el módulo y en el tablero?",
+                    "¿Qué función cumple la luz de control de proceso bloqueado?"
+                ]
+            },
 
-			{
-				texto: "Liberar el botón de parada de emergencia que accionó en el paso numero 5.",
-				
-				preguntas: [
-					"¿Qué cambios observó?",
-				],
-			},
+            {
+                texto: "Colocar el tablero en el modo de operación manual e intente poner en marcha la bomba centrifuga mediante los pulsadores de encendido y apagado.",
 
-			{
-				texto: "Repetir los pasos 5, 6 y 7 con los dos interruptores de emergencia restantes por separado, localizados a la izquierda y derecha del modulo.",
-				
-				preguntas: [
-					"¿Explique si existe alguna diferencia o similitud entre los tres interruptores de emergencia?",
+                preguntas: [
+                    "¿Por qué la bomba no puede ponerse en marcha mientras el proceso está bloqueado?"
+                ]
+            },
 
-					"¿En qué ayuda tener un sistema de parada de emergencia para la bomba?",
-				],
-			},
+            {
+                texto: "Liberar el botón de parada de emergencia que accionó en el paso numero 5.",
 
-			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
-			},
+                preguntas: ["¿Qué cambios observó?"]
+            },
 
+            {
+                texto: "Repetir los pasos 5, 6 y 7 con los dos interruptores de emergencia restantes por separado, localizados a la izquierda y derecha del módulo.",
 
+                preguntas: [
+                    "¿Explique si existe alguna diferencia o similitud entre los tres interruptores de emergencia?",
 
+                    "¿En qué ayuda tener un sistema de parada de emergencia para la bomba?"
+                ]
+            },
 
-		],
-	},
+            {
+                texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal."
+            }
+        ]
+    },
 
+    {
+        id: "5",
 
+        titulo: "FALLA DE TENSION ELÉCTRICA EN EL MODULO DIDACTICO",
 
+        objetivoGeneral:
+            "Identificar una falla de tensión eléctrica en el tablero de Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
+        objetivosEspecificos: [
+            "Entender el funcionamiento del circuito de control durante una falla de tensión eléctrica.",
 
+            "Conocer el comportamiento del Módulo Didáctico de Control de Caudal de Lazo Cerrado durante una falla de tensión eléctrica."
+        ],
 
-	{
-		id: "5",
-
-		titulo: "FALLA DE TENSION ELÉCTRICA EN EL MODULO DIDACTICO",
-
-		objetivoGeneral: "Identificar una falla de tensión eléctrica en el tablero de Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-
-		objetivosEspecificos: [
-			"Entender el funcionamiento del circuito de control durante una falla de tensión eléctrica.",
-
-			"Conocer el comportamiento del Modulo Didáctico de Control de Caudal de Lazo Cerrado durante una falla de tensión eléctrica.",
-		],
-
-		teoria: `
+        teoria: `
 
 			<p>El tablero de control dispone de un protector de voltaje que desempeña una función de seguridad bastante importante porque desconecta la electricidad del tablero cada vez que se presenten los siguientes problemas con el suministro eléctrico:</p>
 
@@ -957,7 +923,7 @@ const practicas = [
 
 			<p>El protector de voltaje es capaz de desconectar los equipos durante una falla gracias a que posee en su interior un relé, el cual se energiza cuando la tensión sea normal y se desenergiza cuando una de las fallas mencionadas se presenta.</p>
 
-			<p>La Figura 1 muestra una versión simplificada del diagrama de control del tablero y el Tabla 1 muestra su leyenda. La bobina R1 representa al protector de voltaje y note que este es alimentado con dos líneas de 120 V desfasadas 120°, ya que esté supervisa la tensión de 240 V del modulo. El contacto R1 pertenece al relé interno del protector.</p>
+			<p>La Figura 1 muestra una versión simplificada del diagrama de control del tablero y el Tabla 1 muestra su leyenda. La bobina R1 representa al protector de voltaje y note que este es alimentado con dos líneas de 120 V desfasadas 120°, ya que esté supervisa la tensión de 240 V del módulo. El contacto R1 pertenece al relé interno del protector.</p>
 
 			<h4>Figura 1. Diagrama de control simplificado del tablero</h4>
 
@@ -1033,95 +999,90 @@ const practicas = [
 			<p>Cuando se presenta una falla, por ejemplo, una sobretensión, el contacto R1 se abrirá (y se apagara la luz “on” del protector) y cortara la corriente al resto del circuito. Esto apagara todos los dispositivos de maniobra y la bomba instantáneamente. </p>
 		`,
 
-		pasos: [
-			{
-				texto: "Colocar el breaker principal en su posición de encendido (ON).",
-			},
+        pasos: [
+            {
+                texto: "Colocar el breaker principal en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
-				
-				preguntas: [
-					"¿Qué cambio observo en el protector de voltaje al encender este breaker?",
-				],
-			},
+            {
+                texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
 
-			{
-				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
-			},
+                preguntas: [
+                    "¿Qué cambio observo en el protector de voltaje al encender este breaker?"
+                ]
+            },
 
-			{
-				texto: "Abrir la pestaña “Fallas” de la página y activar la casilla “Falla de tensión eléctrica” para simular una falla con la tensión eléctrica.",
-				
-				preguntas: [
-					"¿Qué cambio observo en el protector de voltaje durante la falla?",
+            {
+                texto: "Colocar el breaker de control N°2 en su posición de encendido (ON)."
+            },
 
-					"¿Por qué es importante que un tablero de control cuente con un protector de voltaje?",
+            {
+                texto: "Abrir la pestaña “Fallas” de la página y activar la casilla “Falla de tensión eléctrica” para simular una falla con la tensión eléctrica.",
 
-					"¿Contra qué tipo de fallas de tensión protege el protector de voltaje?",
-				],
-			},
+                preguntas: [
+                    "¿Qué cambio observo en el protector de voltaje durante la falla?",
 
-			{
-				texto: "Intentar poner en marcha la bomba colocando el selector de modo de operación en la posición “AUTOMATICO”.",
-				
-				preguntas: [
-					"A nivel del circuito de control ¿Por qué la bomba no se puede poner en marcha durante una falla de tensión?",
+                    "¿Por qué es importante que un tablero de control cuente con un protector de voltaje?",
 
-					"¿De qué forma puede afectar una falla de tensión a la bomba centrifuga?",
-				],
-			},
+                    "¿Contra qué tipo de fallas de tensión protege el protector de voltaje?"
+                ]
+            },
 
-			{
-				texto: "Remover la falla de tensión eléctrica dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de tensión eléctrica”.",
-				
-				preguntas: [
-					"¿Se encendió la bomba centrifuga esta vez?",
-				],
-			},
+            {
+                texto: "Intentar poner en marcha la bomba colocando el selector de modo de operación en la posición “AUTOMATICO”.",
 
-			{
-				texto: "Activar la falla de tensión nuevamente (como en el paso 4) estando la bomba centrifuga en marcha.",
-				
-				preguntas: [
-					"¿Qué destaca en las luces del tablero de control cuando el protector de voltaje está protegiendo al modulo?",
+                preguntas: [
+                    "A nivel del circuito de control ¿Por qué la bomba no se puede poner en marcha durante una falla de tensión?",
 
-					"¿Cómo puede el operador percatarse en el tablero de que una falla de tensión está ocurriendo?",
-				],
-			},
+                    "¿De qué forma puede afectar una falla de tensión a la bomba centrifuga?"
+                ]
+            },
 
-			{
-				texto: "Desactivar la falla de tensión eléctrica como en el paso 6.",
-			},
+            {
+                texto: "Remover la falla de tensión eléctrica dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de tensión eléctrica”.",
 
-			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
-			},
+                preguntas: ["¿Se encendió la bomba centrifuga esta vez?"]
+            },
 
+            {
+                texto: "Activar la falla de tensión nuevamente (como en el paso 4) estando la bomba centrifuga en marcha.",
 
+                preguntas: [
+                    "¿Qué destaca en las luces del tablero de control cuando el protector de voltaje está protegiendo al módulo?",
 
-		],
-	},
+                    "¿Cómo puede el operador percatarse en el tablero de que una falla de tensión está ocurriendo?"
+                ]
+            },
 
+            {
+                texto: "Desactivar la falla de tensión eléctrica como en el paso 6."
+            },
 
-	{
-		id: "6",
+            {
+                texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal."
+            }
+        ]
+    },
 
-		titulo: "FALLA DE SOBRECARGA DE LA BOMBA CENTRIFUGA",
+    {
+        id: "6",
 
-		objetivoGeneral: "Comprender el compartimiento del tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado durante una sobrecarga de corriente en la bomba centrifuga.",
+        titulo: "FALLA DE SOBRECARGA DE LA BOMBA CENTRIFUGA",
 
-		objetivosEspecificos: [
-			"Entender como un relé térmico es capaz de proteger a la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        objetivoGeneral:
+            "Comprender el compartimiento del tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado durante una sobrecarga de corriente en la bomba centrifuga.",
 
-			"Comprender como opera el relé térmico en el circuito de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        objetivosEspecificos: [
+            "Entender como un relé térmico es capaz de proteger a la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-			"Identificar una sobrecarga en la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
-		],
+            "Comprender como opera el relé térmico en el circuito de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-		teoria: `
+            "Identificar una sobrecarga en la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado."
+        ],
 
-			<p>El tablero de control del modulo cuenta con un relé térmico, cuya tarea es proteger a la bomba centrifuga contra sobrecargas de corriente. Un exceso de corriente en la bomba centrífuga puede dañarla a causa del sobrecalentamiento que se produciría. Si el sobrecalentamiento es excesivo, se dañara el aislamiento de las bobinas de la bomba y se estropeara.</p>
+        teoria: `
+
+			<p>El tablero de control del módulo cuenta con un relé térmico, cuya tarea es proteger a la bomba centrifuga contra sobrecargas de corriente. Un exceso de corriente en la bomba centrífuga puede dañarla a causa del sobrecalentamiento que se produciría. Si el sobrecalentamiento es excesivo, se dañara el aislamiento de las bobinas de la bomba y se estropeara.</p>
 
 			<p>Cuando el relé térmico detecta una sobrecarga de corriente, este se dispara y su mecanismo interno conmuta una serie de contactos eléctricos usados para parar la bomba centrifuga y evitar que se dañe. Una vez que el relé térmico se dispara, su mecanismo continuara en esta posición de disparo hasta que se sea reiniciado manualmente por un operador.</p>
 
@@ -1215,108 +1176,100 @@ const practicas = [
 			<p>Si el relé térmico es reiniciado manualmente por un operador, los contactos volverán a sus posiciones normales, la luz L6 se apagara y la operación de la bomba se restaurara.</p>
 		`,
 
-		pasos: [
-			{
-				texto: "Colocar el breaker principal en su posición de encendido (ON).",
-			},
+        pasos: [
+            {
+                texto: "Colocar el breaker principal en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°1 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°2 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el selector de modo de operación en la posición “MANUAL”.",
-			},
+            {
+                texto: "Colocar el selector de modo de operación en la posición “MANUAL”."
+            },
 
-			{
-				texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido.",
-			},
+            {
+                texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido."
+            },
 
+            {
+                texto: "Abrir la pestaña “Fallas” de la página y activar la casilla llamada “Sobrecarga en la bomba centrífuga” para simular una sobrecarga en la bomba centrífuga.",
 
-			{
-				texto: "Abrir la pestaña “Fallas” de la página y activar la casilla llamada “Sobrecarga en la bomba centrífuga” para simular una sobrecarga en la bomba centrífuga.",
-				
-				preguntas: [
-					"¿Qué cambios observó en el tablero de control y en el modulo?",
-					"¿Qué es una sobrecarga en la bomba centrífuga?",
-				],
-			},
+                preguntas: [
+                    "¿Qué cambios observó en el tablero de control y en el módulo?",
+                    "¿Qué es una sobrecarga en la bomba centrífuga?"
+                ]
+            },
 
-			{
-				texto: "Intentar poner en marcha la bomba presionando el pulsador de encendido.",
-				
-				preguntas: [
-					"A nivel del circuito de control ¿Por qué no es posible poner en marcha la bomba?",
-				],
-			},
+            {
+                texto: "Intentar poner en marcha la bomba presionando el pulsador de encendido.",
 
-			{
-				texto: "Reiniciar el relé térmico haciendo clic sobre él.",
-				
-				preguntas: [
-					"¿Para qué debe reiniciarse el relé térmico?",
-				],
-			},
+                preguntas: [
+                    "A nivel del circuito de control ¿Por qué no es posible poner en marcha la bomba?"
+                ]
+            },
 
-			{
-				texto: "Intentar poner en marcha la bomba presionando el pulsador luminoso de encendido.",
-				
-				preguntas: [
-					"¿Por qué esta vez la bomba si pudo ser puesta en marcha?",
-					"¿Qué función cumple el relé térmico a nivel de protección?",
-				],
-			},
+            {
+                texto: "Reiniciar el relé térmico haciendo clic sobre él.",
 
-			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
-			},
-		],
-	},
+                preguntas: ["¿Para qué debe reiniciarse el relé térmico?"]
+            },
 
+            {
+                texto: "Intentar poner en marcha la bomba presionando el pulsador luminoso de encendido.",
 
+                preguntas: [
+                    "¿Por qué esta vez la bomba si pudo ser puesta en marcha?",
+                    "¿Qué función cumple el relé térmico a nivel de protección?"
+                ]
+            },
 
+            {
+                texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal."
+            }
+        ]
+    },
 
+    {
+        id: "7",
 
+        titulo: "FALLA DE SUMINISTRO NEUMÁTICO",
 
+        objetivoGeneral:
+            "Identificar una falla de suministro neumático desde el tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-	{
-		id: "7",
+        objetivosEspecificos: [
+            "Comprender como puede una falla en el suministro neumático perjudicar a la bomba centrifuga del Módulo Didáctico de Control de Caudal de Lazo Cerrado.",
 
-		titulo: "FALLA DE SUMINISTRO NEUMÁTICO",
+            "Entender el comportamiento del circuito de control del tablero durante una falla de suministro neumático.",
 
-		objetivoGeneral: "Identificar una falla de suministro neumático desde el tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+            "Identificar la presencia de una falla de suministro neumático mediante las luces indicadoras del tablero de control del Módulo Didáctico de Control de Caudal de Lazo Cerrado"
+        ],
 
-		objetivosEspecificos: [
-			"Comprender como puede una falla en el suministro neumático perjudicar a la bomba centrifuga del Modulo Didáctico de Control de Caudal de Lazo Cerrado.",
+        teoria: `
 
-			"Entender el comportamiento del circuito de control del tablero durante una falla de suministro neumático.",
+			<p>El módulo didáctico utiliza aire comprimido para accionar la válvula de control y así poder controlar el caudal. Este aire comprimido es producido por un compresor de aire lejos del laboratorio y es transportado por medio de tuberías de color azul hasta el módulo.</p>
 
-			"Identificar la presencia de una falla de suministro neumático mediante las luces indicadoras del tablero de control del Modulo Didáctico de Control de Caudal de Lazo Cerrado",
-		],
-
-		teoria: `
-
-			<p>El modulo didáctico utiliza aire comprimido para accionar la válvula de control y así poder controlar el caudal. Este aire comprimido es producido por un compresor de aire lejos del laboratorio y es transportado por medio de tuberías de color azul hasta el modulo.</p>
-
-			<p>La válvula de control del modulo es de acción inversa, es decir, la válvula se encuentra normalmente cerrada y se abrirá al inyectarle aire comprimido (observe la Figura 1 para diferenciar sus posiciones). Como consecuencia, la válvula se cerrara si por algún motivo el modulo deja de recibir aire comprimido. Esto crea una situación peligrosa en la que si la bomba centrífuga se encuentra en marcha y a la vez ocurre la mencionada situación (falla de suministro neumático), la válvula de control se cerrara y no existirá retorno del agua hacia el tanque y la bomba trabajara forzada y entrara en proceso de cavitación.</p>
+			<p>La válvula de control del módulo es de acción inversa, es decir, la válvula se encuentra normalmente cerrada y se abrirá al inyectarle aire comprimido (observe la Figura 1 para diferenciar sus posiciones). Como consecuencia, la válvula se cerrara si por algún motivo el módulo deja de recibir aire comprimido. Esto crea una situación peligrosa en la que si la bomba centrífuga se encuentra en marcha y a la vez ocurre la mencionada situación (falla de suministro neumático), la válvula de control se cerrara y no existirá retorno del agua hacia el tanque y la bomba trabajara forzada y entrara en proceso de cavitación.</p>
 
 			<h4>Figura 1. Posiciones de la válvula de control</h4>
 
 			<img src="img/practicas/7-figura-1.png"/>
 
-			<p>El modulo didáctico lidia con esta falla gracias a la válvula solenoide normalmente cerrada que se muestra en la Figura 2. Cuando esta válvula se acciona, abre un retorno para el agua y la bomba no correrá riesgos. El modulo cuenta con un presostato para detectar la presencia de aire en el suministro neumático.</p>
+			<p>El módulo didáctico lidia con esta falla gracias a la válvula solenoide normalmente cerrada que se muestra en la Figura 2. Cuando esta válvula se acciona, abre un retorno para el agua y la bomba no correrá riesgos. El módulo cuenta con un presostato para detectar la presencia de aire en el suministro neumático.</p>
 
-			<h4>Figura 2. Válvula solenoide del modulo didáctico</h4>
+			<h4>Figura 2. Válvula solenoide del módulo didáctico</h4>
 
 			<img src="img/practicas/7-figura-2.png"/>
 
 			<p>La Figura 3 muestra el diagrama de control del tablero en su totalidad y la Tabla 1 muestra su leyenda. La sección que se encarga de la falla de aire está constituida por las luces indicadoras L3 (luz de válvula solenoide) y L4 (luz de fallo de aire); la bobina del relé R2 (que energiza la válvula solenoide); el contacto normalmente abierto R2 y el contactor normalmente cerrado K2 del presostato.</p>
 
-			<h4>Figura 3. Diagrama de control del modulo didáctico de caudal de lazo cerrado</h4>
+			<h4>Figura 3. Diagrama de control del módulo didáctico de caudal de lazo cerrado</h4>
 
 			<img src="img/practicas/7-figura-3.png"/>
 
@@ -1409,73 +1362,72 @@ const practicas = [
 				</tr>
 			</table>
 
-			<p>Ante la presencia de aire en el suministro neumático, el modulo trabaja correctamente y el presostato K1 se acciona (ya que detecta la presión del aire). Esto abre el contacto normalmente abierto K2 del presostato. Como resultado, queda aislada la sección del relé R2 y la válvula solenoide no se accionara y ninguna de las luces L3 y L4 se encenderá.</p>
+			<p>Ante la presencia de aire en el suministro neumático, el módulo trabaja correctamente y el presostato K1 se acciona (ya que detecta la presión del aire). Esto abre el contacto normalmente abierto K2 del presostato. Como resultado, queda aislada la sección del relé R2 y la válvula solenoide no se accionara y ninguna de las luces L3 y L4 se encenderá.</p>
 
 			<p>Durante una falla de suministro neumático, la falta de presión hace que el presostato se desactive, por lo tanto, su contacto K2 vuelve a su posición normalmente cerrado y se enciende L4 (luz de fallo de aire) para dar una advertencia visual al operador.</p>
 
 			<p>En caso de que la bomba centrífuga se encuentre en marcha o se ponga en marcha durante la falla de suministro de aire, el contacto normalmente cerrado K1 del contactor se encuentra cerrado y se energiza la bobina del relé R2. El contacto normalmente abierto R2 se cierra y energiza la válvula solenoide (permitiendo el retorno del agua desde la bomba hacia el tanque) y se enciende la luz indicadora L3 (luz de válvula solenoide) dando una advertencia visual al operador.</p>
 		`,
 
-		pasos: [
-			{
-				texto: "Colocar el breaker principal en su posición de encendido (ON).",
-			},
+        pasos: [
+            {
+                texto: "Colocar el breaker principal en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°1 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°1 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el breaker de control N°2 en su posición de encendido (ON).",
-			},
+            {
+                texto: "Colocar el breaker de control N°2 en su posición de encendido (ON)."
+            },
 
-			{
-				texto: "Colocar el selector de modo de operación en la posición “MANUAL”.",
-			},
+            {
+                texto: "Colocar el selector de modo de operación en la posición “MANUAL”."
+            },
 
+            {
+                texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido.",
 
-			{
-				texto: "Poner en marcha la bomba centrífuga accionando el pulsador luminoso de encendido.",
-				
-				preguntas: [
-					"¿Está accionada la válvula solenoide?",
-					"¿En qué posición se encuentra la válvula de control?",
-				],
-			},
+                preguntas: [
+                    "¿Está accionada la válvula solenoide?",
+                    "¿En qué posición se encuentra la válvula de control?"
+                ]
+            },
 
-			{
-				texto: "Abrir la pestaña “Fallas” en el menú lateral de la página y activar la casilla “Falla de suministro de aire”.",
-				
-				preguntas: [
-					"¿En qué posición se encuentra la válvula de control durante una falla de suministro de aire?",
+            {
+                texto: "Abrir la pestaña “Fallas” en el menú lateral de la página y activar la casilla “Falla de suministro de aire”.",
 
-					"¿Qué indica la luz de falla de aire?",
+                preguntas: [
+                    "¿En qué posición se encuentra la válvula de control durante una falla de suministro de aire?",
 
-					"¿Qué indica la luz de la válvula solenoide?",
+                    "¿Qué indica la luz de falla de aire?",
 
-					"¿Por dónde se retorna el agua al tanque durante una falla de aire?",
-				],
-			},
+                    "¿Qué indica la luz de la válvula solenoide?",
 
-			{
-				texto: "Detener la bomba accionando el pulsador de apagado.",
-				
-				preguntas: [
-					"¿Por qué se apaga la válvula solenoide al apagar la bomba centrifuga?",
+                    "¿Por dónde se retorna el agua al tanque durante una falla de aire?"
+                ]
+            },
 
-					"¿Por qué se cierra la válvula de control durante una falla de suministro de aire?",
+            {
+                texto: "Detener la bomba accionando el pulsador de apagado.",
 
-					"¿Por qué se necesita un retorno para el agua durante una falla de suministro de aire?",
-				],
-			},
+                preguntas: [
+                    "¿Por qué se apaga la válvula solenoide al apagar la bomba centrifuga?",
 
-			{
-				texto: "Remover la falla de suministro de aire dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de suministro de aire”.",
-			},
+                    "¿Por qué se cierra la válvula de control durante una falla de suministro de aire?",
 
-			{
-				texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal.",
-			},
-		],
-	},
+                    "¿Por qué se necesita un retorno para el agua durante una falla de suministro de aire?"
+                ]
+            },
+
+            {
+                texto: "Remover la falla de suministro de aire dirigiéndose a la pestaña “Fallas” y desactivando la casilla “Falla de suministro de aire”."
+            },
+
+            {
+                texto: "Apagar el tablero de control en su totalidad de la siguiente forma: colocar el selector de modo de operación en la posición “OFF” y colocar en la posición “OFF” el breaker de control N°2, el breaker de control N°1 y finalmente el breaker principal."
+            }
+        ]
+    }
 ];
