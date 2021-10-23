@@ -841,6 +841,7 @@ a.boton {
 
 .practica-contenido p {
 	text-indent: 2em;
+	text-align: justify;
 }
 
 .pestanas {
