@@ -4,7 +4,7 @@
   --naranja: rgb(255, 152, 64);
   --vinotinto: rgb(166, 0, 0);
   --rojo: #ff0000;
-  --azul: #005082;
+  --azul: #112a3b;
   --header-width: 80px;
 }
 
@@ -44,6 +44,10 @@ body {
   );
 }
 
+.container {
+  padding: 2rem;
+}
+
 button {
   border: none;
   outline: none;
@@ -72,8 +76,14 @@ main {
 }
 
 .nav-logo {
-  width: 60px;
+  width: 103px;
   margin-right: 10px;
+}
+
+@media (min-width: 600px) {
+  .nav-logo {
+    width: 135px;
+  }
 }
 
 .nav-enlaces {
@@ -129,12 +139,6 @@ main {
   opacity: 0.5;
 }
 
-@media (min-width: 600px) {
-  .nav-logo {
-    width: 100px;
-  }
-}
-
 @media (max-width: 1000px) and (orientation: landscape) {
   :root {
     --header-width: 60px;
@@ -169,7 +173,7 @@ main {
   }
 }
 
-.header.on .menu {
+.on.menu {
   right: 0%;
 }
 
