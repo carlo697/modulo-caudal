@@ -524,6 +524,7 @@ a.boton {
 
 .g-boton {
   width: 100%;
+  max-width: 200px;
 }
 
 .informacion {
