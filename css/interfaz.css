@@ -78,6 +78,7 @@ main {
 .nav-logo {
   width: 103px;
   margin-right: 10px;
+  cursor: pointer;
 }
 
 @media (min-width: 600px) {

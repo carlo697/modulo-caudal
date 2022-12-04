@@ -329,7 +329,7 @@ function cerrarMenu() {
 }
 
 function toggleMenu() {
-  if (header.classList.contains("on")) {
+  if (menu.classList.contains("on")) {
     cerrarMenu();
   } else {
     abrirMenu();
