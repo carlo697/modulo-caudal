@@ -1,328 +1,317 @@
 .proceso-contenedor {
-	height: 200px;
-	background-color: gray;
-	position: relative;
-	display: none;
+  height: 200px;
+  background-color: gray;
+  position: relative;
+  display: none;
 }
 
 .proceso-fondo {
-	position: relative;
-	background-image: url("../img/proceso.png");
-	background-size: 100% 100%;
-	background-position: center;
-	width: 60em;
-	height: 30em;
+  position: relative;
+  background-image: url("../img/proceso.png");
+  background-size: 100% 100%;
+  background-position: center;
+  width: 60em;
+  height: 30em;
 }
 
 .panel-informacion {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background-color: black;
-	color: white;
-	padding: 0.5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: 0.5em;
 }
 
 #transmisor {
-	position: absolute;
+  position: absolute;
 
-	left: calc(178.062px - (24.567px / 2));
-	top: calc(448.511px - (24.567px / 2));
-	
-	width: 24.567px;
-	height: 24.567px;
+  left: calc(178.062px - (24.567px / 2));
+  top: calc(448.511px - (24.567px / 2));
+
+  width: 24.567px;
+  height: 24.567px;
 }
 
 #valvulaControl {
-	position: absolute;
+  position: absolute;
 
-	left: calc(371.793px - (64.074px / 2));
-	top: calc(455.745px - (64.074px / 2));
-	
-	width: 64.074px;
-	height: 64.074px;
+  left: calc(371.793px - (64.074px / 2));
+  top: calc(455.745px - (64.074px / 2));
+
+  width: 64.074px;
+  height: 64.074px;
 }
 
 #vastago {
-	position: absolute;
-	
-	left: calc(371.793px - (64.074px / 2));
-	top: calc(455.745px - (64.074px / 2));
-	
-	width: 64.074px;
-	height: 64.074px;
+  position: absolute;
+
+  left: calc(371.793px - (64.074px / 2));
+  top: calc(455.745px - (64.074px / 2));
+
+  width: 64.074px;
+  height: 64.074px;
 }
 
 #bomba {
-	position: absolute;
+  position: absolute;
 
-	left: calc(831.743px - (45.883px / 2));
-	top: calc(545.062px - (45.883px / 2));
-	
-	width: 45.883px;
-	height: 45.883px;
+  left: calc(831.743px - (45.883px / 2));
+  top: calc(545.062px - (45.883px / 2));
+
+  width: 45.883px;
+  height: 45.883px;
 }
 
 #tanque {
-	position: absolute;
-	
-	left: calc(695.667px - (70px / 2));
-	top: calc(471.943px - (162.449px / 2));
-	
-	width: 70px;
-	height: 162.449px;
+  position: absolute;
+
+  left: calc(695.667px - (70px / 2));
+  top: calc(471.943px - (162.449px / 2));
+
+  width: 70px;
+  height: 162.449px;
 }
 
-
 #solenoide {
-	position: absolute;
+  position: absolute;
 
-	left: calc(752.751px - (16.687px / 2));
-	top: calc(404.432px - (16.687px / 2));
-	
-	width: 16.687px;
-	height: 16.687px;
+  left: calc(752.751px - (16.687px / 2));
+  top: calc(404.432px - (16.687px / 2));
+
+  width: 16.687px;
+  height: 16.687px;
 }
 
 #placaOrificio {
-	position: absolute;
+  position: absolute;
 
-	left: calc(177.708px - (16px / 2));
-	top: calc(422.724px - (16px / 2));
-	
-	width: 16px;
-	height: 16px;
+  left: calc(177.708px - (16px / 2));
+  top: calc(422.724px - (16px / 2));
+
+  width: 16px;
+  height: 16px;
 }
 
 #venturi {
-	position: absolute;
+  position: absolute;
 
-	left: calc(178.033px - (7.808px / 2));
-	top: calc(482.845px - (7.808px / 2));
-	
-	width: 7.808px;
-	height: 7.808px;
+  left: calc(178.033px - (7.808px / 2));
+  top: calc(482.845px - (7.808px / 2));
+
+  width: 7.808px;
+  height: 7.808px;
 }
 
 #rotametro {
-	position: absolute;
+  position: absolute;
 
-	left: calc(573.01px - (17.496px / 2));
-	top: calc(406.088px - (62.931px / 2));
-	
-	width: 17.496px;
-	height: 62.931px;
+  left: calc(573.01px - (17.496px / 2));
+  top: calc(406.088px - (62.931px / 2));
+
+  width: 17.496px;
+  height: 62.931px;
 }
 
 #presostato {
-	position: absolute;
+  position: absolute;
 
-	left: calc(420.4px - (30px / 2));
-	top: calc(374.3px - (30px / 2));
-	
-	width: 30px;
-	height: 30px;
+  left: calc(420.4px - (30px / 2));
+  top: calc(374.3px - (30px / 2));
+
+  width: 30px;
+  height: 30px;
 }
 
 #convertidor {
-	position: absolute;
+  position: absolute;
 
-	left: calc(372.194px - (25px / 2));
-	top: calc(507.344px - (25px / 2));
-	
-	width: 25px;
-	height: 25px;
+  left: calc(372.194px - (25px / 2));
+  top: calc(507.344px - (25px / 2));
+
+  width: 25px;
+  height: 25px;
 }
 
-
 #emergencia2 {
-	position: absolute;
+  position: absolute;
 
-	left: calc(295.724px - (25px / 2));
-	top: calc(505.207px - (25px / 2));
-	
-	width: 25px;
-	height: 25px;
+  left: calc(295.724px - (25px / 2));
+  top: calc(505.207px - (25px / 2));
+
+  width: 25px;
+  height: 25px;
 }
 
 #emergencia3 {
-	position: absolute;
+  position: absolute;
 
-	left: calc(860.673px - (25px / 2));
-	top: calc(505.207px - (25px / 2));
-	
-	width: 25px;
-	height: 25px;
+  left: calc(860.673px - (25px / 2));
+  top: calc(505.207px - (25px / 2));
+
+  width: 25px;
+  height: 25px;
 }
 
 #chorro1 {
-	position: absolute;
+  position: absolute;
 
-	left: 670.5px;
-	top: 406.674px;
+  left: 670.5px;
+  top: 406.674px;
 }
 
 #chorro2 {
-	position: absolute;
-	
-	left: 719.75px;
-	top: 407.674px;
+  position: absolute;
+
+  left: 719.75px;
+  top: 407.674px;
 }
 
-
 .chorro-agua {
-	position: relative;
-	/*width: 0.5em;
+  position: relative;
+  /*width: 0.5em;
 	height: 0.5em;
 	background-color: red;*/
 }
 
 .particula-agua1 {
-	position: absolute;
-	width: 0.7em;
-	height: 0.7em;
-	background-color: blue;
-	animation: agua1 0.5s;
-	border-radius: 50%;
-	filter: blur(0.1em);
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  background-color: blue;
+  animation: agua1 0.5s;
+  border-radius: 50%;
+  filter: blur(0.1em);
 }
 
 @keyframes agua1 {
-	0% {
+  0% {
+  }
 
-	}
+  10% {
+    transform: translate(1.5em, 1em);
+  }
 
-	10% {
-		transform: translate(1.5em, 1em);
-	}
+  35% {
+    transform: translate(2em, 3em);
+  }
 
-	35% {
-		transform: translate(2em, 3em);
-	}
-
-	100% {
-		transform: translate(3em, 10em);
-	}
+  100% {
+    transform: translate(3em, 10em);
+  }
 }
 
 .particula-agua2 {
-	position: absolute;
-	width: 0.7em;
-	height: 0.7em;
-	background-color: blue;
-	animation: agua2 0.5s;
-	border-radius: 50%;
-	filter: blur(0.1em);
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  background-color: blue;
+  animation: agua2 0.5s;
+  border-radius: 50%;
+  filter: blur(0.1em);
 }
 
 @keyframes agua2 {
-	0% {
+  0% {
+  }
 
-	}
+  10% {
+    transform: translate(-1.5em, 1em);
+  }
 
-	10% {
-		transform: translate(-1.5em, 1em);
-	}
+  35% {
+    transform: translate(-2em, 3em);
+  }
 
-	35% {
-		transform: translate(-2em, 3em);
-	}
-
-	100% {
-		transform: translate(-3em, 10em);
-	}
+  100% {
+    transform: translate(-3em, 10em);
+  }
 }
 
-
-
-
-
-
-
 .zoom-contenedor {
-	width: 92em;
-	height: calc(100vh - var(--header-width) - 40px);
-	background-color: white;
-	overflow: hidden;
-	position: relative;
-	font-size: 1vw;
+  width: 92em;
+  height: calc(100vh - var(--header-width) - 40px);
+  background-color: white;
+  overflow: hidden;
+  position: relative;
+  font-size: 1vw;
 }
 
 .joystick {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	margin: 5px;
-	width: 130px;
-	height: 130px;
-	background-color: white;
-	border-radius: 100%;
-	border: 1px solid black;
-	touch-action: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 5px;
+  width: 130px;
+  height: 130px;
+  background-color: white;
+  border-radius: 100%;
+  border: 1px solid black;
+  touch-action: none;
 }
 
 .joystick-handle {
-	position: absolute;
-	background-color: gray;
-	top: 50%;
-	left: 50%;
-	width: 60%;
-	height: 60%;
-	transform: translate(-50%, -50%);
-	border-radius: 100%;
-	margin: 0;
-	border: 10px solid #6C6C6C;
+  position: absolute;
+  background-color: gray;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  margin: 0;
+  border: 10px solid #6c6c6c;
 }
 
 .zoom-botones {
-	display: flex;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	margin: 5px;
-	touch-action: none;
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+  touch-action: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .zoom-botones button {
-	font-size: 20px;
-	margin-bottom: 4px;
-	background-color: rgb(193, 193, 193);
-	width: 30px;
-	height: 30px;
-	border-right: 3px solid rgb(106, 106, 119);
-	border-bottom: 3px solid rgb(106, 106, 119);
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  font-size: 20px;
+  margin-bottom: 4px;
+  background-color: rgb(193, 193, 193);
+  width: 30px;
+  height: 30px;
+  border-right: 3px solid rgb(106, 106, 119);
+  border-bottom: 3px solid rgb(106, 106, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 600px) {
-	.zoom-botones button {
-		width: 40px;
-		height: 40px;
-	}
+  .zoom-botones button {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .zoom-botones button:last-child {
-	margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .zoom-contenido {
-	background-color: white;
-	width: 1200px;
-	height: 600px;
-	background-image: url("../img/proceso/proceso.svg");
-	transform-origin: 0 0 0;
-	position: absolute;
-	top: 0;
-	left: 0;
+  background-color: white;
+  width: 1200px;
+  height: 600px;
+  background-image: url("../img/proceso/proceso.svg");
+  transform-origin: 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .zoom-centro {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	background-color: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: blue;
 }

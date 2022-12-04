@@ -1,192 +1,172 @@
 .interruptor {
-	width: 6em;
-	height: 7em;
-	cursor: pointer;
+  width: 6em;
+  height: 7em;
+  cursor: pointer;
 }
 
 .i1 {
-	position: absolute;
-	top: 20%;
-	left: 44%;
+  position: absolute;
+  top: 20%;
+  left: 44%;
 }
 
 .i2 {
-	position: absolute;
-	top: 25%;
-	left: 70%;
+  position: absolute;
+  top: 25%;
+  left: 70%;
 }
 
 .breaker {
-	width: 7em;
-	height: 11em;
-	/*background-color: gray;*/
+  width: 7em;
+  height: 11em;
+  /*background-color: gray;*/
 
-	position: absolute;
-	top: 14%;
-	left: 60%;
+  position: absolute;
+  top: 14%;
+  left: 60%;
 
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .protector {
-	width: 5em;
-	height: 8.5em;
+  width: 5em;
+  height: 8.5em;
 
-	position: absolute;
-	top: 55%;
-	left: 24%;
+  position: absolute;
+  top: 55%;
+  left: 24%;
 }
 
 .rele {
-	width: 4em;
-	height: 5em;
+  width: 4em;
+  height: 5em;
 }
 
 .r1 {
-	position: absolute;
-	top: 55%;
-	left: 40%;
+  position: absolute;
+  top: 55%;
+  left: 40%;
 }
 
 .r2 {
-	position: absolute;
-	top: 55%;
-	left: 52%;
+  position: absolute;
+  top: 55%;
+  left: 52%;
 }
 
 .contactor {
-	width: 5em;
-	height: 8em;
+  width: 5em;
+  height: 8em;
 
-	position: absolute;
-	top: 50%;
-	left: 65%;
+  position: absolute;
+  top: 50%;
+  left: 65%;
 }
 
 .termico {
-	width: 5em;
-	height: 5em;
+  width: 5em;
+  height: 5em;
 
-	position: absolute;
-	top: 74%;
-	left: 65%;
+  position: absolute;
+  top: 74%;
+  left: 65%;
 }
 
 .termico.on {
-	cursor: pointer;
+  cursor: pointer;
 }
-
 
 .fuente {
-	width: 7em;
-	height: 7em;
+  width: 7em;
+  height: 7em;
 
-	position: absolute;
-	top: 43%;
-	left: 25%;
+  position: absolute;
+  top: 43%;
+  left: 25%;
 }
 
-
-
 .manual::after {
-	content: "";
-	width: 0.5em;
-	height: 0.5em;
-	position: absolute;
-	background-color: red;
-	top: 0px;
-	right: 0px;
+  content: "";
+  width: 0.5em;
+  height: 0.5em;
+  position: absolute;
+  background-color: red;
+  top: 0px;
+  right: 0px;
 }
 
 .manual.on::after {
-	background-color: green;
+  background-color: green;
 }
 
-
 .elemento::after {
-	content: "";
-	width: 1em;
-	height: 1em;
-	border-radius: 50%;
-	position: absolute;
-	background-color: red;
+  content: "";
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
 
-	bottom: 0px;
-	left: 0px;
+  bottom: 0px;
+  left: 0px;
 }
 
 .elemento.on::after {
-	background-color: green;
+  background-color: green;
 }
 
-
-
-
-
-.iconos .icono-off, .iconos .icono-on {
-	filter: drop-shadow( 0.05em 0.05em 0.1em rgba(0, 0, 0, .9));
+.iconos .icono-off,
+.iconos .icono-on {
+  filter: drop-shadow(0.05em 0.05em 0.1em rgba(0, 0, 0, 0.9));
 }
 
 .iconos.off .icono-off {
-	font-size: 1.5em;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	color: red;
+  font-size: 1.5em;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: red;
 }
 
 .iconos.on .icono-off {
-	display: none;
+  display: none;
 }
 
-
 .iconos.on .icono-on {
-	font-size: 1.5em;
-	border-radius: 50%;
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	color: green;
+  font-size: 1.5em;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  color: green;
 }
 
 .iconos.off .icono-on {
-	display: none;
+  display: none;
 }
 
-
-
-
-
-
 .iconos.superior.off .icono-off {
-	top: 0px;
+  top: 0px;
 }
 
 .iconos.superior.on .icono-on {
-	top: 0px;
+  top: 0px;
 }
-
-
-
-
-
-
 
 .imagen {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  user-select: none;
 }
 
-
 .iconos.off .hide-off {
-	display: none;
+  display: none;
 }
 
 .iconos.on .hide-on {
-	display: none;
+  display: none;
 }
