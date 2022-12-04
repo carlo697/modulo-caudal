@@ -304,16 +304,12 @@ function abrirMenu(pestana) {
     ultimaPestana = boton.getAttribute("for");
   }
 
-  // header.classList.add("on");
   menu.classList.add("on");
   document.body.style.overflow = "hidden";
 }
 
 function cerrarMenu() {
-  // header.classList.remove("on");
-  console.log("fkdjkdfjiodsioj");
   menu.classList.remove("on");
-
   document.body.style.overflow = "auto";
 }
 
@@ -322,6 +318,11 @@ function toggleMenu() {
     cerrarMenu();
   } else {
     abrirMenu();
+
+    const pestanaAbierta = document.querySelector(".pestana.on");
+    if (!pestanaAbierta) {
+      abrirPestana(document.querySelector(".pestana"));
+    }
   }
 }
 
