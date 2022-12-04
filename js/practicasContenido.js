@@ -17,6 +17,8 @@ if (pestanasContenedor) {
 }
 
 function inicializarPestanas() {
+  let isFirst = false;
+
   practicas.forEach((practica) => {
     const { id } = practica;
 
@@ -32,6 +34,12 @@ function inicializarPestanas() {
       pestana.setAttribute("type", "practicas");
       pestana.setAttribute("data-pregunta-id", id);
       pestanasContenedor.appendChild(pestana);
+
+      // Mostrar la primera pestaña por defecto
+      if (!isFirst) {
+        pestana.setAttribute("default", true);
+        isFirst = true;
+      }
     }
 
     const contenido = document.createElement("div");

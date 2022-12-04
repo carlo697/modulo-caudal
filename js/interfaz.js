@@ -239,19 +239,26 @@ function inicializarPestanas() {
       continue;
     }
 
+    // Asignar variables
     const type = boton.getAttribute("type");
-
     boton.contenedor = target;
     boton.tipo = type;
+
+    // Registrar el botón
     botonesPestanas.push(boton);
 
+    // Esconder el contenido
+    boton.contenedor.style.display = "none";
+
+    // Mostrar la pestaña por defecto
+    if (boton.getAttribute("default")) {
+      abrirPestana(boton);
+    }
+
+    // Registrar un event listener
     boton.addEventListener("click", function (e) {
       abrirPestana(boton);
     });
-  }
-
-  for (let boton of botonesPestanas) {
-    boton.contenedor.style.display = "none";
   }
 }
 
