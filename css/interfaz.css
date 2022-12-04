@@ -537,11 +537,17 @@ a.boton {
   overflow: auto;
 }
 
-#botonCerrarInformacion {
-  position: absolute;
+.boton-cerrar-padre {
+  position: sticky;
   top: 0;
   right: 0;
-  margin: 5px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#botonCerrarInformacion {
+  box-shadow: 0px 0px 20px black;
+  font-weight: bold;
 }
 
 .informacion p {
