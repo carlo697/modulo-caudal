@@ -1,119 +1,119 @@
 /*				Clases 				*/
 
 class Dispositivo {
-    constructor(element, initialState = false) {
-        this.element = element;
-        this.state = initialState;
+  constructor(element, initialState = false) {
+    this.element = element;
+    this.state = initialState;
 
-        this.updateState();
+    this.updateState();
+  }
+
+  updateState() {
+    if (this.state) {
+      this.element.classList.add("on");
+      this.element.classList.remove("off");
+    } else {
+      this.element.classList.add("off");
+      this.element.classList.remove("on");
+    }
+  }
+
+  setState(value) {
+    if (this.state == value) {
+      return;
     }
 
-    updateState() {
-        if (this.state) {
-            this.element.classList.add("on");
-            this.element.classList.remove("off");
+    this.state = value;
+    this.updateState();
+
+    const audio = this.element.querySelector("audio");
+    if (audio != null) {
+      if (audio.hasAttribute("playWhileOn")) {
+        if (value) {
+          audio.currentTime = 0;
+          audio.play();
         } else {
-            this.element.classList.add("off");
-            this.element.classList.remove("on");
+          audio.pause();
         }
+      } else {
+        audio.play();
+      }
     }
 
-    setState(value) {
-        if (this.state == value) {
-            return;
-        }
+    this.playSound();
+  }
 
-        this.state = value;
-        this.updateState();
+  getState(value) {
+    return this.state;
+  }
 
-        const audio = this.element.querySelector("audio");
-        if (audio != null) {
-            if (audio.hasAttribute("playWhileOn")) {
-                if (value) {
-                    audio.currentTime = 0;
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
-            } else {
-                audio.play();
-            }
-        }
+  setSound(url, loop) {
+    this.audio = new Audio(url);
+  }
 
-        this.playSound();
+  playSound() {
+    if (this.audio != null) {
+      this.audio.currentTime = 0;
+      this.audio.play();
     }
+  }
 
-    getState(value) {
-        return this.state;
-    }
-
-    setSound(url, loop) {
-        this.audio = new Audio(url);
-    }
-
-    playSound() {
-        if (this.audio != null) {
-            this.audio.currentTime = 0;
-            this.audio.play();
-        }
-    }
-
-    stopSound() {
-        this.audio.pause();
-    }
+  stopSound() {
+    this.audio.pause();
+  }
 }
 
 class Interruptor extends Dispositivo {
-    constructor(element, initialState = false, targetElement = null) {
-        super(element, initialState);
+  constructor(element, initialState = false, targetElement = null) {
+    super(element, initialState);
 
-        this.enable = true;
-        this.updateStateCallback = null;
+    this.enable = true;
+    this.updateStateCallback = null;
 
-        this.targetElement = targetElement;
-        this.element.addEventListener("click", (e) => {
-            e.preventDefault();
+    this.targetElement = targetElement;
+    this.element.addEventListener("click", (e) => {
+      e.preventDefault();
 
-            if (!this.enable || e.target.classList.contains("ayuda-overlay")) {
-                return;
-            }
+      if (!this.enable || e.target.classList.contains("ayuda-overlay")) {
+        return;
+      }
 
-            this.onClickEvent(e);
-        });
-        this.updateState();
+      this.onClickEvent(e);
+    });
+    this.updateState();
+  }
+
+  onClickEvent(e) {
+    this.setState(!this.getState());
+  }
+
+  updateState() {
+    super.updateState();
+
+    if (this.targetElement != null) {
+      if (this.state) {
+        this.targetElement.classList.add("on");
+        this.targetElement.classList.remove("off");
+      } else {
+        this.targetElement.classList.add("off");
+        this.targetElement.classList.remove("on");
+      }
     }
 
-    onClickEvent(e) {
-        this.setState(!this.getState());
+    if (this.updateStateCallback != null) {
+      this.updateStateCallback(this);
     }
-
-    updateState() {
-        super.updateState();
-
-        if (this.targetElement != null) {
-            if (this.state) {
-                this.targetElement.classList.add("on");
-                this.targetElement.classList.remove("off");
-            } else {
-                this.targetElement.classList.add("off");
-                this.targetElement.classList.remove("on");
-            }
-        }
-
-        if (this.updateStateCallback != null) {
-            this.updateStateCallback(this);
-        }
-    }
+  }
 }
 
 class Termico extends Interruptor {
-    onClickEvent(e) {
-        super.onClickEvent(e);
+  onClickEvent(e) {
+    super.onClickEvent(e);
 
-        if (this.state == false) {
-            this.enable = false;
-        }
+    if (this.state == false) {
+      this.enable = false;
     }
+  }
 }
 
 const botonManual = document.getElementById("BotonManual");
@@ -163,7 +163,7 @@ const luzStop = new Dispositivo(document.getElementById("botonStop"));
 const luzFalloAire = new Dispositivo(document.getElementById("luzFalloAire"));
 const luzSobrecarga = new Dispositivo(document.getElementById("luzSobrecarga"));
 const luzProcesoBloqueado = new Dispositivo(
-    document.getElementById("luzProcesoBloqueado")
+  document.getElementById("luzProcesoBloqueado")
 );
 const luzSolenoide = new Dispositivo(document.getElementById("luzSolenoide"));
 const vastago = document.getElementById("vastago");
@@ -186,187 +186,187 @@ let usandoAyuda = false;
 const fallaInputs = Array.from(document.querySelectorAll(".falla-input"));
 
 function clickGlobal(e) {
-    const target = e.target;
+  const target = e.target;
 
-    if (target.classList.contains("falla-input")) {
-        fallaInputs.forEach((item) => {
-            if (item != target) {
-                item.checked = false;
-            }
-        });
+  if (target.classList.contains("falla-input")) {
+    fallaInputs.forEach((item) => {
+      if (item != target) {
+        item.checked = false;
+      }
+    });
+  }
+
+  if (usandoAyuda) {
+    if (
+      e.target.id == "textoAyuda" ||
+      e.target.classList.contains("ayuda-overlay")
+    ) {
+      e.stopPropagation();
+
+      usandoAyuda = false;
+      document.getElementById("textoAyuda").style.display = "none";
+
+      if (
+        e.target.classList.contains("ayuda-overlay") &&
+        e.target.helpTarget != null
+      ) {
+        abrirMenu("#botonFuncionamiento");
+        e.target.helpTarget.scrollIntoView(true);
+      }
+
+      let elementos = document.querySelectorAll(".ayuda-overlay");
+
+      for (let elemento of elementos) {
+        elemento.remove();
+      }
     }
+  } else {
+    if (e.target.id == "botonAyuda") {
+      usandoAyuda = true;
 
-    if (usandoAyuda) {
-        if (
-            e.target.id == "textoAyuda" ||
-            e.target.classList.contains("ayuda-overlay")
-        ) {
-            e.stopPropagation();
+      document.getElementById("textoAyuda").style.display = "block";
 
-            usandoAyuda = false;
-            document.getElementById("textoAyuda").style.display = "none";
+      const elementos = document.querySelectorAll("[helpTarget]");
+      let styles;
 
-            if (
-                e.target.classList.contains("ayuda-overlay") &&
-                e.target.helpTarget != null
-            ) {
-                abrirMenu("#botonFuncionamiento");
-                e.target.helpTarget.scrollIntoView(true);
-            }
+      for (let elemento of elementos) {
+        styles = getComputedStyle(elemento);
 
-            let elementos = document.querySelectorAll(".ayuda-overlay");
-
-            for (let elemento of elementos) {
-                elemento.remove();
-            }
-        }
-    } else {
-        if (e.target.id == "botonAyuda") {
-            usandoAyuda = true;
-
-            document.getElementById("textoAyuda").style.display = "block";
-
-            const elementos = document.querySelectorAll("[helpTarget]");
-            let styles;
-
-            for (let elemento of elementos) {
-                styles = getComputedStyle(elemento);
-
-                if (styles.position == "static") {
-                    elemento.ultimoPosition = styles.position;
-                    elemento.style.position = "relative";
-                }
-
-                const overlay = document.createElement("div");
-                overlay.classList = "ayuda-overlay";
-                overlay.helpTarget = document.getElementById(
-                    elemento.getAttribute("helpTarget")
-                );
-                elemento.appendChild(overlay);
-            }
+        if (styles.position == "static") {
+          elemento.ultimoPosition = styles.position;
+          elemento.style.position = "relative";
         }
 
-        if (e.target.id == "botonManual") {
-            selector.setAttribute("state", "0");
-            selector.state = 0;
-            _contactor = false;
-
-            e.target.querySelector("audio").play();
-        } else if (e.target.id == "botonOff") {
-            selector.setAttribute("state", "1");
-            selector.state = 1;
-
-            e.target.querySelector("audio").play();
-        } else if (e.target.id == "botonAutomatico") {
-            selector.setAttribute("state", "2");
-            selector.state = 2;
-
-            e.target.querySelector("audio").play();
-        }
-    }
-
-    const element = e.target;
-
-    if (element.hasAttribute("hightlightTarget")) {
-        const target = document.getElementById(
-            element.getAttribute("hightlightTarget")
+        const overlay = document.createElement("div");
+        overlay.classList = "ayuda-overlay";
+        overlay.helpTarget = document.getElementById(
+          elemento.getAttribute("helpTarget")
         );
-
-        cerrarMenu();
-
-        if (ultimoHightlight != null) {
-            ultimoHightlight.remove();
-        }
-
-        const hightlight = document.createElement("div");
-        hightlight.className = "hightlight-overlay";
-
-        target.appendChild(hightlight);
-        hightlight.scrollIntoView(false);
-        ultimoHightlight = hightlight;
-
-        setTimeout(() => {
-            hightlight.remove();
-        }, 8000);
+        elemento.appendChild(overlay);
+      }
     }
+
+    if (e.target.id == "botonManual") {
+      selector.setAttribute("state", "0");
+      selector.state = 0;
+      _contactor = false;
+
+      e.target.querySelector("audio").play();
+    } else if (e.target.id == "botonOff") {
+      selector.setAttribute("state", "1");
+      selector.state = 1;
+
+      e.target.querySelector("audio").play();
+    } else if (e.target.id == "botonAutomatico") {
+      selector.setAttribute("state", "2");
+      selector.state = 2;
+
+      e.target.querySelector("audio").play();
+    }
+  }
+
+  const element = e.target;
+
+  if (element.hasAttribute("hightlightTarget")) {
+    const target = document.getElementById(
+      element.getAttribute("hightlightTarget")
+    );
+
+    cerrarMenu();
+
+    if (ultimoHightlight != null) {
+      ultimoHightlight.remove();
+    }
+
+    const hightlight = document.createElement("div");
+    hightlight.className = "hightlight-overlay";
+
+    target.appendChild(hightlight);
+    hightlight.scrollIntoView(false);
+    ultimoHightlight = hightlight;
+
+    setTimeout(() => {
+      hightlight.remove();
+    }, 8000);
+  }
 }
 
 function mousedownGlobal(e) {
-    let boton = false;
+  let boton = false;
 
-    if (e.target.id == "botonStart") {
-        presionadoStart = true;
-        boton = true;
-    } else if (e.target.id == "botonStop") {
-        presionadoStop = true;
-        boton = true;
-    }
+  if (e.target.id == "botonStart") {
+    presionadoStart = true;
+    boton = true;
+  } else if (e.target.id == "botonStop") {
+    presionadoStop = true;
+    boton = true;
+  }
 
-    if (boton) {
-        e.target.querySelector("audio").play();
-    }
+  if (boton) {
+    e.target.querySelector("audio").play();
+  }
 }
 
 function mouseupGlobal(e) {
-    if (e.target.id == "botonStart") {
-        presionadoStart = false;
-    } else if (e.target.id == "botonStop") {
-        presionadoStop = false;
-    }
+  if (e.target.id == "botonStart") {
+    presionadoStart = false;
+  } else if (e.target.id == "botonStop") {
+    presionadoStop = false;
+  }
 }
 
 termico.updateStateCallback = (element) => {
-    if (!element.state) {
-        document.getElementById("sobreCarga").checked = false;
-    }
+  if (!element.state) {
+    document.getElementById("sobreCarga").checked = false;
+  }
 };
 
 function changeGlobal(e) {
-    const id = e.target.id;
-    const target = e.target;
+  const id = e.target.id;
+  const target = e.target;
 
-    if (id == "fallaAire") {
-        fallaAire = target.checked;
-    } else if (id == "sobreVoltaje") {
-        sobreVoltaje = target.checked;
-    } else if (id == "sobreCarga") {
-        sobreCarga = target.checked;
+  if (id == "fallaAire") {
+    fallaAire = target.checked;
+  } else if (id == "sobreVoltaje") {
+    sobreVoltaje = target.checked;
+  } else if (id == "sobreCarga") {
+    sobreCarga = target.checked;
 
-        termico.setState(true);
-        termico.enable = true;
-    }
+    termico.setState(true);
+    termico.enable = true;
+  }
 }
 
 let activarChorro1 = false;
 const chorro1 = document.querySelector("#chorro1");
 
 setInterval(() => {
-    if (activarChorro1) {
-        const particula = document.createElement("div");
-        particula.classList.add("particula-agua1");
+  if (activarChorro1) {
+    const particula = document.createElement("div");
+    particula.classList.add("particula-agua1");
 
-        chorro1.appendChild(particula);
+    chorro1.appendChild(particula);
 
-        setTimeout(() => {
-            particula.remove();
-        }, 500);
-    }
+    setTimeout(() => {
+      particula.remove();
+    }, 500);
+  }
 }, 200);
 
 let activarChorro2 = false;
 const chorro2 = document.querySelector("#chorro2");
 
 setInterval(() => {
-    if (activarChorro2) {
-        const particula = document.createElement("div");
-        particula.classList.add("particula-agua2");
+  if (activarChorro2) {
+    const particula = document.createElement("div");
+    particula.classList.add("particula-agua2");
 
-        chorro2.appendChild(particula);
+    chorro2.appendChild(particula);
 
-        setTimeout(() => {
-            particula.remove();
-        }, 500);
-    }
+    setTimeout(() => {
+      particula.remove();
+    }, 500);
+  }
 }, 200);
 
 var presionadoStart = false;
@@ -384,157 +384,157 @@ let vastagoPosicionActual = 0;
 let tiempoSobrecarga = 0;
 
 function update(deltaTime) {
-    let _breaker = breaker.getState();
-    let _interruptor1 = interruptor1.getState();
-    let _interruptor2 = interruptor2.getState();
+  let _breaker = breaker.getState();
+  let _interruptor1 = interruptor1.getState();
+  let _interruptor2 = interruptor2.getState();
 
-    let _emergencia1 = emergencia1.getState();
-    let _emergencia2 = emergencia2.getState();
-    let _emergencia3 = emergencia3.getState();
+  let _emergencia1 = emergencia1.getState();
+  let _emergencia2 = emergencia2.getState();
+  let _emergencia3 = emergencia3.getState();
 
-    let _selectorPosicion = parseInt(selector.getAttribute("state"));
+  let _selectorPosicion = parseInt(selector.getAttribute("state"));
 
-    let _termico = termico.getState();
+  let _termico = termico.getState();
 
-    let _protector = false;
-    let _rele1 = false;
-    let _rele2 = false;
-    let _presostato = !fallaAire;
+  let _protector = false;
+  let _rele1 = false;
+  let _rele2 = false;
+  let _presostato = !fallaAire;
 
-    let _luzStart = false;
-    let _luzStop = false;
-    let _luzFalloAire = false;
-    let _luzSobrecarga = false;
-    let _luzProcesoBloqueado = false;
-    let _luzSolenoide = false;
+  let _luzStart = false;
+  let _luzStop = false;
+  let _luzFalloAire = false;
+  let _luzSobrecarga = false;
+  let _luzProcesoBloqueado = false;
+  let _luzSolenoide = false;
 
-    let _bomba = false;
-    let _solenoide = false;
+  let _bomba = false;
+  let _solenoide = false;
 
-    let _controlador = false;
+  let _controlador = false;
 
-    if (_breaker && _interruptor1) {
-        _protector = !sobreVoltaje;
-    }
+  if (_breaker && _interruptor1) {
+    _protector = !sobreVoltaje;
+  }
 
-    if (_protector && _breaker && _interruptor1) {
-        _luzSobrecarga = _termico;
-    }
+  if (_protector && _breaker && _interruptor1) {
+    _luzSobrecarga = _termico;
+  }
 
-    if (_breaker && !sobreVoltaje && _interruptor2 && _interruptor1) {
-        _controlador = true;
-    }
+  if (_breaker && !sobreVoltaje && _interruptor2 && _interruptor1) {
+    _controlador = true;
+  }
 
-    if (_protector && _breaker && _interruptor1) {
-        // Contactor y luz de start
-        if (!_emergencia1 && !_emergencia2 && !_emergencia3) {
-            _rele2 = true;
+  if (_protector && _breaker && _interruptor1) {
+    // Contactor y luz de start
+    if (!_emergencia1 && !_emergencia2 && !_emergencia3) {
+      _rele2 = true;
 
-            if (!_termico) {
-                if (_selectorPosicion == 2) {
-                    _contactor = true;
-                } else if (_selectorPosicion == 0) {
-                    if (presionadoStart) {
-                        presionadoStart = false;
-                        _contactor = true;
-                    } else if (presionadoStop) {
-                        presionadoStop = false;
-                        _contactor = false;
-                    }
-                } else {
-                    _contactor = false;
-                }
-            } else {
-                _contactor = false;
-            }
-        } else {
+      if (!_termico) {
+        if (_selectorPosicion == 2) {
+          _contactor = true;
+        } else if (_selectorPosicion == 0) {
+          if (presionadoStart) {
+            presionadoStart = false;
+            _contactor = true;
+          } else if (presionadoStop) {
+            presionadoStop = false;
             _contactor = false;
+          }
+        } else {
+          _contactor = false;
         }
-
-        _luzStop = !_contactor;
-
-        // Luz de proceso bloqueado
-        if (!_rele2) {
-            _luzProcesoBloqueado = true;
-        }
-
-        // Rele 1, valvula solenoide, luz de valvula solenoide, luz de falla de aire
-        if (!_presostato) {
-            _luzFalloAire = true;
-
-            if (_contactor) {
-                _rele1 = true;
-                _luzSolenoide = true;
-            }
-        }
-    } else {
+      } else {
         _contactor = false;
-    }
-
-    if (_contactor && !_luzFalloAire && _controlador) {
-        activarChorro1 = true;
+      }
     } else {
-        activarChorro1 = false;
+      _contactor = false;
     }
 
-    if (_luzSolenoide) {
-        activarChorro2 = true;
-    } else {
-        activarChorro2 = false;
+    _luzStop = !_contactor;
+
+    // Luz de proceso bloqueado
+    if (!_rele2) {
+      _luzProcesoBloqueado = true;
     }
 
-    // Activar termico cuando la bomba esta en marcha sin encender el controlador
-    if (_contactor && !_luzFalloAire && !_controlador) {
-        tiempoSobrecarga += deltaTime;
+    // Rele 1, valvula solenoide, luz de valvula solenoide, luz de falla de aire
+    if (!_presostato) {
+      _luzFalloAire = true;
 
-        if (tiempoSobrecarga > 10000) {
-            termico.setState(true);
-            termico.enable = true;
-            document.getElementById("sobreCarga").checked = true;
-            tiempoSobrecarga = 0;
-        }
-    } else {
-        tiempoSobrecarga = 0;
+      if (_contactor) {
+        _rele1 = true;
+        _luzSolenoide = true;
+      }
     }
+  } else {
+    _contactor = false;
+  }
 
-    _luzStart = _contactor;
+  if (_contactor && !_luzFalloAire && _controlador) {
+    activarChorro1 = true;
+  } else {
+    activarChorro1 = false;
+  }
 
-    controlador.setState(_controlador);
-    contactor.setState(_contactor);
-    //termico.setState(_termico);
-    protector.setState(_protector);
-    rele1.setState(_rele1);
-    rele2.setState(_rele2);
-    luzStop.setState(_luzStop);
-    luzStart.setState(_luzStart);
-    luzFalloAire.setState(_luzFalloAire);
-    luzSobrecarga.setState(_luzSobrecarga);
-    luzProcesoBloqueado.setState(_luzProcesoBloqueado);
-    luzSolenoide.setState(_luzSolenoide);
+  if (_luzSolenoide) {
+    activarChorro2 = true;
+  } else {
+    activarChorro2 = false;
+  }
 
-    bomba.setState(_contactor);
+  // Activar termico cuando la bomba esta en marcha sin encender el controlador
+  if (_contactor && !_luzFalloAire && !_controlador) {
+    tiempoSobrecarga += deltaTime;
 
-    let _vastagoAbierto = _controlador && !fallaAire;
+    if (tiempoSobrecarga > 10000) {
+      termico.setState(true);
+      termico.enable = true;
+      document.getElementById("sobreCarga").checked = true;
+      tiempoSobrecarga = 0;
+    }
+  } else {
+    tiempoSobrecarga = 0;
+  }
 
-    vastagoPosicionActual += _vastagoAbierto
-        ? 0.0001 * deltaTime
-        : -0.0001 * deltaTime;
-    vastagoPosicionActual = Math.min(0.5, vastagoPosicionActual);
-    vastagoPosicionActual = Math.max(0, vastagoPosicionActual);
+  _luzStart = _contactor;
 
-    vastagoPosicionActual +=
-        Math.sin(performance.now() / 300) * 0.006 * vastagoPosicionActual;
+  controlador.setState(_controlador);
+  contactor.setState(_contactor);
+  //termico.setState(_termico);
+  protector.setState(_protector);
+  rele1.setState(_rele1);
+  rele2.setState(_rele2);
+  luzStop.setState(_luzStop);
+  luzStart.setState(_luzStart);
+  luzFalloAire.setState(_luzFalloAire);
+  luzSobrecarga.setState(_luzSobrecarga);
+  luzProcesoBloqueado.setState(_luzProcesoBloqueado);
+  luzSolenoide.setState(_luzSolenoide);
 
-    vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
+  bomba.setState(_contactor);
+
+  let _vastagoAbierto = _controlador && !fallaAire;
+
+  vastagoPosicionActual += _vastagoAbierto
+    ? 0.0001 * deltaTime
+    : -0.0001 * deltaTime;
+  vastagoPosicionActual = Math.min(0.5, vastagoPosicionActual);
+  vastagoPosicionActual = Math.max(0, vastagoPosicionActual);
+
+  vastagoPosicionActual +=
+    Math.sin(performance.now() / 300) * 0.006 * vastagoPosicionActual;
+
+  vastago.style.transform = `translate(0, -${vastagoPosicionActual}em)`;
 }
 
 function loop(time) {
-    var deltaTime = time - lastRenderTime;
+  var deltaTime = time - lastRenderTime;
 
-    update(deltaTime);
+  update(deltaTime);
 
-    lastRenderTime = time;
-    window.requestAnimationFrame(loop);
+  lastRenderTime = time;
+  window.requestAnimationFrame(loop);
 }
 
 var lastRenderTime = 0;
