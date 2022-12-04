@@ -36,16 +36,36 @@ html {
   background-position: 0 var(--header-width);
 }
 
+.container {
+  padding-inline: 1rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .container {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
 body {
   background: linear-gradient(
     rgba(140, 144, 169, 0.6),
     rgb(105, 108, 118),
     rgb(42, 45, 52)
   );
-}
-
-.container {
-  padding: 2rem;
 }
 
 button {
@@ -58,25 +78,30 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: var(--header-width);
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   top: 0;
+  background: var(--azul);
+  z-index: 100;
+  height: var(--header-width);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.header-content {
+  padding-block: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: var(--azul);
-  padding: 10px;
-  z-index: 100;
-  width: 100%;
-  height: var(--header-width);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .nav-logo {
-  width: 103px;
+  width: 100px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -92,11 +117,6 @@ main {
   flex-wrap: wrap;
   justify-content: flex-end;
   flex-grow: 1;
-}
-
-.header.on .nav-enlaces {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .nav-enlace {
@@ -140,7 +160,7 @@ main {
   opacity: 0.5;
 }
 
-@media (max-width: 1000px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
   :root {
     --header-width: 60px;
   }
