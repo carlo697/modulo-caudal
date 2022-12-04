@@ -370,11 +370,7 @@ function actualizarFinalPracticas(practicaId) {
 
 const letrasPermitidas = "abcdefghijklmnñopqrstuvwxyzáéíóú".split("");
 
-function estaPermitido(texto) {}
-
 function alModificarInputDato(e) {
-  const input = e.target;
-
   // Guardar en localStorage el valor.
   localStorage.setItem(e.target.getAttribute("preguntaId"), e.target.value);
   localStorage.removeItem("datos_confirmados");
