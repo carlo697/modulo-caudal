@@ -1,5 +1,6 @@
 // Elementos
 const header = document.querySelector(".header");
+const bienvenida = document.querySelector(".bienvenida");
 const datosInputs = document.querySelectorAll(".practica-input");
 const preguntasInputs = document.querySelectorAll("textarea[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
@@ -499,12 +500,12 @@ function cargarInputs() {
 
 function cargarBienvenida() {
   if (!localStorage.getItem("esconderBienvenida")) {
-    header.classList.add("bienvenida-on");
+    bienvenida.classList.add("bienvenida-on");
   }
 }
 
 function esconderBienvenida() {
-  header.classList.remove("bienvenida-on");
+  bienvenida.classList.remove("bienvenida-on");
   localStorage.setItem("esconderBienvenida", true);
 }
 
