@@ -936,6 +936,8 @@ a.boton {
   font-size: 1em;
   padding: 0.5em;
   margin-top: 0.5em;
+  background-color: #ffffff;
+  color: black;
 }
 
 #cedula::-webkit-outer-spin-button,
