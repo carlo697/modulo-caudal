@@ -251,9 +251,9 @@ function inicializarPestanas() {
     boton.contenedor.style.display = "none";
 
     // Mostrar la pestaña por defecto
-    if (boton.getAttribute("default")) {
-      abrirPestana(boton);
-    }
+    // if (boton.getAttribute("default")) {
+    //   abrirPestana(boton);
+    // }
 
     // Registrar un event listener
     boton.addEventListener("click", function (e) {
