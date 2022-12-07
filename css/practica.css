@@ -50,12 +50,22 @@ li:last-child {
   margin-bottom: 15pt;
 }
 
+ol {
+  counter-reset: item;
+}
+
 ol ol li {
   page-break-inside: avoid;
 }
 
 ol li {
   page-break-inside: avoid;
+  display: block;
+}
+
+ol li:before {
+  content: counters(item, ".") ") ";
+  counter-increment: item;
 }
 
 .respuesta {
