@@ -1,6 +1,6 @@
 // Elementos
 const header = document.querySelector(".header");
-const bienvenida = document.querySelector(".bienvenida");
+const bienvenida = document.querySelector(".bienvenida-overlay");
 const datosInputs = document.querySelectorAll(".practica-input");
 const preguntasInputs = document.querySelectorAll("textarea[preguntaId]");
 const contenidoPracticas = document.querySelector("#practicasArea");
