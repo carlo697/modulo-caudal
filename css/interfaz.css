@@ -142,7 +142,7 @@ main {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
+  left: 10%;
   width: 0;
   height: 1px;
   background-color: var(--naranja);
@@ -152,7 +152,7 @@ main {
 
 .nav-enlace.on::after,
 .nav-enlace:hover::after {
-  width: 100%;
+  width: 80%;
 }
 
 .nav-enlace.on::after,
@@ -853,6 +853,7 @@ a.boton {
 .pestana {
   flex-grow: 1;
   margin: 1px;
+  text-transform: uppercase;
 }
 
 .pestanas .pestana {
