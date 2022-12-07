@@ -844,15 +844,16 @@ a.boton {
 }
 
 .pestanas {
-  margin-top: 20px;
+  margin-top: 2rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .pestana {
-  flex-grow: 1;
-  margin: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  padding: 0.5rem 1rem;
 }
 
 .practica-contenido h3 {
