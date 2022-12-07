@@ -351,7 +351,7 @@ setInterval(() => {
       particula.remove();
     }, 500);
   }
-}, 200);
+}, 50);
 
 let activarChorro2 = false;
 const chorro2 = document.querySelector("#chorro2");

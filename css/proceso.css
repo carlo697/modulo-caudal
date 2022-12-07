@@ -156,8 +156,10 @@
 #chorro1 {
   position: absolute;
 
-  left: 670.5px;
-  top: 406.674px;
+  top: 10%;
+  left: 10%;
+  width: 70%;
+  height: 80%;
 }
 
 #chorro2 {
@@ -167,37 +169,44 @@
   top: 407.674px;
 }
 
-.chorro-agua {
-  position: relative;
-  /*width: 0.5em;
-	height: 0.5em;
-	background-color: red;*/
-}
-
 .particula-agua1 {
   position: absolute;
-  width: 0.7em;
-  height: 0.7em;
-  background-color: blue;
+  width: 20%;
+  aspect-ratio: 1/1;
+
+  background-color: #24bdd1;
   animation: agua1 0.5s;
+  animation-timing-function: linear;
   border-radius: 50%;
   filter: blur(0.1em);
 }
 
 @keyframes agua1 {
   0% {
+    width: 0%;
+    left: 0;
+    top: 0;
   }
 
-  10% {
-    transform: translate(1.5em, 1em);
+  25% {
+    width: 20%;
+    left: calc(60% * 0.240128);
+    top: calc(50% * 0.042805);
   }
 
-  35% {
-    transform: translate(2em, 3em);
+  50% {
+    left: calc(60% * 0.496454);
+    top: calc(50% * 0.231877);
+  }
+
+  75% {
+    left: calc(60% * 0.748974);
+    top: calc(50% * 0.546575);
   }
 
   100% {
-    transform: translate(3em, 10em);
+    left: calc(60% * 1);
+    top: calc(50% * 1);
   }
 }
 
