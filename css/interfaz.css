@@ -443,9 +443,13 @@ a.boton {
   display: inline-block;
 }
 
+.fallas p {
+  margin-bottom: 2rem;
+}
+
 .falla-fila {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 1.5rem;
   align-items: center;
 }
 
